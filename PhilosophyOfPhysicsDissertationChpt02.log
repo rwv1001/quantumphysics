@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.23)  10 JUL 2022 18:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.23)  10 JUL 2022 18:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1454,84 +1454,4 @@ Overfull \hbox (11.3056pt too wide) in paragraph at lines 1302--1304
 LaTeX Warning: Reference `bornrule' on page 43 undefined on input line 1329.
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1335.
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1335.
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1335.
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1335.
-
-[43]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1337.
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1337.
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1337.
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1337.
-
-[44]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1365.
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1365.
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1365.
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1365.
-
-
-LaTeX Warning: Reference `probOutcomes' on page 45 undefined on input line 1383.
-
-[45] [46] [47]
-
-LaTeX Warning: Reference `decotheory' on page 48 undefined on input line 1522.
-
-
-LaTeX Warning: Reference `reducedev' on page 48 undefined on input line 1526.
-
-
-LaTeX Warning: Reference `reduced' on page 48 undefined on input line 1531.
-
-[48] [49] [50] [51]
-Overfull \hbox (1.18864pt too wide) in paragraph at lines 1903--1907
-\OT1/cmr/m/n/12 Therefore $[] [] = [][][] []$ and $[] [] = [][]$,
- []
-
-[52] [53] [54] [55] [56] [57] [58] (PhilosophyOfPhysicsDissertationChpt02.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package logreq Info: Writing requests to 'PhilosophyOfPhysicsDissertationChpt02.run.xml'.
-\openout1 = `PhilosophyOfPhysicsDissertationChpt02.run.xml'.
-
- ) 
-Here is how much of TeX's memory you used:
- 51163 strings out of 478659
- 1094865 string characters out of 2845919
- 2079644 words of memory out of 3000000
- 68562 multiletter control sequences out of 15000+600000
- 416461 words of font info for 75 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 91i,25n,117p,3054b,3909s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/rwv10/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on PhilosophyOfPhysicsDissertationChpt02.pdf (58 pages, 575995 bytes).
-PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+L
