@@ -1,0 +1,113 @@
+\setlength{\skip\footins}{1.2pc plus 5pt minus 10pt}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{biblatex-chicago}
+\usepackage{paralist}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{lipsum}  
+\usepackage{ragged2e}
+\usepackage{cancel}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{gensymb} 
+\usepackage{csquotes}
+\usepackage{enumitem}
+\usepackage{comment}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage[acronym, nopostdot, nonumberlist, section]{glossaries}
+\usepackage{glossary-mcols}
+\usepackage{etoolbox}
+\usepackage{graphicx} % Required for including images
+\usepackage{tikz, tikz-3dplot}
+\usetikzlibrary{calc,decorations.markings}
+\usetikzlibrary{decorations.pathreplacing,calligraphy}
+\usetikzlibrary{math,fixedpointarithmetic,shapes.geometric}
+\usetikzlibrary{decorations.text}
+\usepackage[autolanguage]{numprint}
+\usepackage{caption}
+\usepackage{parskip}
+\usepackage{bigfoot}
+\usepackage{cleveref}
+\usepackage{tensor}
+\usepackage{newclude}
+\setcounter{secnumdepth}{5}
+
+\tdplotsetmaincoords{80}{45}
+\tdplotsetrotatedcoords{-90}{180}{-90}
+
+\thispagestyle{empty}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+\usepackage[inline]{showlabels}
+
+\newcommand{\du}[2]{\mathbf{\SI[inter-unit-product={}\cdot{}]{#1}{#2}}}
+\makeatletter 
+\newcommand{\pp@spage}{}
+\makeatother
+
+\theoremstyle{hypothesis}
+\newtheorem*{hypothesis}{Partitioning Criterion}
+\newcommand\myeq{\stackrel{\mathclap{\scriptsize\mbox{def}}}{=}}
+\newcommand{\uvb}[1]{\vb{\hat{{#1}}}}
+\newcommand{\uvbp}[1]{\uvb{#1}\bm{+}}
+\newcommand{\uvbm}[1]{\uvb{#1}\bm{-}}
+\newcommand{\uvbpm}[1]{\uvb{#1}\bm{\pm}}
+\newcommand{\dotsize}{2pt}
+\makeatletter 
+\def\footnoterule{\kern-6\p@ % you can put other values to increase vertical space between rule and notes (just try out); difference between the values after "kern" is the width of the rule!
+\hrule \@width 2in \kern 5.7\p@} % the in value is the length of the footnoterule
+% footnotemark
+
+\renewcommand{\@makefntext}[1]{%
+\if@optraggedright
+\raggedright%
+\fi
+\setlength{\parindent}{\footnotemargin}%
+\textsuperscript{\@thefnmark}#1%
+}
+
+\addtolength{\skip\footins}{2pt} % vertical space between rule and main text
+\setlength{\footnotesep}{12pt} % vertical space between footnotes
+\let\origfootnote\footnote % font size of footnotes; changes \footnotesize command only inside footnotes!
+\setlength{\footnotemargin}{0in}
+\renewcommand{\footnote}[1]{%
+\noindent % here there is scriptsize in footnotes (example) 
+\origfootnote{#1}} 
+
+\makeatother
+
+
+
+
+\usepackage{url}
+
+
+
+\let\URL\url
+\makeatletter
+\def\url#1{\@URL#1;;;\@nil}
+\def\@URL#1;#2;#3;#4\@nil{%
+\URL{#1}\ifx\relax#2\relax\else\ifx\relax#3\relax; \URL{#2} \else; \URL{#2}; \URL{#3}\fi \fi}
+\makeatother
+%url = {http://citeseer.ist.psu.edu/562256.html; http://gfs.sf.net/gerris.pdf}
+
+
+
+\renewcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\diag}{\operatorname{diag}}
+
+
+\addbibresource{PhilosophyOfPhysicsDissertationChpt02.bib}
+\title{On Physics and Common Sense}
+\author{Robert Verrill OP}
+
+\date{\today}
+\interfootnotelinepenalty=0
+\allowdisplaybreaks
+\setcounter{tocdepth}{4}

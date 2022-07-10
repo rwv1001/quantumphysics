@@ -1,0 +1,1057 @@
+\section{Evaluating Kent's Interpretation}
+\subsection{The Empirical Adequacy of Kent's interpretation}
+
+We will need to express $\ev*{T^{\mu\nu}(y)}_{\tau_S}$ in terms of the observable $\hat{T}^{\mu\nu}(y)$ and the initial state $\ket{\Psi_0}$ in order to show that Kent's addition to quantum orthodoxy rather contradicting it. to find such an expression we would ideally like to find a hypersurface $S'$ that contains both $S^1(y)$ and $y$. Then we could consider how the observables $\hat{T}_S(x)$ and $\hat{T}^{\mu\nu}(y)$ act on the state $\ket{\Psi'}=U_{S'S_0}\ket{\Psi_0}$ and use this action to determine the probabilities $P(q(\tau),r)$ and $P(r)$ needed to define the conditional expectation $P(q(\kappa)|r)$. However, since by definition a hypersurface must be continuous with any two events of it being space-like separated, it is going to be impossible to find a hypersurface $S'$ with the desired properties. Nevertheless, what we can do is find a sequence of hypersurfaces $S_i(y)$ such that\label{siydef} $S_i(y)\subset S_j(y)$ for $i<j$, and that for any $x\in S^1(y)$, there exists $i$ such that $x\in S_i(y)$. An example of one such $S_i(y)$ is shown in figure \ref{S3}. When there is no ambiguity, we will drop the $y$ and write $S_i$ instead of $S_i(y)$. 
+
+ \begin{figure}[ht!]
+\captionsetup{justification=justified}
+\centering
+
+\tikzmath{
+\a= 1;  
+\e = 0.1;
+\lam=0.9;
+\h=-1;
+\hae=(3*\a*\a+6*\a*\e+7*\e*\e-3*\a*sqrt(\a*\a+4*\e*\e)-4*\e*sqrt(\a*\a+4\e*\e))/(4*\a+4*\e-2*sqrt(\a*\a+4*\e*\e));
+\hae=0.205678;
+\circsize=1.2;
+\md = (\a+\h)/2;
+\lrange = 4;
+\rrange=2;
+\fictlabel=(\rrange-\lrange)/2;
+\ss=(-\lrange-\a)/2;
+\sss=\a+(\rrange-\a)/2;
+\tlen=0.75;
+\labelpos=(-\lrange-\a)/2;
+} 
+
+\begin{tikzpicture}[thick, scale=2]
+
+\def\dotsize{0.7}
+
+\definecolor{tempcolor}{RGB}{0,151,76}
+\draw[<->] (-\lrange, \h) node[left] {$S_0$} -- (\rrange, \h) node[right] {$S_0$};
+\filldraw (0,0) circle (\dotsize pt) node [below right] {$y$} ;
+              
+\draw[->] (\rrange,\md-\tlen/2) --  (\rrange,\md+\tlen/2) node[midway,right]{time}; 
+
+\draw[->,blue, thick] [domain=-\a/2:-\lrange, samples=150]   plot (\x, {\a-\e/2-1/2*(sqrt(\lam*\lam*pow(\x+\hae+\a,2)+\e*\e)-\e+\lam*(\x+\hae+\a))}) node[left, black]{$S_i(y)$}  ;
+\draw[blue, thick] [domain=-\a/2:\a/2, samples=150] plot (\x, {sqrt(\lam*\lam*\x*\x+\e*\e)-\e})   node[right, black]{$S_i(y)$};
+\draw[->,blue, thick] [domain=\a/2:\rrange, samples=150]   plot (\x, {\a-\e/2-1/2*(sqrt(\lam*\lam*pow(\x-\hae-\a,2)+\e*\e)-\e-\lam*(\x-\hae-\a))}) node[right, black]{$S_i(y)$}  ;
+\draw[gray] (-\lrange, \a)  -- (\rrange, \a)  {};
+\draw[gray, dashed] (-\a, \a) -- (0,0) {};
+\draw[gray, dashed](0,0) -- (\a, \a) {};
+\draw[gray](\a, \a) --  (\rrange, \a)  ;         
+\coordinate (B) at (\a,\a);
+\node at (B)[red,circle,fill,inner sep=\circsize pt]{};
+\coordinate (A) at (-\a,\a);
+\node at (A)[red,circle,fill,inner sep=\circsize pt]{};
+\coordinate (C) at (0,0);
+\node at (C)[black,circle,fill,inner sep=\circsize pt]{};
+
+\coordinate[label = above:$S$]  (D) at (0,\a);
+
+\coordinate[label = above:$S$]  (D) at (\sss,\a);
+
+\filldraw (\ss,\a) circle (\dotsize pt) node [above] {$x\in S_i(y)\cap S$} ;
+
+
+ 
+\node (start) at (\labelpos,\h) [below] {Initial State $\ket{\Psi_0}$};
+\node (evolution) at (\labelpos,\md+0.05) [below] {Unitary Evolution $\ket{\Psi_i}=U_{S_iS_0}\ket{\Psi_0}$};
+\node (final) at (\labelpos,\a) [below] {Unitary Evolution $U_{SS_0}\ket{\Psi_0}$};
+%\node at (-\ss+0.17,\mn-0.18){$-a_0$};
+\draw [->, shorten <= 5pt] (start) [above] -- (evolution); 
+\draw [->] (evolution) -- (final); 
+\end{tikzpicture}
+
+\vspace*{2px}
+\caption{$S_i\myeq S_i(y)$ is a hypersurface containing $y$ and all of $S^1(y)$ in the limit as $i\rightarrow\infty$.   }
+\label{S3}
+\end{figure}
+ 
+ Now if $r_i$ is the statement that  $T_S(x)=\tau_S(x)$ for all $x\in S_i(y)\cap S$, then 
+ $$P(q(\tau)|r)=\lim_{i\rightarrow\infty}P(q(\tau)|r_i),$$
+ and therefore from the definition of $\ev*{T^{\mu\nu}(y)}_{\tau_S}$ together with equation (\ref{conditionalexpectatio}), we have 
+\begin{equation}\label{beable1}
+\ev*{T^{\mu\nu}(y)}_{\tau_S}=\lim_{i\rightarrow\infty}\sum_\tau\frac{P(q(\tau),r_i)\tau}{P(r_i)}.
+\end{equation} 
+ To calculate $P(q(\tau)|r_i)$, we note that since $S_i$ is a hypersurface,  then there will exist a unitary operator operator $U_{S_iS_0}$ which maps the Hilbert space of states $H_{S_0}$ describing $S_0$ to the Hilbert space of states $H_{S_i}$\label{HSidef} describing $S_i$ in accord with how the states of $H_{S_0}$  evolve over time. Now let $H_{S_i,\tau_S}\subset H_{S_i}$ be subspace of states $\ket{\xi}$ for which  $T_S(x)\ket{\xi}=\tau_S(x)\ket{\xi}$  for all $x\in S_i\cap S$, and  let $\{\ket{\xi_1},\ket{\xi_2},\ldots\}$ be an orthonormal basis of the states of $H_{S_i,\tau_S}$. Given that the initial state of the world is $\ket{\Psi_0}$, the probability $P(r_i)$ of ``measuring'' the value of $T_S(x)$ on $S_i\cap S$ to be $\tau_S(x)$ will be 
+\begin{equation}\label{Pri}
+P(r_i)=\sum_j \abs{ \ip{\xi_j}{\Psi_i}}^2,
+\end{equation}
+where $\ket{\Psi_i}=U_{S_iS_0}$, and this probability will be independent of the particular orthonormal basis  $\{\ket{\xi_j}:j\}$ of $H_{S_i,\tau_S}$.\footnote{To see why this is, we note that we can extend the orthonormal set $\{\ket{\xi_1},\ket{\xi_2},\ldots\}$ to an orthonormal basis  $\{\ket{\xi_1},\ket{\xi_2},\ldots\}\cup\{\ket{\zeta_1},\ket{\zeta_2},\ldots\}$ which consists entirely of $\hat{T}_S$-eigenstates. We can think of each of the states of this orthonormal basis as the possible measurement outcomes when making the notional measurement of $T_S(x)$ on $S_i\cap S$. By the Born rule, it therefore follows that $P(r_i)=\sum_j \abs{ \ip{\xi_j}{\Psi_i}}^2$. But to see that this probability is independent of the particular basis, we can uniquely write $\ket{\Psi_i}$ as a sum $\ket{\Psi_i}=\ket{\xi}+\ket{\zeta}$ where $\ket{\xi}$ belongs to the span of $\{\ket{\xi_j}:j\}$ and $\ket{\zeta}$ belongs to the span of $\{\ket{\zeta_j}:j\}$.  Then since $\ket{\xi}=\sum_j\ip{\xi_j}{\Psi_i}\ket{\xi_j}$, it follows that $$\ip{\xi}{\xi}=\sum_j\abs{ \ip{\xi_j}{\Psi_i}}^2=P(r_i).$$ Therefore, since  $\ip{\xi}{\xi}$ is independent of the particular basis chosen, then so is $P(r_i)$.  \label{priproof} } If we define $\pi_i=\sum_j\dyad{\xi_j},$
+then it is easy to see that
+$$P(r_i)=\ev*{\pi_i}{\Psi_i}.$$
+Turning to the calculation of $P(q(\tau), r_i)$, note that for the Tomogana-Schwinger formulation of relativistic quantum physics, the operators $\hat{T}_S(x)$ and $\hat{T}^{\mu\nu}(y)$ for fixed $\mu,\nu$ commute when $x$ and $y$ are spacelike separated. It therefore follows that we can express any state of $H_{S_i}$ as a superposition of simultaneous eigenstates of $\hat{T}^{\mu\nu}(y)$ and $\hat{T}_S(x)$ for $x\in S_i\cap S$.\footnote{cf. page \pageref{simultaneous} and footnote \ref{glosssim}.}  For a particular choice of $\mu,\nu$, we can then form an orthonormal basis $\{\ket{\eta_j}:j\}$ of $H_{S_i}$ consisting of simultaneous $\hat{T}^{\mu\nu}(y)$, $\hat{T}_S(x)$-eigenstates so that $\hat{T}^{\mu\nu}(y)\ket{\eta_j}=\tau^{(j)}\ket{\eta_j}$ and $\hat{T}_{S}(x)\ket{\eta_j}=\tau_S^{(j)}(x)\ket{\eta_j}$ for $x\in S_i\cap S$, where $\tau^{(j)}$ and $\tau_S^{(j)}(x)$ are the corresponding eigenstates. If we define  $\pi_{i,\tau}=\sum_j\dyad{\chi_{j,\tau}}$ where $\{\ket{\chi_{j,\tau}}:j\}$ is the subset of $\{\ket{\eta_j}:j\}$ such that $\hat{T}^{\mu\nu}(y)\ket{\chi_{j,\tau}}=\tau\ket{\chi_{j,\tau}}$ and $\hat{T}_S(x)\ket{\chi_{j,\tau}}=\tau_S(x)\ket{\chi_{j,\tau}}$ for all $x\in S_i\cap S$, then 
+\begin{equation}\label{pqtauri}
+P(q(\tau), r_i)=\sum_j \abs{ \ip{\chi_{j,\tau}}{\Psi_i}}^2=\ev*{\pi_{i,\tau}}{\Psi_i}.\protect\footnotemark
+\end{equation}
+\footnotetext{The proof of this is very similar to the proof given in footnote \ref{priproof}.}
+But if we define $\pi_\tau=\sum_j\dyad{\eta_{j,\tau}}$ where $\{\ket{\eta_{j,\tau}}:j\}$ is the subset of  $\{\ket{\eta_j}:j\}$ with $\hat{T}^{\mu\nu}(y)\ket{\eta_{j,\tau}}=\tau\ket{\eta_{j,\tau}}$, then we also have  $\pi_{i,\tau}=\pi_i\pi_\tau$.\footnote{To see why, 
+we first show that $\pi_i=\sum_j\dyad{\eta_{i,j}}$ where $\{\eta_{i,j}:j\}$ is the subset of $\{\eta_j:j\}$  for which $\ket{\eta_{i,j}}\in H_{S_i,\tau_S}$. 
+To see why this holds, note that $\pi_i\ket{\eta_{i,j}}=\ket{\eta_{i,j}}$    since $\{\ket{\xi_j}:j\}$ is a basis for $H_{S_i,\tau_S}$ and $\ket{\eta_{i,j}}\in H_{S_i,\tau_S}$. 
+Therefore $\pi_i\pi_{i,\eta}=\pi_{i,\eta}$  where  $\pi_{i,\eta}=\sum_j\dyad{\eta_{i,j}}$. 
+But  $\pi_{i,\eta}\ket{\xi_j}=\ket{\xi_j}$ since $\{\ket{\eta_{i,j}}:j\}$ is a basis for $H_{S_i,\tau_S}$ and $\ket{\xi_j}\in H_{S_i,\tau_S}$. 
+Therefore $\pi_{i,\eta}\pi_i=\pi_i.$ But $\pi_{i,\eta}\pi_i= \pi_i\pi_{i,\eta}$ since $\pi_i$ and $\pi_{i,\eta}$ are Hermitian. Hence $\pi_i= \pi_{i,\eta}$.
+
+Now the summands of $\pi_i\pi_\tau$ are only going to consist of those $\dyad{\eta_j}$ for which $\hat{T}^{\mu\nu}(y)\ket{\eta_j}=\tau\ket{\eta_j}$ and for which $\hat{T}_S(x)\ket{\eta_j}=\tau_S(x)\ket{\eta_j}$ for all $x\in S_i\cap S$, and these are just the $\dyad*{\chi_{j,\tau}}$ which are the summands of  $\pi_{i,\tau}$. Hence  $\pi_i\pi_\tau=\pi_{i,\tau}.$} 
+  Hence
+\begin{equation}\label{pqtauri2}
+P(q(\tau), r_i)=\ev*{\pi_i\pi_\tau}{\Psi_i}.
+\end{equation}
+But clearly $\hat{T}^{\mu\nu}(y)=\sum_\tau \tau \pi_\tau.$ Therefore combining (\ref{beable1}) and (\ref{pqtauri2}), we have 
+\begin{equation}\label{kentconsistency0}
+\ev*{T^{\mu\nu}(y)}_{\tau_S}=\lim_{i\rightarrow\infty}\frac{\sum_\tau \ev*{\pi_i\pi_\tau}{\Psi_i}\tau}{\ev*{\pi_i}{\Psi_i}}=\lim_{i\rightarrow\infty}\frac{\ev*{\pi_i\hat{T}^{\mu\nu}(y)}{\Psi_i}}{\ev*{\pi_i}{\Psi_i}}.
+\end{equation}
+We are now in a position to show that Kent's theory is consistent with standard quantum orthodoxy. First let us consider what we need to show. 
+
+In the pilot-wave interpretation, its consistency with standard quantum orthodoxy requires that if one averages the expectation values of an observable over the hidden variables (i.e. the positions and the momenta of all the particles) then one obtains the expectation value of the observable given by standard quantum orthodoxy as indicated in equation (\ref{bohmconsistency}). 
+
+Now in Kent's interpretation, the hidden variables on which Kent's beables $\ev*{T^{\mu\nu}(y)}_{\tau_S}$ are the values $\tau_S(x)$ of $T_S(x)$ for $x\in S^1(y)\cap S$. The operator $\pi_i$ in equation (in the limit as $i\rightarrow\infty$) encapsulates this hidden information. To remind ourselves of $\pi_i$'s dependency on $\tau_S$ restricted to $S_i\cap S$, we will now write $\pi_i(\tau_{S_i\cap S})$ for $\pi_i$ where $\tau_{S_i\cap S}$ is the function $\tau_S$ restricted to $S_i\cap S$. Likewise, we will now write  $r_i(\tau_{S_i\cap S})$ for $r_i$, the statement that $T_S(x)=\tau_S(x)$ for all $x\in S_i(y)\cap S$. If we let $j$ index all possible functions $\tau^{(j)}_{S_i\cap S}$ taking real values on $S_i\cap S$, then the analogue of (\ref{bohmconsistency}) requires us to show that 
+\begin{equation}\label{kentconsistency}
+\ev*{\hat{T}^{\mu\nu}(y)}=\lim_{i\rightarrow\infty}\sum_{j}P\big(r_i(\tau^{(j)}_{S_i\cap S})\big)\ev*{T^{\mu\nu}(y)}_{\tau_S}
+\end{equation}
+for all $y$ lying between $S_0$ and $S$. Equation (\ref{kentconsistency}) is sufficient to establish consistency with quantum orthodoxy because ultimately, all observables are going to be reducible to expressions dependent on $\hat{T}^{\mu\nu}(y)$, since once we know what to expect for $\hat{T}^{\mu\nu}(y)$ we will know what to expect for the energy and momentum densities for all measuring apparatus readouts etc. and hence what to expect for all measurement outcomes. But from (\ref{kentconsistency0}), we have 
+\begin{equation}\label{kentconsistency1}
+\lim_{i\rightarrow\infty}\sum_jP\big(r_i(\tau^{(j)}_{S_i\cap S})\big)\ev*{T^{\mu\nu}(y)}_{\tau^{(j)}_{S_i\cap S}}=\lim_{i\rightarrow\infty}\sum_{j}{\ev*{\pi_{i}(\tau^{(j)}_{S_i\cap S})\hat{T}^{\mu\nu}(y)}{\Psi_i}}
+\end{equation}
+Since there is an orthonormal basis $\{\ket{\eta_j}:j\}$ of $H_{S_i}$ consisting of simultaneous $\hat{T}_S(x)$-eigenstates so that $\hat{T}_S(x)\ket{\eta_j}=\tau^{(j)}_{S_i\cap S}(x)\ket{\eta_j}$ for all $x\in S_i\cap S$, it follows that $\sum_j \pi_{i}(\tau^{(j)}_{S_i\cap S})=I$. Therefore equation (\ref{kentconsistency}) follows from (\ref{kentconsistency1}) which is what we were aiming to show for orthodox quantum consistency to hold.
+\subsection{Parameter Independence in Kent's interpretation}
+
+\subsection{Kent's interpretation and the Colbeck Renner theorem}
+
+\subsection{Kent's interpretation and Lorentz Invariance\label{massenergydensity}}
+In order to explain what it means for Kent's interpretation to be compatible with Special Relativity, we first need to explain how spacetime coordinates look to different observers. 
+
+A spacetime location is represented by a four-tuples $(x^0, x^1, x^2, x^3)$ where $(x^i)_{i=1}^3$ are spatial coordinates, and where $x^0=ct$ with $c$ being equal to the speed of light and $t$ being the time. If $(1,0,0,0)$ corresponds to the spacetime location $\hat{e}_0$, $(0,1,0,0)$ corresponds to the spacetime location $\hat{e}_1$, etc., then we can express any other spacetime location  as a sum $\sum_{\mu=0}^3x^\mu\hat{e}_\mu$. We will use the so-called Einstein convention of dropping the summation sign and implicitly assume there is a summation whenever an upper index and a lower index are the same so that we can write $x^\mu\hat{e}_\mu$ instead of $\sum_{\mu=0}^3x^\mu\hat{e}_\mu$.  
+
+Now suppose an observer $O$ expresses spacetime locations in terms of $\{\hat{e}_\mu\}_{\mu=0}^3$ and hence uses the coordinates $(x^0, x^1, x^2, x^3)$ to describe various spacetime locations. For another observer $O'$, it may be more natural to express spacetime locations in terms of a different set of spacetime locations $\{\hat{e'}_\mu\}_{\mu=0}^3$ so that the location described by $O$ as $(x^0, x^1, x^2, x^3)$ would be described by $O'$ as $({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ where ${x'}^\mu{\hat{e}'}_\mu=x^\mu\hat{e}_\mu$.  For instance if $O$ and $O'$ are moving with respect to each other, they may both want to use coordinates in which their own spatial coordinates are fixed and in which the spatial coordinates of the other observer are changing. As another example, figure \ref{rotfigure} shows how the $(x^1, x^2)$-coordinates transform under a spatial rotation. 
+
+
+\begin{figure}[ht!]
+\captionsetup{justification=justified}
+\centering
+\tikzmath{
+\textscale = 0.7;
+\picscale = 0.59;
+\circsize=3.5;
+\px=3;
+\py=3.5;
+\pr=sqrt(\px*\px+\py*\py);
+\th=33;
+\thd=atan(\py/\px)-\th;
+\pyd=\pr*sin(\thd);
+\pxd=\pr*cos(\thd);
+\rrange =7; 
+\labelx= \rrange/2;
+\labely=-0.3;
+\vr=3;
+\vth=75;
+\vx=\vr*cos(\vth);
+\vy=\vr*sin(\vth);
+\vxt=\vx+\px;
+\vyt=\vy+\py;
+\vrt=sqrt(\vxt*\vxt+\vyt*\vyt);
+\vthd=atan(\vyt/\vxt)-\th;
+\vxtd=\vrt*cos(\vthd);
+\vytd=\vrt*sin(\vthd);
+\vxd=\vr*cos(\vth-\th);
+\vyd=\vr*sin(\vth-\th);
+} 
+\begin{tikzpicture}[scale=\picscale] 
+    \draw[-latex] (0,0) -- (\rrange,0)  node[right,scale=\textscale, text width=5em] {$\hat{e}_1$};
+    \draw[-latex] (0,0) -- (0,\rrange)  node[right,scale=\textscale, text width=5em] {$\hat{e}_2$};
+    \draw[dotted, thick] (\px,0) --  (\px,\py) node[midway,right, scale=\textscale]{${x}^2$}; 
+     \draw[dotted, thick] (0,\py) --  (\px,\py)  node[midway,above, scale=\textscale]{${x}^1$};  
+
+    \begin{scope}[rotate=\th,draw=red, text=red]
+       \draw[-latex] (0,0) -- (\rrange,0)  node[right,scale=\textscale, text width=5em]  {$\hat{e}'_1$};
+   	   \draw[-latex] (0,0) -- (0,\rrange)  node[right,scale=\textscale, text width=5em] {$\hat{e}'_2$};
+   	   \draw[dotted, thick] (\pxd,0) --  (\pxd,\pyd) node[midway, above=4,right=1,scale=\textscale]{${x'}^2$}; 
+   	   \draw[dotted, thick] (0,\pyd) --  (\pxd,\pyd)  node[midway,above, scale=\textscale]{${x'}^1$};  
+    \end{scope}
+
+  \draw [black,fill] (\px,\py) circle [radius=\circsize pt] ;
+    
+    \coordinate[label = below: (a)]  (D) at (\labelx,\labely); 
+\end{tikzpicture}% pic 1
+\vspace*{2px}
+\caption{Shows how a location (marked as $\bullet$) can be expressed either  in coordinates $(x^1, x^2)$ with respect to the basis $\{\hat{e}_1,\hat{e}_2\}$ or in coordinates $({x'}^1,{x'}^2)$ with respect to the basis $\{\hat{e}'_1,\hat{e}'_2\}$.}\label{rotfigure}
+\end{figure}
+
+Now the key fact about all observer is that they must always observe light to have a constant speed $c$. Thus,  for a photon that goes through the spacetime locations $(0,0,0,0)$ and $(x^0, x^1, x^2, x^3)$ in the coordinates of $O$, we must have $(x^0, x^1, x^2, x^3)=(ct,tv^1,tv^2,tv^3)$ where 
+$$\sqrt{(v^1)^2 +(v^2)^2+(v^3)^2}=c.$$ But if $(0,0,0,0)$ and $(x^0, x^1, x^2, x^3)$ corresponds to $(0,0,0,0)$ and $({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ respecetively in the coordinates of another observer $O'$, then we must also have $({x'}^0, {x'}^1, {x'}^2, {x'}^3)=(ct',t'{v'}^1,t'{v'}^2,t'{v'}^3)$ where 
+$$\sqrt{({v'}^1)^2 +({v'}^2)^2+({v'}^3)^2}=c.$$ 
+In either case, we must have 
+\begin{equation}\label{invariant}
+(x^0)^2- (x^1)^2- (x^2)^2 - (x^3)^2=({x'}^0)^2- ({x'}^1)^2- ({x'}^2)^2 - ({x'}^3)^2=0.
+\end{equation}
+If we define $\eta_{00}=1$, $\eta_{ii}=-1$ for $i=1,2,3$ and $\eta_{\mu\nu}=0$ for $\mu\neq\nu$, then using the Einstein summation convention as well as the convention of lowering indices so that we define $x_\mu=\eta_{\mu\nu}x^\nu$, then (\ref{invariant}) is equivalent to 
+$$x_\mu x^\nu={x'}_\mu {x'}^\nu=0.$$ 
+Thus, for any coordinate transformation $x\rightarrow x'$ such that  $x_\mu x^\mu={x'}_\mu{x'}^\mu$,  if the speed of light is $c$ in the $x$-coordinates, then the speed of light is also guaranteed to be $c$ in the $x'$-coordinates.  A \textbf{Lorentz Transformatin} $\Lambda$ is any coordinate transformation of the form ${x'}^\mu=\Lambda\indices{^\mu_\nu}x^\nu$ such that $x_\mu x^\mu={x'}_\mu{x'}^\mu$. Since a Lorentz transformation must satisfy
+$$x_\mu x^\mu=\eta_{\mu\rho}\Lambda\indices{^\rho_\sigma}x^\sigma\Lambda\indices{^\mu_\nu}x^\nu$$
+for all $x$, it follows that  
+\begin{equation}\label{lorentztrans}
+\Lambda\indices{^\rho_\mu}\eta_{\rho\sigma}\Lambda\indices{^\sigma_\nu}=\eta_{\mu\nu}.\protect\footnotemark
+\end{equation}
+\footnotetext{To see why this is, note that if  $x_\mu x^\mu={x'}_\mu{x'}^\mu$ for all $x$, then putting for any other spacetime location $y$, we have $(x+y)_\mu (x+y)^\mu={(x'+y')}_\mu{(x'+y')}^\mu$. If we expand this out and cancel $x_\mu x^\mu$ with ${x'}_\mu{x'}^\mu$ and cancel $y_\mu y^\mu$ with ${y'}_\mu{y'}^\mu$, and using the fact that $y_\mu x^\mu=x_\mu y^\mu$, etc. we find that  $x_\mu y^\mu={x'}_\mu{y'}^\mu$ for all $x$ and $y$. Hence
+$$\eta_{\nu\mu}x^\mu y^\nu = x_\mu y^\mu=\eta_{\sigma\rho}\Lambda\indices{^\rho_\mu}\Lambda\indices{^\sigma_\nu}x^\mu y^\nu.$$  
+Since we can choose $x$ such that $x^\mu=1$ and $x^\alpha = 0$ for $\alpha\neq\mu$, and choose $y$ such that $y^\nu=1$ and $y^\beta=0$ for $\beta\neq\nu$. Then we get
+$$\eta_{\mu\nu} = \eta_{\sigma\rho}\Lambda\indices{^\rho_\mu}\Lambda\indices{^\sigma_\nu}, $$ and hence the result follows.}
+Having considered how the coordinates of a spacetime location viewed by one observers relate to the coordinates of the same spacetime location viewed by a different observer, we can now consider how physical quantities viewed by different observers relate to each other. The simplest kind of physical quantity is called a \textbf{scalar}. A scalar defined at a particular spacetime location has the same value no matter what frame of reference an observer uses. One example of a scalar is an object's \textbf{rest mass} which is the mass an object would have if it had no velocity. There is still a transformation rule for scalars since the spacetime location at which the scalar is measured is usually expressed in terms of an observer's coordinate system, and the coordinates of  such a location  will differ for different observers. Thus, if $\phi(x)\myeq\phi(x^0, x^1, x^2, x^3)$ is the value of a scalar defined at the spacetime location $(x^0, x^1, x^2, x^3)$ as described by an observer $O$, then another observer $O'$ using a different set of coordinate $({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ to describe the location $(x^0, x^1, x^2, x^3)$ will describe this same scalar as $\phi'(x')\myeq\phi'({x'}^0, {x'}^1, {x'}^2, {x'}^3)$  where $\phi'(x')=\phi(x)$. Since $\phi'$ is just a function of the four numbers ${x'}^0, {x'}^1, {x'}^2,$ and ${x'}^3$, we can rename these numbers ${x}^0, {x}^1, {x}^2,$ and ${x}^3$, and then 
+\begin{equation}\label{lorentzscalar}
+\phi'(x)=\phi(\Lambda^{-1}x)
+\end{equation} 
+where $\Lambda$ is the inverse Lorentz transformation that takes $({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ to $(x^0, x^1, x^2, x^3)$. Thus, equation (\ref{lorentzscalar}) shows us how a scalar transforms under a Lorentz transformation $\Lambda$. 
+
+Many physical quantities, however, are not scalars and so will look different to different observers. For instance, the energy of an object has a kinetic component that depends on the velocity the object has relative to an observer. However, it turns out that if an observer $O$ considers an object's energy $E$ together with its three components of momentum $p^1, p^2$, and $p^3$ (in the directions $\hat{e}_1$, $\hat{e}_2$, and $\hat{e}_3$ respectively) to form the four-tuple $p\myeq(E/c, p^1, p^2, p^3)$ known as the object's \textbf{four-momentum}, then $p$ transforms in the same way as spacetime coordinates transform between different observers. In other words, a different observer $O'$ whose coordinates are given by ${x'}^\mu=\Lambda\indices{^\mu_\nu}x^\nu$ would observe the object's four-momentum to be ${p'}^\mu=\Lambda\indices{^\mu_\nu}p^\nu$.\footnote{In order for $p$ to transform in this way, we have to redefine what we mean by energy and momentum. In classical mechanics, the momentum of an object is the product of the object's mass and its velocity. In the context of special relativity, however, the four-momentum of an object is defined to the product of its rest mass $m_0$ and its \textbf{four-velocity} where the four velocity of an object is a four-tuple $(u^0, u^1, u^2, u^3)$ such that the object's velocity (in the classical sense) is the vector $(c \frac{u^1}{u^0}, c \frac{u^2}{u^0}, c\frac{u^3}{u^0})$ and such that $v_\mu v^\mu=c^2$. One can work out an object's four-velocity by first considering its four-velocity relative to an observer who is stationary relative to the object. In this case, the object's four-velocity will be $(c,0,0,0)$. Now suppose the observer is moving at a constant speed $v$ in the $\hat{e}_1$ direction towards the object. Then according to the  transformation rule for four-vectors, the corresponding four-velocity must now be $(u^0, u^1, u^2, u^3)$ with $u^\mu=\Lambda\indices{^\mu_0}c$ for some Lorentz transformation $\Lambda\indices{^\mu_\nu}$ such that $(c \frac{u^1}{u^0}, c \frac{u^2}{u^0}, c\frac{u^3}{u^0})=(-v,0,0)$. From this it follows that $u^2=u^3=0$. But in terms of the $\Lambda\indices{^\mu_\nu}$ components, we must also have $(c,0,0,0)\rightarrow(\Lambda{^0_0}c, \Lambda{^1_0}c, 0, 0)$. Hence, $ \Lambda{^1_0}=-{\Lambda{^0_0}v}/{c}$. It is conventional to define $\beta={v}/{c}$ and $\gamma=\Lambda{^0_0}$ so that   $ \Lambda{^1_0}=-\gamma\beta$. Moreover, since $u_0u^0-u_1u^1=c^2$, we must also have $(\gamma c)^2-(\gamma \beta c )^2=c^2$ from which it follows that $\gamma=\frac{1}{\sqrt{1-\beta^2}}.$ Thus, in the case of an object moving with velocity $(-v,0,0)$, its four-velocity will be $(\gamma c, -\gamma \beta c,0,0)=(\gamma c, -\gamma v,0,0)$. Without loss of generality, we therefore see that in the case of an object moving with velocity $(v^1, v^2, v^3)$, then its four-velocity must be $\gamma(c,v^1,v^2,v^3)$  where 
+ $\gamma=\frac{1}{\sqrt{1-\beta^2}}$ and $\beta=v/c=\sqrt{({v}^1)^2+({v}^2)^2+({v}^3)^2}/c$. Hence, the object's four-momentum will be $\gamma m_0(c,v^1,v^2,v^3).$ If the objects velocity is very small compared to the speed of light, then $\gamma\approx 1+\frac{v^2}{2c^2}$, and hence the objects four-momentum $(E/c, p^1, p^2, p^3)$ will be approximately $(m_0c+\frac{1}{2}m_0{v^2}/c, m_0v^1,m_0v^2,m_0v^3)$. Therefore, $(p^1, p^2, p^3)$ is approximately equal to the classical momentum. However, the energy is now $E=m_0c^2+\frac{1}{2}m_0{v^2}$. Thus, in addition to the kinetic energy term $\frac{1}{2}m_0{v^2}$, there is a rest mass energy $m_0c^2$. If we define the \textbf{relativistic mass} $m=\gamma m_0$, then we obtain Einstein's famous forumla $E=mc^2$.  } More generally, any list of four physical quantities $(\varphi^0, \varphi^1, \varphi^2, \varphi^3)$ that transforms as $\varphi\rightarrow\varphi'$ with  ${\varphi'}^\mu=\Lambda\indices{^\mu_\nu}\varphi^\nu$ is called a \textbf{four-vector}. Figure \ref{rotfigure} shows how (two of) the components of a four-vector $\varphi$ at a particular location will differ for different observers under a spatial rotation of the coordinates. A four-vector $\varphi^\mu(x)$ defined at at every spacetime location $x$ is called a \textbf{vector field}, and if $O$ observers this vector-field $\varphi^\mu(x)$, and $O'$ is another observer whose coordinates are related to the coordinates $O$ via the Lorentz transformation $\Lambda$, then $O'$ will describe this vector-field as ${\varphi'}^\mu(x')\myeq\Lambda\indices{^\mu_\nu}\varphi^\nu(x).$ Hence under the Lorentz transformation $\Lambda$, ${\varphi}^\mu\rightarrow {\varphi'}^\mu$ where
+\begin{equation}\label{lorentzvector}
+{\varphi'}^\mu(x)=\Lambda\indices{^\mu_\nu}\varphi^\nu(\Lambda^{-1}x).
+\end{equation} 
+
+
+\begin{figure}[ht!]
+\captionsetup{justification=justified}
+\centering
+\tikzmath{
+\textscale = 0.7;
+\picscale = 0.59;
+\circsize=3.5;
+\px=3;
+\py=3.5;
+\pr=sqrt(\px*\px+\py*\py);
+\th=33;
+\thd=atan(\py/\px)-\th;
+\pyd=\pr*sin(\thd);
+\pxd=\pr*cos(\thd);
+\rrange =7; 
+\labelx= \rrange/2;
+\labely=-0.3;
+\vr=3;
+\vth=75;
+\vx=\vr*cos(\vth);
+\vy=\vr*sin(\vth);
+\vxt=\vx+\px;
+\vyt=\vy+\py;
+\vrt=sqrt(\vxt*\vxt+\vyt*\vyt);
+\vthd=atan(\vyt/\vxt)-\th;
+\vxtd=\vrt*cos(\vthd);
+\vytd=\vrt*sin(\vthd);
+\vxd=\vr*cos(\vth-\th);
+\vyd=\vr*sin(\vth-\th);
+} 
+\begin{tikzpicture}[scale=\picscale ] 
+    \draw[-latex] (0,0) -- (\rrange,0)  node[right,scale=\textscale, text width=5em] {$\hat{e}_1$};
+    \draw[-latex] (0,0) -- (0,\rrange)  node[right,scale=\textscale, text width=5em] {$\hat{e}_2$};
+    \draw[dotted, thick] (\px,0) --  (\px,\py) node[midway,right, scale=\textscale]{${x}^2$}; 
+    \draw[dotted, thick] (0,\py) --  (\px,\py)  node[midway,above, scale=\textscale]{${x}^1$};  
+    
+    \draw[-latex] (\px,\py)  -- (\px+\vx,\py+\vy)  node[right=22,above=-4,scale=\textscale, text width=5em] {${\varphi}$};
+    \draw[dotted, thick] (\px,\py) --  (\px,\py+\vy) node[midway,left, scale=\textscale]{${\varphi}^2$}; 
+    \draw[dotted, thick] (\px,\py+\vy) --  (\px+\vx,\py+\vy) node[midway,above, scale=\textscale]{${\varphi}^1$};  
+
+    \begin{scope}[rotate=\th,draw=red, text=red]
+       \draw[-latex] (0,0) -- (\rrange,0)  node[right,scale=\textscale, text width=5em]  {$\hat{e}'_1$};
+   	   \draw[-latex] (0,0) -- (0,\rrange)  node[right,scale=\textscale, text width=5em] {$\hat{e}'_2$};
+    \draw[dotted, thick] (\pxd,\pyd) --  (\vxtd,\pyd) node[midway,right=3,below=-3, scale=\textscale]{${\varphi'}^1$}; 
+    \draw[dotted, thick] (\vxtd,\pyd) --  (\vxtd,\vytd) node[midway,right=6,above=-4, scale=\textscale]{${\varphi'}^2$};  
+    \end{scope}
+
+  \draw [black,fill] (\px,\py) circle [radius=\circsize pt];    
+    \coordinate[label = below: (b)]  (D) at (\labelx,\labely); 
+\end{tikzpicture}% pic 1
+\vspace*{2px}
+\caption{Shows how a four-vector ${\varphi}$ (of which only two components are shown) defined at a spacetime location (indicated by $\bullet$) can be expressed either as $(\varphi^1, \varphi^2)$ with respect to the basis $\{\hat{e}_1,\hat{e}_2\}$ or as $({\varphi'}^1,{\varphi'}^2)$ with respect to the basis $\{\hat{e}'_1,\hat{e}'_2\}$.}\label{rotfigure2}
+\end{figure}
+If $\varphi^\mu$ is a four-vector, then we refer to $\varphi_\mu\myeq\eta_{\mu\nu}\varphi^\nu$ as a \textbf{four-covector}. To see how covectors transform under a Lorentz transformation $\Lambda$, it will be helpful to define $\Lambda\indices{_\mu^\nu}\myeq\eta_{\mu\rho}\eta^{\nu\sigma}\Lambda\indices{^\rho_\sigma}$ where $\eta^{\nu\sigma}=\eta_{\nu\sigma}$. If we also define the \textbf{Kronecker-delta} $\delta^\nu_\mu$ such $\delta^\nu_\mu=1$ when $\mu=\nu$ and $\delta^\nu_\mu=0$ otherwise. Then using the fact that $\eta_{\mu\rho}\eta^{\nu\rho}=\delta^\nu_\mu$ together with equation (\ref{lorentztrans}), we have 
+\begin{equation}\label{lambdainverse}
+\Lambda\indices{^\rho_\mu}\Lambda\indices{_\rho^\nu}=\delta^\nu_\mu.
+\end{equation}
+By definition, the inverse of $\Lambda^{-1}$ satisfies 
+$(\Lambda^{-1})\indices{^\nu_\rho}\Lambda\indices{^\rho_\mu}=\delta^\nu_\mu,$
+so we have $(\Lambda^{-1})\indices{^\nu_\rho}=\Lambda\indices{_\rho^\nu}.$  From (\ref{lorentztrans}), we see that under a Lorentz transformation $\Lambda$, $\varphi_\mu\rightarrow\varphi'_\mu$
+where
+\begin{equation}\label{lorentzcovector}
+\varphi'_\mu(x)=\Lambda\indices{_\mu^\nu}\varphi_\nu(\Lambda^{-1}x)
+\end{equation}
+ 
+
+Besides scalars, vectors, and covectors we also need to consider physical quantities called rank two tensors. The stress-energy tensor $T^{\mu\nu}$ mentioned on page \ref{stressenergy} is an example of a rank two tensor. The defining property of a rank two tensor $\varphi^{\mu\nu}(x)$ is that under a Lorentz transformation $\Lambda$, $\varphi^{\mu\nu}\rightarrow{\varphi'}^{\mu\nu}$ where
+\begin{equation}\label{lorentztensor}
+{\varphi'}^{\mu\nu}(x)=\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}\varphi^{\rho\sigma}(\Lambda^{-1}x).
+\end{equation}
+On page \pageref{massenergydensity}, we introduced the mass-energy density $T_S(x)$ on a hypersurface $S$. As explained in section \ref{massenergydensity}, the values of $T_S(x)$ are the additional values that Kent uses to supplement standard quantum orthodoxy.  It was mentioned in passing that $T_S(x)$ does not depend on which frame of reference one is in. In other words, $T_S(x)$ is a scalar. I will now explain why this is so. 
+
+We first need to consider the precise definition of $T_S(x)$. At each spacetime location on the hypersurface $S$ which an observer $O$ describes as having coordinates $x=(x^\mu)_{\mu=0}^3$, we define  $\eta^\mu(x)$ to be the future-directed  unit four-vector at $x$ that is orthogonal to $S$. In other words, $\eta^0(x)>0$, $\eta_\mu(x)\eta^\mu(x)=1$, and if $y\in S$ is very close to $x$, then $\frac{(x-y)_\mu\eta^\mu(x)}{\sqrt{(x-y)_\nu(x-y)^\nu}}\approx 0.$  $T_S(x)$ is then given by the formula 
+\begin{equation}\label{TSdef}
+T_S(x)=T^{\mu\nu}(x)\eta_{\mu}(x)\eta_{\nu}(x).
+\end{equation}
+For example, if $S$ was the hypersurface consisting of all spacetime locations $(0,x^1,x^2,x^3)$, then $\big(\eta^{0}(x),\eta^{1}(x),\eta^{3}(x),\eta^{3}(x)\big) =(1,0,0,0),$ and hence $T_S(x)=T^{00}(x)$ which is the density of relativistic mass at $x$, i.e. the energy density at $x$ divided by $c^2$. 
+
+Let us now show that $T_S(x)$ is a scalar. So suppose that $\Lambda$ is a Lorentz transformation such that $\Lambda\indices{^0_\mu}\eta^\mu>0$ for any future-directed  unit four-vector vector $\eta^\mu$. We refer to a $\Lambda$ with this property as a \textbf{orthochronous} Lorentz transformation. Also suppose that $O$ and $O'$ are two observers such that spacetime locations that observer $O$ describes as having coordinates $x=(x^\mu)_{\mu=0}^3$ are described by $O'$ as having coordinates $x'=(\Lambda\indices{^\mu_\nu}x^\nu)_{\mu=0}^3$. Then since ${x'}_\mu{y'}^\mu= x_\mu y^\mu$, it follows that the future-directed unit four-vector orthogonal to $S$ at $x$ which $O$ describes as $\eta^\mu(x)$ will be described by $O'$ as  ${\eta'}^\mu(x')=\Lambda\indices{^\mu_\nu}\eta^\nu(x)$. Thus, for any location in $S$ that $O'$ describes as having coordinates $x'$ with corresponding  future-directed $S$-orthogonal unit four-vector ${\eta'}^\mu(x')$, $O'$ can construct a function $T'_S(x')$  with 
+\begin{equation}\label{TSprimedef}
+T'_S(x')=T'^{\mu\nu}(x')\eta'_{\mu}(x')\eta'_{\nu}(x').
+\end{equation}
+Then using (\ref{lorentzvector}), (\ref{lorentzcovector}) and (\ref{lorentztensor}) on the right hand side of (\ref{TSprimedef}),  we have
+\begin{equation}\label{invariantTS1}
+\begin{split}
+T'_S(x')&=\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}T^{\rho\sigma}(x)\Lambda\indices{_\mu^\alpha}\eta_{\alpha}(x)\Lambda\indices{_\nu^\beta}\eta_{\beta}(x)\\
+&=\Lambda\indices{^\mu_\rho}\Lambda\indices{_\mu^\alpha} \Lambda\indices{^\nu_\sigma}\Lambda\indices{_\nu^\beta}T^{\rho\sigma}(x)\eta_{\alpha}(x)\eta_{\beta}(x)\\
+&=\delta^\alpha_\rho\delta^\beta_\sigma T^{\rho\sigma}(x)\eta_{\alpha}(x)\eta_{\beta}(x)\\
+&=T^{\alpha\beta}(x)\eta_{\alpha}(x)\eta_{\beta}(x)\\
+&=T_S(x)
+\end{split}
+\end{equation}
+where on the third line we have used (\ref{lambdainverse}) and on the last line we have used (\ref{TSdef}). To obtain (\ref{invariantTS1}), we assumed that $\Lambda$ is orthochronous, but if $\Lambda$ is non-orthochronous, we would need to take the negations of ${\eta'}^\mu(x')$ to get the future-directed $S$-orthogonal unit four-vector. But clearly this will not affect the equality in (\ref{invariantTS1}), so (\ref{invariantTS1}) holds for all Lorentz transformation, whether they are orthochronous or non-orthochronous.  We thus see that   $T_S(x)$ is a scalar.
+
+Let us now consider the Hilbert space $H_{S_i}$ as defined on page \pageref{HSidef} for a hypersurface $S_i$. Two observers $O$ and $O'$ will typically assign different physical states to $S_i$ based on their frame of reference. E.g. if $O$ and $O'$ are traveling at different speeds, they will attribute different energy levels and momenta to to the spacetime locations of $S_i$. For the Lorentz transformation that relates the coodinates of $O'$ to the coordinates of $O$, i.e. $x'=\Lambda x$,  there  will then be a unitary operator $U(\Lambda):H_{S_i}\rightarrow H_{S_i}$ such that if
+$O$ observes  $S_i$ to be in state $\ket{\psi_i}\in H_{S_i}$, then $O'$ will observe $S_i$ to be in state $U(\Lambda)\ket{\psi_i}$. Also, if $\hat{T}^{\mu\nu}(x)$ is the observable whose eigenstates with eigenvalues $\tau$ are the states of $S_i$ for which $O$ observes the stress-energy tensor $T^{\mu\nu}(x)$ to take the value $\tau$ at $x$, then 
+\begin{equation}\label{TUrelation}
+U(\Lambda)^{-1}\hat{T}^{\mu\nu}(x)U(\Lambda)=\Lambda\indices{^\mu_\rho}\Lambda{^\nu_\sigma}\hat{T}^{\rho\sigma}(\Lambda^{-1}x).
+\end{equation}
+We insist on this identity because it makes it the case that  $\hat{T}^{\mu\nu}(x')$ will be the observable whose eigenstates with eigenvalues $\tau'$ are the states of $S_i$ for which $O'$ observes the stress-energy tensor $T^{\prime\mu\nu}(x')$ to take the value $\tau'$ at $x'$.
+
+We also insist that $U(\Lambda)$ is unitary because this means that if $O$ calculates the probability $S_i$ transitions from state $\ket{\psi_i}$ to state $\ket{\chi_i}$ , then $O'$ would calculate the same probability for the corresponding transition from the state $\ket{\psi_i'}=U(\Lambda)\ket{\psi_i}$ to state $\ket{\chi_i'}=U(\Lambda)\ket{\chi_i}$\footnote{This follows from (\ref{unitarycond}) which implies 
+$\abs{\ip{\chi'_i}{\psi'_i}}^2=\abs{\ip{\chi_i}{\psi_i}}^2$, together with the Born rule given on page \pageref{bornrule}.}
+
+Now in order to show that Kent's model is consistent with special relativity, we need to show that (\ref{kentconsistency0}) defines a rank 2 tensor. In other words, if $\{\ket{\xi_j}\}_{j=1}^\infty$ is an orthonormal basis of the Hilbert space of states $H_{S_i,\tau_S}$ for which $O$ observes $T_S(x)$ to be $\tau_S(x)$ for all $x\in S_i(y)\cap S$, and if $\{\ket{\xi_j'}\}_{j=1}^\infty$ is an orthonormal basis of the Hilbert space of states $H_{S_i,\tau_S'}$ for which $O'$ observes $T'_S(x')$ to be $\tau'_S(x')$ for all $x'\in S_i(y')\cap S$, then
+\begin{equation}\label{kentlorentz}
+\lim_{i\rightarrow\infty}\frac{\ev{\pi_i'\hat{T}^{\mu\nu}(y')}{\Psi_i'}}{\ev{\pi_i'}{\Psi_i'}}=\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma} \lim_{i\rightarrow\infty}\frac{\ev{\pi_i\hat{T}^{\rho\sigma}(y)}{\Psi_i}}{\ev{\pi_i}{\Psi_i}}
+\end{equation}
+where $\pi_i=\sum_j\dyad{\xi_j}$, $\pi_i'=\sum_j\dyad{\xi_j'}$, and $\ket{\Psi_i'}=U(\Lambda)\ket{\Psi_i}$. To see why (\ref{kentlorentz}) holds, we first recall that $\pi_i'$ will be independent of which orthonormal basis we choose for $H_{S_i,\tau_S'}$.\footnote{We showed this was the case for $\pi_i$ in footnote \ref{priproof} on page \pageref{priproof}.} Therefore, if we can show that $\{\ket{\xi_j'}\myeq U(\Lambda)\ket{\xi_j}\}_{j=1}^\infty$ is an orthonormal basis of $H_{S_i,\tau_S'}$, it will follow that $\pi_i'=U(\Lambda)\pi_iU(\Lambda)^{-1}$. 
+
+That the elements of $\{U(\Lambda)\ket{\xi_j}\}_{j=1}^\infty$ are orthonormal follows from the unitarity of $U(\Lambda)$ together with the orthormality of  $\{\ket{\xi_j}\}_{j=1}^\infty$.  Since $\hat{T}^{\mu\nu}(x')$ is the observable whose eigenstates with eigenvalue $\tau'$ are the states of $S_i(y')$ for which $O'$ observes the stress-energy tensor $T^{\prime\mu\nu}(x')$ to take the value $\tau'$ at $x'$, it follows that $\hat{T}'_S(x')\myeq\eta_\mu'(x')\eta_\nu'(x')\hat{T}^{\mu\nu}(x')$ will be the observable whose eigenstates with eigenvalue $\tau'_S$ are the states of $S_i(y')$ for which $O'$ observes $T'_S(x')$ to take the value $\tau'_S$ at $x'$, where as usual, $\eta^{\prime\mu}(x')$ is the unit four-vector orthogonal to $S_i(y')$ at $x'$. Now if $x'\in S_i(y')\cap S$, then $x=\Lambda^{-1}x'\in S_i(y)\cap S$. Using the same calculation as in (\ref{invariantTS1}) together with (\ref{lorentzcovector}), we have
+\begin{equation}\label{TSLambda}
+\begin{split}
+\hat{T}_S(x)&=\eta_\mu(x)\eta_\nu(x)\hat{T}^{\mu\nu}(x)\\
+&=\eta_{\mu}'(x')\eta_{\nu}'(x') \Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}\hat{T}^{\rho\sigma}(x)
+\end{split}
+\end{equation}
+Using (\ref{TSLambda}) together with (\ref{TUrelation}), we therefore have
+\begin{equation}\label{TSU}
+\begin{split}
+\hat{T}_S(x)U(\Lambda)^{-1}&=\eta_{\mu}'(x')\eta_{\nu}'(x')\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}\hat{T}^{\rho\sigma}(x)U(\Lambda)^{-1}\\
+&=U(\Lambda)^{-1} \eta_{\mu}'(x')\eta_{\nu}'(x')\hat{T}^{\mu\nu}(x')\\
+&=U(\Lambda)^{-1} \hat{T}_S'(x').
+\end{split}
+\end{equation}
+Now suppose that $\ket{\xi'}$ is a state for which $O'$ observes $T'_S(x')$ to be $\tau_S(x')$ for all $x'\in S_i(y')\cap S$. Then $\hat{T}_S'(x')\ket{\xi'}=\tau_S'(x'),$ and so by (\ref{TSU}), 
+\begin{equation}\label{TSUxi}
+\begin{split}
+\hat{T}_S(x)U(\Lambda)^{-1}\ket{\xi'}&= U(\Lambda)^{-1} \hat{T}_S'(x')\ket{\xi'}\\
+&=\tau_S'(x')U(\Lambda)^{-1}\ket{\xi'}\\
+&=\tau_S(x)U(\Lambda)^{-1}\ket{\xi'}
+\end{split}
+\end{equation}
+where on the last line we have used the fact that $T_S(x)$ is a scalar. Therefore, $U(\Lambda)^{-1}\ket{\xi'}$ can be expressed as a linear combination of basis elements $\{\ket{\xi_j}\}_{j=1}^\infty$, and hence  $\ket{\xi'}$ is can be expressed as a linear combination of $\{U(\Lambda)\ket{\xi_j}\}_{j=1}^\infty$. From (\ref{TSU}) we also see that  $U(\Lambda)\hat{T}_S(x)=\hat{T}_S'(x')U(\Lambda)$, so
+$$
+\hat{T}_S'(x')U(\Lambda)\ket{\xi_j}=U(\Lambda)\hat{T}_S(x)\ket{\xi_j}=\tau_S(x)U(\Lambda)\ket{\xi_j}=\tau_S'(x')U(\Lambda)\ket{\xi_j}
+$$
+for all $x'\in S_i(y')\cap S$. 
+Therefore $\{\ket{\xi_j'}\myeq U(\Lambda)\ket{\xi_j}\}_{j=1}^\infty$ is an orthonormal basis of $H_{S_i,\tau_S'}$, and from this it follows that $\pi_i'=U(\Lambda)\pi_iU(\Lambda)^{-1}$. Therefore
+\begin{equation}\label{kentlorentz2}
+\begin{split}
+\frac{\ev{\pi_i'\hat{T}^{\mu\nu}(y')}{\Psi_i'}}{\ev{\pi_i'}{\Psi_i'}}&=\frac{\ev{U(\Lambda)^{-1}U(\Lambda)\pi_iU(\Lambda)^{-1}\hat{T}^{\mu\nu}(y')U(\Lambda)}{\Psi_i}}{\ev{U(\Lambda)^{-1}U(\Lambda)\pi_i U(\Lambda)^{-1}U(\Lambda)}{\Psi_i}}\\
+&=\frac{\ev{\pi_iU(\Lambda)^{-1}\hat{T}^{\mu\nu}(y')U(\Lambda)}{\Psi_i}}{\ev{\pi_i}{\Psi_i}}\\
+&=\frac{\ev{\pi_i\Lambda\indices{^\mu_\rho}\Lambda{^\nu_\sigma}\hat{T}^{\rho\sigma}(y)}{\Psi_i}}{\ev{\pi_i }{\Psi_i}}
+\end{split}
+\end{equation}
+where on the last line we have used (\ref{TUrelation}). Thus, equation (\ref{kentlorentz}) holds, and hence Kent's model is consistent with special relativity.
+
+
+
+
+
+ 
+
+
+\subsection{Kent's Interpretation and Decoherence Theory}
+In section \ref{probOutcomes} we saw that decoherence theory by itself does not offer a solution to the problem of outcomes. In this section, we consider how the additional information in Kent's interpretation is sufficient to address this problem. We suppose that $y_1$ is an event between the two hypersurfaces $S_0$ and $S$, and we consider a hypersurface $S_i=S_i(y_1)$  in a sequence of hypersurfaces that each contain $y_1$ as described on page \pageref{siydef}. To simplify our description of $S_i$ we use a coarse-grained model so that $S_i$ is treated as a mesh of tiny cells labeled by a sequence $(y_k)_{k=1}^\infty$, and for each cell $y_k$ there is a Hilbert space $H_k$ describing the state of that cell.  For any $y_k$ we denote its spatial component as $z_k$ and its time component as $t_k$. Then we suppose that the state $\ket{\Psi_i}$ describing $S_i$ can be decomposed as
+\begin{equation}\label{Sistate}
+\ket{\Psi_i}=\Big(\sum_{j=1}^{J} c_j\ket{\xi_{1,j}}\prod_{l=1}^{N_j}\ket{\xi_{k_{l,j},j}}\Big)\Xi
+\end{equation}
+where $\ket{\xi_{1,j}}\in H_1$ are normalized stares with $\ip{\xi_{1,j}}{\xi_{1,j'}}=0$ for $j\neq j'$, where $\ket{\xi_{k_{l,j},j}}\in H_{k_{l,j}}$ are normalized states with all the $k_{l,j}$ for $l=1$ to $N_j$ being non-zero and unique for a particular $j$, and where $\Xi$ is the sum of states of the form $\prod_l\ket{\xi_{\kappa_l}}$ describing all the cells of $S_i$ not included in the set $\bigcup_j\bigcup_{l=1}^{N_j}\{k_{l,j}\}.$ We also assume each summand $c_j\ket{\xi_{1,j}}\prod_{l=1}^{N_j}\ket{\xi_{k_{l,j},j}}\Xi$ contains a state in each $H_k$ for every cell $k$ of $S_i$. In other words if $k$ does not belong to the set $\{k_{l,j}:l\}$ then $k$ belongs to the set $\{\kappa_l:l\}$. From this it follows that $\bigcup_{l=1}^{N_j}\{k_{l,j}\}=\bigcup_{l=1}^{N_j'}\{k_{l,j'}\}$ for any $j'\neq j$. We can therefore assume $N_j=N$ and $k_{l,j}=k_l$ are independent of $j$. We can thus rewrite (\ref{Sistate}) as
+\begin{equation}\label{Sistate2}
+\ket{\Psi_i}=\Big(\sum_{j=1}^{J} c_j\ket{\xi_{1,j}}\prod_{l=1}^{N}\ket{\xi_{k_{l},j}}\Big)\Xi
+\end{equation}
+  We also assume that $\Xi$ describes as much of $S_i$ as possible, so that there is no common factor $\ket{\xi}$ among all the elements of $\{\prod_{l=1}^{N}\ket{\xi_{k_{l},j}}:j\}$. Furthermore, we assume that the $k_l$ are appropriately ordered so that there is some $M$ such that $y_{k_l}\in S\cap S_i$ for $l\geq M$ and  $y_{k_l}\not\in S\cap S_i$  for $l<M$. Finally, we will assume that if $N=0$ then $J=1$, for otherwise we can add the different $\ket{\xi_{1,j}}$ to form a single state in $H_1$.
+
+To get a sense of the applicability of the decomposition (\ref{Sistate2}), we will consider a few different scenarios inspired by Kent's toy model, and in each scenario, we will use (\ref{Sistate2}) to calculate the partial trace enscapsulating all the information to calculate expectation values at different space-time locations. We thus suppose that a system is in a superposition $\psi_0^\text{sys} = c_1\psi_1^\text{sys}+c_2\psi_2^\text{sys}$ of two local states $\psi_1^\text{sys}$ and $\psi_2^\text{sys}$ where $\abs{c_1}^2+\abs{c_2}^2=1$ and that there is a photon coming in from the left that interacts with the system. Figure \ref{kentdeco1} depicts the hypersurface $S_i(y^a_1)$ for an event $y^a_1$ that occurs before the photon has interacted with the system.
+
+\begin{figure}[ht!]
+\captionsetup{justification=justified}
+\centering
+\tikzmath{
+\a=5.3;  
+\psione=0;
+\psitwo=1.5;
+\h=1;
+\labelx=(\psione+\psitwo)/2;
+\labely=-1.5;
+\phstartx=-1.7;
+\phstarty=\h;
+\tbeg=\phstarty;
+\ca=\phstartx-\tbeg;
+\ttwo=\psitwo-\ca;
+\cb=\ttwo+\ca;
+\xend=\ttwo-\a+\cb;
+\tone=\psione-\ca;
+\cc=\tone+\ca;
+\xendz=\tone-\a+\cc;
+\tthree=\cc+\tone-\psitwo;
+\circsize=0.08;
+\md = (\a+\h)/2;
+\tlen=0.75;
+\textscale = 0.7;
+\picscale = 0.89;
+\nudge=0.1;
+\tnudge=(\ttwo-\tone)/2+0.8;
+\ttesta=2*\tone-\ttwo-\tnudge;
+\ttestb=2*\tone-\ttwo+\tnudge;
+\ttestc=\ttwo-\tnudge;
+\ttestd=\ttwo+\tnudge;
+\sonea=\a+\psione-\ttesta;
+\sadd=0.5;
+\lrange = -(\psione-\a+\ttesta)+\sadd;
+\rrange =\lrange; 
+\timex=\rrange-1.5;
+\e = 0.4;
+\ttestx=2.4;
+\at=\a-\ttestx;
+\ct=\ttestx;
+\lam = 0.87;
+\e = 0.2;
+\hae=(2*pow(\at,3)*\lam*(2+\lam)+\e*\e*(2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam))-8*\at*\e*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam))-2*\at*\at*(2+\lam)*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam)))/(4*\at*\lam*(2*\at+2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam)))-(\e*\e/4+\at*\at*(-1+\lam))/(\at*\lam);
+\mmu=(\tone-\tbeg)/(\psione-\phstartx);
+\nnu=(\psione*\tbeg-\phstartx*\tone)/(\psione-\phstartx);
+} 
+\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw, inner sep=1pt]%
+\tikzstyle{scoresquare}=[draw,rectangle,minimum size=1mm,inner sep=0pt,outer sep=0pt]%
+\begin{tikzpicture}[scale=\picscale,
+declare function={
+	testxonep(\ps,\t)=\a+\ps-\t;
+	testxonem(\ps,\t)=\ps-\a+\t; 
+	xa(\m,\n)=(-\ct*\m+\e*\m+\m*\n-sqrt(\ct*\ct*\lam*\lam+\e*\e*\m*\m+2*\e*\lam*\lam*\n+\lam*\lam*\n*\n-2*\ct*\lam*\lam*(\e+\n)))/(\lam*\lam-\m*\m);
+	xb(\m,\n)=(-\ct*\m+\e*\m+\m*\n+sqrt(\ct*\ct*\lam*\lam+\e*\e*\m*\m+2*\e*\lam*\lam*\n+\lam*\lam*\n*\n-2*\ct*\lam*\lam*(\e+\n)))/(\lam*\lam-\m*\m);
+	bl(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x+\hae+\at,2)+\e*\e)-\e+\lam*(\x+\hae+\at));
+	br(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x-\hae-\at,2)+\e*\e)-\e-\lam*(\x-\hae-\at));
+	bc(\x)=\ct+sqrt(\lam*\lam*\x*\x+\e*\e)-\e;
+},
+ ] 
+\definecolor{tempcolor}{RGB}{250,190,0}
+\definecolor{darkgreen}{RGB}{40,190,40}
+
+\draw[->,blue, thick] [domain=-\at/2:-\lrange, samples=150]   plot (\x, {bl(\x)})  ;
+\draw[blue, thick] [domain=-\at/2:\at/2, samples=150] plot (\x, {bc(\x)})   ;
+\draw[->,blue, thick] [domain=\at/2:\rrange, samples=150]   plot (\x, {br(\x)})   ;
+ \node[scale=\textscale]  at (2.7,4.1) {$S_i(y^a_1)$}; 
+
+\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+              
+\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$z_1$}-- (\psione,\a) ;
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$z_2$}-- (\psitwo,\a);
+
+\draw[dashed, tempcolor,  thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tone) node[above, pos=0.3, rotate=45,scale=0.7,black] {} node[below, pos=0.3, rotate=45,scale=0.7,black] {};
+\draw[dashed, tempcolor](\psione,\tone) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo );
+\draw[dashed, tempcolor](\psitwo,\ttwo)--(\xend,\a); 
+\draw[dashed, tempcolor,  thick](\psione,\tone)--(\xendz,\a);
+
+
+
+%\draw[dashed, darkgreen, ultra thick](\psione,\tone)--(\psitwo,\tthree);
+%\draw [black,fill] (\psitwo,\tthree) circle [radius=\circsize] node [black,below=4,right,scale=\textscale] {$2t_1-t_2$}; 
+
+
+%\draw [black,fill] (\psione,\tone) circle [radius=\circsize] node [black,left=4,scale=\textscale] {$t_1$}; 
+%\draw [black,fill](\psitwo,\ttwo)circle [radius=\circsize] node [black,above right,scale=\textscale, align=left] {$t_2$}; 
+
+%\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\ttwo) --  (\psitwo+\nudge,\tone+\nudge/4) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+%\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\tone-\nudge/4) --  (\psitwo+\nudge,2*\tone-\ttwo) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+
+\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+ 
+\draw[dotted](\psione,\ttestx)--({testxonep(\psione,\ttestx)},\a);
+\draw[dotted](\psione,\ttestx)--({testxonem(\psione,\ttestx)},\a);
+%\draw [black,fill](\psione,\ttestx) circle [radius=\circsize] node [black,below=6,left,scale=\textscale] {$y^a_1$}; 
+\draw (\psione,\ttestx) node[ scoresquare, fill=gray]  {} node [black,below=6,right,scale=\textscale] {$y^a_1$};
+\draw (\psitwo, {bc(\psitwo)}) node[ scoresquare, fill=gray]  {} node [black,below=6,right,scale=\textscale] {$y^a_2$};
+\draw ({xa(\mmu,\nnu)}, {xa(\mmu,\nnu)*\mmu+\nnu}) node[ scoresquare, fill=white]  {} node [black,left=7,below=-4,scale=\textscale] {$y^a_3$};
+
+\draw[magenta,->,ultra thick] ({testxonem(\psione,\ttestx)},\a)--(-\lrange,\a);
+\draw[magenta,->,ultra thick] ({testxonep(\psione,\ttestx)},\a)--(\rrange,\a);
+%\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
+\end{tikzpicture}% pic 1
+
+\vspace*{2px}
+\caption{Depiction of a superposition of two local states at $z_1$ and $z_2$ before the photon has interacted with them. The gray squares indicate cells in $S^1(y^a_1)$ whose states are among the summands in (\ref{Sistate2}). The white square indicates a cell in $S_i(y^a_1)$ whose state is a factor in $\Xi$.}
+\label{kentdeco1}
+\end{figure}
+The gray squares correspond to the summands that appear in (\ref{Sistate2}). If the system were in the $\psi_1^\text{sys}$-state, then the state describing $S_i(y^a_1)$ would have a factor $\ket{\psi_1^\text{sys}}\in H_1$ indicating that there is a 
+non-zero mass at the $y^a_1$-cell, and there would also be a factor $\ket{0_2}\in H_2$ which we use to indicate that there is zero mass at $y^a_2$. 
+There is also an incoming photon at the $y^a_3$-cell, and so we use $\ket{\gamma_3}$ to indicate that there is a photon there.
+ Thus, if  the system  were in the $\psi_1^\text{sys}$-state, we would write the state of $S_i(y^a_1)$ 
+ as $\ket{\Psi_i}=\ket{\psi_1^\text{sys}}\ket{0_2}\ket{\gamma_3}\Xi'$ where $\Xi'$ is describes the states of all the other cells of $S_i(y^a_1)$. 
+ But on the other hand, if the system were in the state $\psi_2^\text{sys}$, then the state describing $S_i(y^a_1)$ would have a factor $\ket{\psi_2^\text{sys}}\in H_2$ 
+ indicating that there is a non-zero mass at the $y^a_2$-cell, and there would also be a factor $\ket{0_1}\in H_1$ which we use to indicate that there is zero mass at $y^a_1$,
+  and again the $y^a_3$-cell would be in the $\ket{\gamma_3}$, and every other cell would be described by  $\Xi'$  just as if the system had been in the $\psi_1^\text{sys}$-state. Therefore, when the system is in the state $\psi_2^\text{sys}$, we would write the state of $S_i(y^a_1)$ as $\ket{\Psi_i}=\ket{0_1}\ket{\psi_2^\text{sys}}\ket{\gamma_3}\Xi'$ 
+ But since the system is actually in a supposition $\psi_0^\text{sys} = c_1\psi_1^\text{sys}+c_2\psi_2^\text{sys}$, the state of $S_i(y^a_1)$ will be 
+ \begin{equation*}
+ \ket{\Psi_i}=\big(c_1\ket{\psi_1^\text{sys}}\ket{0_2}+c_2\ket{0_1}\ket{\psi_2^\text{sys}}\big)\ket{\gamma_3}\Xi'=\big(c_1\ket{\psi_1^\text{sys}}\ket{0_2}+c_2\ket{0_1}\ket{\psi_2^\text{sys}}\big)\Xi
+ \end{equation*}
+where we have absorbed the $\ket{\gamma_3}$-state into $\Xi$ (i.e. $\Xi= \ket{\gamma_3}\Xi'$).
+
+Now as it stands, the state $\ket{\Psi_i}$ describing $S_i(y^a_1)$ has a definite mass-energy density $\tau_S(x)$ for $x\in S_i(y^a_1)\cap S$. Thus if $\pi_i$ is the operator featuring in (\ref{kentconsistency0}) that corresponds to this definite mass-energy density, then $\pi_i\ket{\Psi_i}=\ket{\Psi_i}$. Therefore, equation (\ref{kentconsistency0}) for Kent's beables tells us that
+$$\ev*{T^{\mu\nu}(y^a_1)}_{\tau_S}=\ev*{\hat{T}^{\mu\nu}(y^a_1)}{\Psi_i}.$$ 
+where we have also used the fact that $\ip*{\Psi_i}{\Psi_i}=1.$
+
+Now as we saw in section \ref{decotheory}, if we are interested only in the expectation values of observables for a system $\mathcal{S}$ contained within a universe $\mathcal{U}=\mathcal{S}+\mathcal{E}$ then the information needed to do this can be encapsulated in the reduced density matrix for $\mathcal{S}$. Thus, if the universe is described by a state 
+$\ket{\Psi}=\sum_j c_j \ket{\psi_j}_\mathcal{S}\ket{E_j}$ with corresponding density matrix $\hat{\rho}=\dyad{\Psi}\in M(H_\mathcal{U})$, then the reduced density matrix $\hat{\rho}_\mathcal{S}\in M(H_\mathcal{S})$ is the operator that acts on the Hermitian operators of the state space $H_\mathcal{S}$ with the property that 
+\begin{equation}\tag{\ref{reducedev} revisited}
+\ev*{\hat{\Lambda}_\mathcal{U}}_\rho=\Tr_\mathcal{S}(\hat{\rho}_\mathcal{S}\hat{\Lambda}_\mathcal{S})
+\end{equation}
+where $\hat{\Lambda}_\mathcal{S}$ is an observable on $H_\mathcal{S}$  and $\hat{\Lambda}_\mathcal{U}$ is the corresponding observable on $H_\mathcal{U}$. Furthermore, we also have
+\begin{equation}\label{reduced2}
+\hat{\rho}_\mathcal{S}=\sum_j \abs{c_j}^2\dyad{\psi_j}+\sum_{j\neq k} c_j\overline{c_k}\ip{E_k}{E_j}\dyad{\psi_j}{\psi_k}.\protect\footnotemark
+\end{equation}
+\footnotetext{cf. (\ref{reduced})}
+We can thus apply this to the situation at hand by taking $S_i$ to be our universe $\mathcal{U}$ and $y^a_1$ to be the system $\mathcal{S}$, and $S_i\setminus y^a_1$ to be the environment $\mathcal{E}$. If we assume that $\ip{0_2}{\psi_2^\text{sys}}\approx 0$, then by (\ref{reduced2}), the corresponding reduced density matrix $\hat{\rho}_{y^a_1}$ takes the form of an improper mixture
+\begin{equation}\label{kentred}
+\hat{\rho}_{y^a_1}\approx \abs{c_1}^2\dyad{\psi_1^\text{sys}}+\abs{c_2}^2\dyad{0_1}
+\end{equation}
+Kent's beables at $y^a_1$ will thus take the form 
+\begin{equation}\label{kentbe}
+\begin{split}
+\ev*{T^{\mu\nu}(y^a_1)}_{\tau_S}&=\Tr_{y^a_1}(\hat{\rho}_{y^a_1}\hat{T}^{\mu\nu}(y^a_1))\\
+&=\abs{c_1}^2\ev*{\hat{T}^{\mu\nu}(y^a_1)}{\psi_1^\text{sys}}+\abs{c_2}^2\ev*{\hat{T}^{\mu\nu}(y^a_1)}{0_1}.
+\end{split}
+\end{equation}
+
+Let us now consider Kent's beables at the spacetime location $y^b_1$ depicted in figure 
+ 
+\begin{figure}[ht!]
+\captionsetup{justification=justified}
+\centering
+\tikzmath{
+\a=5.3;  
+\psione=0;
+\psitwo=1.5;
+\h=1;
+\labelx=(\psione+\psitwo)/2;
+\labely=-1.5;
+\phstartx=-1.7;
+\phstarty=\h;
+\tbeg=\phstarty;
+\ca=\phstartx-\tbeg;
+\ttwo=\psitwo-\ca;
+\cb=\ttwo+\ca;
+\xend=\ttwo-\a+\cb;
+\tone=\psione-\ca;
+\cc=\tone+\ca;
+\xendz=\tone-\a+\cc;
+\tthree=\cc+\tone-\psitwo;
+\circsize=0.08;
+\md = (\a+\h)/2;
+\tlen=0.75;
+\textscale = 0.7;
+\picscale = 0.89;
+\nudge=0.1;
+\tnudge=(\ttwo-\tone)/2+0.8;
+\ttesta=2*\tone-\ttwo-\tnudge;
+\ttestb=2*\tone-\ttwo+\tnudge;
+\ttestc=\ttwo-\tnudge;
+\ttestd=\ttwo+\tnudge;
+\sonea=\a+\psione-\ttesta;
+\sadd=0.5;
+\lrange = -(\psione-\a+\ttesta)+\sadd;
+\rrange =\lrange; 
+\timex=\rrange-1.5;
+\e = 0.4;
+\ttestx=3.0;
+\at=\a-\ttestx;
+\ct=\ttestx;
+\lam = 0.87;
+\e = 0.2;
+\hae=(2*pow(\at,3)*\lam*(2+\lam)+\e*\e*(2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam))-8*\at*\e*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam))-2*\at*\at*(2+\lam)*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam)))/(4*\at*\lam*(2*\at+2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam)))-(\e*\e/4+\at*\at*(-1+\lam))/(\at*\lam);
+\mmu=(\tone-\tbeg)/(\psione-\phstartx);
+\nnu=(\psione*\tbeg-\phstartx*\tone)/(\psione-\phstartx);
+\muf=(\a-\tone)/(\xendz-\psione);
+\nuf=(\xendz*\tone-\psione*\a)/(\xendz-\psione);
+} 
+\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw, inner sep=1pt]%
+\tikzstyle{scoresquare}=[draw,rectangle,minimum size=1mm,inner sep=0pt,outer sep=0pt]%
+\begin{tikzpicture}[scale=\picscale,
+declare function={
+	testxonep(\ps,\t)=\a+\ps-\t;
+	testxonem(\ps,\t)=\ps-\a+\t; 
+	xa(\m,\n)=(-\ct*\m+\e*\m+\m*\n-sqrt(\ct*\ct*\lam*\lam+\e*\e*\m*\m+2*\e*\lam*\lam*\n+\lam*\lam*\n*\n-2*\ct*\lam*\lam*(\e+\n)))/(\lam*\lam-\m*\m);
+	xb(\m,\n)=(-\ct*\m+\e*\m+\m*\n+sqrt(\ct*\ct*\lam*\lam+\e*\e*\m*\m+2*\e*\lam*\lam*\n+\lam*\lam*\n*\n-2*\ct*\lam*\lam*(\e+\n)))/(\lam*\lam-\m*\m);
+	bl(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x+\hae+\at,2)+\e*\e)-\e+\lam*(\x+\hae+\at));
+	br(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x-\hae-\at,2)+\e*\e)-\e-\lam*(\x-\hae-\at));
+	bc(\x)=\ct+sqrt(\lam*\lam*\x*\x+\e*\e)-\e;
+},
+ ] 
+\definecolor{tempcolor}{RGB}{250,190,0}
+\definecolor{darkgreen}{RGB}{40,190,40}
+
+\draw[->,blue, thick] [domain=-\at/2:-\lrange, samples=150]   plot (\x, {bl(\x)})  ;
+\draw[blue, thick] [domain=-\at/2:\at/2, samples=150] plot (\x, {bc(\x)})  node[right=20, above=10,black,scale=\textscale]{}  ;
+\draw[->,blue, thick] [domain=\at/2:\rrange, samples=150]   plot (\x, {br(\x)})   ;
+
+ \node[scale=\textscale]  at (2.7,4.6) {$S_i(y^b_1)$}; 
+\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+              
+\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$z_1$}-- (\psione,\a) ;
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$z_2$}-- (\psitwo,\a);
+
+\draw[dashed, tempcolor,  thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tone) node[above, pos=0.3, rotate=45,scale=0.7,black] {} node[below, pos=0.3, rotate=45,scale=0.7,black] {};
+\draw[dashed, tempcolor,  thick](\psione,\tone) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo );
+\draw[dashed, tempcolor,  thick](\psitwo,\ttwo)--(\xend,\a); 
+\draw[dashed, tempcolor, thick](\psione,\tone)--(\xendz,\a);
+
+
+
+
+
+\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+ 
+\draw[dotted](\psione,\ttestx)--({testxonep(\psione,\ttestx)},\a);
+\draw[dotted](\psione,\ttestx)--({testxonem(\psione,\ttestx)},\a);
+%\draw [black,fill](\psione,\ttestx) circle [radius=\circsize] node [black,below=6,left,scale=\textscale] {$y^b_1$}; 
+\draw (\psione,\ttestx) node[ scoresquare, fill=gray]  {} node [black,below=6,right,scale=\textscale] {$y^b_1$};
+\draw (\psitwo, {bc(\psitwo)}) node[ scoresquare, fill=gray]  {} node [black,below=6,right,scale=\textscale] {$y^b_2$};
+\draw ({xa(\mmu,\nnu)}, {xa(\mmu,\nnu)*\mmu+\nnu}) node[ scoresquare, fill=gray]  {} node [black,below=3,scale=\textscale] {$y^b_4$};
+\draw ({xb(\muf,\nuf)}, {xb(\muf,\nuf)*\muf+\nuf}) node[ scoresquare, fill=gray]  {} node [black,below=3,scale=\textscale] {$y^b_3$};
+
+\draw[magenta,->,ultra thick] ({testxonem(\psione,\ttestx)},\a)--(-\lrange,\a);
+\draw[magenta,->,ultra thick] ({testxonep(\psione,\ttestx)},\a)--(\rrange,\a);
+%\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
+\end{tikzpicture}% pic 1
+
+\vspace*{2px}
+\caption{Depiction of a superposition of two local states at $z_1$ and $z_2$ with $S_i(y^b_1)$ being after the photon has interacted without the photon intersecting $S_i(y^b_1)\cap S$. The gray squares indicate cells in $S^1(y^b_1)$ whose states are among the summands in (\ref{Sistate2}).}
+\label{kentdecoh2}
+\end{figure}
+The state of $S_i(y^b_1)$ will then be
+ \begin{equation*}
+ \ket{\Psi_i}=\big(c_1\ket{\psi_1^\text{sys}}\ket{0_2}\ket{\gamma_3}\ket{0_4}+c_2\ket{0_1}\ket{\psi_2^\text{sys}}\ket{0_3}\ket{\gamma_4}\big)\Xi
+ \end{equation*}
+ where the notation is analogous to that in the previous example. Since no photon detections are registered on $S_i(y^b_1)\cap S$, we again have $\pi_i\ket{\Psi_i}=\ket{\Psi_i}$ so that the reduced density matrix $\hat{\rho}_{y_1^b}$ will again be given by  (\ref{kentred}) with $y^a_1$ replaced by $y^b_1$, and likewise,  Kent's beables $\ev*{T^{\mu\nu}(y^b_1)}_{\tau_S}$ will be given by (\ref{kentbe}).
+
+For the next example, we consider the case 
+
+
+\begin{figure}[ht!]
+\captionsetup{justification=justified}
+\centering
+\tikzmath{
+\a=5.3;  
+\psione=0;
+\psitwo=1.5;
+\h=1;
+\labelx=(\psione+\psitwo)/2;
+\labely=-1.5;
+\phstartx=-1.7;
+\phstarty=\h;
+\tbeg=\phstarty;
+\ca=\phstartx-\tbeg;
+\ttwo=\psitwo-\ca;
+\cb=\ttwo+\ca;
+\xend=\ttwo-\a+\cb;
+\tone=\psione-\ca;
+\cc=\tone+\ca;
+\xendz=\tone-\a+\cc;
+\tthree=\cc+\tone-\psitwo;
+\circsize=0.08;
+\md = (\a+\h)/2;
+\tlen=0.75;
+\textscale = 0.7;
+\picscale = 0.89;
+\nudge=0.1;
+\tnudge=(\ttwo-\tone)/2+0.8;
+\ttesta=2*\tone-\ttwo-\tnudge;
+\ttestb=2*\tone-\ttwo+\tnudge;
+\ttestc=\ttwo-\tnudge;
+\ttestd=\ttwo+\tnudge;
+\sonea=\a+\psione-\ttesta;
+\sadd=0.5;
+\lrange = -(\psione-\a+\ttesta)+\sadd;
+\rrange =\lrange; 
+\timex=\rrange-1.5;
+\e = 0.4;
+\ttestx=4;
+\at=\a-\ttestx;
+\ct=\ttestx;
+\lam = 0.87;
+\e = 0.2;
+\hae=(2*pow(\at,3)*\lam*(2+\lam)+\e*\e*(2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam))-8*\at*\e*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam))-2*\at*\at*(2+\lam)*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam)))/(4*\at*\lam*(2*\at+2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam)))-(\e*\e/4+\at*\at*(-1+\lam))/(\at*\lam);
+\mmu=(\tone-\tbeg)/(\psione-\phstartx);
+\nnu=(\psione*\tbeg-\phstartx*\tone)/(\psione-\phstartx);
+\muf=(\a-\ttwo)/(\xend-\psitwo);
+\nuf=(\xend*\ttwo-\psitwo*\a)/(\xend-\psitwo);
+} 
+\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw, inner sep=1pt]%
+\tikzstyle{scoresquare}=[draw,rectangle,minimum size=1mm,inner sep=0pt,outer sep=0pt]%
+\begin{tikzpicture}[scale=\picscale,
+declare function={
+	testxonep(\ps,\t)=\a+\ps-\t;
+	testxonem(\ps,\t)=\ps-\a+\t; 
+	xa(\m,\n)=(-\ct*\m+\e*\m+\m*\n-sqrt(\ct*\ct*\lam*\lam+\e*\e*\m*\m+2*\e*\lam*\lam*\n+\lam*\lam*\n*\n-2*\ct*\lam*\lam*(\e+\n)))/(\lam*\lam-\m*\m);
+	xb(\m,\n)=(-\ct*\m+\e*\m+\m*\n+sqrt(\ct*\ct*\lam*\lam+\e*\e*\m*\m+2*\e*\lam*\lam*\n+\lam*\lam*\n*\n-2*\ct*\lam*\lam*(\e+\n)))/(\lam*\lam-\m*\m);
+	bl(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x+\hae+\at,2)+\e*\e)-\e+\lam*(\x+\hae+\at));
+	br(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x-\hae-\at,2)+\e*\e)-\e-\lam*(\x-\hae-\at));
+	bc(\x)=\ct+sqrt(\lam*\lam*\x*\x+\e*\e)-\e;
+},
+ ] 
+\definecolor{tempcolor}{RGB}{250,190,0}
+\definecolor{darkgreen}{RGB}{40,190,40}
+
+\draw[->,blue, thick] [domain=-\at/2:-\lrange, samples=150]   plot (\x, {bl(\x)})  ;
+\draw[blue, thick] [domain=-\at/2:\at/2, samples=150] plot (\x, {bc(\x)})  node[right=20, above=10,black,scale=\textscale]{}  ;
+\draw[->,blue, thick] [domain=\at/2:\rrange, samples=150]   plot (\x, {br(\x)})   ;
+
+ \node[scale=\textscale]  at (1,4.1) {$S_i(y^c_1)$}; 
+\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+              
+\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$z_1$}-- (\psione,\a) ;
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$z_2$}-- (\psitwo,\a);
+
+\draw[dashed, tempcolor,  thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tone) node[above, pos=0.3, rotate=45,scale=0.7,black] {} node[below, pos=0.3, rotate=45,scale=0.7,black] {};
+\draw[dashed, tempcolor,  thick](\psione,\tone) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo );
+\draw[dashed, tempcolor,  thick](\psitwo,\ttwo)--(\xend,\a); 
+\draw[dashed, tempcolor,  thick](\psione,\tone)--(\xendz,\a);
+
+\draw[magenta,->,ultra thick] ({testxonem(\psione,\ttestx)},\a)--(-\lrange,\a);
+\draw[magenta,->,ultra thick] ({testxonep(\psione,\ttestx)},\a)--(\rrange,\a);
+
+
+
+\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+ 
+\draw[dotted](\psione,\ttestx)--({testxonep(\psione,\ttestx)},\a);
+\draw[dotted](\psione,\ttestx)--({testxonem(\psione,\ttestx)},\a);
+%\draw [black,fill](\psione,\ttestx) circle [radius=\circsize] node [black,below=6,left,scale=\textscale] {$y^c_1$}; 
+\draw (\psione,\ttestx) node[ scoresquare, fill=gray]  {} node [black,below=6,right,scale=\textscale] {$y^c_1$};
+\draw (\psitwo, {bc(\psitwo)}) node[ scoresquare, fill=gray]  {} node [black,below=6,right,scale=\textscale] {$y^c_2$};
+\draw ({xb(\muf,\nuf)}, {xb(\muf,\nuf)*\muf+\nuf}) node[ scoresquare, fill=gray]  {} node [black,right=7, below=-4,scale=\textscale] {$y^c_4$};
+\draw (\xendz,\a) node[ scoresquare, fill=gray]  {} node [black,below=3,scale=\textscale] {$y^c_3$};
+
+
+%\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
+\end{tikzpicture}% pic 1
+
+\vspace*{2px}
+\caption{Depiction of a superposition of two local states at $z_1$ and $z_2$ with $y^c_1$ sufficiently late that the photon intersects $S_i(y^c_1)\cap S$. The gray squares indicate cells in $S^1(y^c_1)$ whose states are among the summands in (\ref{Sistate2})}
+\label{kentdecoh3}
+\end{figure}
+
+In this case, the state of $S_i(y^c_1)$ will be
+ \begin{equation*}
+ \ket{\Psi_i}=\big(c_1\ket{\psi_1^\text{sys}}\ket{0_2}\ket{\gamma_3}\ket{0_4}+c_2\ket{0_1}\ket{\psi_2^\text{sys}}\ket{0_3}\ket{\gamma_4}\big)\Xi
+ \end{equation*}
+ but this time we have to consider the fact that the photon intersects $S_i(y^c_1)\cap S$. There are two possible (notional) measurements outcomes that can occur on $S_i(y^c_1)\cap S$: either $T_S=\tau_{S,1}$ where $\tau_{S,1}(y^c_3)\neq 0$ or $T_S=\tau_{S,2}$ where $\tau_{S,2}(y^c_3)=0.$ The case  $T_S=\tau_{S,1}$ indicates that there is a photon detection at $y^c_3$ so that the local state at the $y^c_3$-cell is $\ket{\gamma_3}$. Therefore, if we write $\pi_{i,1}$ for the operator $\pi_i$, we have 
+ $$\pi_{i,1}\ket{\Psi_i}=c_1\ket{\psi_1^\text{sys}}\ket{0_2}\ket{\gamma_3}\ket{0_4}\Xi,$$
+ Therefore 
+ $\ev*{\pi_{i,1}\hat{T}^{\mu\nu}(y^c_1)}{\Psi_i}=\abs{c_1}^2\ev*{\hat{T}^{\mu\nu}(y^c_1)}{\psi_1^\text{sys}}$ and  $\ev*{\pi_{i,1}}{\Psi_i}=\abs{c_1}^2$. Hence, by (\ref{kentconsistency0}), Kent's beables at $y^c_1$ will be 
+ $$\ev*{T^{\mu\nu}(y^c_1)}_{\tau_{S,1}}=\ev*{\hat{T}^{\mu\nu}(y^c_1)}{\psi_1^\text{sys}}.$$ 
+ From this, it follows that the reduced density matrix at $y^c_1$ will take the form of a pure state:
+ \begin{equation}
+\hat{\rho}_{y^c_1}\approx \dyad{\psi_1^\text{sys}}.
+\end{equation} 
+ On the other hand, for the case when  $T_S=\tau_{S,2}$, this indicates that there is no photon detection at $y^c_3$, so that the local state at the $y^c_3$-cell will be $\ket{0_3}$. So if now we write $\pi_{i,2}$ for the operator $\pi_i$, we have 
+ $$\pi_{i,2}\ket{\Psi_i}=c_2\ket{0_1}\ket{\psi_2^\text{sys}}\ket{0_3}\ket{\gamma_4}\Xi.$$
+ Therefore 
+ $\ev*{\pi_{i,2}\hat{T}^{\mu\nu}(y^c_1)}{\Psi_i}=\abs{c_2}^2\ev*{\hat{T}^{\mu\nu}(y^c_1)}{0_1}$ and  $\ev*{\pi_{i,2}}{\Psi_i}=\abs{c_2}^2$,  
+  and so by (\ref{kentconsistency0}), Kent's beables at $y^c_1$ will be 
+ $$\ev*{T^{\mu\nu}(y^c_1)}_{\tau_{S,2}}=\ev*{\hat{T}^{\mu\nu}(y^c_1)}{0_1}.$$
+ In this case, the reduced density matrix at $y^c_1$  will be
+  \begin{equation}
+\hat{\rho}_{y^c_1}\approx \dyad{0_1},
+\end{equation} 
+which is again a pure state.
+
+In the final example, we introduce an atom at a spatial location $z_3$ initially in its ground state, and suppose that it can't interact with the incoming photon, but that after the photon's interaction with the two local states at $z_1$ and $z_2$, the atom at spacetime location $y^c_3$ can either absorb the photon with probability $\abs{d_+}^2$ or not absorb the photon with probability  $\abs{d_-}^2$ as depicted in figure \ref{kentdecoh4}.
+ 
+\begin{figure}[ht!]
+\captionsetup{justification=justified}
+\centering
+\tikzmath{
+\a=5.3;  
+\psione=0;
+\psitwo=1.5;
+\psithree=-0.7;
+\h=1;
+\labelx=(\psione+\psitwo)/2;
+\labely=-1.5;
+\phstartx=-1.7;
+\phstarty=\h;
+\tbeg=\phstarty;
+\ca=\phstartx-\tbeg;
+\ttwo=\psitwo-\ca;
+\cb=\ttwo+\ca;
+\xend=\ttwo-\a+\cb;
+\tone=\psione-\ca;
+\cc=\tone+\ca;
+\xendz=\tone-\a+\cc;
+\tthree=\cc+\tone-\psitwo;
+\circsize=0.08;
+\md = (\a+\h)/2;
+\tlen=0.75;
+\textscale = 0.7;
+\picscale = 0.89;
+\nudge=0.1;
+\tnudge=(\ttwo-\tone)/2+0.8;
+\ttesta=2*\tone-\ttwo-\tnudge;
+\ttestb=2*\tone-\ttwo+\tnudge;
+\ttestc=\ttwo-\tnudge;
+\ttestd=\ttwo+\tnudge;
+\sonea=\a+\psione-\ttesta;
+\sadd=0.5;
+\lrange = -(\psione-\a+\ttesta)+\sadd;
+\rrange =\lrange; 
+\timex=\rrange-1.5;
+\e = 0.4;
+\ttestx=4;
+\at=\a-\ttestx;
+\ct=\ttestx;
+\lam = 0.87;
+\e = 0.2;
+\hae=(2*pow(\at,3)*\lam*(2+\lam)+\e*\e*(2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam))-8*\at*\e*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam))-2*\at*\at*(2+\lam)*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam)))/(4*\at*\lam*(2*\at+2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam)))-(\e*\e/4+\at*\at*(-1+\lam))/(\at*\lam);
+\mmu=(\a-\tone)/(\xendz-\psione);
+\nnu=(\xendz*\tone-\psione*\a)/(\xendz-\psione);
+\muf=(\a-\ttwo)/(\xend-\psitwo);
+\nuf=(\xend*\ttwo-\psitwo*\a)/(\xend-\psitwo);
+} 
+\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw, inner sep=1pt]%
+\tikzstyle{scoresquare}=[draw,rectangle,minimum size=1mm,inner sep=0pt,outer sep=0pt]%
+\begin{tikzpicture}[scale=\picscale,
+declare function={
+	testxonep(\ps,\t)=\a+\ps-\t;
+	testxonem(\ps,\t)=\ps-\a+\t; 
+	xa(\m,\n)=(-\ct*\m+\e*\m+\m*\n-sqrt(\ct*\ct*\lam*\lam+\e*\e*\m*\m+2*\e*\lam*\lam*\n+\lam*\lam*\n*\n-2*\ct*\lam*\lam*(\e+\n)))/(\lam*\lam-\m*\m);
+	xb(\m,\n)=(-\ct*\m+\e*\m+\m*\n+sqrt(\ct*\ct*\lam*\lam+\e*\e*\m*\m+2*\e*\lam*\lam*\n+\lam*\lam*\n*\n-2*\ct*\lam*\lam*(\e+\n)))/(\lam*\lam-\m*\m);
+	bl(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x+\hae+\at,2)+\e*\e)-\e+\lam*(\x+\hae+\at));
+	br(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x-\hae-\at,2)+\e*\e)-\e-\lam*(\x-\hae-\at));
+	bc(\x)=\ct+sqrt(\lam*\lam*\x*\x+\e*\e)-\e;
+},
+ ] 
+\definecolor{tempcolor}{RGB}{250,190,0}
+\definecolor{darkgreen}{RGB}{40,190,40}
+
+\draw[->,blue, thick] [domain=-\at/2:-\lrange, samples=150]   plot (\x, {bl(\x)})  ;
+\draw[blue, thick] [domain=-\at/2:\at/2, samples=150] plot (\x, {bc(\x)})  node[right=20, above=10,black,scale=\textscale]{}  ;
+\draw[->,blue, thick] [domain=\at/2:\rrange, samples=150]   plot (\x, {br(\x)})   ;
+
+ \node[scale=\textscale]  at (1,4.1) {$S_i(y^d_1)$}; 
+\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+              
+\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$z_1$}-- (\psione,\a) ;
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$z_2$}-- (\psitwo,\a);
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psithree,\h) node[below, scale=\textscale]{$\psi_{3}^{\pm}$}   node[above left, scale=\textscale]{$z_3$}-- (\psithree,\a);
+
+
+\draw[dashed, tempcolor,  thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tone) node[above, pos=0.3, rotate=45,scale=0.7,black] {} node[below, pos=0.3, rotate=45,scale=0.7,black] {};
+\draw[dashed, tempcolor,  thick](\psione,\tone) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo );
+\draw[dashed, tempcolor,  thick](\psitwo,\ttwo)--(\xend,\a); 
+\draw[dashed, tempcolor,  thick](\psione,\tone)--(\xendz,\a);
+
+\draw[magenta,->,ultra thick] ({testxonem(\psione,\ttestx)},\a)--(-\lrange,\a);
+\draw[magenta,->,ultra thick] ({testxonep(\psione,\ttestx)},\a)--(\rrange,\a);
+
+
+
+\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+ 
+\draw[dotted](\psione,\ttestx)--({testxonep(\psione,\ttestx)},\a);
+\draw[dotted](\psione,\ttestx)--({testxonem(\psione,\ttestx)},\a);
+%\draw [black,fill](\psione,\ttestx) circle [radius=\circsize] node [black,below=6,left,scale=\textscale] {$y^d_1$}; 
+\draw (\psione,\ttestx) node[ scoresquare, fill=gray]  {} node [black,below=6,right,scale=\textscale] {$y^d_1$};
+\draw (\psitwo, {bc(\psitwo)}) node[ scoresquare, fill=gray]  {} node [black,below=6,right,scale=\textscale] {$y^d_2$};
+\draw ({xb(\muf,\nuf)}, {xb(\muf,\nuf)*\muf+\nuf}) node[ scoresquare, fill=gray]  {} node [black,right=7, below=-4,scale=\textscale] {$y^d_5$};
+\draw (\xendz,\a) node[ scoresquare, fill=gray]  {} node [black,below=3,scale=\textscale] {$y^d_4$};
+\draw (\psithree, {bc(\psithree)}) node[ scoresquare, fill=gray]  {} node [black,below=6,left,scale=\textscale] {$y^d_3$};
+
+\draw [black,fill] (\psithree,\psithree*\mmu+\nnu) circle [radius=\circsize] ; 
+\end{tikzpicture}% pic 1
+
+\vspace*{2px}
+\caption{Depiction of a superposition of two local states at $z_1$ and $z_2$ with $y^c_1$ sufficiently late that the photon can intersect with $S_i(y^c_1)\cap S$, but there is also an atom at $z_3$ that can absorb the photon. The gray squares indicate cells in $S^1(y^d_1)$ whose states are among the summands in (\ref{Sistate2})} 
+\label{kentdecoh4}
+\end{figure}
+If the  atom at $y^d_3$ absorbs the photon it will go into a higher energy state $\ket{\psi^{+}_{3}}$, whereas if it  does not absorb the photon, it will remain in its lower energy state $\ket{\psi^{-}_{3}}$. The state of $S_i(y^d_1)$ will thus be
+ \begin{equation*}
+ \ket{\Psi_i}=\big(c_1\ket{\psi_1^\text{sys}}\ket{0_2}\big(d_+\ket{\psi^{+}_{3}}\ket{0_4}+d_-\ket{\psi^{-}_{3}}\ket{\gamma_4}\big)\ket{0_5}+c_2\ket{0_1}\ket{\psi_2^\text{sys}}\ket{\psi^{-}_{3}}\ket{0_4}\ket{\gamma_5}\big)\Xi.
+ \end{equation*}
+As in the previous example,  there are two (notional) measurements that can occur $S_i(y^d_1)\cap S$: either $T_S=\tau_{S,1}$ where $\tau_{S,1}(y^d_4)\neq 0$ or $T_S=\tau_{S,2}$ where $\tau_{S,2}(y^d_4)=0.$ The case  $T_S=\tau_{S,1}$ indicates that there is a photon detection at $y^d_4$ so that the local state at the $y^d_3$-cell is $\ket{\gamma_4}$. Therefore, if we write $\pi_{i,1}$ for the operator $\pi_i$, we have 
+ $$\pi_{i,1}\ket{\Psi_i}=c_1d_-\ket{\psi_1^\text{sys}}\ket{0_2}\ket{\psi^{-}_{3}}\ket{\gamma_4}\ket{0_5}\Xi.$$
+ Therefore  
+ $\ev*{\pi_{i,1}\hat{T}^{\mu\nu}(y^d_1)}{\Psi_i}=\abs{c_1 d_-}^2\ev*{\hat{T}^{\mu\nu}(y^d_1)}{\psi_1^\text{sys}}$ and  $\ev*{\pi_{i,1}}{\Psi_i}=\abs{c_1d_-}^2$,  
+  and so by (\ref{kentconsistency0}), Kent's beables at $y^d_1$ will be 
+ $$\ev*{T^{\mu\nu}(y^d_1)}_{\tau_{S,1}}=\ev*{\hat{T}^{\mu\nu}(y^d_1)}{\psi_1^\text{sys}}.$$ 
+and the reduced density matrix at $y^d_1$ will be the pure state
+ \begin{equation}
+\hat{\rho}_{y^d_1}\approx \dyad{\psi_1^\text{sys}}.
+\end{equation} 
+ On the other hand, for the case when  $T_S=\tau_{S,2}$, writing $\pi_{i,2}$ for the operator $\pi_i$, we have 
+ $$\pi_{i,2}\ket{\Psi_i}=\big(c_1\ket{\psi_1^\text{sys}}\ket{0_2}d_+\ket{\psi^{+}_{3}}\ket{0_4}\ket{0_5}+c_2\ket{0_1}\ket{\psi_2^\text{sys}}\ket{\psi^{-}_{3}}\ket{0_4}\ket{\gamma_5}\big)\Xi.$$
+ Therefore 
+ $\ev*{\pi_{i,2}\hat{T}^{\mu\nu}(y^c_1)}{\Psi_i}=\abs{c_1 d_+}^2\ev*{\hat{T}^{\mu\nu}(y^d_1)}{\psi_1^\text{sys}}+\abs{c_2}^2\ev*{\hat{T}^{\mu\nu}(y^c_1)}{0_1}$ and  $\ev*{\pi_{i,2}}{\Psi_i}=\abs{c_1 d_+}^2+\abs{c_2}^2$.
+Hence by (\ref{kentconsistency0}), Kent's beables at $y^d_1$ will be 
+ $$\ev*{T^{\mu\nu}(y^d_1)}_{\tau_{S,2}}=\frac{\abs{c_1 d_+}^2\ev*{\hat{T}^{\mu\nu}(y^d_1)}{\psi_1^\text{sys}}+\abs{c_2}^2\ev*{\hat{T}^{\mu\nu}(y^c_1)}{0_1}}{\abs{c_1 d_+}^2+\abs{c_2}^2},$$
+and the reduced density matrix at $y^d_1$  will take the form of an improper mixture:
+  \begin{equation}
+\hat{\rho}_{y^d_1}\approx \frac{ \abs{c_1 d_+}^2\dyad{\psi_1^\text{sys}}+\abs{c_2}^2\dyad{0_1}}{\abs{c_1 d_+}^2+\abs{c_2}^2}.
+\end{equation} 
+
+
+\subsection{An objection to Kent's beables}
+In the examples of the last subsection we have seen how the additional information concerning photon detection on $S_i(y_1)\cap S$ is able to determine whether the reduced density matrix at $y_1$ is a pure state or an improper mixture. As already mentioned, according to d'Espagnat, if the reduced density matrix for a system is an improper mixture, we are not entitled to give it an ignorance interpretation, and thus we are unable to say that an outcome has occurred. However, if the reduced density matrix of a system goes from being an improper mixture to a pure state state of the form $\dyad{\psi}$, then we can say that an outcome has occurred, namely that the system is in the state $\ket{\psi}.$  
+
+There is still the question of why Kent decides that the beables of his theory should take the form of expectation values. As an analogy, it seems a bit like saying a six sided dice can actually come up with a $3.5$ since this is its expectation value. We can however address this objection if can find a way of having multiple throws of the dice, so to speak. My suggestion is to stipulate that the reduced density matrices $\hat{\rho}_y$ as calculated in the previous section are more fundamental beables than the conditional expectation values of $\hat{T}_{\mu,\nu}(y)$, and that the determinate value of $T_S$ is more fundamental still. There are a few things I need to explain here such as what I mean fundamental, what I mean by saying a beable is a reduced density matrix, and how the beable of a reduced density matrix can give rise to Kent's expectation value beables.
+
+By saying that the determinate value of $T_S$ is more fundamental than the reduced density matrices,  I mean that if we have a statements of the form ``the beable at $y$ is $\hat{\rho}_y$'', then such a statement is reducible to statements about $T_S$. Such statements might be simple factual statements such as ``there is photon is at $x_1$, and $x_2$ but not at $x_3$ or $x_4$'' where the locations are indicated in figure \ref{kentdecoh5}.
+
+\begin{figure}[ht!]
+\captionsetup{justification=justified}
+\centering
+\tikzmath{
+\a=5.3;  
+\psione=0;
+\psitwo=1.5;
+\psithree=-0.7;
+\h=1;
+\labelx=(\psione+\psitwo)/2;
+\labely=-1.5;
+\phstartx=-1.7;
+\phstartxx=-0.9;
+\phstarty=\h;
+\tbeg=\phstarty;
+\ca=\phstartx-\tbeg;
+\caa=\phstartxx-\tbeg;
+\ttwo=\psitwo-\ca;
+\ttwoo=\psitwo-\caa;
+\cb=\ttwo+\ca;
+\cbb=\ttwoo+\caa;
+\xend=\ttwo-\a+\cb;
+\xendd=\ttwoo-\a+\cbb;
+\tone=\psione-\ca;
+\tonee=\psione-\caa;
+\cc=\tone+\ca;
+\ccc=\tonee+\caa;
+\xendz=\tone-\a+\cc;
+\xendzz=\tonee-\a+\ccc;
+\tthree=\cc+\tone-\psitwo;
+\circsize=0.08;
+\md = (\a+\h)/2;
+\tlen=0.75;
+\textscale = 0.7;
+\picscale = 0.89;
+\nudge=0.1;
+\tnudge=(\ttwo-\tone)/2+0.8;
+\ttesta=2*\tone-\ttwo-\tnudge;
+\ttestb=2*\tone-\ttwo+\tnudge;
+\ttestc=\ttwo-\tnudge;
+\ttestd=\ttwo+\tnudge;
+\sonea=\a+\psione-\ttesta;
+\sadd=0.5;
+\lrange = -(\psione-\a+\ttesta)+\sadd;
+\rrange =\lrange; 
+\timex=\rrange-1.5;
+\e = 0.4;
+\ttestx=4;
+\at=\a-\ttestx;
+\ct=\ttestx;
+\lam = 0.87;
+\e = 0.2;
+\hae=(2*pow(\at,3)*\lam*(2+\lam)+\e*\e*(2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam))-8*\at*\e*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam))-2*\at*\at*(2+\lam)*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam)))/(4*\at*\lam*(2*\at+2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam)))-(\e*\e/4+\at*\at*(-1+\lam))/(\at*\lam);
+\mmu=(\tone-\tbeg)/(\psione-\phstartx);
+\nnu=(\psione*\tbeg-\phstartx*\tone)/(\psione-\phstartx);
+\muf=(\a-\ttwo)/(\xend-\psitwo);
+\nuf=(\xend*\ttwo-\psitwo*\a)/(\xend-\psitwo);
+} 
+\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw, inner sep=1pt]%
+\tikzstyle{scoresquare}=[draw,rectangle,minimum size=1mm,inner sep=0pt,outer sep=0pt]%
+\begin{tikzpicture}[scale=\picscale,
+declare function={
+	testxonep(\ps,\t)=\a+\ps-\t;
+	testxonem(\ps,\t)=\ps-\a+\t; 
+	xa(\m,\n)=(-\ct*\m+\e*\m+\m*\n-sqrt(\ct*\ct*\lam*\lam+\e*\e*\m*\m+2*\e*\lam*\lam*\n+\lam*\lam*\n*\n-2*\ct*\lam*\lam*(\e+\n)))/(\lam*\lam-\m*\m);
+	xb(\m,\n)=(-\ct*\m+\e*\m+\m*\n+sqrt(\ct*\ct*\lam*\lam+\e*\e*\m*\m+2*\e*\lam*\lam*\n+\lam*\lam*\n*\n-2*\ct*\lam*\lam*(\e+\n)))/(\lam*\lam-\m*\m);
+	bl(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x+\hae+\at,2)+\e*\e)-\e+\lam*(\x+\hae+\at));
+	br(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x-\hae-\at,2)+\e*\e)-\e-\lam*(\x-\hae-\at));
+	bc(\x)=\ct+sqrt(\lam*\lam*\x*\x+\e*\e)-\e;
+},
+ ] 
+\definecolor{tempcolor}{RGB}{250,190,0}
+\definecolor{darkgreen}{RGB}{40,190,40}
+
+%\draw[->,blue, thick] [domain=-\at/2:-\lrange, samples=150]   plot (\x, {bl(\x)})  ;
+%\draw[blue, thick] [domain=-\at/2:\at/2, samples=150] plot (\x, {bc(\x)})  node[right=20, above=10,black,scale=\textscale]{}  ;
+%\draw[->,blue, thick] [domain=\at/2:\rrange, samples=150]   plot (\x, {br(\x)})   ;
+
+% \node[scale=\textscale]  at (1,4.1) {$S_i(y^c_1)$}; 
+\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+              
+\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$z_1$}-- (\psione,\a) ;
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$z_2$}-- (\psitwo,\a);
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psithree,\h) node[below, scale=\textscale]{$\psi_{3}^{\pm}$}   node[above left, scale=\textscale]{$z_3$}-- (\psithree,\a);
+
+
+\draw[dashed, tempcolor,  thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tone) ;
+\draw[dashed, tempcolor,  thick](\psione,\tone) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo );
+\draw[dashed, tempcolor,  thick](\psitwo,\ttwo)--(\xend,\a); 
+\draw[dashed, tempcolor,  thick](\psione,\tone)--(\xendz,\a);
+
+\draw[dashed, tempcolor,  thick](\phstartxx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tonee) ;
+\draw[dashed, tempcolor,  thick](\psione,\tonee) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwoo );
+\draw[dashed, tempcolor,  thick](\psitwo,\ttwoo)--(\xendd,\a); 
+\draw[dashed, tempcolor,  thick](\psione,\tonee)--(\xendzz,\a);
+
+\draw[magenta,<->,ultra thick] (\rrange,\a)--(-\lrange,\a);
+
+
+
+\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+
+\draw [black,fill] (\xendzz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$x_1$}; 
+\draw [black,fill] (\xend,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$x_4$}; 
+\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$x_2$}; 
+\draw [black,fill] (\xendd,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$x_3$}; 
+ 
+%\draw[dotted](\psione,\ttestx)--({testxonep(\psione,\ttestx)},\a);
+%\draw[dotted](\psione,\ttestx)--({testxonem(\psione,\ttestx)},\a);
+\draw [black,fill] (\psione,\tone) circle [radius=\circsize] node [black,left=4,scale=\textscale] {$y_1$}; 
+\draw [black,fill](\psitwo,\ttwo)circle [radius=\circsize] node [black,above right,scale=\textscale, align=left] {$y_2$}; 
+
+%\draw (\psione,\ttestx) node[ scoresquare, fill=gray]  {} node [black,below=6,right,scale=\textscale] {$y^c_1$};
+%\draw (\psitwo, {bc(\psitwo)}) node[ scoresquare, fill=gray]  {} node [black,below=6,right,scale=\textscale] {$y^c_2$};
+%\draw ({xb(\muf,\nuf)}, {xb(\muf,\nuf)*\muf+\nuf}) node[ scoresquare, fill=gray]  {} node [black,right=7, below=-4,scale=\textscale] {$y^c_4$};
+%\draw (\xendz,\a) node[ scoresquare, fill=gray]  {} node [black,below=3,scale=\textscale] {$y^c_3$};
+
+
+%\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
+\end{tikzpicture}% pic 1
+
+\vspace*{2px}
+\caption{Depiction of a superposition of two local states at $z_1$ and $z_2$ with $y^c_1$ sufficiently late that the photon intersects $S_i(y^c_1)\cap S$. With enough photon detections on $S$ we can make statements about }
+\label{kentdecoh5}
+\end{figure}
+
+
+ With enough such factual statements, we would have enough information on $T_S$ to say that there is a local state $\psi_1^\text{sys}$ at spacetime location $y_1$ and hence conclude that the statement p=``the beable at $y_1$ is $\dyad{\psi_1^\text{sys}}$'' is true. But we would very likely need quite a lot more information than knowledge of the fact that a photon is at $x_1$, and $x_2$, to conclude p since we would need to be able to work out something about time at which the incoming arrived in the vicinity of the system, and this would depend on physics of photon creation. But it seems plausible that from all the information in $T_S$ one could make statements such as p that involve pure states. It is no more controversial than the assumption that we can draw valid conclusions about the physical world based on which cells in our retina are excited. What is controversial is my (and Kent's) suggestion   that the information contained in $T_S$ determines the state of physical reality on earlier hypersurfaces rather than the physical state of the earlier hypersurfaces determining the the information contained in $T_S$. In the final chapter, I will aim to justify this suggestion and show that it is not quite as alien to common sense as it might first seem. 
+ 
+As for statements that involve improper mixtures, for example statements of the form q=``the beable at $y_1$ is $\abs{c_1}^2\dyad{\psi_1^\text{sys}}+\abs{c_2}^2\dyad{0_1}$'') we could take these to be expressible in terms of modal statement about such as ``it's possible that a photon could have been detected at either $x_1$ or $x_3$ but not both'' as depicted in figure \ref{kentdecoh5}. As in the case for pure states, we would also need other modal statements and declarative propositions about $T_S$ in order to say enough about the times at which incoming photons would arrive at the $z_1$ and $z_2$. But with enough information on $T_S$ it seems plausible that we could build up a picture of such photon interaction on earlier hypersurfaces. Also, by comparing the values of $T_S$ over different region of $S$, we could detect similar configurations from which a superintelligent being could conclude that these similar configurations correspond to some kind of activity such as a human being performing an experiment.   But these multiple configurations would also have differences, some of which would correspond to different measurement outcomes. By surveying many of these configurations, the superintelligent being could assign probabilities to these outcomes and hence calculate expectation values for observables and the reduced density matrices that would give rise to these expectation values and hence make statements like $q$ which involve improper mixtures. 
+
+At this point it is worth reminding ourselves that Kent is not saying that an actual measurement of $T_S$ on $S$ is made, but only a notional measurement which is to say if a measurement were made on $T_S$ it would have a determinate value $\tau_S$, say. One could choose a hypersurface $S'$ even later than $S$, but Kent supposes that the description of physical reality between $S_0$ and $S$ is not going to be significantly different if the one used the notional measurements for $T_{S'}$ on $S'$ rather than those on $T_S$.
+
+So let's now consider how the understanding of beables in terms of reduced density matrices can give rise to Kent's beables as conditional expectation values of $T_{\mu,\nu}(y)$. In this section we have $S_i$ we been using a coarse-grained model so that $S_i$ is treated as a mesh of tiny cells labeled. The state of these one of these tiny cells, $y_k$ would not in general be pure eigenstates of $T_{\mu,\nu}(y_k)$
+
+
+\nocite{Shimony93}
+\nocite{Bell}
