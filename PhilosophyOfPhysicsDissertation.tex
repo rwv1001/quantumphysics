@@ -1,27 +1,11 @@
-\documentclass[letter, 12pt]{turabian-thesis}
-%\documentclass[draft, letter, 12pt]{turabian-thesis}
+%\documentclass[letter, 12pt]{turabian-thesis}
+\documentclass[draft, letter, 12pt]{turabian-thesis}
 
 \pdfcompresslevel=0
 \pdfobjcompresslevel=0
 
 \usepackage{preamble}
-\includeonly{
-Chapter01/chapterIntro,
-Chapter01/Stern-Gerlach,
-Chapter01/HiddenVariables,
-Chapter01/BellInequality,
-Chapter01/many-worldsPrelim,
-Chapter01/quantummechanic,
-Chapter01/PreferredBasis,
-Chapter01/Decoherence,
-Chapter01/Interference,
-Chapter01/Many-WorldsInterpretation,
-Chapter01/Many-WorldsEval,
-Chapter02/chapterIntro,
-Chapter02/OIvsPI,
-Chapter02/KentIntepretation,
-Chapter02/KentEvaluation
-}
+
 
 \begin{document}
 \justifying
@@ -39,21 +23,22 @@ Chapter02/KentEvaluation
 \thispagestyle{empty}
 \tableofcontents
 
-\include*{Chapter01/chapterIntro}
-\include*{Chapter01/Stern-Gerlach}
-\include*{Chapter01/HiddenVariables}
-\include*{Chapter01/BellInequality}
-\include*{Chapter01/many-worldsPrelim}
-\include*{Chapter01/quantummechanics}
-\include*{Chapter01/PreferredBasis}
-\include*{Chapter01/Decoherence}
-\include*{Chapter01/Interference}
-\include*{Chapter01/Many-WorldsInterpretation}
-\include*{Chapter01/Many-WorldsEval}
 
-\include*{Chapter02/chapterIntro}
-\include*{Chapter02/OIvsPI}
-\include*{Chapter02/KentIntepretation}
-\include*{Chapter02/KentEvaluation}
+\include{Chapter01/chapterIntro}
+\include{Chapter01/Stern-Gerlach}
+\include{Chapter01/HiddenVariables}
+\include{Chapter01/BellInequality}
+\include{Chapter01/many-worldsPrelim}
+\include{Chapter01/quantummechanics}
+\include{Chapter01/PreferredBasis}
+\include{Chapter01/Decoherence}
+\include{Chapter01/Interference}
+\include{Chapter01/Many-WorldsInterpretation}
+\include{Chapter01/Many-WorldsEval}
+
+\include{Chapter02/chapterIntro}
+\include{Chapter02/OIvsPI}
+\include{Chapter02/KentIntepretation}
+\include{Chapter02/KentEvaluation}
 \printbibliography
 \end{document}
