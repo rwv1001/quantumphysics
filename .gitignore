@@ -8,3 +8,4 @@
 *.synctex.gz
 *.toc
 *.fdb_latexmk
+*.git rm --cached
