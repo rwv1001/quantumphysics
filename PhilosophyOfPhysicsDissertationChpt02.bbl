@@ -1,0 +1,532 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{cms/global//global/global}
+    \entry{Bell2}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=b325c069ba584d7afe84b2cffd384202}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={J.\bibnamedelimi S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{b325c069ba584d7afe84b2cffd384202}
+      \strng{fullhash}{b325c069ba584d7afe84b2cffd384202}
+      \strng{bibnamehash}{b325c069ba584d7afe84b2cffd384202}
+      \strng{authorbibnamehash}{b325c069ba584d7afe84b2cffd384202}
+      \strng{authornamehash}{b325c069ba584d7afe84b2cffd384202}
+      \strng{authorfullhash}{b325c069ba584d7afe84b2cffd384202}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Speakable and unspeakable in quantum mechanics}
+      \strng{crossref}{Bell}
+      \field{edition}{2nd ed.}
+      \field{isbn}{9780521818629}
+      \field{title}{Subject and Object}
+      \field{year}{2004}
+      \field{pages}{40\bibrangedash 44}
+      \range{pages}{5}
+      \keyw{Quantum theory}
+    \endentry
+    \entry{BohmDavid1952A}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f9ef65b246ff9ae37555f758f986fe69}{%
+           family={Bohm},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f9ef65b246ff9ae37555f758f986fe69}
+      \strng{fullhash}{f9ef65b246ff9ae37555f758f986fe69}
+      \strng{bibnamehash}{f9ef65b246ff9ae37555f758f986fe69}
+      \strng{authorbibnamehash}{f9ef65b246ff9ae37555f758f986fe69}
+      \strng{authornamehash}{f9ef65b246ff9ae37555f758f986fe69}
+      \strng{authorfullhash}{f9ef65b246ff9ae37555f758f986fe69}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0031-899X}
+      \field{journaltitle}{Physical review}
+      \field{number}{2}
+      \field{title}{A Suggested Interpretation of the Quantum Theory in Terms of "Hidden" Variables. I}
+      \field{volume}{85}
+      \field{year}{1952}
+      \field{pages}{166\bibrangedash 179}
+      \range{pages}{14}
+    \endentry
+    \entry{BohmDavid1952B}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f9ef65b246ff9ae37555f758f986fe69}{%
+           family={Bohm},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f9ef65b246ff9ae37555f758f986fe69}
+      \strng{fullhash}{f9ef65b246ff9ae37555f758f986fe69}
+      \strng{bibnamehash}{f9ef65b246ff9ae37555f758f986fe69}
+      \strng{authorbibnamehash}{f9ef65b246ff9ae37555f758f986fe69}
+      \strng{authornamehash}{f9ef65b246ff9ae37555f758f986fe69}
+      \strng{authorfullhash}{f9ef65b246ff9ae37555f758f986fe69}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0031-899X}
+      \field{journaltitle}{Physical review}
+      \field{number}{2}
+      \field{title}{A Suggested Interpretation of the Quantum Theory in Terms of "Hidden" Variables. II}
+      \field{volume}{85}
+      \field{year}{1952}
+      \field{pages}{180\bibrangedash 193}
+      \range{pages}{14}
+    \endentry
+    \entry{Hiley}{book}{}
+      \name{author}{2}{}{%
+        {{hash=f9ef65b246ff9ae37555f758f986fe69}{%
+           family={Bohm},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a6ad907d689854a5417c727e11c146a2}{%
+           family={Hiley},
+           familyi={H\bibinitperiod},
+           given={B.\bibnamedelimi J},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{0fd92dd8764e596ef51c3cba8a3cc642}
+      \strng{fullhash}{0fd92dd8764e596ef51c3cba8a3cc642}
+      \strng{bibnamehash}{0fd92dd8764e596ef51c3cba8a3cc642}
+      \strng{authorbibnamehash}{0fd92dd8764e596ef51c3cba8a3cc642}
+      \strng{authornamehash}{0fd92dd8764e596ef51c3cba8a3cc642}
+      \strng{authorfullhash}{0fd92dd8764e596ef51c3cba8a3cc642}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780415065887}
+      \field{title}{The undivided universe : an ontological interpretation of quantum theory}
+      \field{year}{1993}
+      \keyw{Quantum theory; Ontology; Physics -- Philosophy}
+    \endentry
+    \entry{Butterfield}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9b1adf49ad958af3aade743b3380f3b6}{%
+           family={Butterfield},
+           familyi={B\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{9b1adf49ad958af3aade743b3380f3b6}
+      \strng{fullhash}{9b1adf49ad958af3aade743b3380f3b6}
+      \strng{bibnamehash}{9b1adf49ad958af3aade743b3380f3b6}
+      \strng{authorbibnamehash}{9b1adf49ad958af3aade743b3380f3b6}
+      \strng{authornamehash}{9b1adf49ad958af3aade743b3380f3b6}
+      \strng{authorfullhash}{9b1adf49ad958af3aade743b3380f3b6}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Peaceful Coexistence: Examining Kent's Relativistic Solution to the Quantum Measurement Problem}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb arXiv:1710.07844
+      \endverb
+    \endentry
+    \entry{ColbeckRoger2011Neoq}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6108c483c140c0ecd5ed21ecccf894f7}{%
+           family={Colbeck},
+           familyi={C\bibinitperiod},
+           given={Roger},
+           giveni={R\bibinitperiod}}}%
+        {{hash=31ab9a997aaced32f65c72d1be34ac55}{%
+           family={Renner},
+           familyi={R\bibinitperiod},
+           given={Renato},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {England}%
+      }
+      \strng{namehash}{4681ca32c1e0b684b716c56bfe528050}
+      \strng{fullhash}{4681ca32c1e0b684b716c56bfe528050}
+      \strng{bibnamehash}{4681ca32c1e0b684b716c56bfe528050}
+      \strng{authorbibnamehash}{4681ca32c1e0b684b716c56bfe528050}
+      \strng{authornamehash}{4681ca32c1e0b684b716c56bfe528050}
+      \strng{authorfullhash}{4681ca32c1e0b684b716c56bfe528050}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{According to quantum theory, measurements generate random outcomes, in stark contrast with classical mechanics. This raises the question of whether there could exist an extension of the theory that removes this indeterminism, as suspected by Einstein, Podolsky and Rosen. Although this has been shown to be impossible, existing results do not imply that the current theory is maximally informative. Here we ask the more general question of whether any improved predictions can be achieved by any extension of quantum theory. Under the assumption that measurements can be chosen freely, we answer this question in the negative: no extension of quantum theory can give more information about the outcomes of future measurements than quantum theory itself. Our result has significance for the foundations of quantum mechanics, as well as applications to tasks that exploit the inherent randomness in quantum theory, such as quantum cryptography.}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature communications}
+      \field{number}{1}
+      \field{title}{No extension of quantum theory can have improved predictive power}
+      \field{volume}{2}
+      \field{year}{2011}
+      \field{pages}{411\bibrangedash 411}
+      \range{pages}{1}
+    \endentry
+    \entry{ColbeckRoger2012Tcoq}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6108c483c140c0ecd5ed21ecccf894f7}{%
+           family={Colbeck},
+           familyi={C\bibinitperiod},
+           given={Roger},
+           giveni={R\bibinitperiod}}}%
+        {{hash=31ab9a997aaced32f65c72d1be34ac55}{%
+           family={Renner},
+           familyi={R\bibinitperiod},
+           given={Renato},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{4681ca32c1e0b684b716c56bfe528050}
+      \strng{fullhash}{4681ca32c1e0b684b716c56bfe528050}
+      \strng{bibnamehash}{4681ca32c1e0b684b716c56bfe528050}
+      \strng{authorbibnamehash}{4681ca32c1e0b684b716c56bfe528050}
+      \strng{authornamehash}{4681ca32c1e0b684b716c56bfe528050}
+      \strng{authorfullhash}{4681ca32c1e0b684b716c56bfe528050}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The predictions that quantum theory makes about the outcomes of measurements are generally probabilistic. This has raised the question whether quantum theory can be considered complete, or whether there could exist alternative theories that provide improved predictions. Here we review recent work that considers arbitrary alternative theories, constrained only by the requirement that they are compatible with a notion of "free choice" (defined with respect to a natural causal order). It is shown that quantum theory is "maximally informative", i.e., there is no other compatible theory that gives improved predictions. Furthermore, any alternative maximally informative theory is necessarily equivalent to quantum theory. This means that the state a system has in such a theory is in one-to-one correspondence with its quantum-mechanical state (the wave function). In this sense, quantum theory is complete.}
+      \field{title}{The completeness of quantum theory for predicting measurement outcomes}
+      \field{year}{2012}
+      \keyw{Physics - Quantum Physics}
+    \endentry
+    \entry{Kent2014}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b7aa48f0678b0467d4b36779731fa902}{%
+           family={Kent},
+           familyi={K\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7aa48f0678b0467d4b36779731fa902}
+      \strng{fullhash}{b7aa48f0678b0467d4b36779731fa902}
+      \strng{bibnamehash}{b7aa48f0678b0467d4b36779731fa902}
+      \strng{authorbibnamehash}{b7aa48f0678b0467d4b36779731fa902}
+      \strng{authornamehash}{b7aa48f0678b0467d4b36779731fa902}
+      \strng{authorfullhash}{b7aa48f0678b0467d4b36779731fa902}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Phil. Trans. R. Soc. A 373: 20140241 (2014)}
+      \field{title}{Lorentzian Quantum Reality: Postulates and Toy Models}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.1098/rsta.2014.0241
+      \endverb
+      \verb{eprint}
+      \verb arXiv:1411.2957
+      \endverb
+    \endentry
+    \entry{LandsmanK2015OtCt}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6ae672084ce1a85eca4a867d6676405a}{%
+           family={Landsman},
+           familyi={L\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {United States}%
+      }
+      \strng{namehash}{6ae672084ce1a85eca4a867d6676405a}
+      \strng{fullhash}{6ae672084ce1a85eca4a867d6676405a}
+      \strng{bibnamehash}{6ae672084ce1a85eca4a867d6676405a}
+      \strng{authorbibnamehash}{6ae672084ce1a85eca4a867d6676405a}
+      \strng{authornamehash}{6ae672084ce1a85eca4a867d6676405a}
+      \strng{authorfullhash}{6ae672084ce1a85eca4a867d6676405a}
+      \field{extraname}{1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In three papers Colbeck and Renner (Nature Communications 2:411, (2011); Phys. Rev. Lett. 108, 150402 (2012); arXiv:1208.4123) argued that "no alternative theory compatible with quantum theory and satisfying the freedom of choice assumption can give improved predictions". We give a more precise version of the formulation and proof of this remarkable claim. Our proof broadly follows theirs, which relies on physically well motivated axioms, but to fill in some crucial details certain technical assumptions have had to be added, whose physical status seems somewhat obscure.}
+      \field{issn}{0022-2488}
+      \field{journaltitle}{Journal of mathematical physics}
+      \field{number}{12}
+      \field{title}{On the Colbeck–Renner theorem}
+      \field{volume}{56}
+      \field{year}{2015}
+      \field{pages}{122103}
+      \range{pages}{1}
+      \keyw{CLASSICAL AND QUANTUM MECHANICS,GENERAL PHYSICS ; FORECASTING ; HIDDEN VARIABLES ; INVARIANCE PRINCIPLES ; QUANTUM MECHANICS ; UNITARY SYMMETRY}
+    \endentry
+    \entry{Landsman}{book}{}
+      \name{author}{1}{}{%
+        {{hash=40eaa6550a3592f997eae49069662fbb}{%
+           family={Landsman},
+           familyi={L\bibinitperiod},
+           given={Klaas},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer Open}%
+      }
+      \strng{namehash}{40eaa6550a3592f997eae49069662fbb}
+      \strng{fullhash}{40eaa6550a3592f997eae49069662fbb}
+      \strng{bibnamehash}{40eaa6550a3592f997eae49069662fbb}
+      \strng{authorbibnamehash}{40eaa6550a3592f997eae49069662fbb}
+      \strng{authornamehash}{40eaa6550a3592f997eae49069662fbb}
+      \strng{authorfullhash}{40eaa6550a3592f997eae49069662fbb}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book studies the foundations of quantum theory through its relationship to classical physics. This idea goes back to the Copenhagen Interpretation (in the original version due to Bohr and Heisenberg), which the author relates to the mathematical formalism of operator algebras originally created by von Neumann. The book therefore includes comprehensive appendices on functional analysis and C*-algebras, as well as a briefer one on logic, category theory, and topos theory. Matters of foundational as well as mathematical interest that are covered in detail include symmetry (and its "spontaneous" breaking), the measurement problem, the Kochen-Specker, Free Will, and Bell Theorems, the Kadison-Singer conjecture, quantization, indistinguishable particles, the quantum theory of large systems, and quantum logic, the latter in connection with the topos approach to quantum theory.}
+      \field{isbn}{9783319517773}
+      \field{series}{Fundamental Theories of Physics}
+      \field{title}{Foundations of Quantum Theory : From Classical Concepts to Operator Algebras (Volume 188.0)}
+      \field{volume}{188}
+      \field{year}{2017}
+      \keyw{Algebra ; bic Book Industry Communication ; Mathematical physics ; Matrix theory ; P Mathematics & science ; PH Physics ; Physics ; Quantum physics ; Quantum Theory ; Science}
+    \endentry
+    \entry{LeegwaterGijs2016Aitf}{article}{}
+      \name{author}{1}{}{%
+        {{hash=05414b05f527d8d5f41b01c95ac259c1}{%
+           family={Leegwater},
+           familyi={L\bibinitperiod},
+           given={Gijs},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Ltd}%
+      }
+      \strng{namehash}{05414b05f527d8d5f41b01c95ac259c1}
+      \strng{fullhash}{05414b05f527d8d5f41b01c95ac259c1}
+      \strng{bibnamehash}{05414b05f527d8d5f41b01c95ac259c1}
+      \strng{authorbibnamehash}{05414b05f527d8d5f41b01c95ac259c1}
+      \strng{authornamehash}{05414b05f527d8d5f41b01c95ac259c1}
+      \strng{authorfullhash}{05414b05f527d8d5f41b01c95ac259c1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recently, Roger Colbeck and Renato Renner (C&R) have claimed that ‘[n]o extension of quantum theory can have improved predictive power’ (Colbeck & Renner, 2011, 2012b). If correct, this is a spectacular impossibility theorem for hidden variable theories, which is more general than the theorems of Bell (1964) and Leggett (2003). Also, C&R have used their claim in attempt to prove that a system׳s quantum-mechanical wave function is in a one-to-one correspondence with its ‘ontic’ state (Colbeck & Renner, 2012a). C&R׳s claim essentially means that in any hidden variable theory that is compatible with quantum-mechanical predictions, probabilities of measurement outcomes are independent of these hidden variables. This makes such variables otiose. On closer inspection, however, the generality and validity of the claim can be contested. First, it is based on an assumption called ‘Freedom of Choice’. As the name suggests, this assumption involves the independence of an experimenter׳s choice of measurement settings. But in the way C&R define this assumption, a no-signalling condition is surreptitiously presupposed, making the assumption less innocent than it sounds. When using this definition, any hidden variable theory violating parameter independence, such as Bohmian Mechanics, is immediately shown to be incompatible with quantum-mechanical predictions. Also, the argument of C&R is hard to follow and their mathematical derivation contains several gaps, some of which cannot be closed in the way they suggest. We shall show that these gaps can be filled. The issue with the ‘Freedom of Choice’ assumption can be circumvented by explicitly assuming parameter independence. This makes the result less general, but better founded. We then obtain an impossibility theorem for hidden variable theories satisfying parameter independence only. As stated above, such hidden variable theories are impossible in the sense that any supplemental variables have no bearing on outcome probabilities, and are therefore trivial. So, while quantum mechanics itself satisfies parameter independence, if a variable is added that changes the outcome probabilities, however slightly, parameter independence must be violated. •A no-go theorem is presented for parameter independent hidden variable theories.•Simpler proofs of existing results related to chained Bell inequalities are included.•The work is based on a no-go theorem by Roger Colbeck and Renato Renner.•Shortcomings of Colbeck and Renner׳s work are addressed.•This work aims to be mathematically thorough and contains some new, necessary steps.}
+      \field{issn}{1355-2198}
+      \field{journaltitle}{Studies in History and Philosophy of Modern Physics}
+      \field{title}{An impossibility theorem for parameter independent hidden variable theories}
+      \field{volume}{54}
+      \field{year}{2016}
+      \field{pages}{18\bibrangedash 34}
+      \range{pages}{17}
+      \keyw{Bell inequalities ; Chained Bell inequalities ; Hidden variable theories ; No-go theorem ; Parameter independence ; Physics - Quantum Physics ; Quantum mechanics ; Quantum theory}
+    \endentry
+    \entry{Redhead}{book}{}
+      \name{author}{1}{}{%
+        {{hash=67f51b990d5c2c3d7f9696e82b61bf3d}{%
+           family={Redhead},
+           familyi={R\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Oxford : New York}%
+      }
+      \list{publisher}{1}{%
+        {Clarendon Press ; Oxford University Press}%
+      }
+      \strng{namehash}{67f51b990d5c2c3d7f9696e82b61bf3d}
+      \strng{fullhash}{67f51b990d5c2c3d7f9696e82b61bf3d}
+      \strng{bibnamehash}{67f51b990d5c2c3d7f9696e82b61bf3d}
+      \strng{authorbibnamehash}{67f51b990d5c2c3d7f9696e82b61bf3d}
+      \strng{authornamehash}{67f51b990d5c2c3d7f9696e82b61bf3d}
+      \strng{authorfullhash}{67f51b990d5c2c3d7f9696e82b61bf3d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780198249375}
+      \field{title}{Incompleteness, nonlocality, and realism : a prolegomenon to the philosophy of quantum mechanics}
+      \field{year}{1987}
+      \keyw{Physics -- Philosophy; Quantum theory}
+    \endentry
+    \entry{SchwingerJulianI}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b980b4d50e299f1778272e6120f86baf}{%
+           family={Schwinger},
+           familyi={S\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b980b4d50e299f1778272e6120f86baf}
+      \strng{fullhash}{b980b4d50e299f1778272e6120f86baf}
+      \strng{bibnamehash}{b980b4d50e299f1778272e6120f86baf}
+      \strng{authorbibnamehash}{b980b4d50e299f1778272e6120f86baf}
+      \strng{authornamehash}{b980b4d50e299f1778272e6120f86baf}
+      \strng{authorfullhash}{b980b4d50e299f1778272e6120f86baf}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0031-899X}
+      \field{journaltitle}{Physical review}
+      \field{number}{10}
+      \field{title}{Quantum Electrodynamics. I. A Covariant Formulation}
+      \field{volume}{74}
+      \field{year}{1948}
+      \field{pages}{1439\bibrangedash 1461}
+      \range{pages}{23}
+    \endentry
+    \entry{Shimony86}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=b5bc54eaf43aa6ec6966c23cf46280b5}{%
+           family={Shimony},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{b5bc54eaf43aa6ec6966c23cf46280b5}
+      \strng{fullhash}{b5bc54eaf43aa6ec6966c23cf46280b5}
+      \strng{bibnamehash}{b5bc54eaf43aa6ec6966c23cf46280b5}
+      \strng{authorbibnamehash}{b5bc54eaf43aa6ec6966c23cf46280b5}
+      \strng{authornamehash}{b5bc54eaf43aa6ec6966c23cf46280b5}
+      \strng{authorfullhash}{b5bc54eaf43aa6ec6966c23cf46280b5}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Search for a Naturalistic World View: Volume II: natural science and metaphysics}
+      \strng{crossref}{Shimony93}
+      \field{origyear}{1986}
+      \field{title}{Events and processes in the quantum world}
+      \field{year}{1993}
+      \field{origdateera}{ce}
+      \field{pages}{140\bibrangedash 162}
+      \range{pages}{23}
+    \endentry
+    \entry{Shimony93}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b5bc54eaf43aa6ec6966c23cf46280b5}{%
+           family={Shimony},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{b5bc54eaf43aa6ec6966c23cf46280b5}
+      \strng{fullhash}{b5bc54eaf43aa6ec6966c23cf46280b5}
+      \strng{bibnamehash}{b5bc54eaf43aa6ec6966c23cf46280b5}
+      \strng{authorbibnamehash}{b5bc54eaf43aa6ec6966c23cf46280b5}
+      \strng{authornamehash}{b5bc54eaf43aa6ec6966c23cf46280b5}
+      \strng{authorfullhash}{b5bc54eaf43aa6ec6966c23cf46280b5}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Search for a Naturalistic World View: Volume II: natural science and metaphysics}
+      \field{year}{1993}
+    \endentry
+    \entry{Bell}{book}{}
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd ed.}
+      \field{isbn}{9780521818629}
+      \field{title}{Speakable and unspeakable in quantum mechanics}
+      \field{year}{2004}
+      \keyw{Quantum theory}
+    \endentry
+    \entry{TomonagaI}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8fb10ec0ce9a911702b1e526956b9ba4}{%
+           family={Tomonaga},
+           familyi={T\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Tokyo}%
+      }
+      \list{publisher}{2}{%
+        {Japan Science}%
+        {Technology Agency}%
+      }
+      \strng{namehash}{8fb10ec0ce9a911702b1e526956b9ba4}
+      \strng{fullhash}{8fb10ec0ce9a911702b1e526956b9ba4}
+      \strng{bibnamehash}{8fb10ec0ce9a911702b1e526956b9ba4}
+      \strng{authorbibnamehash}{8fb10ec0ce9a911702b1e526956b9ba4}
+      \strng{authornamehash}{8fb10ec0ce9a911702b1e526956b9ba4}
+      \strng{authorfullhash}{8fb10ec0ce9a911702b1e526956b9ba4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0033-068X}
+      \field{journaltitle}{Progress of theoretical physics}
+      \field{number}{2}
+      \field{title}{On a Relativistically Invariant Formulation of the Quantum Theory of Wave Fields}
+      \field{volume}{1}
+      \field{year}{1946}
+      \field{pages}{27\bibrangedash 42}
+      \range{pages}{16}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
