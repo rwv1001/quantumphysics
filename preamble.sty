@@ -45,15 +45,15 @@
 \makeatother
 
 \usepackage[inline]{showlabels}
+\usepackage{microtype}
 
 \newcommand{\du}[2]{\mathbf{\SI[inter-unit-product={}\cdot{}]{#1}{#2}}}
 \makeatletter 
 \newcommand{\pp@spage}{}
 \makeatother
 
-\theoremstyle{hypothesis}
-\newtheorem*{hypothesis}{Partitioning Criterion}
-\newcommand\myeq{\stackrel{\mathclap{\scriptsize\mbox{def}}}{=}}
+
+\newcommand\myeq{\stackrel{\mathclap{\text{\scriptsize\mbox{def}}}}{=}}
 \newcommand{\uvb}[1]{\vb{\hat{{#1}}}}
 \newcommand{\uvbp}[1]{\uvb{#1}\bm{+}}
 \newcommand{\uvbm}[1]{\uvb{#1}\bm{-}}
