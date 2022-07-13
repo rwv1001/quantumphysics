@@ -66,8 +66,9 @@
 
 \renewcommand{\@makefntext}[1]{%
 \if@optraggedright
-\raggedright%
+%\raggedright%
 \fi
+\justifying
 \setlength{\parindent}{\footnotemargin}%
 \textsuperscript{\@thefnmark}#1%
 }
