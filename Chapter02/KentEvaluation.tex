@@ -213,80 +213,90 @@ $$\eta_{\mu\nu} = \eta_{\sigma\rho}\Lambda\indices{^\rho_\mu}\Lambda\indices{^\s
 \end{equation} 
 where $\Lambda^{-1}$ is the inverse Lorentz transformation that takes the coordinates $x'=({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ of a location to the coordinates $x=(x^0, x^1, x^2, x^3)$ describing that location. Thus, equation (\ref{lorentzscalar}) shows us how a scalar transforms under a Lorentz transformation $\Lambda$. 
 
-Many physical quantities, however, are not scalars and so will look different to different observers. For instance, the energy of an object has a kinetic component that depends on the velocity the object has relative to an observer. However, it turns out that if an observer $O$ considers an object's energy $E$ together with its three components of momentum $p^1, p^2$, and $p^3$ (in the directions $\hat{e}_1$, $\hat{e}_2$, and $\hat{e}_3$ respectively) to form the four-tuple $p\myeq(E/c, p^1, p^2, p^3)$ known as the object's \textbf{four-momentum}, then $p$ transforms in the same way as spacetime coordinates transform between different observers. In other words, a different observer $O'$ whose coordinates are given by ${x'}^\mu=\Lambda\indices{^\mu_\nu}x^\nu$ would observe the object's four-momentum to be ${p'}^\mu=\Lambda\indices{^\mu_\nu}p^\nu$.\footnote{In order for $p$ to transform in this way, we have to redefine what we mean by energy and momentum. In classical mechanics, the momentum of an object is the product of the object's mass and its velocity. In the context of special relativity, however, the four-momentum of an object is defined to the product of its rest mass $m_0$ and its \textbf{four-velocity} where the four velocity of an object is a four-tuple $(u^0, u^1, u^2, u^3)$ such that the object's velocity (in the classical sense) is the vector $(c \frac{u^1}{u^0}, c \frac{u^2}{u^0}, c\frac{u^3}{u^0})$ and such that $v_\mu v^\mu=c^2$. One can work out an object's four-velocity by first considering its four-velocity relative to an observer who is stationary relative to the object. In this case, the object's four-velocity will be $(c,0,0,0)$. Now suppose the observer is moving at a constant speed $v$ in the $\hat{e}_1$ direction towards the object. Then according to the  transformation rule for four-vectors, the corresponding four-velocity must now be $(u^0, u^1, u^2, u^3)$ with $u^\mu=\Lambda\indices{^\mu_0}c$ for some Lorentz transformation $\Lambda\indices{^\mu_\nu}$ such that $(c \frac{u^1}{u^0}, c \frac{u^2}{u^0}, c\frac{u^3}{u^0})=(-v,0,0)$. From this it follows that $u^2=u^3=0$. But in terms of the $\Lambda\indices{^\mu_\nu}$ components, we must also have $(c,0,0,0)\rightarrow(\Lambda{^0_0}c, \Lambda{^1_0}c, 0, 0)$. Hence, $ \Lambda{^1_0}=-{\Lambda{^0_0}v}/{c}$. It is conventional to define $\beta={v}/{c}$ and $\gamma=\Lambda{^0_0}$ so that   $ \Lambda{^1_0}=-\gamma\beta$. Moreover, since $u_0u^0-u_1u^1=c^2$, we must also have $(\gamma c)^2-(\gamma \beta c )^2=c^2$ from which it follows that $\gamma=\frac{1}{\sqrt{1-\beta^2}}.$ Thus, in the case of an object moving with velocity $(-v,0,0)$, its four-velocity will be $(\gamma c, -\gamma \beta c,0,0)=(\gamma c, -\gamma v,0,0)$. Without loss of generality, we therefore see that in the case of an object moving with velocity $(v^1, v^2, v^3)$, then its four-velocity must be $\gamma(c,v^1,v^2,v^3)$  where 
- $\gamma=\frac{1}{\sqrt{1-\beta^2}}$ and $\beta=v/c=\sqrt{({v}^1)^2+({v}^2)^2+({v}^3)^2}/c$. Hence, the object's four-momentum will be $\gamma m_0(c,v^1,v^2,v^3).$ If the objects velocity is very small compared to the speed of light, then $\gamma\approx 1+\frac{v^2}{2c^2}$, and hence the objects four-momentum $(E/c, p^1, p^2, p^3)$ will be approximately $(m_0c+\frac{1}{2}m_0{v^2}/c, m_0v^1,m_0v^2,m_0v^3)$. Therefore, $(p^1, p^2, p^3)$ is approximately equal to the classical momentum. However, the energy is now $E=m_0c^2+\frac{1}{2}m_0{v^2}$. Thus, in addition to the kinetic energy term $\frac{1}{2}m_0{v^2}$, there is a rest mass energy $m_0c^2$. If we define the \textbf{relativistic mass} $m=\gamma m_0$, then we obtain Einstein's famous formula $E=mc^2$.  } More generally, any list of four physical quantities $(\varphi^0, \varphi^1, \varphi^2, \varphi^3)$ that transforms as $\varphi\rightarrow\varphi'$ with  ${\varphi'}^\mu=\Lambda\indices{^\mu_\nu}\varphi^\nu$ is called a \textbf{four-vector}. Figure \ref{rotfigure} shows how (two of) the components of a four-vector $\varphi$ at a particular location will differ for different observers under a spatial rotation of the coordinates. A four-vector $\varphi^\mu(x)$ defined at every spacetime location $x$ is called a \textbf{vector field}, and if $O$ observers this vector-field $\varphi^\mu(x)$, and $O'$ is another observer whose coordinates are related to the coordinates $O$ via the Lorentz transformation $\Lambda$, then $O'$ will describe this vector-field as ${\varphi'}^\mu(x')\myeq\Lambda\indices{^\mu_\nu}\varphi^\nu(x).$ Hence, under the Lorentz transformation $\Lambda$, ${\varphi}^\mu\rightarrow {\varphi'}^\mu$ where
+Many physical quantities, however, are not scalars and so will look different to different observers. For instance, the energy of an object has a kinetic component that depends on the velocity the object has relative to an observer. However, it turns out that if an observer $O$ considers an object's energy $E$ together with its three components of momentum $p^1, p^2$, and $p^3$ (in the directions $\hat{e}_1$, $\hat{e}_2$, and $\hat{e}_3$ respectively) to form the four-tuple $p\myeq(E/c, p^1, p^2, p^3)$ known as the object's \textbf{four-momentum}, then $p$ transforms in the same way as spacetime coordinates transform between different observers. In other words, a different observer $O'$ whose coordinates are given by ${x'}^\mu=\Lambda\indices{^\mu_\nu}x^\nu$ would observe the object's four-momentum to be ${p'}^\mu=\Lambda\indices{^\mu_\nu}p^\nu$.\footnote{In order for $p$ to transform in this way, we have to redefine what we mean by energy and momentum. In classical mechanics, the momentum of an object is the product of the object's mass and its velocity. In the context of special relativity, however, the four-momentum of an object is defined to be the product of its rest mass $m_0$ and its \textbf{four-velocity} where the four velocity of an object is a four-tuple $(u^0, u^1, u^2, u^3)$ with $u_\mu u^\mu=c^2$ such that the object's velocity (in the classical sense) is the vector $(c \frac{u^1}{u^0}, c \frac{u^2}{u^0}, c\frac{u^3}{u^0})$. The motivation for this definition can be seen by considering an object whose classical velocity is $\vb{v}=(v^1,v^2,v^3)$ that goes through $(0,0,0,0)$. It will have a spacetime trajectory $x(t)=(ct, v^1 t, v^2 t, v^3 t)$. $u$ is just the four-vector proportional to $x(1)$ with $u_\mu u^\mu=c^2$.  We can easily work out the 
+four-velocity of an object whose classical velocity is $\vb{v}$. For we must have $u^i=\frac{v^i u^0}{c}$, for $i=1$ to $3$. Therefore, since $u_\mu u^\mu=c^2$, we must have $(u^0)^2\big(1-\frac{v^2}{c^2}\big)=c^2$ where $v=\sqrt{({v}^1)^2+({v}^2)^2+({v}^3)^2}$. Thus, if we define $\beta={v}/{c}$ and $\gamma=\frac{1}{\sqrt{1-\beta^2}}$, then $u^0=c\gamma$ and $u^i=\gamma v^i$ for $i=1$ to $3$, and hence the four-velocity of the object must be $u=\gamma(c,v^1,v^2,v^3).$ From this, we see that the object's four-momentum will be $\gamma m_0(c,v^1,v^2,v^3).$ If the object's velocity is very small compared to the speed of light, then $\gamma\approx 1+\frac{v^2}{2c^2}$, and hence the object's four-momentum $(E/c, p^1, p^2, p^3)$ will be approximately $(m_0c+\frac{1}{2}m_0{v^2}/c, m_0v^1,m_0v^2,m_0v^3)$. Therefore, $(p^1, p^2, p^3)$ is approximately equal to the classical momentum. However, the energy is now $E=m_0c^2+\frac{1}{2}m_0{v^2}$. Thus, in addition to the kinetic energy term $\frac{1}{2}m_0{v^2}$, there is a rest mass energy $m_0c^2$. If we define the \textbf{relativistic mass} $m=\gamma m_0$, then we obtain Einstein's famous formula $E=mc^2$.  } More generally, any list of four physical quantities $(\varphi^0, \varphi^1, \varphi^2, \varphi^3)$ that transforms as $\varphi\rightarrow\varphi'$ with  ${\varphi'}^\mu=\Lambda\indices{^\mu_\nu}\varphi^\nu$ is called a \textbf{four-vector}.
+\begin{figure}[ht!]
+	\captionsetup{justification=justified}
+	\centering
+	\tikzmath{
+	\textscale = 0.7;
+	\picscale = 0.58;
+	\circsize=3.5;
+	\px=3;
+	\py=3.5;
+	\pr=sqrt(\px*\px+\py*\py);
+	\th=33;
+	\thd=atan(\py/\px)-\th;
+	\pyd=\pr*sin(\thd);
+	\pxd=\pr*cos(\thd);
+	\rrange =7; 
+	\labelx= \rrange/2;
+	\labely=-0.3;
+	\vr=3;
+	\vth=75;
+	\vx=\vr*cos(\vth);
+	\vy=\vr*sin(\vth);
+	\vxt=\vx+\px;
+	\vyt=\vy+\py;
+	\vrt=sqrt(\vxt*\vxt+\vyt*\vyt);
+	\vthd=atan(\vyt/\vxt)-\th;
+	\vxtd=\vrt*cos(\vthd);
+	\vytd=\vrt*sin(\vthd);
+	\vxd=\vr*cos(\vth-\th);
+	\vyd=\vr*sin(\vth-\th);
+	} 
+	\begin{tikzpicture}[scale=\picscale ] 
+		\draw[-latex] (0,0) -- (\rrange,0)  node[right,scale=\textscale, text width=5em] {$\hat{e}_1$};
+		\draw[-latex] (0,0) -- (0,\rrange)  node[right,scale=\textscale, text width=5em] {$\hat{e}_2$};
+		\draw[dotted, thick] (\px,0) --  (\px,\py) node[midway,right, scale=\textscale]{${x}^2$}; 
+		\draw[dotted, thick] (0,\py) --  (\px,\py)  node[midway,above, scale=\textscale]{${x}^1$};  
+		
+		\draw[-latex] (\px,\py)  -- (\px+\vx,\py+\vy)  node[right=22,above=-4,scale=\textscale, text width=5em] {${\varphi}$};
+		\draw[dotted, thick] (\px,\py) --  (\px,\py+\vy) node[midway,left, scale=\textscale]{${\varphi}^2$}; 
+		\draw[dotted, thick] (\px,\py+\vy) --  (\px+\vx,\py+\vy) node[midway,above, scale=\textscale]{${\varphi}^1$};  
+	
+		\begin{scope}[rotate=\th,draw=red, text=red]
+		   \draw[-latex] (0,0) -- (\rrange,0)  node[right,scale=\textscale, text width=5em]  {$\hat{e}'_1$};
+			  \draw[-latex] (0,0) -- (0,\rrange)  node[right,scale=\textscale, text width=5em] {$\hat{e}'_2$};
+		\draw[dotted, thick] (\pxd,\pyd) --  (\vxtd,\pyd) node[midway,right=3,below=-3, scale=\textscale]{${\varphi'}^1$}; 
+		\draw[dotted, thick] (\vxtd,\pyd) --  (\vxtd,\vytd) node[midway,right=6,above=-4, scale=\textscale]{${\varphi'}^2$};  
+		\end{scope}
+	
+	  \draw [black,fill] (\px,\py) circle [radius=\circsize pt];    
+		\coordinate[label = below: (b)]  (D) at (\labelx,\labely); 
+	\end{tikzpicture}% pic 1
+	\vspace*{2px}
+	\caption{Shows how a four-vector ${\varphi}$ (of which only two components are shown) defined at a spacetime location (indicated by $\bullet$) can be expressed either as $(\varphi^1, \varphi^2)$ with respect to the basis $\{\hat{e}_1,\hat{e}_2\}$ or as $({\varphi'}^1,{\varphi'}^2)$ with respect to the basis $\{\hat{e}'_1,\hat{e}'_2\}$.}\label{rotfigure2}
+	\end{figure}
+Figure \ref{rotfigure2} shows how (two of) the components of a four-vector $\varphi$ at a particular location will differ for different observers under a spatial rotation of the coordinates. A four-vector $\varphi^\mu(x)$ defined at every spacetime location $x$ is called a \textbf{four-vector field}. If $O$ observes this vector-field $\varphi^\mu(x)$, and $O'$ is another observer whose coordinates are related to the coordinates $O$ via the Lorentz transformation $\Lambda$, then $O'$ will describe this vector-field as ${\varphi'}^\mu(x')\myeq\Lambda\indices{^\mu_\nu}\varphi^\nu(x).$ Hence, under the Lorentz transformation $\Lambda$, ${\varphi}^\mu\rightarrow {\varphi'}^\mu$ where
 \begin{equation}\label{lorentzvector}
 {\varphi'}^\mu(x)=\Lambda\indices{^\mu_\nu}\varphi^\nu(\Lambda^{-1}x).
 \end{equation} 
 
 
-\begin{figure}[ht!]
-\captionsetup{justification=justified}
-\centering
-\tikzmath{
-\textscale = 0.7;
-\picscale = 0.58;
-\circsize=3.5;
-\px=3;
-\py=3.5;
-\pr=sqrt(\px*\px+\py*\py);
-\th=33;
-\thd=atan(\py/\px)-\th;
-\pyd=\pr*sin(\thd);
-\pxd=\pr*cos(\thd);
-\rrange =7; 
-\labelx= \rrange/2;
-\labely=-0.3;
-\vr=3;
-\vth=75;
-\vx=\vr*cos(\vth);
-\vy=\vr*sin(\vth);
-\vxt=\vx+\px;
-\vyt=\vy+\py;
-\vrt=sqrt(\vxt*\vxt+\vyt*\vyt);
-\vthd=atan(\vyt/\vxt)-\th;
-\vxtd=\vrt*cos(\vthd);
-\vytd=\vrt*sin(\vthd);
-\vxd=\vr*cos(\vth-\th);
-\vyd=\vr*sin(\vth-\th);
-} 
-\begin{tikzpicture}[scale=\picscale ] 
-    \draw[-latex] (0,0) -- (\rrange,0)  node[right,scale=\textscale, text width=5em] {$\hat{e}_1$};
-    \draw[-latex] (0,0) -- (0,\rrange)  node[right,scale=\textscale, text width=5em] {$\hat{e}_2$};
-    \draw[dotted, thick] (\px,0) --  (\px,\py) node[midway,right, scale=\textscale]{${x}^2$}; 
-    \draw[dotted, thick] (0,\py) --  (\px,\py)  node[midway,above, scale=\textscale]{${x}^1$};  
-    
-    \draw[-latex] (\px,\py)  -- (\px+\vx,\py+\vy)  node[right=22,above=-4,scale=\textscale, text width=5em] {${\varphi}$};
-    \draw[dotted, thick] (\px,\py) --  (\px,\py+\vy) node[midway,left, scale=\textscale]{${\varphi}^2$}; 
-    \draw[dotted, thick] (\px,\py+\vy) --  (\px+\vx,\py+\vy) node[midway,above, scale=\textscale]{${\varphi}^1$};  
 
-    \begin{scope}[rotate=\th,draw=red, text=red]
-       \draw[-latex] (0,0) -- (\rrange,0)  node[right,scale=\textscale, text width=5em]  {$\hat{e}'_1$};
-   	   \draw[-latex] (0,0) -- (0,\rrange)  node[right,scale=\textscale, text width=5em] {$\hat{e}'_2$};
-    \draw[dotted, thick] (\pxd,\pyd) --  (\vxtd,\pyd) node[midway,right=3,below=-3, scale=\textscale]{${\varphi'}^1$}; 
-    \draw[dotted, thick] (\vxtd,\pyd) --  (\vxtd,\vytd) node[midway,right=6,above=-4, scale=\textscale]{${\varphi'}^2$};  
-    \end{scope}
-
-  \draw [black,fill] (\px,\py) circle [radius=\circsize pt];    
-    \coordinate[label = below: (b)]  (D) at (\labelx,\labely); 
-\end{tikzpicture}% pic 1
-\vspace*{2px}
-\caption{Shows how a four-vector ${\varphi}$ (of which only two components are shown) defined at a spacetime location (indicated by $\bullet$) can be expressed either as $(\varphi^1, \varphi^2)$ with respect to the basis $\{\hat{e}_1,\hat{e}_2\}$ or as $({\varphi'}^1,{\varphi'}^2)$ with respect to the basis $\{\hat{e}'_1,\hat{e}'_2\}$.}\label{rotfigure2}
-\end{figure}
-If $\varphi^\mu$ is a four-vector, then we refer to $\varphi_\mu\myeq\eta_{\mu\nu}\varphi^\nu$ as a \textbf{four-covector}. To see how four-covectors transform under a Lorentz transformation $\Lambda$, it will be helpful to define $\Lambda\indices{_\mu^\nu}\myeq\eta_{\mu\rho}\eta^{\nu\sigma}\Lambda\indices{^\rho_\sigma}$ where $\eta^{\nu\sigma}=\eta_{\nu\sigma}$. If we also define the \textbf{Kronecker-delta} $\delta^\nu_\mu$ such $\delta^\nu_\mu=1$ when $\mu=\nu$ and $\delta^\nu_\mu=0$ otherwise. Then using the fact that $\eta_{\mu\rho}\eta^{\nu\rho}=\delta^\nu_\mu$ together with equation (\ref{lorentztrans}), we have 
+From a four-vector $\varphi^\mu$, we can also define the so called \textbf{four-covector}: 
+\begin{equation}\label{covector}
+	\varphi_\mu\myeq\eta_{\mu\nu}\varphi^\nu.
+\end{equation}
+To see how four-covectors transform under a Lorentz transformation $\Lambda$, it will be helpful to define 
+\begin{equation}\label{colambda}
+	\Lambda\indices{_\mu^\nu}\myeq\eta_{\mu\rho}\eta^{\nu\sigma}\Lambda\indices{^\rho_\sigma}
+\end{equation}
+where $\eta^{\nu\sigma}=\eta_{\nu\sigma}$. If we also define the \textbf{Kronecker-delta} $\delta^\nu_\mu$ such that $\delta^\nu_\mu=1$ when $\mu=\nu$ and $\delta^\nu_\mu=0$ otherwise, then using the fact that $\eta_{\mu\rho}\eta^{\nu\rho}=\delta^\nu_\mu$ together with equation (\ref{lorentztrans}), we have 
 \begin{equation}\label{lambdainverse}
 \Lambda\indices{^\rho_\mu}\Lambda\indices{_\rho^\nu}=\delta^\nu_\mu.
 \end{equation}
-By definition, the inverse of $\Lambda^{-1}$ satisfies 
+Since by definition, the inverse of $\Lambda^{-1}$ satisfies 
 $(\Lambda^{-1})\indices{^\nu_\rho}\Lambda\indices{^\rho_\mu}=\delta^\nu_\mu,$
-so we have $(\Lambda^{-1})\indices{^\nu_\rho}=\Lambda\indices{_\rho^\nu}.$  From (\ref{lorentztrans}), we see that under a Lorentz transformation $\Lambda$, $\varphi_\mu\rightarrow\varphi'_\mu$
+ we have $(\Lambda^{-1})\indices{^\nu_\rho}=\Lambda\indices{_\rho^\nu}.$  From (\ref{lorentzvector}), (\ref{covector}), and (\ref{colambda}), we therefore see that under a Lorentz transformation $\Lambda$, a four-covector field $\varphi_\mu(x)$ transforms as $\varphi_\mu(x)\rightarrow\varphi'_\mu(x')$
 where
 \begin{equation}\label{lorentzcovector}
 \varphi'_\mu(x)=\Lambda\indices{_\mu^\nu}\varphi_\nu(\Lambda^{-1}x)
 \end{equation}
  
 
-Besides scalars, four-vectors, and four-covectors we also need to consider physical quantities called rank-two tensors. The stress-energy tensor $T^{\mu\nu}$ mentioned on page \ref{stressenergy} is an example of a rank-two tensor. The defining property of a rank-two tensor $\varphi^{\mu\nu}(x)$ is that under a Lorentz transformation $\Lambda$, $\varphi^{\mu\nu}\rightarrow{\varphi'}^{\mu\nu}$ where
+Besides scalars, four-vectors, and four-covectors, we also need to consider physical quantities called rank-two tensors. The stress-energy tensor $T^{\mu\nu}$ mentioned on page \pageref{stressenergy} is an example of a rank-two tensor. The defining property of a rank-two tensor field $\varphi^{\mu\nu}(x)$ is that under a Lorentz transformation $\Lambda$, $\varphi^{\mu\nu}(x)\rightarrow{\varphi'}^{\mu\nu}(x')$ where
 \begin{equation}\label{lorentztensor}
 {\varphi'}^{\mu\nu}(x)=\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}\varphi^{\rho\sigma}(\Lambda^{-1}x).
 \end{equation}
@@ -298,11 +308,11 @@ T_S(x)=T^{\mu\nu}(x)\eta_{\mu}(x)\eta_{\nu}(x).
 \end{equation}
 For example, if $S$ was the hypersurface consisting of all spacetime locations $x = (0,x^1,x^2,x^3)$, then $\big(\eta^{0}(x),\eta^{1}(x),\eta^{3}(x),\eta^{3}(x)\big) =(1,0,0,0),$ and hence $T_S(x)=T^{00}(x)$ which is the density of relativistic mass at $x$, i.e. the energy density at $x$ divided by $c^2$. 
 
-Let us now show that $T_S(x)$ is a scalar. So suppose that $\Lambda$ is a Lorentz transformation such that $\Lambda\indices{^0_\mu}\eta^\mu>0$ for any future-directed  unit four-vector vector $\eta^\mu$. We refer to a $\Lambda$ with this property as an \textbf{orthochronous} Lorentz transformation. Also suppose that $O$ and $O'$ are two observers such that spacetime locations that observer $O$ describes as having coordinates $x=(x^\mu)_{\mu=0}^3$ are described by $O'$ as having coordinates $x'=(\Lambda\indices{^\mu_\nu}x^\nu)_{\mu=0}^3$. Then since ${x'}_\mu{y'}^\mu= x_\mu y^\mu$, it follows that the future-directed unit four-vector orthogonal to $S$ at $x$ which $O$ describes as $\eta^\mu(x)$ will be described by $O'$ as  ${\eta'}^\mu(x')=\Lambda\indices{^\mu_\nu}\eta^\nu(x)$. Thus, for any location in $S$ that $O'$ describes as having coordinates $x'$ with corresponding  future-directed $S$-orthogonal unit four-vector ${\eta'}^\mu(x')$, $O'$ can construct a function $T'_S(x')$  with 
+To see why $T_S(x)$ is a scalar, suppose that $\Lambda$ is a Lorentz transformation such that $\Lambda\indices{^0_\mu}\eta^\mu>0$ for any future-directed  unit four-vector vector $\eta^\mu$. We refer to a $\Lambda$ with this property as an \textbf{orthochronous} Lorentz transformation. Also suppose that $O$ and $O'$ are two observers such that spacetime locations that observer $O$ describes as having coordinates $x=(x^\mu)_{\mu=0}^3$ are described by $O'$ as having coordinates $x'=(\Lambda\indices{^\mu_\nu}x^\nu)_{\mu=0}^3$. Then since ${x'}_\mu{y'}^\mu= x_\mu y^\mu$, it follows that the future-directed unit four-vector orthogonal to $S$ at $x$ which $O$ describes as $\eta^\mu(x)$ will be described by $O'$ as  ${\eta'}^\mu(x')=\Lambda\indices{^\mu_\nu}\eta^\nu(x)$. Thus, for any location in $S$ that $O'$ describes as having coordinates $x'$ with corresponding  future-directed $S$-orthogonal unit four-vector ${\eta'}^\mu(x')$, $O'$ can construct a function $T'_S(x')$  with 
 \begin{equation}\label{TSprimedef}
 T'_S(x')=T'^{\mu\nu}(x')\eta'_{\mu}(x')\eta'_{\nu}(x').
 \end{equation}
-Then using (\ref{lorentzvector}), (\ref{lorentzcovector}) and (\ref{lorentztensor}) on the right-hand side of (\ref{TSprimedef}),  we have
+Then using  (\ref{lorentzcovector}) and (\ref{lorentztensor}) on the right-hand side of (\ref{TSprimedef}),  we have
 \begin{equation}\label{invariantTS1}
 \begin{split}
 T'_S(x')&=\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}T^{\rho\sigma}(x)\Lambda\indices{_\mu^\alpha}\eta_{\alpha}(x)\Lambda\indices{_\nu^\beta}\eta_{\beta}(x)\\
@@ -312,32 +322,49 @@ T'_S(x')&=\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}T^{\rho\sigma}(x
 &=T_S(x)
 \end{split}
 \end{equation}
-where on the third line we have used (\ref{lambdainverse}) and on the last line we have used (\ref{TSdef}). To obtain (\ref{invariantTS1}), we assumed that $\Lambda$ is orthochronous, but if $\Lambda$ is non-orthochronous, we would need to take the negations of ${\eta'}^\mu(x')$ to get the future-directed $S$-orthogonal unit four-vector. But clearly this will not affect the equality in (\ref{invariantTS1}), so (\ref{invariantTS1}) holds for all Lorentz transformation, whether they are orthochronous or non-orthochronous.  We thus see that   $T_S(x)$ is a scalar.
+where on the third line we have used (\ref{lambdainverse}) and on the last line we have used (\ref{TSdef}). To obtain (\ref{invariantTS1}), we assumed that $\Lambda$ is orthochronous, but if $\Lambda$ is non-orthochronous, we would need to take the negations of ${\eta'}^\mu(x')$ to get the future-directed $S$-orthogonal unit four-vector. But clearly this will not affect the equality in (\ref{invariantTS1}), so (\ref{invariantTS1}) holds for all Lorentz transformations, whether they are orthochronous or non-orthochronous.  We thus see that   $T_S(x)$ is a scalar.
 
-Let us now consider the Hilbert space $H_{S_i}$ as defined on page \pageref{HSidef} for a hypersurface $S_i$. Two observers $O$ and $O'$ will typically assign different physical states to $S_i$ based on their frame of reference. E.g. if $O$ and $O'$ are traveling at different speeds, they will attribute different energy levels and momenta to the spacetime locations of $S_i$. For the Lorentz transformation that relates the coordinates of $O'$ to the coordinates of $O$, i.e. $x'=\Lambda x$,  there  will then be a unitary operator $U(\Lambda):H_{S_i}\rightarrow H_{S_i}$ such that if
-$O$ observes  $S_i$ to be in state $\ket{\psi_i}\in H_{S_i}$, then $O'$ will observe $S_i$ to be in state $U(\Lambda)\ket{\psi_i}$. Also, if $\hat{T}^{\mu\nu}(x)$ is the observable whose eigenstates with eigenvalues $\tau$ are the states of $S_i$ for which $O$ observes the stress-energy tensor $T^{\mu\nu}(x)$ to take the value $\tau$ at $x$, then 
+Let us now consider the Hilbert space $H_{S_i}$ as defined on page \pageref{HSidef} for a hypersurface $S_i$. 
+Given that $\hat{T}^{\mu\nu}(x)$ is the observable whose eigenstates with eigenvalues $\tau$ are the states of $S_i$ for which an observer $O$ observes the stress-energy tensor $T^{\mu\nu}(x)$ to take the value $\tau$ at $x$, it follows from (\ref{TSdef}) that 
+\begin{equation}\label{TShat}
+	T_S(x)\myeq T^{\mu\nu}(x)\eta_{\mu}(x)\eta_{\nu}(x)
+	\end{equation}
+	will be the observable whose eigenstates with eigenvalues $\tau_S(x)$ are the states of $S_i$ for which an observer $O$ observes $T_S(x)$ to take the value $\tau_S(x)$ at $x$.
+Two observers $O$ and $O'$ will typically assign different physical states to $S_i$ based on their frame of reference. E.g. if $O$ and $O'$ are traveling at different speeds, they will attribute different energy levels and momenta to the spacetime locations of $S_i$. For the Lorentz transformation that relates the coordinates of $O'$ to the coordinates of $O$, i.e. $x'=\Lambda x$,  there  will then be a unitary operator $U(\Lambda):H_{S_i}\rightarrow H_{S_i}$ such that if
+$O$ observes  $S_i$ to be in the state $\ket{\psi_i}\in H_{S_i}$, then $O'$ will observe $S_i$ to be in the state $U(\Lambda)\ket{\psi_i}$. But in order for $U(\Lambda)\ket{\psi_i}$ to be meaningful, we need to specify how the Hermitian operators that act on $U(\Lambda)\ket{\psi_i}$ correspond to the physical quantities that $O'$ observes. So we specify that the Hermitian operator 
+\begin{equation}\label{Thatprime}
+\hat{T}'^{\mu\nu}(x')=\hat{T}^{\mu\nu}(x')
+\end{equation}
+will be the observable whose eigenstates with eigenvalues $\tau'$ are the states of $S_i$ for which $O'$ observes the stress-energy tensor $T^{\prime\mu\nu}(x')$ to take the value $\tau'$ at $x'$. Since $T^{\mu\nu}(x)$ transforms according to (\ref{lorentztensor}), it will follow that
 \begin{equation}\label{TUrelation}
 U(\Lambda)^{-1}\hat{T}^{\mu\nu}(x)U(\Lambda)=\Lambda\indices{^\mu_\rho}\Lambda{^\nu_\sigma}\hat{T}^{\rho\sigma}(\Lambda^{-1}x).
 \end{equation}
-We insist on this identity because it makes it the case that  $\hat{T}^{\mu\nu}(x')$ will be the observable whose eigenstates with eigenvalues $\tau'$ are the states of $S_i$ for which $O'$ observes the stress-energy tensor $T^{\prime\mu\nu}(x')$ to take the value $\tau'$ at $x'$.
 
-We also insist that $U(\Lambda)$ is unitary because this means that if $O$ calculates the probability $S_i$ transitions from state $\ket{\psi_i}$ to state $\ket{\chi_i}$, then $O'$ would calculate the same probability for the corresponding transition from the state $\ket{\psi_i'}=U(\Lambda)\ket{\psi_i}$ to state $\ket{\chi_i'}=U(\Lambda)\ket{\chi_i}$\footnote{This follows from (\ref{unitarycond}) which implies 
+We also insist that $U(\Lambda)$ is unitary because this means that if $O$ calculates the probability $S_i$ transitions from state $\ket{\psi_i}$ to state $\ket{\chi_i}$, then $O'$ would calculate the same probability for the corresponding transition from the state $\ket{\psi_i'}=U(\Lambda)\ket{\psi_i}$ to the state $\ket{\chi_i'}=U(\Lambda)\ket{\chi_i}.$\footnote{This follows from (\ref{unitarycond}) which implies 
 $\abs{\ip{\chi'_i}{\psi'_i}}^2=\abs{\ip{\chi_i}{\psi_i}}^2$, together with the Born rule given on page \pageref{bornrule}.}
 
-Now in order to show that Kent's model is consistent with special relativity, we need to show that (\ref{kentconsistency0}) defines a rank-two tensor. In other words, if $\{\ket{\xi_j}\}_{j=1}^\infty$ is an orthonormal basis of the Hilbert space of states $H_{S_i,\tau_S}$ for which $O$ observes $T_S(x)$ to be $\tau_S(x)$ for all $x\in S_i(y)\cap S$, and if $\{\ket{\xi_j'}\}_{j=1}^\infty$ is an orthonormal basis of the Hilbert space of states $H_{S_i,\tau_S'}$ for which $O'$ observes $T'_S(x')$ to be $\tau'_S(x')$ for all $x'\in S_i(y')\cap S$, then
+Now to say that Kent's model is Lorentz invariant, is to say that (\ref{kentconsistency0}) defines a rank-two tensor, for then this quantity and the quantities on which it depends will transform in the way that physical quantities should transform under a Lorentz transformation. Thus, in order to show that Kent's model is Lorentz invariant, we need to show that if $\{\ket{\xi_j}\}_{j=1}^\infty$ is an orthonormal basis of the Hilbert space of states $H_{S_i,\tau_S}$ for which $O$ observes $T_S(x)$ to be $\tau_S(x)$ for all $x\in S_i(y)\cap S$, and if $\{\ket{\xi_j'}\}_{j=1}^\infty$ is an orthonormal basis of the Hilbert space of states $H_{S_i,\tau_S'}$ for which $O'$ observes $T'_S(x')$ to be $\tau'_S(x')$ for all $x'\in S_i(y')\cap S$, then
 \begin{equation}\label{kentlorentz}
 \lim_{i\rightarrow\infty}\frac{\ev{\pi_i'\hat{T}^{\mu\nu}(y')}{\Psi_i'}}{\ev{\pi_i'}{\Psi_i'}}=\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma} \lim_{i\rightarrow\infty}\frac{\ev{\pi_i\hat{T}^{\rho\sigma}(y)}{\Psi_i}}{\ev{\pi_i}{\Psi_i}}
 \end{equation}
 where $\pi_i=\sum_j\dyad{\xi_j}$, $\pi_i'=\sum_j\dyad{\xi_j'}$, and $\ket{\Psi_i'}=U(\Lambda)\ket{\Psi_i}$. To see why (\ref{kentlorentz}) holds, we first recall that $\pi_i'$ will be independent of which orthonormal basis we choose for $H_{S_i,\tau_S'}$.\footnote{We showed this was the case for $\pi_i$ in footnote \ref{priproof} on page \pageref{priproof}.} Therefore, if we can show that $\{\ket{\xi_j'}\myeq U(\Lambda)\ket{\xi_j}\}_{j=1}^\infty$ is an orthonormal basis of $H_{S_i,\tau_S'}$, it will follow that $\pi_i'=U(\Lambda)\pi_iU(\Lambda)^{-1}$. 
 
-That the elements of $\{U(\Lambda)\ket{\xi_j}\}_{j=1}^\infty$ are orthonormal follows from the unitarity of $U(\Lambda)$ together with the orthonormality of  $\{\ket{\xi_j}\}_{j=1}^\infty$.  Since $\hat{T}^{\mu\nu}(x')$ is the observable whose eigenstates with eigenvalue $\tau'$ are the states of $S_i(y')$ for which $O'$ observes the stress-energy tensor $T^{\prime\mu\nu}(x')$ to take the value $\tau'$ at $x'$, it follows that $\hat{T}'_S(x')\myeq\eta_\mu'(x')\eta_\nu'(x')\hat{T}^{\mu\nu}(x')$ will be the observable whose eigenstates with eigenvalue $\tau'_S$ are the states of $S_i(y')$ for which $O'$ observes $T'_S(x')$ to take the value $\tau'_S$ at $x'$, where as usual, $\eta^{\prime\mu}(x')$ is the unit four-vector orthogonal to $S_i(y')$ at $x'$. Now if $x'\in S_i(y')\cap S$, then $x=\Lambda^{-1}x'\in S_i(y)\cap S$. Using the same calculation as in (\ref{invariantTS1}) together with (\ref{lorentzcovector}), we have
+That the elements of $\{U(\Lambda)\ket{\xi_j}\}_{j=1}^\infty$ are orthonormal follows from the unitarity of $U(\Lambda)$ together with the orthonormality of  $\{\ket{\xi_j}\}_{j=1}^\infty$.  Since $\hat{T}^{\mu\nu}(x')$ is the observable whose eigenstates with eigenvalue $\tau'$ are the states of $S_i(y')$ for which $O'$ observes the stress-energy tensor $T^{\prime\mu\nu}(x')$ to take the value $\tau'$ at $x'$, it follows from (\ref{TSprimedef}) and (\ref{Thatprime})  that 
+\begin{equation}\label{TShatprime}
+	\hat{T}'_S(x')\myeq\eta_\mu'(x')\eta_\nu'(x')\hat{T}^{\mu\nu}(x')
+\end{equation}
+ will be the observable whose eigenstates with eigenvalue $\tau'_S$ are the states of $S_i(y')$ for which $O'$ observes $T'_S(x')$ to take the value $\tau'_S$ at $x'$, where as usual, $\eta^{\prime\mu}(x')$ is the unit four-vector orthogonal to $S_i(y')$ at $x'$. Now if $x'\in S_i(y')\cap S$ in the coordinates of $O'$, then $x=\Lambda^{-1}x'\in S_i(y)\cap S$ in the coordinates of $O$. Using the same calculation as in (\ref{invariantTS1}) together with (\ref{lorentzcovector}), we have
 \begin{equation}\label{TSLambda}
 \begin{split}
-\hat{T}_S(x)&=\eta_\mu(x)\eta_\nu(x)\hat{T}^{\mu\nu}(x)\\
+\hat{T}_S(x)&\myeq\eta_\mu(x)\eta_\nu(x)\hat{T}^{\mu\nu}(x)\\
 &=\eta_{\mu}'(x')\eta_{\nu}'(x') \Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}\hat{T}^{\rho\sigma}(x)
 \end{split}
 \end{equation}
-Using (\ref{TSLambda}) together with (\ref{TUrelation}), we therefore have
+By (\ref{TUrelation}) we have
+\begin{equation}
+	U(\Lambda)^{-1}\hat{T}^{\mu\nu}(x')=\Lambda\indices{^\mu_\rho}\Lambda{^\nu_\sigma}\hat{T}^{\rho\sigma}(x)U(\Lambda)^{-1},
+\end{equation}
+so using this with (\ref{TSLambda}) and (\ref{TShatprime}), we have
 \begin{equation}\label{TSU}
 \begin{split}
 \hat{T}_S(x)U(\Lambda)^{-1}&=\eta_{\mu}'(x')\eta_{\nu}'(x')\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}\hat{T}^{\rho\sigma}(x)U(\Lambda)^{-1}\\
@@ -345,7 +372,7 @@ Using (\ref{TSLambda}) together with (\ref{TUrelation}), we therefore have
 &=U(\Lambda)^{-1} \hat{T}_S'(x').
 \end{split}
 \end{equation}
-Now suppose that $\ket{\xi'}$ is a state for which $O'$ observes $T'_S(x')$ to be $\tau_S(x')$ for all $x'\in S_i(y')\cap S$. Then $\hat{T}_S'(x')\ket{\xi'}=\tau_S'(x'),$ and so by (\ref{TSU}), 
+Now suppose that $\ket{\xi'}$ is a state for which $O'$ observes $T'_S(x')$ to be $\tau'_S(x')$ for all $x'\in S_i(y')\cap S$. Then $\hat{T}_S'(x')\ket{\xi'}=\tau_S'(x'),$ and so by (\ref{TSU}), 
 \begin{equation}\label{TSUxi}
 \begin{split}
 \hat{T}_S(x)U(\Lambda)^{-1}\ket{\xi'}&= U(\Lambda)^{-1} \hat{T}_S'(x')\ket{\xi'}\\
@@ -353,12 +380,12 @@ Now suppose that $\ket{\xi'}$ is a state for which $O'$ observes $T'_S(x')$ to b
 &=\tau_S(x)U(\Lambda)^{-1}\ket{\xi'}
 \end{split}
 \end{equation}
-where on the last line we have used the fact that $T_S(x)$ is a scalar. Therefore, $U(\Lambda)^{-1}\ket{\xi'}$ can be expressed as a linear combination of basis elements $\{\ket{\xi_j}\}_{j=1}^\infty$, and hence  $\ket{\xi'}$ is can be expressed as a linear combination of $\{U(\Lambda)\ket{\xi_j}\}_{j=1}^\infty$. From (\ref{TSU}) we also see that  $U(\Lambda)\hat{T}_S(x)=\hat{T}_S'(x')U(\Lambda)$, so
+where on the last line we have used the fact that $T_S(x)$ is a scalar. Therefore, $U(\Lambda)^{-1}\ket{\xi'}$ can be expressed as a linear combination of the basis elements $\{\ket{\xi_j}\}_{j=1}^\infty$ of $H_{S_i,\tau_S}$, and hence  $\ket{\xi'}$  can be expressed as a linear combination of $\{U(\Lambda)\ket{\xi_j}\}_{j=1}^\infty$. From (\ref{TSU}) we also see that  $U(\Lambda)\hat{T}_S(x)=\hat{T}_S'(x')U(\Lambda)$, so
 $$
 \hat{T}_S'(x')U(\Lambda)\ket{\xi_j}=U(\Lambda)\hat{T}_S(x)\ket{\xi_j}=\tau_S(x)U(\Lambda)\ket{\xi_j}=\tau_S'(x')U(\Lambda)\ket{\xi_j}
 $$
-for all $x'\in S_i(y')\cap S$. 
-Therefore, $\{\ket{\xi_j'}\myeq U(\Lambda)\ket{\xi_j}\}_{j=1}^\infty$ is an orthonormal basis of $H_{S_i,\tau_S'}$, and from this it follows that $\pi_i'=U(\Lambda)\pi_iU(\Lambda)^{-1}$. Therefore, 
+for all $x'\in S_i(y')\cap S$. Therefore, $U(\Lambda)\ket{\xi_j}\in H_{S_i,\tau_S'}$.
+Since $\{\ket{\xi_j'}\myeq U(\Lambda)\ket{\xi_j}\}_{j=1}^\infty$ is a spanning orthonormal subset of $H_{S_i,\tau_S'}$, it must therefore be an orthonormal basis of $H_{S_i,\tau_S'}$. From this it follows that $\pi_i'=U(\Lambda)\pi_iU(\Lambda)^{-1}$. Therefore, 
 \begin{equation}\label{kentlorentz2}
 \begin{split}
 \frac{\ev{\pi_i'\hat{T}^{\mu\nu}(y')}{\Psi_i'}}{\ev{\pi_i'}{\Psi_i'}}&=\frac{\ev{U(\Lambda)^{-1}U(\Lambda)\pi_iU(\Lambda)^{-1}\hat{T}^{\mu\nu}(y')U(\Lambda)}{\Psi_i}}{\ev{U(\Lambda)^{-1}U(\Lambda)\pi_i U(\Lambda)^{-1}U(\Lambda)}{\Psi_i}}\\
@@ -366,21 +393,16 @@ Therefore, $\{\ket{\xi_j'}\myeq U(\Lambda)\ket{\xi_j}\}_{j=1}^\infty$ is an orth
 &=\frac{\ev{\pi_i\Lambda\indices{^\mu_\rho}\Lambda{^\nu_\sigma}\hat{T}^{\rho\sigma}(y)}{\Psi_i}}{\ev{\pi_i }{\Psi_i}}
 \end{split}
 \end{equation}
-where on the last line we have used (\ref{TUrelation}). Thus, equation (\ref{kentlorentz}) holds, and hence Kent's model is consistent with special relativity.
+where on the last line we have used (\ref{TUrelation}). Thus, equation (\ref{kentlorentz}) holds, and hence Kent's model is Lorentz invariant.
 
 
 
-
-
- 
-
-
-\subsection{Kent's Interpretation and Decoherence Theory}
-In section \ref{probOutcomes} we saw that decoherence theory by itself does not offer a solution to the problem of outcomes. In this section, we consider how the additional information in Kent's interpretation is sufficient to address this problem. We suppose that $y_1$ is a spacetime location between the two hypersurfaces $S_0$ and $S$, and we consider a hypersurface $S_i=S_i(y_1)$  in a sequence of hypersurfaces that each contain $y_1$ as described on page \pageref{siydef}. To simplify our description of $S_i$ we use a coarse-grained model so that $S_i$ is treated as a mesh of tiny cells labeled by a sequence $(y_k)_{k=1}^\infty$, and for each cell $y_k$ there is a Hilbert space $H_k$ describing the state of that cell.  For any $y_k$ we denote its spatial component as $z_k$ and its time component as $t_k$. Then we suppose that the state $\ket{\Psi_i}$ describing $S_i$ can be decomposed as
+\subsection{Kent's Interpretation and Decoherence Theory\textsuperscript{*}}
+In section \ref{probOutcomes} we saw that decoherence theory by itself does not offer a solution to the problem of outcomes. In this section, we consider how the additional information in Kent's interpretation is sufficient to address this problem. We suppose that $y_1$ is a spacetime location between the two hypersurfaces $S_0$ and $S$, and we consider a hypersurface $S_i=S_i(y_1)$  in a sequence of hypersurfaces that each contain $y_1$ as described on page \pageref{siydef}. To simplify our description of $S_i$ we use a coarse-grained model so that $S_i$ is treated as a mesh of tiny cells labeled by a sequence $(y_k)_{k=1}^\infty$, so that for each cell $y_k$ there is a Hilbert space $H_k$ describing the state of that cell.  For any $y_k$ we denote its spatial component as $z_k$ and its time component as $t_k$. Then we suppose that the state $\ket{\Psi_i}$ describing $S_i$ can be decomposed as
 \begin{equation}\label{Sistate}
 \ket{\Psi_i}=\Big(\sum_{j=1}^{J} c_j\ket{\xi_{1,j}}\prod_{l=1}^{N_j}\ket{\xi_{k_{l,j},j}}\Big)\Xi
 \end{equation}
-where $\ket{\xi_{1,j}}\in H_1$ are normalized stares with $\ip{\xi_{1,j}}{\xi_{1,j'}}=0$ for $j\neq j'$, where $\ket{\xi_{k_{l,j},j}}\in H_{k_{l,j}}$ are normalized states with all the $k_{l,j}$ for $l=1$ to $N_j$ being non-zero and unique for a particular $j$, and where $\Xi$ is the sum of states of the form $\prod_l\ket{\xi_{\kappa_l}}$ describing all the cells of $S_i$ not included in the set $\bigcup_j\bigcup_{l=1}^{N_j}\{k_{l,j}\}.$ We also assume each summand $c_j\ket{\xi_{1,j}}\prod_{l=1}^{N_j}\ket{\xi_{k_{l,j},j}}\Xi$ contains a state in each $H_k$ for every cell $k$ of $S_i$. In other words if $k$ does not belong to the set $\{k_{l,j}:l\}$ then $k$ belongs to the set $\{\kappa_l:l\}$. From this it follows that $\bigcup_{l=1}^{N_j}\{k_{l,j}\}=\bigcup_{l=1}^{N_j'}\{k_{l,j'}\}$ for any $j'\neq j$. We can therefore assume $N_j=N$ and $k_{l,j}=k_l$ are independent of $j$. We can thus rewrite (\ref{Sistate}) as
+for orthonormal states $\ket{\xi_{1,j}}\in H_1$, and for normalized states $\ket{\xi_{k_{l,j},j}}\in H_{k_{l,j}}$ with the $k_{l,j}\neq 1$ being unique for a particular $j$, and where $\Xi$ is the sum of states of the form $\prod_l\ket{\xi_{\kappa_l}}$ describing all the cells of $S_i$ not included in the set $\bigcup_j\bigcup_{l=1}^{N_j}\{k_{l,j}\}.$ We also assume each summand $c_j\ket{\xi_{1,j}}\prod_{l=1}^{N_j}\ket{\xi_{k_{l,j},j}}\Xi$ contains a state in each $H_k$ for every cell $k$ of $S_i$. In other words if $k$ does not belong to the set $\{k_{l,j}:l\}$ then $k$ belongs to the set $\{\kappa_l:l\}$. From this it follows that $\bigcup_{l=1}^{N_j}\{k_{l,j}\}=\bigcup_{l=1}^{N_j'}\{k_{l,j'}\}$ for any $j'\neq j$. We can therefore assume $N_j=N$ and $k_{l,j}=k_l$ are independent of $j$. We can thus rewrite (\ref{Sistate}) as
 \begin{equation}\label{Sistate2}
 \ket{\Psi_i}=\Big(\sum_{j=1}^{J} c_j\ket{\xi_{1,j}}\prod_{l=1}^{N}\ket{\xi_{k_{l},j}}\Big)\Xi
 \end{equation}
@@ -501,10 +523,10 @@ The gray squares correspond to the summands that appear in (\ref{Sistate2}). If 
 non-zero mass at the $y^a_1$-cell, and there would also be a factor $\ket{0_2}\in H_2$ which we use to indicate that there is zero mass at $y^a_2$. 
 There is also an incoming photon at the $y^a_3$-cell, and so we use $\ket{\gamma_3}$ to indicate that there is a photon there.
  Thus, if  the system  were in the $\psi_1^\text{sys}$-state, we would write the state of $S_i(y^a_1)$ 
- as $\ket{\Psi_i}=\ket{\psi_1^\text{sys}}\ket{0_2}\ket{\gamma_3}\Xi'$ where $\Xi'$ is describes the states of all the other cells of $S_i(y^a_1)$. 
+ as $\ket{\Psi_i}=\ket{\psi_1^\text{sys}}\ket{0_2}\ket{\gamma_3}\Xi'$ where $\Xi'$ describes the states of all the other cells of $S_i(y^a_1)$. 
  But on the other hand, if the system were in the state $\psi_2^\text{sys}$, then the state describing $S_i(y^a_1)$ would have a factor $\ket{\psi_2^\text{sys}}\in H_2$ 
  indicating that there is a non-zero mass at the $y^a_2$-cell, and there would also be a factor $\ket{0_1}\in H_1$ which we use to indicate that there is zero mass at $y^a_1$,
-  and again the $y^a_3$-cell would be in the $\ket{\gamma_3}$, and every other cell would be described by  $\Xi'$  just as if the system had been in the $\psi_1^\text{sys}$-state. Therefore, when the system is in the state $\psi_2^\text{sys}$, we would write the state of $S_i(y^a_1)$ as $\ket{\Psi_i}=\ket{0_1}\ket{\psi_2^\text{sys}}\ket{\gamma_3}\Xi'$ 
+  and again the $y^a_3$-cell would be in the $\ket{\gamma_3}$, and every other cell would be described by  $\Xi'$  just as if the system had been in the $\psi_1^\text{sys}$-state. Therefore, when the system is in the state $\psi_2^\text{sys}$, we would write the state of $S_i(y^a_1)$ as $\ket{\Psi_i}=\ket{0_1}\ket{\psi_2^\text{sys}}\ket{\gamma_3}\Xi'$. 
  But since the system is actually in a supposition $\psi_0^\text{sys} = c_1\psi_1^\text{sys}+c_2\psi_2^\text{sys}$, the state of $S_i(y^a_1)$ will be 
  \begin{equation*}
  \ket{\Psi_i}=\big(c_1\ket{\psi_1^\text{sys}}\ket{0_2}+c_2\ket{0_1}\ket{\psi_2^\text{sys}}\big)\ket{\gamma_3}\Xi'=\big(c_1\ket{\psi_1^\text{sys}}\ket{0_2}+c_2\ket{0_1}\ket{\psi_2^\text{sys}}\big)\Xi
@@ -515,19 +537,18 @@ Now as it stands, the state $\ket{\Psi_i}$ describing $S_i(y^a_1)$ has a definit
 $$\ev*{T^{\mu\nu}(y^a_1)}_{\tau_S}=\ev*{\hat{T}^{\mu\nu}(y^a_1)}{\Psi_i}.$$ 
 where we have also used the fact that $\ip*{\Psi_i}{\Psi_i}=1.$
 
-Now as we saw in section \ref{decotheory}, if we are interested only in the expectation values of observables for a system $\mathcal{S}$ contained within a universe $\mathcal{U}=\mathcal{S}+\mathcal{E}$ then the information needed to do this can be encapsulated in the reduced density matrix for $\mathcal{S}$. Thus, if the universe is described by a state 
+Now as we saw in section \ref{decotheory}, if we are interested only in the expectation values of observables for a system $\mathcal{S}$ contained within a universe $\mathcal{U}=\mathcal{S}+\mathcal{E}$, then the information needed to do this can be encapsulated in the reduced density matrix for $\mathcal{S}$. Thus, if the universe is described by a state 
 $\ket{\Psi}=\sum_j c_j \ket{\psi_j}_\mathcal{S}\ket{E_j}$ with corresponding density matrix $\hat{\rho}=\dyad{\Psi}\in M(H_\mathcal{U})$, then the reduced density matrix $\hat{\rho}_\mathcal{S}\in M(H_\mathcal{S})$ is the operator that acts on the Hermitian operators of the state space $H_\mathcal{S}$ with the property that 
 \begin{equation}\tag{\ref{reducedev} revisited}
 \ev*{\hat{\Lambda}_\mathcal{U}}_\rho=\Tr_\mathcal{S}(\hat{\rho}_\mathcal{S}\hat{\Lambda}_\mathcal{S})
 \end{equation}
-where $\hat{\Lambda}_\mathcal{S}$ is an observable on $H_\mathcal{S}$  and $\hat{\Lambda}_\mathcal{U}$ is the corresponding observable on $H_\mathcal{U}$. Furthermore, we also have
+where $\hat{\Lambda}_\mathcal{S}$ is an observable on $H_\mathcal{S}$,  and $\hat{\Lambda}_\mathcal{U}$ is the corresponding observable on $H_\mathcal{U}$. Furthermore, we also have
 \begin{equation}\label{reduced2}
 \hat{\rho}_\mathcal{S}=\sum_j \abs{c_j}^2\dyad{\psi_j}+\sum_{j\neq k} c_j\overline{c_k}\ip{E_k}{E_j}\dyad{\psi_j}{\psi_k}.\protect\footnotemark
 \end{equation}
-\footnotetext{cf. (\ref{reduced})}
-We can thus apply this to the situation at hand by taking $S_i$ to be our universe $\mathcal{U}$ and $y^a_1$ to be the system $\mathcal{S}$, and $S_i\setminus y^a_1$ to be the environment $\mathcal{E}$. If we assume that $\ip{0_2}{\psi_2^\text{sys}}\approx 0$, then by (\ref{reduced2}), the corresponding reduced density matrix $\hat{\rho}_{y^a_1}$ takes the form of an improper mixture
+\footnotetext{cf. (\ref{reduced})}We can thus apply this to the situation at hand by taking $S_i$ to be our universe $\mathcal{U}$ and $y^a_1$ to be the system $\mathcal{S}$, and $S_i\setminus y^a_1$ to be the environment $\mathcal{E}$. If we assume that $\ip{0_2}{\psi_2^\text{sys}}\approx 0$, then by (\ref{reduced2}), the corresponding reduced density matrix $\hat{\rho}_{y^a_1}$ takes the form of an improper mixture
 \begin{equation}\label{kentred}
-\hat{\rho}_{y^a_1}\approx \abs{c_1}^2\dyad{\psi_1^\text{sys}}+\abs{c_2}^2\dyad{0_1}
+\hat{\rho}_{y^a_1}\approx \abs{c_1}^2\dyad{\psi_1^\text{sys}}+\abs{c_2}^2\dyad{0_1}.
 \end{equation}
 Kent's beables at $y^a_1$ will thus take the form 
 \begin{equation}\label{kentbe}
@@ -537,7 +558,7 @@ Kent's beables at $y^a_1$ will thus take the form
 \end{split}
 \end{equation}
 
-Let us now consider Kent's beables at the spacetime location $y^b_1$ depicted in figure 
+Let us now consider Kent's beables at the spacetime location $y^b_1$ depicted in figure \ref{kentdecoh2}.
  
 \begin{figure}[ht!]
 \captionsetup{justification=justified}
@@ -649,7 +670,7 @@ The state of $S_i(y^b_1)$ will then be
  \end{equation*}
  where the notation is analogous to that in the previous example. Since no photon detections are registered on $S_i(y^b_1)\cap S$, we again have $\pi_i\ket{\Psi_i}=\ket{\Psi_i}$ so that the reduced density matrix $\hat{\rho}_{y_1^b}$ will again be given by  (\ref{kentred}) with $y^a_1$ replaced by $y^b_1$, and likewise,  Kent's beables $\ev*{T^{\mu\nu}(y^b_1)}_{\tau_S}$ will be given by (\ref{kentbe}).
 
-For the next example, we consider the case 
+For the next example, we consider the case in figure \ref{kentdecoh3}.
 
 
 \begin{figure}[ht!]
@@ -762,7 +783,7 @@ In this case, the state of $S_i(y^c_1)$ will be
  \ket{\Psi_i}=\big(c_1\ket{\psi_1^\text{sys}}\ket{0_2}\ket{\gamma_3}\ket{0_4}+c_2\ket{0_1}\ket{\psi_2^\text{sys}}\ket{0_3}\ket{\gamma_4}\big)\Xi
  \end{equation*}
  but this time we have to consider the fact that the photon intersects $S_i(y^c_1)\cap S$. There are two possible (notional) measurements outcomes that can occur on $S_i(y^c_1)\cap S$: either $T_S=\tau_{S,1}$ where $\tau_{S,1}(y^c_3)\neq 0$ or $T_S=\tau_{S,2}$ where $\tau_{S,2}(y^c_3)=0.$ The case  $T_S=\tau_{S,1}$ indicates that there is a photon detection at $y^c_3$ so that the local state at the $y^c_3$-cell is $\ket{\gamma_3}$. Therefore, if we write $\pi_{i,1}$ for the operator $\pi_i$, we have 
- $$\pi_{i,1}\ket{\Psi_i}=c_1\ket{\psi_1^\text{sys}}\ket{0_2}\ket{\gamma_3}\ket{0_4}\Xi,$$
+ $$\pi_{i,1}\ket{\Psi_i}=c_1\ket{\psi_1^\text{sys}}\ket{0_2}\ket{\gamma_3}\ket{0_4}\Xi.$$
  Therefore 
  $\ev*{\pi_{i,1}\hat{T}^{\mu\nu}(y^c_1)}{\Psi_i}=\abs{c_1}^2\ev*{\hat{T}^{\mu\nu}(y^c_1)}{\psi_1^\text{sys}}$ and  $\ev*{\pi_{i,1}}{\Psi_i}=\abs{c_1}^2$. Hence, by (\ref{kentconsistency0}), Kent's beables at $y^c_1$ will be 
  $$\ev*{T^{\mu\nu}(y^c_1)}_{\tau_{S,1}}=\ev*{\hat{T}^{\mu\nu}(y^c_1)}{\psi_1^\text{sys}}.$$ 
@@ -770,7 +791,7 @@ In this case, the state of $S_i(y^c_1)$ will be
  \begin{equation}
 \hat{\rho}_{y^c_1}\approx \dyad{\psi_1^\text{sys}}.
 \end{equation} 
- On the other hand, for the case when  $T_S=\tau_{S,2}$, this indicates that there is no photon detection at $y^c_3$, so that the local state at the $y^c_3$-cell will be $\ket{0_3}$. So if now we write $\pi_{i,2}$ for the operator $\pi_i$, we have 
+ On the other hand, for the case when  $T_S=\tau_{S,2}$, this indicates that there is no photon detection at $y^c_3$, so that the local state at the $y^c_3$-cell will be $\ket{0_3}$. So if we now  write $\pi_{i,2}$ for the operator $\pi_i$, we have 
  $$\pi_{i,2}\ket{\Psi_i}=c_2\ket{0_1}\ket{\psi_2^\text{sys}}\ket{0_3}\ket{\gamma_4}\Xi.$$
  Therefore, 
  $\ev*{\pi_{i,2}\hat{T}^{\mu\nu}(y^c_1)}{\Psi_i}=\abs{c_2}^2\ev*{\hat{T}^{\mu\nu}(y^c_1)}{0_1}$ and  $\ev*{\pi_{i,2}}{\Psi_i}=\abs{c_2}^2$,  
