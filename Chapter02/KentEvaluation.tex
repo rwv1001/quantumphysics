@@ -95,7 +95,7 @@ where $\ket{\Psi_n}=U_{S_nS_0}\ket{\Psi_0}$, and this probability will be indepe
 \end{equation}
 then it is easy to see that
 $$P(r_n)=\ev*{\pi_n}{\Psi_n}.$$
-We also see that $pi_n$ is Hermitian (i.e. has real eigenvalues) and that $\pi_n \pi_n = \pi_n$. Any Hermitian operator $\pi$ with $\pi^2=\pi$ is called a \textbf{projection}. We thus see that $\pi_n$ is a projection.
+We also see that $\pi_n$ is Hermitian (i.e. has real eigenvalues) and that $\pi_n \pi_n = \pi_n$. Any Hermitian operator $\pi$ with $\pi^2=\pi$ is called a \textbf{projection}. We thus see that $\pi_n$ is a projection.
 
 Turning to the calculation of $P(q(\tau), r_n)$, note that for the Tomonaga-Schwinger formulation of relativistic quantum physics, the operators $\hat{T}_S(x)$ and $\hat{T}^{\mu\nu}(y)$ for fixed $\mu,\nu$ commute when $x$ and $y$ are spacelike-separated. It therefore follows that we can express any state of $H_{S_n}$ as a superposition of simultaneous eigenstates of $\hat{T}^{\mu\nu}(y)$ and $\hat{T}_S(x)$ for $x\in S_n\cap S$.\footnote{We make the same approximation as mentioned on page \pageref{simultaneous} in footnote \ref{glosssim}.}  For a particular choice of $\mu,\nu$, we can then form an orthonormal basis $\{\ket{\eta_j}:j\}$ of $H_{S_n}$ consisting of simultaneous $\hat{T}^{\mu\nu}(y)$, $\hat{T}_S(x)$-eigenstates so that $\hat{T}^{\mu\nu}(y)\ket{\eta_j}=\tau^{(j)}\ket{\eta_j}$ and $\hat{T}_{S}(x)\ket{\eta_j}=\tau_S^{(j)}(x)\ket{\eta_j}$ for $x\in S_n\cap S$, where $\tau^{(j)}$ and $\tau_S^{(j)}(x)$ are the corresponding eigenstates. If we define  $\pi_{n,\tau}=\sum_j\dyad{\chi_{j,\tau}}$ where $\{\ket{\chi_{j,\tau}}:j\}$ is the subset of $\{\ket{\eta_j}:j\}$ such that $\hat{T}^{\mu\nu}(y)\ket{\chi_{j,\tau}}=\tau\ket{\chi_{j,\tau}}$ and $\hat{T}_S(x)\ket{\chi_{j,\tau}}=\tau_S(x)\ket{\chi_{j,\tau}}$ for all $x\in S_n\cap S$, then 
 \begin{equation}\label{pqtauri}
@@ -1010,7 +1010,7 @@ Thus, the Colbeck-Renner theorem means that we cannot hope to make Kent's interp
 
 But nevertheless, it still seems that we should be able to make some kind of sense of PI and AE in Kent's interpretation and that we should be able to evaluate Kent's interpretation on the basis of whether these notions of PI and EA are true in this context. To achieve this aim, one strategy would be to relax one of the five criteria for a hidden variable. Since we still want to be able to make sense of PI and AE,  a process of elimination suggests that the most obvious hidden variable criterion to drop would be criterion \ref{hidden3}. In other words, instead of thinking of $\tau_S$ as an augmentation of standard quantum theory, we could instead think of $\tau_S$ as a rather elaborate way of stipulating the initial quantum states of experiments as well as the quantum states of measurement outcomes.
 
-To explain this strategy in more detail, we first suppose we have a single piece of experimental apparatus $\mathcal{A}$ and a particle $\mathcal{S}$ that we are interested in measuring. Since the apparatus has been around for a long time, it has already interacted with many photons during its existence. Likewise, the particle has interacted with many photons. So let us suppose that the hypersurface $S$ has energy density $\tau_S(x)$ indicating that some photons have been ``measured'' on $S$ to be in a state $\ket*{\gamma_i^{(\mathcal{A})}}$ which is correlated with the apparatus being in a state $\ket{a}$ shortly before time $t_i$ and in the vicinity of spatial location $z_1$ as depicted in figure \ref{pisolution}. Similarly, we suppose that $\tau_S(x)$ also indicates that some photons have been ``measured'' on $S$ to be in a state $\ket*{\gamma_i^{(\mathcal{S})}}$ which is correlated with the particle being in a state $\ket{s}$ also shortly before time $t_i$ and in the vicinity of spatial location $z_1$. We assume that the time $t_i$ is just before the particle enters the apparatus (given the measurent of $\ket*{\gamma_i^{(\mathcal{S})}}$ and  $\ket*{\gamma_i^{(\mathcal{A})}}$ on $S$) and that no more photons are measured on $S$ that have reflected from the particle $\mathcal{S}$ until it emerges from the apparatus at time $t_f$. Then some more photons interact with $\mathcal{S}$ shortly before time $t_m$, and these photons are detected on $S$ to be in a state  $\ket*{\gamma_f^{(\mathcal{S})}}$, and this state is correlated with the particle now being in a state $\ket{s_{f}}$. 
+To explain this strategy in more detail, we first suppose we have a single piece of experimental apparatus $\mathcal{A}$ and a particle $\mathcal{S}$ that we are interested in measuring. Since the apparatus has been around for a long time, it has already interacted with many photons during its existence. Likewise, the particle has interacted with many photons. So let us suppose that the hypersurface $S$ has energy density $\tau_S(x)$ indicating that some photons have been ``measured'' on $S$ to be in a state $\ket*{\gamma_i^{(\mathcal{A})}}$ which is correlated with the apparatus being in a state $\ket{a}$ shortly before time $t_i$ and in the vicinity of spatial location $z_1$ as depicted in figure \ref{pisolution}. Similarly, we suppose that $\tau_S(x)$ also indicates that some photons have been ``measured'' on $S$ to be in a state $\ket*{\gamma_i^{(\mathcal{S})}}$ which is correlated with the particle being in a state $\ket{s}$ also shortly before time $t_i$ and in the vicinity of spatial location $z_1$. We assume that the time $t_i$ is just before the particle enters the apparatus (given the measurent of $\ket*{\gamma_i^{(\mathcal{S})}}$ and  $\ket*{\gamma_i^{(\mathcal{A})}}$ on $S$) and that no more photons are measured on $S$ that have become entangled with particle  or the apparatus until the particle emerges from the apparatus at time $t_f$. Then some more photons interact with the apparatus $\mathcal{A}$ and get entangled with it shortly before time $t_m$, and these photons are detected on $S$ to be in a state  $\ket*{\gamma_f^{(\mathcal{A})}}$, and this state is correlated with the apparatus now being in a state $\ket{a_{f}}$, and hence the particle being in state $\ket{s_f}$. 
 
 \begin{figure}[ht!]
 	\captionsetup{justification=justified}
@@ -1154,8 +1154,8 @@ To explain this strategy in more detail, we first suppose we have a single piece
 	
 	\draw [black,fill](\xendz,\a) circle [radius=\circsize] node [black,above=9,right=-4,scale=\textscale] {$\gamma_i^{(\mathcal{A})}$}; 
 	\draw [black,fill](\wxendz,\a) circle [radius=\circsize] node [black,above=9,left=-7,scale=\textscale] {$\gamma_i^{(\mathcal{S})}$}; 
-	\draw [black,fill](\qxendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_f^{(\mathcal{A})}$}; 
-	\draw [black,fill](-3.7,\a) circle [radius=\circsize] node [black,above=9,left=-7,scale=\textscale] {$\gamma$}; 
+	\draw [black,fill](\qxendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_f^{\prime\prime}$}; 
+	\draw [black,fill](-3.7,\a) circle [radius=\circsize] node [black,above=9,left=-7,scale=\textscale] {$\gamma_0'$}; 
 	%\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
 	\end{tikzpicture}% pic 1
 	
@@ -1176,28 +1176,41 @@ is an orthonormal basis of states for the particle $\mathcal{S}$ with $\ket{s}\i
 is an orthonormal basis of states describing the apparatus $\mathcal{A}$ with $\ket{a}\in\{\ket{\alpha_k}:k\}$,  $\{\ket*{\gamma_j^{(\mathcal{S})}}:j\}$ 
 are normalized states of photons in $S_{n,i}\cap S$ that are entangled with the particle $\mathcal{S}$ such that $\ip*{\gamma_j^{(\mathcal{S})}}{\gamma_{j'}^{(\mathcal{S})}}\approx 0$ for $j\neq j'$,   $\{\ket*{\gamma_k^{(\mathcal{A})}}:k\}$  are normalized states of photons in $S_{n,i}\cap S$ that are entangled with the apparatus $\mathcal{A}$ such that $\ip*{\gamma_k^{(\mathcal{A})}}{\gamma_{k'}^{(\mathcal{A})}}\approx 0$ for $k\neq k'$, and for clarity, we have absorbed any other environmental information into the states $\ket{\alpha_k}$. 
 
-If we now define the projection $\pi_{n,i}$ corresponding to the ``measurement'' $\tau_S(x)$ as in equation (\ref{tauprojection}), and if we also assume that bases are indexed so that $\ket{s}=\ket{\sigma_i}$
+If we now define the projection $\pi_{n,i}$ corresponding to the ``measurement outcome''  $\tau_S(x)$ on $S_{n,i}\cap S$ as in equation (\ref{tauprojection}), and if we also assume that the bases are indexed so that $\ket{s}=\ket{\sigma_i}$
  and $\ket{a}=\ket{\alpha_i}$ then
- $$\pi_{n,i}\ket{\Psi_{n,i}}\approx c\ket{s}\ket{a}\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\gamma_i^{(\mathcal{A})}}$$
- where $c=c_{i,i}$. For convenience, we will omit the reference to $n$ and write $S_i$ for $S_{n,i}$ and $\pi_i$ for $\pi_{n,i}$.
+\begin{equation}\label{piphi}
+	\pi_{n,i}\ket{\Psi_{n,i}}\approx c\ket{s}\ket{a}\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\gamma_i^{(\mathcal{A})}}
+\end{equation}
+ where $c=c_{i,i}$. For convenience, we will omit the reference to $n$ and write $S_i$ for $S_{n,i}$ and $\pi_i$ for $\pi_{n,i}$. We will also write $\ket{\Phi_i}$ for the normalized state of $\pi_i\ket{\Psi_i}$ so that 
+ $$\ket{\Phi_i}\approx \ket{s}\ket{a}\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\gamma_i^{(\mathcal{A})}}.$$
 
  We now suppose that at time $t_i$, $\ket{a}$ is the ready state of the apparatus with pointer states $\{\ket{a_j}:j\}$ so that if $\ket{s}=\sum_i c_j\ket{s_j}$, then under Schr\"{o}dinger evolution from time $t_i$ to $t_f$,
- $$\ket{s}\ket{a}\rightarrow\sum_j c_i\ket{s_j}\ket{a_j}.$$
- We assume that before time $t_f$, no photons have had a chance to get entangled with $\mathcal{S}+\mathcal{A}$. So if there are any photons ``measured'' on $S$ between the hypersurfaces $S_i$ and $S_f$ as indicated in figure \ref{pisolution}, then 
-\begin{equation}\label{USfievolve}
-	U_{S_f,S_i}\pi_{i}\ket{\Psi_{i}}\approx \sum_j c_j\ket{s_j}\ket{a_j}\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\gamma_i^{(\mathcal{A})}}\ket{\gamma}.
-\end{equation}
-Therefore, if $\pi_f$ is the projection corresponding to the ``measurement'' of $\tau_S$ on $S_f$, then by (\ref{USfievolve}) we will have
-$$\pi_f U_{S_f,S_i}\pi_{i}\ket{\Psi_{i}} = U_{S_f,S_i}\pi_{i}\ket{\Psi_{i}}. $$
-But since $\pi_f$ will pick out the $\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\gamma_i^{(\mathcal{A})}}$ term in $\ket{\Psi_i}$, we must also have 
-$$ \pi_f U_{S_f,S_i}\ket{\Psi_{i}}= \pi_f U_{S_f,S_i}\pi_{i}\ket{\Psi_{i}}.$$
- It therefore follows that 
- $$\pi_f U_{S_f,S_i}\ket{\Psi_{i}}=U_{S_f,S_i}\pi_{i}\ket{\Psi_{i}}.$$
-
-
- the component  have not yet got entangled with $\mathcal{S}+\mathcal{A}$ by time $t_f$ so that we have
-
+ $$\ket{s}\ket{a}\rightarrow\sum_j c_j\ket{s_j}\ket{a_j}.$$
+ We assume that before time $t_f$, no photons have had a chance to get entangled with $\mathcal{S}+\mathcal{A}$. We assume it is only by time $t_m$ that a measurement of photons in state $\ket{\gamma_f^{\prime\prime}}$ on $S$ outside the light cone of $(t_m,z_1)$ is able to determine that the apparatus is in state $\ket{a_f}$ and hence that the particle is in state $\ket{s_f}$. Although the measurement outcome $\tau_S(x)$ on the whole of $S$ determines with probability $1$ that the apparatus and the particle will be in the states $\ket{a_f}$ and $\ket{s_f}$ respectively at time $t_m$, if we consider the probability $P(f|\ket{\Phi_i})$ that this outcome occurs based just on the state $\ket{\Phi_i}$, then typically this probability is going to be less than $1$.
  
+ To calculate this probability, we first consider the evolution of $\ket{\Phi_i}$ to $ U_{S_f,S_i}\ket{\Phi_{i}}$. It's possible that there may be photons ``measured'' on $S$ between the hypersurfaces $S_i$ and $S_f$ as indicated in figure \ref{pisolution} (i.e. on $(S\cap S_f)\setminus(S\cap S_i)$), but we are assuming that they do not get entangled with the different pointer states of the apparatus. In other words, $\ket{\Phi_i}$ will evolve to a state of the form 
+\begin{equation}\label{USfievolve1}
+	U_{S_f,S_i}\ket{\Phi_{i}}\approx \sum_j c_j\ket{s_j}\ket{a_j}\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\gamma_i^{(\mathcal{A})}}\sum_kg_k\ket{\gamma'_k},
+\end{equation}
+where $\ket{\gamma_k'}$ correspond to the possible measurements of $T_S(x)$  on $(S\cap S_f)\setminus(S\cap S_i)$, and $\sum_k\abs{g_k}^2=1$.
+
+But from time $t_f$ to $t_m$, we assume that the apparatus does get entangled with photons which are measured on $S\cap S_m$. Thus, if $\{\ket{\gamma_j^{\prime\prime}}:j\}$ are the normalized states representing the possible measurements outcomes of these photons such that $\ip{\gamma_j^{\prime\prime}}{\gamma_k^{\prime\prime}}\approx 0$ for $j\neq k$, then 
+$$U_{S_m,S_f} U_{S_f,S_i}\ket{\Phi_{i}}\approx \sum_j c_j\ket{s_j}\ket{a_j}\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\gamma_i^{(\mathcal{A})}}\sum_kg_k\ket{\gamma'_k}\ket{\gamma_j^{\prime\prime}}.$$
+Since we are assuming that at time $t_m$ a measurement of photons on $S\cap S_m$ is able to determine that the apparatus is in state $\ket{a_f}$, this can only happen if $U_{S_m,S_f} U_{S_f,S_i}\ket{\Phi_{i}}$ is found to be in one of the states $\ket{\Phi_{k,f}}$ for some $k$ where
+$$\ket{\Phi_{k,j}}=\ket{s_j}\ket{a_j}\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\gamma_i^{(\mathcal{A})}}\ket{\gamma'_k}\ket{\gamma_j^{\prime\prime}}.$$
+By the Born Rule, the probability $\ket{\Phi_i}$ will be found to be in state $\ket{\Phi_{k,j}}$ will be
+$$\abs{\ip{\Phi_{k,j}}{\Phi_i}}=\abs{c_j}^2\abs{g_k}^2.$$
+Therefore,
+$$P(f|\ket{\Phi_i})=\sum_k \abs{\ip{\Phi_{k,f}}{\Phi_i}}=\abs{c_f}^2=\abs{\ip{s_f}{s}}^2.$$
+Hence, the probability that a complete measurement of $T_S(x)$ on $S$ will give a measurement outcome of the particle being in state $\ket{s_f}$ given the partial measurement of $T_S(x)$ on $S_i\cap S$ determines the particle to be initially in the state $\ket{s}$ will be the same as the standard Born rule probability $\abs{\ip{s_f}{s}}^2$ of $\ket{s}$ being found to be in state $\ket{s_f}$.
+
+We can also recover this probability using Kent's conditional expectation. To do this, we recall that in standard quantum mechanics, if for some state $\ket{\psi}$ of a system we define the operator $[\psi]=\dyad{\psi}$, then when the system is in some initial state $\ket{\chi}$, the Born rule implies that $\ev{[\psi]}{\xi}=P(\psi|\chi)$, where $P(\psi|\chi)$ is the probability that the system will be found to be in state $\ket{\psi}$ given that it was initially in state $\ket{\chi}$. But by (\ref{evev}),  $\ev{[\psi]}{\xi}$ is just the expectation $\ev*{\psi}_\chi$ of $[\psi]$ when $[\psi]$ is treated as an observable. 
+
+Now in equation (\ref{kentconsistency0}), we saw how to calculate the expectation value $\ev*{T^{\mu\nu}(y)}_{\tau_S}$ of the observable $\hat{T}^{\mu\nu}(y)$ given the notional measurement $\tau_S$ on $S$ outside the light cone of $y$. This suggests that the expectation value of any observable $\hat{O}$ defined at spacetime location $(t_i,z_1)$ given the notional measurement $\tau_S$ on $S$ outside the light cone of $(t_i,z_1)$ is going to be
+$$\ev*{\hat{O}}_{\tau_S}=\frac{\ev*{\pi_i\hat{O}}{\Psi_i}}{\ev*{\pi_i}{\Psi_i}}.$$ 
+By (\ref{piphi}), $\ev*{\pi_i}{\Psi_i}=\abs{c}^2$, and so taking $\hat{O}$ to be $[s_f]$ we have 
+$$ \ev*{[s_f]}_{\tau_S}=\frac{\abs{c}^2\abs{\ip{s_f}{s}}^2}{\abs{c}^2}=\abs{\ip{s_f}{s}}^2.$$
+Thus, Kent's conditional expectation $\ev*{[s_f]}_{\tau_S}$ gives us the same probability $\abs{\ip{s_f}{s}}^2$ for finding a particle transition from state $\ket{s}$ to state $\ket{s_f}$ as in standard quantum mechanics.
 
 
 
