@@ -403,7 +403,7 @@ Note that in this proof of Lorentz invariance, we don't need to take the limit o
 
 
 
-\subsection{Kent's Interpretation and Decoherence Theory\textsuperscript{*}}
+\subsection{Kent's Interpretation\label{Kentdecoherencesection} and Decoherence Theory\textsuperscript{*}}
 In section \ref{probOutcomes} we saw that decoherence theory by itself does not offer a solution to the problem of outcomes. In this section, we consider how the additional information in Kent's interpretation is sufficient to address this problem. We will explain this by again considering  Kent's toy model discussed in section \ref{toysection}.
 
 We thus suppose that a system is in a superposition $\psi_0^\text{sys} = c_1\psi_1^\text{sys}+c_2\psi_2^\text{sys}$ of two local states $\psi_1^\text{sys}$ and $\psi_2^\text{sys}$ where $\abs{c_1}^2+\abs{c_2}^2=1$, and that there is a photon coming in from the left that interacts with the system. We also suppose that  $y_1$ is a spacetime location with spatial location $z_1$ between the two hypersurfaces $S_0$ and $S$, and we consider a hypersurface $S_n=S_n(y_1)$  in a sequence of hypersurfaces that each contain $y_1$ as described on page \pageref{siydef}. 
@@ -805,7 +805,7 @@ In this case, the state of $S_n(y^c_1)$ will be
  $\ev*{\pi_{n,1}\hat{T}^{\mu\nu}(y^c_1)}{\Psi_n}=\abs{c_1}^2\ev*{\hat{T}^{\mu\nu}(y^c_1)}{\psi_1^\text{sys}}$ and  $\ev*{\pi_{n,1}}{\Psi_n}=\abs{c_1}^2$. Hence, by (\ref{kentconsistency0}), Kent's beables at $y^c_1$ will be 
  $$\ev*{T^{\mu\nu}(y^c_1)}_{\tau_{S,1}}=\ev*{\hat{T}^{\mu\nu}(y^c_1)}{\psi_1^\text{sys}}.$$ 
  From this, it follows that the reduced density matrix at $y^c_1$ will take the form of a pure state:
- \begin{equation}
+ \begin{equation}\label{purerho}
 \hat{\rho}_{y^c_1}= \dyad{\psi_1^\text{sys}}.
 \end{equation} 
  On the other hand, for the case when  $T_S=\tau_{S,2}$, this indicates that there is no photon detection at $y^c_3$, so that the local state at the $y^c_3$-cell will be $\ket{0_3}$. So if we now  write $\pi_{n,2}$ for the operator $\pi_n$, we have 
@@ -1061,7 +1061,7 @@ Let's assume that the  apparatus has already interacted with many photons during
 	\md = (\a+\h)/2;
 	\tlen=0.75;
 	\textscale = 0.7;
-	\picscale = 0.89;
+	\picscale = 0.78;
 	\nudge=0.1;
 	\tnudge=(\ttwo-\tone)/2+0.8;
 	\ttesta=2*\tone-\ttwo-\tnudge;
@@ -1221,7 +1221,7 @@ Thus, Kent's conditional expectation $\ev*{[s_f]}_{\tau_S}$ gives us the same pr
 
 Also note that we can typically expect the $\ket*{\gamma_i^{(\mathcal{S})}}$-state to be independent of the $\ket*{\gamma_i^{(\mathcal{A})}}$-state. Therefore, since $\ket*{\gamma_i^{(\mathcal{A})}}$ will determine the measurement choice, and since $\ket*{\gamma_i^{(\mathcal{S})}}$ determines the initial state of the particle, we can expect the state of the particle to be independent of the measurement choice in Kent's interpretation. Thus, we can fulfil one of the necessary criteria (i.e. criterion \ref{hidden2}) for PI to be a well-defined notion.
 
-\subsection{Kent's Interpretation and Parameter Independence}
+\subsection{Kent's Interpretation and Parameter Independence\label{kentpi}}
 In addition to criterion \ref{hidden2} being satisfied, criterion \ref{hidden4} must also be true if PI is to be a well-defined notion. In the previous section, we saw how we can generalize Kent's beable $\ev*{\hat{T}^{\mu\nu}(y)}_{\tau_S}$ to calculate conditional expectations $\ev*{\hat{O}}_{\tau_S}$ for any observable $\hat{O}$ defined at a particular spacetime location $(t_i, z_1)$. Calculating the probability for two measurements requires calculating the conditional expectation of an observable that depends on two spacetime locations. In order to do this, we need to make a further adaption to Kent's interpretation. In this section, we will describe this adaption and show that with it, Kent's interpretation allows us to calculate probabilities for Bell-type experiments, and that these probabilities are the same as in standard quantum physics. Since PI holds in standard quantum theory,  a consequence of Kent's interpretation agreeing with standard quantum theory is that PI will also hold in Kent's interpretation.
 
 
@@ -1279,7 +1279,7 @@ So let's consider figure \ref{bellsolution} which depicts a one-dimensional view
 	\md = (\a+\h)/2;
 	\tlen=0.75;
 	\textscale = 0.7;
-	\picscale = 0.89;
+	\picscale = 0.78;
 	\nudge=0.1;
 	\tnudge=(\ttwo-\tone)/2+0.8;
 	\ttesta=2*\tone-\ttwo-\tnudge;
@@ -1463,148 +1463,243 @@ $$\ev*{[\bm{\hat{s}+}]_L[\bm{\hat{s}_\theta+}]_R}_{\tau_S}=\frac{1}{2}\sin^2(\th
 which is the joint probability for finding the left wing particle in state $\ket{\uvbp{s}}_L$ and the right wing particle in state $\ket{\bm{\hat{s}_\theta+}}_R$. Thus, we can adapt Kent's model so that criterion \ref{hidden4} of page \pageref{hidden4} is satisfied and such that Kent's model gives the same probabilities as standard quantum physics. Hence, PI holds in Kent's interpretation.
 
 
-\subsection{An objection to Kent's beables}
+\subsection{An Alternative to Kent's Beables}
+A final question to consider in this chapter is the nature of Kent's beables. As discussed on page \pageref{beabledef}, Bell hoped for a more satisfactory theory than standard quantum theory. This more satisfactory theory was to be a theory of beables rather than a theory of observables, and these beables would form the underlying reality that gives rise to all the familiar things in the world around us. Now in the context of Kent's interpretation, the determinate mass/energy density $\tau_S(x)$ at a location $x\in S$ seems like a good candidate to be a beable. But what is less obvious is what the beables should be for a spacetime locate $y$ prior to $S$. Kent seems to be saying that the conditional expectation value  $\ev*{\hat{T}^{\mu\nu}(y)}_{\tau_S}$ is a beable at $y$. Now in some situations, the determinate values of $\tau_S(x)$ on $S$ will give rise to a determinate value for $T^{\mu\nu}(y)$, in which case the conditional expectation $\ev*{\hat{T}^{\mu\nu}(y)}_{\tau_S}$ will be identical to the determinate value for $T^{\mu\nu}(y)$. But there will inevitably be situations in which the determinate values of $\tau_S(x)$ on $S$ will not give rise to a determinate value of $T^{\mu\nu}(y)$. In the notion defined in section \ref{LorentzInvarianceSection} on page \pageref{tauprojection}, we may find that the state $\pi_n\ket{\Psi_n}$ at $y$ is in a superposition of eigenstates of $\hat{T}^{\mu,\nu}(y)$. But in that case, it seems very dubious to claim that the expectation value $\ev*{\hat{T}^{\mu\nu}(y)}_{\tau_S}$ is the true state of reality and hence the beable at $y$. As an analogy, it seems a bit like saying the throw of a six-sided dice could yield a beable of 3.5 for its outcome since 3.5 is the expectation value for the throw of a dice.
+Imposing this degree of definiteness at $y$ seems unnatural and unnecessary. 
 
+To my mind, it seems more natural to suppose that there are limitations to the definiteness that we can attribute to physical reality. So in the context of Kent's interpretation, the mass/energy density $\tau_S(x)$ on $S$ would be definite, and some definite facts about physical reality would flow from the definite facts about $S$. But there would also be much indefiniteness about physical reality. This occurs whenever the information in $\tau_S(x)$ is insufficient to determine whether the state $\pi_n\ket{\Psi_n}$ is an eigenstate of some observable. If light had interacted with the location $y$ in a different way, then this might be able to settle which eigenstate $\pi_n\ket{\Psi_n}$ was in, but this definite outcome would then result in $y$ being indefinite with respect to other observables. But even though there will inevitably be many physical quantities of a system that lack definiteness, we can still make claims about how mass/energy could have been measured on $S$ and hence how likely a physical quantity could have had a particular value corresponding to this possible measurement on $S$.
 
-There is still the question of why Kent decides that the beables of his theory should take the form of expectation values. As an analogy, it seems a bit like saying a six sided dice can actually come up with a $3.5$ since this is its expectation value. As an alternative to Kent's $\ev*{\hat{T}_{\mu,\nu}(y)}_{\tau_S}$ beables, we could instead  stipulate the reduced density matrices $\hat{\rho}_y$ as calculated in section \ref{ddddddddddddddddddddddddddd} as beaare more fundamental beables than the conditional expectation values of $\hat{T}_{\mu,\nu}(y)$, and that the determinate value of $T_S$ is more fundamental still. There are a few things I need to explain here such as what I mean fundamental, what I mean by saying a beable is a reduced density matrix, and how the beable of a reduced density matrix can give rise to Kent's expectation value beables.
+Another issue that should concern us is the question of what should be the  subject of the beables. Any beable presupposes a subject as well as a property that belongs to the subject. So in the case of Kent's beables, the spacetime location $y$ would be the subject and $\ev*{\hat{T}^{\mu\nu}(y)}_{\tau_S}$ would be a property of the subject. However, in section \ref{kentpi}, we found that in order to deal with joint probabilities in Bell-type experiments, it was necessary to calculate expectation values for observables that depended on two spacetime locations rather than just one spacetime location. Now perhaps some people would argue that joint probabilities are not beables and therefore conclude that the need to use multiple spacetime locations in determining joint probabilities is irrelevant when it comes to deciding what the subject of a beable should be. But in defense of their relevance, it does seem that joint probabilities are saying something about reality, and in the absence of hidden variables, these joint probabilities can't be reduced to some more basic reality of which the components would only depend on  single spacetime locations. So I think this is a reason to attribute beability to probabilities. 
 
-By saying that the determinate value of $T_S$ is more fundamental than the reduced density matrices,  I mean that if we have a statement of the form ``the beable at $y$ is $\hat{\rho}_y$'', then such a statement is reducible to statements about $T_S$. Such statements might be simple factual statements such as ``there is photon is at $x_1$, and $x_2$ but not at $x_3$ or $x_4$'' where the locations are indicated in figure \ref{kentdecoh5}.
+But note that once we allow for beables whose subject consists in multiple locations, can help us to avoid some strange consequences that occur if we just insist on single locations the subject of a beable. For consider figure \ref{strangesubject}.
 
 \begin{figure}[ht!]
-\captionsetup{justification=justified}
-\centering
-\tikzmath{
-\a=5.3;  
-\psione=0;
-\psitwo=1.5;
-\psithree=-0.7;
-\h=1;
-\labelx=(\psione+\psitwo)/2;
-\labely=-1.5;
-\phstartx=-1.7;
-\phstartxx=-0.9;
-\phstarty=\h;
-\tbeg=\phstarty;
-\ca=\phstartx-\tbeg;
-\caa=\phstartxx-\tbeg;
-\ttwo=\psitwo-\ca;
-\ttwoo=\psitwo-\caa;
-\cb=\ttwo+\ca;
-\cbb=\ttwoo+\caa;
-\xend=\ttwo-\a+\cb;
-\xendd=\ttwoo-\a+\cbb;
-\tone=\psione-\ca;
-\tonee=\psione-\caa;
-\cc=\tone+\ca;
-\ccc=\tonee+\caa;
-\xendz=\tone-\a+\cc;
-\xendzz=\tonee-\a+\ccc;
-\tthree=\cc+\tone-\psitwo;
-\circsize=0.08;
-\md = (\a+\h)/2;
-\tlen=0.75;
-\textscale = 0.7;
-\picscale = 0.89;
-\nudge=0.1;
-\tnudge=(\ttwo-\tone)/2+0.8;
-\ttesta=2*\tone-\ttwo-\tnudge;
-\ttestb=2*\tone-\ttwo+\tnudge;
-\ttestc=\ttwo-\tnudge;
-\ttestd=\ttwo+\tnudge;
-\sonea=\a+\psione-\ttesta;
-\sadd=0.5;
-\lrange = -(\psione-\a+\ttesta)+\sadd;
-\rrange =\lrange; 
-\timex=\rrange-1.5;
-\e = 0.4;
-\ttestx=4;
-\at=\a-\ttestx;
-\ct=\ttestx;
-\lam = 0.87;
-\e = 0.2;
-\hae=(2*pow(\at,3)*\lam*(2+\lam)+\e*\e*(2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam))-8*\at*\e*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam))-2*\at*\at*(2+\lam)*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam)))/(4*\at*\lam*(2*\at+2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam)))-(\e*\e/4+\at*\at*(-1+\lam))/(\at*\lam);
-\mmu=(\tone-\tbeg)/(\psione-\phstartx);
-\nnu=(\psione*\tbeg-\phstartx*\tone)/(\psione-\phstartx);
-\muf=(\a-\ttwo)/(\xend-\psitwo);
-\nuf=(\xend*\ttwo-\psitwo*\a)/(\xend-\psitwo);
-} 
-\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw, inner sep=1pt]%
-\tikzstyle{scoresquare}=[draw, rectangle, minimum size=1mm,inner sep=0pt,outer sep=0pt]%
-\begin{tikzpicture}[scale=\picscale,
-declare function={
-	testxonep(\ps,\t)=\a+\ps-\t;
-	testxonem(\ps,\t)=\ps-\a+\t; 
-	xa(\m,\n)=(-\ct*\m+\e*\m+\m*\n-sqrt(\ct*\ct*\lam*\lam+\e*\e*\m*\m+2*\e*\lam*\lam*\n+\lam*\lam*\n*\n-2*\ct*\lam*\lam*(\e+\n)))/(\lam*\lam-\m*\m);
-	xb(\m,\n)=(-\ct*\m+\e*\m+\m*\n+sqrt(\ct*\ct*\lam*\lam+\e*\e*\m*\m+2*\e*\lam*\lam*\n+\lam*\lam*\n*\n-2*\ct*\lam*\lam*(\e+\n)))/(\lam*\lam-\m*\m);
-	bl(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x+\hae+\at,2)+\e*\e)-\e+\lam*(\x+\hae+\at));
-	br(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x-\hae-\at,2)+\e*\e)-\e-\lam*(\x-\hae-\at));
-	bc(\x)=\ct+sqrt(\lam*\lam*\x*\x+\e*\e)-\e;
-},
- ] 
-\definecolor{tempcolor}{RGB}{250,190,0}
-\definecolor{darkgreen}{RGB}{40,190,40}
+	\captionsetup{justification=justified}
+	\centering
+	\tikzmath{
+	\a=5.3;  
+	\qa=5.3;  
+	\ja=5.3;  
+	\psione=-1;
+	\jpsione=1;
+	\qpsione=-1;
+	\psitwo=1.5;
+	\h=-1;	
+	\phstartx=-2.1;
+	\offset=-\psione;
+	\joffset=-\jpsione;
+	\qphstartx=-3.8;
+	\jphstartx=-3.8;
+	\wphstartx=-1.8;
+	\phstarty=\h;
+	\tbeg=\phstarty;
+	\ca=\phstartx-\tbeg;
+	\ttwo=\psitwo-\ca;
+	\cb=\ttwo+\ca;
+	\xend=\ttwo-\a+\cb;
+	\tone=\psione-\ca;
+	\cc=\tone+\ca;
+	\xendz=\tone-\a+\cc;
+	\qca=\qphstartx-\tbeg;
+	\qtone=\qpsione-\qca;
+	\qqcc=\qtone+\qca;
+	\qxendz=\qtone-\qa+\qqcc;
+	\jca=\jphstartx-\tbeg;
+	\jtone=\jpsione-\jca;
+	\jqcc=\jtone+\jca;
+	\jxendz=\jtone-\ja+\jqcc;
+	\wa=5.3;  
+	\wpsione=-1;
+	\wttestx=3.7;
+	\wca=\wphstartx-\tbeg;
+	\wtone=\wpsione-\wca;
+	\wwcc=\wtone+\wca;
+	\wxendz=\wtone-\wa+\wwcc;
+	\wat=\wa-\wttestx;
+	\wct=\wttestx;
+	\wlam = 0.87;
+		\we=0.1;
+	\tthree=\cc+\tone-\psitwo;
+	\circsize=0.08;
+	\md = (\a+\h)/2;
+	\tlen=0.75;
+	\textscale = 0.7;
+	\picscale = 0.59;
+	\nudge=0.1;
+	\tnudge=(\ttwo-\tone)/2+0.8;
+	\ttesta=2*\tone-\ttwo-\tnudge;
+	\sonea=\a+\psione-\ttesta;
+	\sadd=0.5;
+	\lrange = 5;
+	\rrange =6.5; 
+	\timex=\rrange-1.5;
+	\ttestx=2.4;
+	\at=\a-\ttestx;
+	\ct=\ttestx;
+	\qttestx=1.2;
+	\qat=\qa-\qttestx;
+	\qct=\qttestx;
+	\qlam = 0.87;
+	\jttestx=1.2;
+	\jat=\ja-\jttestx;
+	\jct=\jttestx;
+	\jlam = 0.87;
+	\lam = 0.87;
+	\e = 0.1;
+	\qe=0.1;
+	\je=0.1;
+	\xs=2.7;
+	\xm=\psione;
+	\ys=\h;
+	\ym=-(\xm-\xs)+\ys;
+	\yf=\a;
+	\xf=\yf-\ym+\xm;
+	\labelx=(\rrange-\lrange)/2;
+	\labely=\h-0.5;
+	\hae=(2*pow(\at,3)*\lam*(2+\lam)+\e*\e*(2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam))-8*\at*\e*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam))-2*\at*\at*(2+\lam)*(-2*\e+sqrt(4*\e*\e+\at*\at*\lam*\lam)))/(4*\at*\lam*(2*\at+2*\e-sqrt(4*\e*\e+\at*\at*\lam*\lam)))-(\e*\e/4+\at*\at*(-1+\lam))/(\at*\lam);
+	\qhae=(2*pow(\qat,3)*\qlam*(2+\qlam)+\qe*\qe*(2*\qe-sqrt(4*\qe*\qe+\qat*\qat*\qlam*\qlam))-8*\qat*\qe*(-2*\qe+sqrt(4*\qe*\qe+\qat*\qat*\qlam*\qlam))-2*\qat*\qat*(2+\qlam)*(-2*\qe+sqrt(4*\qe*\qe+\qat*\qat*\qlam*\qlam)))/(4*\qat*\qlam*(2*\qat+2*\qe-sqrt(4*\qe*\qe+\qat*\qat*\qlam*\qlam)))-(\qe*\qe/4+\qat*\qat*(-1+\qlam))/(\qat*\qlam);
+		\whae=(2*pow(\wat,3)*\wlam*(2+\wlam)+\we*\we*(2*\we-sqrt(4*\we*\we+\wat*\wat*\wlam*\wlam))-8*\wat*\we*(-2*\we+sqrt(4*\we*\we+\wat*\wat*\wlam*\wlam))-2*\wat*\wat*(2+\wlam)*(-2*\we+sqrt(4*\we*\we+\wat*\wat*\wlam*\wlam)))/(4*\wat*\wlam*(2*\wat+2*\we-sqrt(4*\we*\we+\wat*\wat*\wlam*\wlam)))-(\we*\we/4+\wat*\wat*(-1+\wlam))/(\wat*\wlam);
+			\jhae=(2*pow(\jat,3)*\jlam*(2+\jlam)+\je*\je*(2*\je-sqrt(4*\je*\je+\jat*\jat*\jlam*\jlam))-8*\jat*\je*(-2*\je+sqrt(4*\je*\je+\jat*\jat*\jlam*\jlam))-2*\jat*\jat*(2+\jlam)*(-2*\je+sqrt(4*\je*\je+\jat*\jat*\jlam*\jlam)))/(4*\jat*\jlam*(2*\jat+2*\je-sqrt(4*\je*\je+\jat*\jat*\jlam*\jlam)))-(\je*\je/4+\jat*\jat*(-1+\jlam))/(\jat*\jlam);
+	} 
+	\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw, inner sep=1pt]%
+	\tikzstyle{scoresquare}=[draw, rectangle, minimum size=1mm,inner sep=0pt,outer sep=0pt]%
+	\begin{tikzpicture}[scale=\picscale,
+		declare function={
+			testxonep(\ps,\t)=\a+\ps-\t;
+			testxonem(\ps,\t)=\ps-\a+\t; 
+			bl(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x+\hae+\at,2)+\e*\e)-\e+\lam*(\x+\hae+\at));
+			br(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x-\hae-\at,2)+\e*\e)-\e-\lam*(\x-\hae-\at));
+			bc(\x)=\ct+sqrt(\lam*\lam*\x*\x+\e*\e)-\e;
+			qbl(\qx)=\qct+\qat-\qe/2-1/2*(sqrt(\qlam*\qlam*pow(\qx+\qhae+\qat,2)+\qe*\qe)-\qe+\qlam*(\qx+\qhae+\qat));
+			qbr(\qx)=\qct+\qat-\qe/2-1/2*(sqrt(\qlam*\qlam*pow(\qx-\qhae-\qat,2)+\qe*\qe)-\qe-\qlam*(\qx-\qhae-\qat));
+			qbc(\qx)=\qct+sqrt(\qlam*\qlam*\qx*\qx+\qe*\qe)-\qe;
+			wbl(\wx)=\wct+\wat-\we/2-1/2*(sqrt(\wlam*\wlam*pow(\wx+\whae+\wat,2)+\we*\we)-\we+\wlam*(\wx+\whae+\wat));
+			wbr(\wx)=\wct+\wat-\we/2-1/2*(sqrt(\wlam*\wlam*pow(\wx-\whae-\wat,2)+\we*\we)-\we-\wlam*(\wx-\whae-\wat));
+			wbc(\wx)=\wct+sqrt(\wlam*\wlam*\wx*\wx+\we*\we)-\we;
+			jbl(\jx)=\jct+\jat-\je/2-1/2*(sqrt(\jlam*\jlam*pow(\jx+\jhae+\jat,2)+\je*\je)-\je+\jlam*(\jx+\jhae+\jat));
+			jbr(\jx)=\jct+\jat-\je/2-1/2*(sqrt(\jlam*\jlam*pow(\jx-\jhae-\jat,2)+\je*\je)-\je-\jlam*(\jx-\jhae-\jat));
+			jbc(\jx)=\jct+sqrt(\jlam*\jlam*\jx*\jx+\je*\je)-\je;
+			rr(\x)=2*(pow(\x,4)/4-pow(\offset*\x,2)/2+pow(\offset,4)/4)+\qttestx;
+		},
+		 ] 
+		\definecolor{tempcolor}{RGB}{250,190,0}
+		\definecolor{darkgreen}{RGB}{40,190,40}
+			
+		 \draw[->,blue, thick] [domain=-\at/2-\offset:-\lrange, samples=150]   plot (\x, {wbl(\x+\offset)})  ;
+		 \draw[blue, thick] [domain=-\at/2-\offset:\at/2-\offset, samples=150] plot (\x, {wbc(\x+\offset)})   ;
+	
+			 
+		 \draw[->,blue, thick] [domain=\at/2-\offset:\rrange, samples=150]   plot (\x, {wbl(-\x-\offset)})  ;
+		
+		  \node[scale=\textscale]  at (-2.5,\wttestx+0.7) {$S_{n}$}; 
+	
+		
+		\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+		\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+					  
+		\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h)  node[above right, scale=\textscale]{$z_L$}-- (\psione,\a) ;
+		\draw[->, shorten <= 5pt,  shorten >= 1pt] (\jpsione,\h)  node[above right, scale=\textscale]{$z_R$}-- (\jpsione,\a) ;
+		
+	
+		
+				\draw[dashed, tempcolor,  ultra thick](\xs,\ys)--(\xm,\ym);
+		
+				\draw[dashed, tempcolor,  ultra thick](\xf,\yf)--(\xm,\ym);
+	
+		
+		\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time};  
+	
+		\draw[dotted](\psione,\wttestx)--({testxonep(\psione,\wttestx)},\a);
+		\draw[dotted](\psione,\wttestx)--({testxonem(\psione,\wttestx)},\a);
+		\draw[dotted](\jpsione,\wttestx)--({testxonep(\jpsione,\wttestx)},\a);
+		\draw[dotted](\jpsione,\wttestx)--({testxonem(\jpsione,\wttestx)},\a);
+	\draw (\psione,\wttestx) node[ scoresquare, fill=gray]  {} ;
+		\draw (\jpsione,\wttestx) node[ scoresquare, fill=gray]  {};
+	
+		\draw [black,fill](\xf,\a) circle [radius=\circsize] node [black,above=9,right=-4,scale=\textscale] {$\gamma$}; 
+	\coordinate[label = below: (a)]  (D) at (\labelx,\labely);
+		\end{tikzpicture}% pic 1		
+	\begin{tikzpicture}[scale=\picscale,
+	declare function={
+		testxonep(\ps,\t)=\a+\ps-\t;
+		testxonem(\ps,\t)=\ps-\a+\t; 
+		bl(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x+\hae+\at,2)+\e*\e)-\e+\lam*(\x+\hae+\at));
+		br(\x)=\ct+\at-\e/2-1/2*(sqrt(\lam*\lam*pow(\x-\hae-\at,2)+\e*\e)-\e-\lam*(\x-\hae-\at));
+		bc(\x)=\ct+sqrt(\lam*\lam*\x*\x+\e*\e)-\e;
+		qbl(\qx)=\qct+\qat-\qe/2-1/2*(sqrt(\qlam*\qlam*pow(\qx+\qhae+\qat,2)+\qe*\qe)-\qe+\qlam*(\qx+\qhae+\qat));
+		qbr(\qx)=\qct+\qat-\qe/2-1/2*(sqrt(\qlam*\qlam*pow(\qx-\qhae-\qat,2)+\qe*\qe)-\qe-\qlam*(\qx-\qhae-\qat));
+		qbc(\qx)=\qct+sqrt(\qlam*\qlam*\qx*\qx+\qe*\qe)-\qe;
+		wbl(\wx)=\wct+\wat-\we/2-1/2*(sqrt(\wlam*\wlam*pow(\wx+\whae+\wat,2)+\we*\we)-\we+\wlam*(\wx+\whae+\wat));
+		wbr(\wx)=\wct+\wat-\we/2-1/2*(sqrt(\wlam*\wlam*pow(\wx-\whae-\wat,2)+\we*\we)-\we-\wlam*(\wx-\whae-\wat));
+		wbc(\wx)=\wct+sqrt(\wlam*\wlam*\wx*\wx+\we*\we)-\we;
+		jbl(\jx)=\jct+\jat-\je/2-1/2*(sqrt(\jlam*\jlam*pow(\jx+\jhae+\jat,2)+\je*\je)-\je+\jlam*(\jx+\jhae+\jat));
+		jbr(\jx)=\jct+\jat-\je/2-1/2*(sqrt(\jlam*\jlam*pow(\jx-\jhae-\jat,2)+\je*\je)-\je-\jlam*(\jx-\jhae-\jat));
+		jbc(\jx)=\jct+sqrt(\jlam*\jlam*\jx*\jx+\je*\je)-\je;
+		rr(\x)=2*(pow(\x,4)/4-pow(\offset*\x,2)/2+pow(\offset,4)/4)+\qttestx;
+	},
+	 ] 
+	\definecolor{tempcolor}{RGB}{250,190,0}
+	\definecolor{darkgreen}{RGB}{40,190,40}
+		
+	 \draw[->,blue, thick] [domain=-\at/2-\offset:-\lrange, samples=150]   plot (\x, {wbl(\x+\offset)})  ;
+	 \draw[blue, thick] [domain=-\at/2-\offset:0-\offset, samples=150] plot (\x, {wbc(\x+\offset)})   ;
+	 \draw[blue, thick] [domain=-\offset:-\joffset, samples=150] plot (\x, {\wttestx})   ;
+		 
+	 \draw[->,blue, thick] [domain=\at/2+\offset:\rrange, samples=150]   plot (\x, {wbl(-\x+\offset)})  ;
+	\draw[blue, thick] [domain=\at/2+\offset:\offset, samples=150] plot (\x, {wbc(-\x+\offset)})   ;
 
-%\draw[->,blue, thick] [domain=-\at/2:-\lrange, samples=150]   plot (\x, {bl(\x)})  ;
-%\draw[blue, thick] [domain=-\at/2:\at/2, samples=150] plot (\x, {bc(\x)})  node[right=20, above=10,black,scale=\textscale]{}  ;
-%\draw[->,blue, thick] [domain=\at/2:\rrange, samples=150]   plot (\x, {br(\x)})   ;
+	  \node[scale=\textscale]  at (-2.5,\wttestx+0.7) {$S_{n}$}; 
 
-% \node[scale=\textscale]  at (1,4.1) {$S_n(y^c_1)$}; 
-\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
-\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
-              
-\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$z_1$}-- (\psione,\a) ;
-\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$z_2$}-- (\psitwo,\a);
-\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psithree,\h) node[below, scale=\textscale]{$\psi_{3}^{\pm}$}   node[above left, scale=\textscale]{$z_3$}-- (\psithree,\a);
+	
+	\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+	\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+				  
+	\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h)  node[above right, scale=\textscale]{$z_L$}-- (\psione,\a) ;
+	\draw[->, shorten <= 5pt,  shorten >= 1pt] (\jpsione,\h)  node[above right, scale=\textscale]{$z_R$}-- (\jpsione,\a) ;
+	
 
+	
+			\draw[dashed, tempcolor,  ultra thick](\xs,\ys)--(\xm,\ym);
+	
+			\draw[dashed, tempcolor,  ultra thick](\xf,\yf)--(\xm,\ym);
 
-\draw[dashed, tempcolor,  thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tone) ;
-\draw[dashed, tempcolor,  thick](\psione,\tone) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo );
-\draw[dashed, tempcolor,  thick](\psitwo,\ttwo)--(\xend,\a); 
-\draw[dashed, tempcolor,  thick](\psione,\tone)--(\xendz,\a);
+	
+	\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time};  
 
-\draw[dashed, tempcolor,  thick](\phstartxx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tonee) ;
-\draw[dashed, tempcolor,  thick](\psione,\tonee) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwoo );
-\draw[dashed, tempcolor,  thick](\psitwo,\ttwoo)--(\xendd,\a); 
-\draw[dashed, tempcolor,  thick](\psione,\tonee)--(\xendzz,\a);
+	\draw[dotted](\psione,\wttestx)--({testxonep(\psione,\wttestx)},\a);
+	\draw[dotted](\psione,\wttestx)--({testxonem(\psione,\wttestx)},\a);
+	\draw[dotted](\jpsione,\wttestx)--({testxonep(\jpsione,\wttestx)},\a);
+	\draw[dotted](\jpsione,\wttestx)--({testxonem(\jpsione,\wttestx)},\a);
+\draw (\psione,\wttestx) node[ scoresquare, fill=gray]  {} ;
+    \draw (\jpsione,\wttestx) node[ scoresquare, fill=gray]  {};
 
-\draw[magenta,<->,ultra thick] (\rrange,\a)--(-\lrange,\a);
+	\draw [black,fill](\xf,\a) circle [radius=\circsize] node [black,above=9,right=-4,scale=\textscale] {$\gamma$}; 
+\coordinate[label = below: (b)]  (D) at (\labelx,\labely);
+	\end{tikzpicture}% pic 1
 
+	
+	\vspace*{2px}
+	\caption{(a) and (b) show how conditional expectations are going to depend on the subject. In (a) the subject consists of spacetime locations $(t, z_L)$ and $(t, z_R)$, whereas in (b) the subject is just $(t, z_L)$.  }
+	\label{strangesubject}
+	\end{figure}
 
+We suppose that initially the state of $S_0$ is 
+$$\ket{\Phi_0}=a\ket{\psi}_L\ket{0}_R+b\ket{0}_L\ket{\psi}_R$$ 
+with $\abs{a}^2+\abs{b}^2=1$ (and where we have omitted all other terms corresponding to other spacetime locations). A photon then interacts with the joint system and is ``measured'' on $S$ to be in state $\ket{\gamma}$ thus determining the mass of the composite system to be located at $z_L$. Now we consider the observable $[\psi]_L$ and suppose its corresponding $z_L$-beable has as its subject a single spacetime location $(t,z_L)$, so that the expectation of $[\psi]_L$ is conditioned on $S_n\cap S$ as depicted in figure \ref{strangesubject} (a). Then as soon as the photon has interacted with the mass centered at $z_L$, we can say that the system has collapsed to this mass center. But if the photon registers at a location on $S$ that is within the light cone of $(t, z_R)$, and we consider the observable $[\psi]_R$ and its corresponding $z_R$-beable, then there is nothing to condition on in $S$ when calculating the expectation value of $[\psi]_R$, and so we will obtain a non-zero answer for this $z_R$-beable, even though according to the $z_L$-beable all the mass is located at $z_L$. This seems very strange. 
 
-\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+If however, we consider the beable whose subject consists of both $(t, z_L)$ and $(t, z_R)$, then because we have to choose a hypersurface that contains both $(t, z_L)$ and $(t, z_R)$ as depicted in figure \ref{strangesubject} (b), the system won't collapse to the mass center at $z_L$ as soon as the photon interacts with it. Rather, it will only collapse to this mass center once the photon registered on $S$ is outside the light cones of  both $(t, z_L)$ and $(t, z_R)$. Once this time has occurred, the $z_L$ and the $z_R$ will no longer be entangled, and so we would be able to consider beables whose subjects were the single locations at $z_L$ and $z_R$.
 
-\draw [black,fill] (\xendzz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$x_1$}; 
-\draw [black,fill] (\xend,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$x_4$}; 
-\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$x_2$}; 
-\draw [black,fill] (\xendd,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$x_3$}; 
- 
-%\draw[dotted](\psione,\ttestx)--({testxonep(\psione,\ttestx)},\a);
-%\draw[dotted](\psione,\ttestx)--({testxonem(\psione,\ttestx)},\a);
-\draw [black,fill] (\psione,\tone) circle [radius=\circsize] node [black,left=4,scale=\textscale] {$y_1$}; 
-\draw [black,fill](\psitwo,\ttwo)circle [radius=\circsize] node [black,above right,scale=\textscale, align=left] {$y_2$}; 
+This suggests we should take all the spacetime locations in an entangled system to be the subject of a beable. Particle interactions and particle spreading will tend to induce entanglement between spacetime locations, but ``measurement'' on $S$ will tend to disentangle spacetime locations. For example, if we have an entangled state of the form
+$$a\ket{\psi^a_1}_L\ket{\psi^a_2}_R\ket{\gamma_a}+b\ket{\psi^b_1}_L\ket{\psi^b_2}_R\ket{\gamma_b}$$
+then once the $\ket{gamma}$-state is measured on $S$ outside the light cone of these two locations, then the state will disentangle to either 
+$$\ket{\psi^a_1}_L\ket{\psi^a_2}_R\ket{\gamma_a}$$
+or 
+$$\ket{\psi^b_1}_L\ket{\psi^b_2}_R\ket{\gamma_b}.$$
+So with all this entanglement and disentanglement going, we can expect there by many different beable-subjects.
 
-%\draw (\psione,\ttestx) node[ scoresquare, fill=gray]  {} node [black,below=6,right,scale=\textscale] {$y^c_1$};
-%\draw (\psitwo, {bc(\psitwo)}) node[ scoresquare, fill=gray]  {} node [black,below=6,right,scale=\textscale] {$y^c_2$};
-%\draw ({xb(\muf,\nuf)}, {xb(\muf,\nuf)*\muf+\nuf}) node[ scoresquare, fill=gray]  {} node [black,right=7, below=-4,scale=\textscale] {$y^c_4$};
-%\draw (\xendz,\a) node[ scoresquare, fill=gray]  {} node [black,below=3,scale=\textscale] {$y^c_3$};
+There is the question of which hypersurface we should choose to contain all the spacetime locations that form the subject of a beable, for we need to be able to do this in a natural way lest we sacrifice Lorentz invariance. An obvious choice for such a hypersurface would be one in which all the entangled spacetime locations are simultaneous and in which the expectation value of the center of mass of the system had zero velocity. Then we could the corresponding beables of the entangled system to be Lorentz invariant in  a way analogous to the rest mass of a particle being Lorentz invariant.
 
-
-%\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
-\end{tikzpicture}% pic 1
-
-\vspace*{2px}
-\caption{Depiction of a superposition of two local states at $z_1$ and $z_2$ with $y^c_1$ sufficiently late that the photon intersects $S_n(y^c_1)\cap S$. With enough photon detections on $S$ we can make statements about }
-\label{kentdecoh5}
-\end{figure}
-
-
- With enough such factual statements, we would have enough information on $T_S$ to say that there is a local state $\psi_1^\text{sys}$ at spacetime location $y_1$ and hence conclude that the statement p=``the beable at $y_1$ is $\dyad{\psi_1^\text{sys}}$'' is true. But we would very likely need quite a lot more information than knowledge of the fact that a photon is at $x_1$, and $x_2$, to conclude p since we would need to be able to work out something about time at which the incoming arrived in the vicinity of the system, and this would depend on physics of photon creation. But it seems plausible that from all the information in $T_S$ one could make statements such as p that involve pure states. It is no more controversial than the assumption that we can draw valid conclusions about the physical world based on which cells in our retina are excited. What is controversial is my (and Kent's) suggestion   that the information contained in $T_S$ determines the state of physical reality on earlier hypersurfaces rather than the physical state of the earlier hypersurfaces determining the information contained in $T_S$. In the final chapter, I will aim to justify this suggestion and show that it is not quite as alien to common sense as it might first seem. 
- 
-As for statements that involve improper mixtures, for example statements of the form q=``the beable at $y_1$ is $\abs{c_1}^2\dyad{\psi_1^\text{sys}}+\abs{c_2}^2\dyad{0_1}$'', we could take these to be expressible in terms of modal statement about such as ``it's possible that a photon could have been detected at either $x_1$ or $x_3$ but not both'' as depicted in figure \ref{kentdecoh5}. As in the case for pure states, we would also need other modal statements and declarative propositions about $T_S$ in order to say enough about the times at which incoming photons would arrive at the $z_1$ and $z_2$. But with enough information on $T_S$ it seems plausible that we could build up a picture of such photon interaction on earlier hypersurfaces. Also, by comparing the values of $T_S$ over different region of $S$, we could detect similar configurations from which a super-intelligent being could conclude that these similar configurations correspond to some kind of activity such as a human being performing an experiment.   But these multiple configurations would also have differences, some of which would correspond to different measurement outcomes. By surveying many of these configurations, the super-intelligent being could assign probabilities to these outcomes and hence calculate expectation values for observables and the reduced density matrices that would give rise to these expectation values and hence make statements like $q$ which involve improper mixtures. 
-
-At this point it is worth reminding ourselves that Kent is not saying that an actual measurement of $T_S$ on $S$ is made, but only a notional measurement which is to say if a measurement were made on $T_S$ it would have a determinate value $\tau_S$, say. One could choose a hypersurface $S'$ even later than $S$, but Kent supposes that the description of physical reality between $S_0$ and $S$ is not going to be significantly different if the one used the notional measurements for $T_{S'}$ on $S'$ rather than those on $T_S$.
-
-So let's now consider how the understanding of beables in terms of reduced density matrices can give rise to Kent's beables as conditional expectation values of $T_{\mu,\nu}(y)$. In this section we have been approximating $S_n$ as a coarse-grained model so that $S_n$ is treated as a mesh of tiny cells labeled. The state of these one of these tiny cells, $y_k$ would not in general be pure eigenstates of $T_{\mu,\nu}(y_k)$
+Having specified what the subject of a beable should be, we can finally consider what the beable itself should be. I propose we take the reality signified by the reduced density matrix (conditioned on the available information in $S$) of an entangled system to be the beable. In section \ref{Kentdecoherencesection}, I showed how to calculate these reduced density matrices when the system was a single location, but there is nothing to stop us from calculating the reduced density matrices for systems of entangled spacetime locations. I am attracted to this proposal since because it allows for definite outcomes as in the case when the reduced density matrix is a pure state such as in equation (\ref{purerho}). But the reduced density matrix also captures the reality of possibility rather than forcing on us an overly rigid definiteness to the whole of reality. The meaning of this possibility is grounded in the real possibilities that the ``measurement'' on $S$ could have been other than it is.
 
 
 \nocite{Shimony93}
