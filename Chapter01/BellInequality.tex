@@ -38,20 +38,9 @@
       This inequality is known as \textbf{Bell's inequality}, and it follows from Einstein's locality principle.  However, it turns out that when this experiment is actually performed, Bell's inequality is violated. Because of this violation, the most natural conclusion to draw is that it is wrong to suppose that there any hidden variables describing possible spin measurement outcomes. But it also turns out that this violation of Bell's inequality is entirely predictable if we assume that when the two particles $q_A$ and $q_B$ are coupled together, everything that can be said about their spins is encoded in the so-called \textbf{Bell state}: 
       \begin{equation}\label{bell}
       \frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B-\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B).\end{equation}
-      This state means that if both Alice and Bob measure their particles along the measurement axis $\uvb{a}$, then with probability $\frac{1}{2}$, Alice will detect her particle at location $\uvbp{a}$ and Bob will detect his particle at location $\uvbm{a}$. Likewise, with probability $\frac{1}{2}$, Alice will detect her particle at location $\uvbm{a}$ and Bob will detect his particle at location $\uvbp{a}$. Prima facie, it looks like the Bell state depends on the direction of $\uvb{a}$. However, it can be shown that for any other direction $\uvb{b}$,
-      \begin{equation}\label{bellstate2}\frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B-\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B)=\frac{1}{\sqrt{2}}(\ket*{\uvbp{b}}_A\ket*{\uvbm{b}}_B-\ket*{\uvbm{b}}_A\ket*{\uvbp{b}}_B).\protect\footnotemark\end{equation}
-      \footnotetext{\label{bellstate2pf}To see this, using the transformation rules given in equation (\ref{spintrans}) we have 
-      \begin{align*}\frac{1}{\sqrt{2}}(\ket*{\uvbp{b}}\ket*{\uvbm{b}}&-\ket*{\uvbm{b}}\ket*{\uvbp{b}})\\
-            &=\frac{1}{\sqrt{2}}((\cos(\theta/2)\ket*{\uvbp{a}}+\sin(\theta/2)\ket*{\uvbm{a}})(\cos(\theta/2)\ket*{\uvbm{a}}-\sin(\theta/2)\ket*{\uvbp{a}})\\
-      &\quad-(\cos(\theta/2)\ket*{\uvbm{a}}-\sin(\theta/2)\ket*{\uvbp{a}})(\cos(\theta/2)\ket*{\uvbp{a}}+\sin(\theta/2)\ket*{\uvbm{a}}))\\ 
-      &=\frac{1}{\sqrt{2}}(\cos(\theta/2)\ket*{\uvbp{a}}\cos(\theta/2)\ket*{\uvbm{a}}-\cos(\theta/2)\ket*{\uvbp{a}}\sin(\theta/2)\ket*{\uvbp{a}}\\
-      &\quad+\sin(\theta/2)\ket*{\uvbm{a}}\cos(\theta/2)\ket*{\uvbm{a}}-\sin(\theta/2)\ket*{\uvbm{a}}\sin(\theta/2)\ket*{\uvbp{a}}\\
-      &\quad-\cos(\theta/2)\ket*{\uvbm{a}}\cos(\theta/2)\ket*{\uvbp{a}}-\cos(\theta/2)\ket*{\uvbm{a}}\sin(\theta/2)\ket*{\uvbm{a}}\\
-      &\quad+\sin(\theta/2)\ket*{\uvbp{a}}\cos(\theta/2)\ket*{\uvbp{a}}+
-      \sin(\theta/2)\ket*{\uvbp{a}}\sin(\theta/2)\ket*{\uvbm{a}})\\
-      &=\frac{1}{\sqrt{2}}((\cos[2](\theta/2)+\sin[2](\theta/2))\ket*{\uvbp{a}}\ket*{\uvbm{a}}-(\cos[2](\theta/2)+\sin[2](\theta/2))\ket*{\uvbm{a}}\ket*{\uvbp{a}})\\
-      &=\frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}\ket*{\uvbm{a}}-\ket*{\uvbm{a}}\ket*{\uvbp{a}}).
-      \end{align*}}Thus, without loss of generality we can write the joint state of both Alice and Bob's particles as in equation (\ref{bell}), from which it would follow that 
+      This state means that if both Alice and Bob measure their particles along the measurement axis $\uvb{a}$, then with probability $\frac{1}{2}$, Alice will detect her particle at location $\uvbp{a}$ and Bob will detect his particle at location $\uvbm{a}$. Likewise, with probability $\frac{1}{2}$, Alice will detect her particle at location $\uvbm{a}$ and Bob will detect his particle at location $\uvbp{a}$. Prima facie, it looks like the Bell state depends on the direction of $\uvb{a}$. However, ************************
+      
+      Thus, without loss of generality we can write the joint state of both Alice and Bob's particles as in equation (\ref{bell}), from which it would follow that 
       \begin{equation*}\label{bellsin}
       P_{AB}(\uvbp{a};\uvbp{b})=\frac{1}{2}\sin^2(\theta/2)
       \end{equation*}
