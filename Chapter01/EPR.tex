@@ -1,8 +1,20 @@
-\section{The EPR Paradox}
-Things get even more interesting when we perform Stern-Gerlach-like spin measurements on pairs of particles. We thus suppose there are two particles $q_A$ and $q_B$. Naively, one would expect that if the spin of $q_A$ were to be measured, then this would have no effect on any spin-measurement of $q_B$. This assumption is a special case of \textbf{Einstein's locality principle}: For two spatially separated systems $S_1$ and $S_2$,  the real factual situation of the system $S_2$ should be independent of what is done to the system $S_1$.\footnote{Einstein expressed this locality principle in his autobiographical notes: ``But on one supposition we should, in my opinion, absolutely hold fast: the real factual situation of the system $S_2$ is independent of what is done with the system $S_1$, which is spatially separated from the former.'' \cite[p. 85]{EinsteinLocality}.} If Einstein's locality principle holds we would be able to attribute a state $\ket{\psi}_A$ to particle $q_A$, and a state $\ket{\chi}_B$ to particle $q_B$, so that if an experimenter, Alice say, were to perform a Stern-Gerlach experiment on particle $q_A$ then by the Born rule, the probability Alice would find $q_A$ to be in state $\ket{\psi'}_A$ would be $|\ip{\psi'}{\psi}_A|^2$,\footnote{Strictly speaking, we should add that the state $\ket{\psi'}_A$ is the state of one of the possible measurement outcomes of the experiment Alice is performing. After all, if her particle were in the state $\ket*{\uvbp{a}}_A$, and she made her measurement of spin along the $\uvb{a}$-axis, then  even though in general $\ip*{\uvbp{b}}{\uvbp{a}}_A\neq 0$ for $\uvb{a}\neq\uvb{b}$, the probability of her measuring the particle to be in the state $\ket*{\uvbp{b}}_A$ would be zero. But this is only because $\ket*{\uvbp{b}}_A$ is not a possible measurement outcome of Alice's experiment.  } and likewise, if another  experimenter, Bob say, measured particle $q_B$, then the probability Bob would find $q_B$ to be in state $\ket{\chi'}_B$ would be $|\ip{\chi'}{\chi}_B|^2$. 
+\section{The Copenhagen Interpretation and the EPR-Bohm Paradox}
+Given the equations (\ref{spintrans1}) and (\ref{spintrans2}) that  relate the states $\ket*{\uvbpm{a}}$ and $\ket*{\uvbpm{b}}$ to each other, we can calculate probabilities such as the probability a particle will be measured to be in the $\ket*{\uvbp{a}}$-state given that it is in the $\ket*{\uvbp{b}}$-state. There however arises the question of what the physical meaning of one of these states is. Clearly, the $\ket*{\uvbp{b}}$-state says something about the spin of a particle; but is this a complete description of the particle's spin state? For the $\ket*{\uvbp{b}}$-state only tells us what the outcome of a spin measurement would be along one particular axis $\uvb{b}$. For a spin measurement along another axis $\uvb{a}\neq\pm\uvb{b}$, $\ket*{\uvbp{b}}$ only tells us the probabilities (via equation (\ref{spintrans1})) that the measurement outcome would be $\ket*{\uvbp{a}}$ or $\ket*{\uvbp{a}}$ -- the state doesn't determine either of these outcomes. So is this indetermination of the measurement outcome along the $\uvb{a}$-axis merely a reflection of our lack of knowledge of a more complete specification of the particle's spin state? Or is the  $\ket*{\uvbp{b}}$-state a complete description of the spin state of the particle so that there is no fact of the matter about what spin state the particle would be found to be in along the $\uvb{a}$-axis until a measurement of spin along the $\uvb{a}$-axis is made. 
 
-Now an important principle in probability theory is that two events $X$ and $Y$ are \textbf{independent} if and only if 
-$P(X,Y)=P(X)P(Y)$
+Now Bohr and Heisenberg believed the latter to be the case. This was because their mathematical formalism of quantum physics implied that there were physical quantities of particles that couldn't be simultaneously determined. For example, their mathematical formalism is incapable of representing a particle which has a definite spin in both the $\uvb{a}$-direction and the $\uvb{b}$-direction when $\uvb{a}\neq\pm\uvb{b}.$ So when a particle that is in the $\ket*{\uvbp{b}}$ is measured along the $\uvb{a}$-axis and is found to be in the $\ket*{\uvbp{a}}$-state, there is a so-called collapse of the $\ket*{\uvbp{b}}$-state:
+$$ \ket*{\uvbp{b}}= \cos(\theta/2)\ket*{\uvbp{a}}+\sin(\theta/2) \ket*{\uvbm{a}}\xrightarrow{\text{Collapse!!}}\ket*{\uvbp{a}}$$
+so that after the measurement, the particle is no longer in the $\ket*{\uvbp{b}}$-state. This interpretation of the quantum state where the state collapses to another state upon measurement is known as the \textbf{Copenhagen Interpretation}.
+
+Einstein, Podolsky, and Rosen, however, strongly objected to the Copenhagen Interpretation, and introduced their EPR paradox to explain what troubled them.\footnote{See \cite{EinsteinPodolskyRosen}.} The EPR paradox was originally expressed in terms of the position and momentum of a particle rather than its spin, but Bohm translated the EPR paradox to the context of spin,\footnote{e.g. see \cite[p. 29, Ch. 5 sec. 3, and Ch. 22 sec. 19]{BohmQuantumTheory}. } and this is the version we will consider here. 
+
+The EPR-Bohm paradox arises in the context of particle pairs known as spin-singlets. A \textbf{spin singlet} describes the state of two particles which a single particle of zero spin has decayed into. For example, a high energy \textbf{photon}, that is, a particle of light, can decay into a negatively charged electron, and a positively charged position (where a \textbf{positron} is a fundamental particle like an electron but of opposite charge). Since spin is a conserved physical quantity, the spin of the two particles $q_A$ and $q_B$ of a spin singlet state must be equal and opposite when measured along the same axis, no matter what direction this axis happens to point in. The existence of spin singlet states thus raises the question of what the physical mechanism or principle is that ensures two experimenters, Alice and Bob say, will always obtain opposite spin measurement results if Alice measures the spin of particle $q_A$, and Bob measures the spin of particle $q_B$ along the same axis. 
+
+Naively, one would expect that if the spin of $q_A$ were to be measured, then this would have no effect on any spin-measurement of $q_B$. This assumption is a special case of \textbf{Einstein's locality principle}: For two spatially separated systems $S_1$ and $S_2$,  the real factual situation of the system $S_2$ should be independent of what is done to the system $S_1$.\footnote{Einstein expressed this locality principle in his autobiographical notes: ``But on one supposition we should, in my opinion, absolutely hold fast: the real factual situation of the system $S_2$ is independent of what is done with the system $S_1$, which is spatially separated from the former.'' \cite[p. 85]{EinsteinLocality}.} If Einstein's locality principle holds we would be able to attribute a state $\ket{\psi}_A$ to particle $q_A$, and a state $\ket{\chi}_B$ to particle $q_B$, so that if Alice were to perform a Stern-Gerlach experiment on particle $q_A$ in which one of the possible outcomes was a spin state $\ket*{\psi'}_A$, then by the Born rule, the probability Alice would find $q_A$ to be in state $\ket{\psi'}_A$ would be $|\ip{\psi'}{\psi}_A|^2$. Likewise, if Bob were to perform a Stern-Gerlach experiment on particle $q_B$ in which one of the possible outcomes was a spin state $\ket*{\chi'}$, then the probability Bob would find $q_B$ to be in state $\ket{\chi'}_B$ would be $|\ip{\chi'}{\chi}_B|^2$. 
+
+Now in probability theory, we say that two events $X$ and $Y$ are \textbf{independent} if and only if 
+\begin{equation}\label{indep}
+    P(X,Y)=P(X)P(Y)
+\end{equation}
 where $P(X)$ is the probability that $X$ occurs, $P(Y)$ is the probability that $Y$ occurs, and $P(X,Y)$ is the probability that both $X$ and $Y$ both occur. Then the independence of Alice and Bob's measurement outcomes would imply that the joint probability of Alice finding $q_A$ to be in state $
 \ket{\psi'}_A$, and Bob finding $q_B$ to be in state $\ket{\chi'}_B$, would be 
 $$P_{A,B}(\psi',\chi'|\psi,\chi)=|\ip{\psi'}{\psi}_A|^2\times|\ip{\chi'}{\chi}_B|^2=|\ip{\psi'}{\psi}_A\ip{\chi'}{\chi}_B|^2.$$
@@ -16,11 +28,50 @@ Now muons, electrons, and protons, are all examples of particles know as fermion
 
 Fermions are contrasted with \textbf{bosons} which are particles which can coexist in the same system and be in exactly the same state. \textbf{Photons} which are particles of light are examples of bosons, as are mesons.
 
-Now since the outcomes of Alice and Bob's measurements of their respective muons would be independent if the state of the composite system was of the form $\ket{\psi}_A\ket{\chi}_B$, it follows that it is not possible to represent the composite state of the two muons in this form. However, if we knew that Alice had found her particle to be in spin state $\ket*{\uvbpm{a}}_A$, then we would know that Bob would find his particle to be in the state $\ket*{\uvbmp{a}}_B$ if he were to measure his particle along the same $\uvb{a}$-axis as Alice made her measurement. Although neither the state $\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B$ or $\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B$ can describe the composite system of the two particles, it turns out the summation of states:
+Now since the outcomes of Alice and Bob's measurements of their respective muons would be independent if the state of the composite system was of the form $\ket{\psi}_A\ket{\chi}_B$, it follows that it is not possible to represent the composite state of the two muons in this form. However, if we knew that Alice had found her particle to be in spin state $\ket*{\uvbpm{a}}_A$, then we would know that Bob would find his particle to be in the state $\ket*{\uvbmp{a}}_B$ if he were to measure his particle along the same $\uvb{a}$-axis as Alice made her measurement. Although neither the state $\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B$ or $\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B$ can describe the composite system of the two particles, it turns out that the summation of states:
 \begin{equation}\label{bell}
-    \frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B-\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B).
+    \ket*{\Psi_{\text{Bell}}}=\frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B-\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B).
 \end{equation}
-can describe this composite system. This is because it turns out that (\ref{bell}) is independent of the axis $\uvb{a}$. That is, for any other direction $\uvb{b}$ it can be shown that,
+can describe this composite system. 
+We refer to the state (\ref{bell}) as a \textbf{Bell state}.\footnote{By convention, the states $ \frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B+\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B)$, $ \frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbp{a}}_B-\ket*{\uvbm{a}}_A\ket*{\uvbm{a}}_B)$, and $ \frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbp{a}}_B+\ket*{\uvbm{a}}_A\ket*{\uvbm{a}}_B)$ are also referred to as Bell states.} If the composite system is in the Bell state $\ket*{\Psi_{\text{Bell}}}$, then according to the Born Rule, the probability that Alice measures her particle to be in state $\ket*{\psi}$ and Bob measures his particle to be in the state $\ket*{\chi}$ will be:
+\begin{equation}
+\begin{split}
+    P_{A,B}(\psi,\chi|\Psi_{\text{Bell}})&=|\prescript{}{B}{ \bra*{\chi}}\prescript{}{A}{ \ip{\psi}{\Psi_{\text{Bell}}}}|^2\\
+        &=\frac{1}{2}|\ip*{\psi}{\uvbp{a}}_A\ip*{\chi}{\uvbm{a}}_B-\ip*{\psi}{\uvbm{a}}_A\ip*{\chi}{\uvbp{a}}_B|^2
+\end{split}
+\end{equation}
+This means that whatever axis Bob decides to measure along, if Alice measures her particle along the $\uvb{a}$-axis, then the Born rule predicts that she will measure the particle to be in either the $\ket*{\uvbp{a}}_A$-state or the $\ket*{\uvbm{a}}_A$-state, each with probability of $\frac{1}{2}$.\footnote{To see this, suppose Bob performs his measurement along an arbitrary axis $\uvb{b}$. Then the probability Alice measures her particle to be in the $\ket*{\uvbp{a}}$-state will be 
+\begin{equation}
+    \begin{split}
+        P_{A,B}(\uvbp{a},\uvbp{b}|\Psi_{\text{Bell}})&+P_{A,B}(\uvbp{a},\uvbm{b}|\Psi_{\text{Bell}})= \\
+        =&\frac{1}{2}\big| \ip*{\uvbp{a}}{\uvbp{a}}_A\ip*{\uvbp{b}}{\uvbm{a}}_B-\ip*{\uvbp{a}}{\uvbm{a}}_A\ip*{\uvbp{b}}{\uvbp{a}}_B\big|^2\\
+        &+\frac{1}{2}\big|\ip*{\uvbp{a}}{\uvbp{a}}_A\ip*{\uvbm{b}}{\uvbm{a}}_B-\ip*{\uvbp{a}}{\uvbm{a}}_A\ip*{\uvbm{b}}{\uvbp{a}}_B\big|^2\\
+        =&\frac{1}{2}\big|\ip*{\uvbp{b}}{\uvbm{a}}_B|^2+\frac{1}{2}|\ip*{\uvbm{b}}{\uvbm{a}}_B\big|^2=\frac{1}{2}
+    \end{split}
+\end{equation} 
+where on the last line we have used the fact that 
+$$\ket*{\uvbm{a}}_B=\ket*{\uvbp{b}}_B\ip*{\uvbp{b}}{\uvbm{a}}_B+\ket*{\uvbm{b}}\ip*{\uvbm{b}}{\uvbm{a}}_B$$
+and 
+$$\ip*{\uvbm{a}}{\uvbm{a}}_B=1,\quad\ip*{\uvbpm{b}}{\uvbpm{b}}_B=1,\quad\text{and}\quad \ip*{\uvbpm{b}}{\uvbmp{b}}_B=0$$
+so that 
+$$|\ip*{\uvbp{b}}{\uvbm{a}}_B|^2+\ip*{\uvbm{b}}{\uvbm{a}}_B|^2=1.$$
+} But also, the Born rule implies that if both Alice and Bob measure their respective particles along the same $\uvb{a}$-axis, then the probability Bob will measure his particle to have the same spin as Alice's particle will be zero, and the probability that Bob measures his particle to have the opposite spin from Alice's particle will be one.\footnote{This is because the probability Alice and Bob will measure their particles to have the same spin will be 
+\begin{equation}
+\begin{split}
+    P_{A,B}(\uvbp{a},\uvbp{a}|\Psi_{\text{Bell}})&+P_{A,B}(\uvbm{a},\uvbm{a}|\Psi_{\text{Bell}})= \\
+    =&\frac{1}{2}\big| \ip*{\uvbp{a}}{\uvbp{a}}_A\ip*{\uvbp{a}}{\uvbm{a}}_B-\ip*{\uvbp{a}}{\uvbm{a}}_A\ip*{\uvbp{a}}{\uvbp{a}}_B\big|^2\\
+    &+\frac{1}{2}\big|\ip*{\uvbm{a}}{\uvbp{a}}_A\ip*{\uvbm{a}}{\uvbm{a}}_B-\ip*{\uvbm{a}}{\uvbm{a}}_A\ip*{\uvbm{a}}{\uvbp{a}}_B\big|^2=0,
+\end{split}
+\end{equation}
+and the probability Alice and Bob will measure their particles to have different spins will be
+\begin{equation}
+\begin{split}
+    P_{A,B}(\uvbp{a},\uvbm{a}|\Psi_{\text{Bell}})&+P_{A,B}(\uvbm{a},\uvbp{a}|\Psi_{\text{Bell}})= \\
+    =&\frac{1}{2}\big| \ip*{\uvbp{a}}{\uvbp{a}}_A\ip*{\uvbm{a}}{\uvbm{a}}_B-\ip*{\uvbp{a}}{\uvbm{a}}_A\ip*{\uvbm{a}}{\uvbp{a}}_B\big|^2\\
+    &+\frac{1}{2}\big|\ip*{\uvbm{a}}{\uvbp{a}}_A\ip*{\uvbp{a}}{\uvbm{a}}_B-\ip*{\uvbm{a}}{\uvbm{a}}_A\ip*{\uvbp{a}}{\uvbp{a}}_B\big|^2=1.
+\end{split}
+\end{equation}} 
+These probabilities predicted by the Born rule using the Bell state $\ket*{\Psi_{\text{Bell}}}$ correspond to the probabilities observed experimentally. Also note that despite the of appearance the formula (\ref{bell}), $\ket*{\Psi_{\text{Bell}}}$ is independent of the axis $\uvb{a}$. That is, for any other direction $\uvb{b}$ it can be shown that,
 \begin{equation}\label{bellstate2}\frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B-\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B)=\frac{1}{\sqrt{2}}(\ket*{\uvbp{b}}_A\ket*{\uvbm{b}}_B-\ket*{\uvbm{b}}_A\ket*{\uvbp{b}}_B).\protect\footnotemark\end{equation}
 \footnotetext{\label{bellstate2pf}To see this, using the transformation rules given in equation (\ref{spintrans}) we have 
 \begin{align*}\frac{1}{\sqrt{2}}(\ket*{\uvbp{b}}\ket*{\uvbm{b}}&-\ket*{\uvbm{b}}\ket*{\uvbp{b}})\\
@@ -34,5 +85,9 @@ can describe this composite system. This is because it turns out that (\ref{bell
 &=\frac{1}{\sqrt{2}}((\cos[2](\theta/2)+\sin[2](\theta/2))\ket*{\uvbp{a}}\ket*{\uvbm{a}}-(\cos[2](\theta/2)+\sin[2](\theta/2))\ket*{\uvbm{a}}\ket*{\uvbp{a}})\\
 &=\frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}\ket*{\uvbm{a}}-\ket*{\uvbm{a}}\ket*{\uvbp{a}}).
 \end{align*}}
-We refer to the state (\ref{bell}) as a \textbf{Bell state}.\footnote{By convention, the states $ \frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B+\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B)$, $ \frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbp{a}}_B-\ket*{\uvbm{a}}_A\ket*{\uvbm{a}}_B)$, and $ \frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbp{a}}_B+\ket*{\uvbm{a}}_A\ket*{\uvbm{a}}_B)$ are also referred to as Bell states.}
-This means that whatever axis Bob decides to measure along, if Alice measures her particle along the $\uvb{a}$-axis, then the Born rule predicts that she will measure the particle to be in either the $\ket*{\uvbp{a}}_A$-state or the $\ket*{\uvbm{a}}_A$-state, each with probability of $\frac{1}{2}$.\footnote{************************************} But also, the Born rule implies that if both Alice and Bob measure their respective particles along the same $\uvb{a}$-axis, then the probability Bob will measure his particle to have the same spin as Alice's particle will be zero, and the probability that Bob measures his particle to have the opposite spin from Alice's particle will be one.\footnote{*********************************} 
+Therefore, if Alice had chosen to measure her particle along the $\uvb{b}$-axis rather than the $\uvb{a}$-axis, she would still obtain equal probabilities for finding her particle to be in either the state $\ket*{\uvbp{b}}_A$ or $\ket*{\uvbm{b}}_A$, and the same equal probabilities for Bob's measurement outcomes hold as well.
+
+Now according to the independence criterion given by (\ref{indep}), it is clearly the case that Alice and Bob's measurement outcomes are not independent,\footnote{e.g. $P_{A,B}(\uvbp{a},\uvbp{a})=0$, but  $P_{A}(\uvbp{a})=P_{B}(\uvbp{a})=\frac{1}{2}$, and so the independence criterion $P_{A,B}(\uvbp{a},\uvbp{a})=P_{A}(\uvbp{a})P_{B}(\uvbp{a})$ fails to hold.} However, it is not immediately obvious that the non-independence of Alice and Bob's measurement outcome is paradoxical. That there might be something paradoxical going on 
+
+
+The EPR paradox, named after Einstein, Rosen, and P

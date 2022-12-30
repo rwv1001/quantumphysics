@@ -124,3 +124,6 @@ Tomonaga
 observables at
 Beables
 beable-subjects
+indetermination
+EPR-Bohm
+Bohm
