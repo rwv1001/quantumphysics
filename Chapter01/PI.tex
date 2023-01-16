@@ -1,0 +1,92 @@
+
+\section{Parameter Dependence in the Pilot Wave Model}\label{PI}
+One model which exhibits PD is the \textbf{pilot wave interpretation} of quantum mechanics. In this interpretation, it is assumed that at any instant of time $t$, the particles $q_A$ and $q_B$ will have definite positions $\vb{x}_A$ and $\vb{x}_B$ and definite momenta $\vb{p}_A$ and $\vb{p}_B$ respectively. But in addition to the positions and momenta of the particles, it is also assumed that there is a so-called \textbf{pilot wave} 
+\begin{equation}
+\psi(\vb{x}_A, \vb{x}_B, t)=r(\vb{x}_A, \vb{x}_B, t)e^{i S(\vb{x}_A, \vb{x}_B, t)} 
+\end{equation}
+where $r(\vb{x}_A, \vb{x}_B, t)>0$ is the magnitude of $\psi(\vb{x}_A, \vb{x}_B, t)$, and the real-valued function $S(\vb{x}_A, \vb{x}_B,t )$ is the complex phase of $\psi(\vb{x}_A, \vb{x}_B, t).$
+The time evolution of the pilot wave is deterministically governed by the Schr\"{o}dinger equation, and the phase $S(\vb{x}_A, \vb{x}_B, t )$ relates the positions $\vb{x}_A$ and $\vb{x}_B$ to the momenta $\vb{p}_A$ and $\vb{p}_B$ via the gradient of $S$:
+\begin{equation}
+\vb{p}_A=\grad_A{S}(\vb{x}_A, \vb{x}_B),\qquad
+\vb{p}_B=\grad_B{S}(\vb{x}_A, \vb{x}_B).
+\end{equation}
+In other words, if we fix $\vb{x}_B$ and consider $S$ to be just a function of $\vb{x}_A$, then the momentum $\vb{p}_A$ is in the direction and has the magnitude of the steepest ascent of $S$ considered as a function of $\vb{x}_A$. The momentum $\vb{p}_B$ is determined similarly. 
+
+In reality, we don't know the exact positions of all the particles, but based on what we know about an experimental setup, we can average over our uncertainty and recover exactly the same predictions that quantum mechanics would make.\footnote{See \cite{BohmDavid1952A} and \cite{BohmDavid1952B}.} So for instance, our knowledge of the experimental setup above should enable us  to know both that $q_A$ and $q_B$ are contained within a region $V,$ and also for us to work out the probability  $p(V_i, V_j)$ that particle $q_A$  will be in a region $V_i$, and $q_B$ will be in a region $V_j,$ where the $V_i$ are small non-overlapping regions such that $V=\bigcup_iV_i$. If we are interested in some physical quantity $O(\vb{x}_A, \vb{x}_B)$ that depends on the positions $\vb{x}_A$ and $\vb{x}_B$ of the two particles, then when the regions $V_i$ are  sufficiently small so that $O(\vb{x}_i, \vb{x}_j)$ varies negligibly for any $\vb{x}_i\in V_i$ and $\vb{x}_j\in V_j$,  the average value
+\begin{equation}\label{bohmconsistency}
+\ev{O}=\sum_{i,j}p(V_i, V_j)O(\vb{x}_i, \vb{x}_j)
+\end{equation}
+calculated in the pilot wave model turns out to be the same as the expectation value for $O$ predicted by standard quantum theory.\footnote{In this explanation, I've refrained from using measure theory, but basically this explanation is saying that we when we construct a measure $\mu$ on $V\times V$ based on our knowledge of the experimental setup,  $\int_{V\times V}O(\vb{x}_i, \vb{x}_j)\dd\mu$ will be the same as the expectation value for $O$ predicted by standard quantum theory. }
+
+To see why PI fails to hold in the pilot wave model, we first note that since the pilot wave model makes the same predictions as quantum mechanics when averaged over all the hidden variables, the violation of Bell's inequality (\ref{bellinequality}) implies there must be some hidden variable $\lambda$ and choices of measurement directions $\bm{\hat{a}}$, $\bm{\hat{b}}$, and $\bm{\hat{c}}$ such that 
+ \begin{equation}\label{bellinequality2}
+P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a};\uvbp{b})> P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbp{c})+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c};\uvbp{b}).
+\end{equation}
+Since physics in the pilot wave model is deterministic, probabilities must be either $0$ or $1$. Therefore, the only way (\ref{bellinequality2}) can be satisfied is for
+ \begin{align}
+P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a};\uvbp{b})&=1, \label{PDproof1}\\
+P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbp{c})&=0,\label{PDproof2}\\
+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c};\uvbp{b})&=0. \label{PDproof3}
+ \end{align}
+ We suppose that PI holds, and we will try to arrive at a contradiction. If both Alice and Bob make their measurement in the $\bm{\hat{c}}$-direction, there are two possibilities: either Alice measures $q_A$ to be in the state $\uvbm{c}$ and Bob measures $q_B$ to be in the state $\uvbp{c}$, or Alice measures $q_A$ to be in the state $\uvbp{c}$ and Bob measures $q_B$ to be in the state $\uvbm{c}.$ So expressed in terms of probabilities, these two possibilities are equivalent to either 
+ \begin{equation}\label{PDproofcase1}
+ P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c};\uvbp{c})=1 \qquad\text{and}\qquad  P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c};\uvbm{c})=0.
+ \end{equation}
+ or 
+  \begin{equation}\label{PDproofcase2}
+ P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c};\uvbm{c})=1 \qquad\text{and}\qquad P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c};\uvbp{c})=0
+ \end{equation}
+ Let's first consider case (\ref{PDproofcase1}). Note that
+\begin{equation}
+ P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c};\uvbm{c})+P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c};\uvbm{c})=0.
+\end{equation}
+ Therefore, since we are assuming PI, 
+ \begin{equation}
+ P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbm{c})+P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbm{a};\uvbm{c})=0.
+\end{equation}
+ In particular, 
+  \begin{equation}\label{PDproof4}
+  P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbm{c})=0.
+  \end{equation}
+  But by (\ref{PDproof1}), we know that 
+  \begin{equation}
+  P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a};\uvbp{b})+P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a};\uvbm{b})=1,
+  \end{equation}
+  so using this together with PI, we must have
+    \begin{equation}\label{PDproof5}
+  P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbp{c})+P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbm{c})=1.
+  \end{equation}
+ But by (\ref{PDproof2}) and (\ref{PDproof4})
+\begin{equation}\label{PDproof6}
+  P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbp{c})+P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbm{c})=0.
+\end{equation}
+Since (\ref{PDproof5}) contradicts (\ref{PDproof6}), the assumption (\ref{PDproofcase1}) must be false if PI is to hold.
+
+So we now consider the alternative case when (\ref{PDproofcase2}) holds. We will again see that this assumption leads to a contradiction. First note that
+\begin{equation}
+ P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c};\uvbp{c})+P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c};\uvbm{c})=0.
+\end{equation}
+ By PI
+\begin{equation}
+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbm{c};\uvbp{b})+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbm{c};\uvbm{b})=0.
+\end{equation}
+In particular, 
+\begin{equation}\label{PDproof8}
+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbm{c};\uvbp{b})=0.
+\end{equation}
+   But by (\ref{PDproof1}), we know that 
+  \begin{equation}
+  P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a};\uvbp{b})+P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbm{a};\uvbp{b})=1,
+  \end{equation}   
+ so using this together with PI, we must have
+    \begin{equation}\label{PDproof7}
+  P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c};\uvbp{b})+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbm{c};\uvbp{b})=1.
+  \end{equation} 
+   But by (\ref{PDproof3}) and (\ref{PDproof8})
+\begin{equation}\label{PDproof9}
+ P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c};\uvbp{b})+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbm{c};\uvbp{b})=0.
+\end{equation}
+Since (\ref{PDproof7}) contradicts (\ref{PDproof9}), the assumption (\ref{PDproofcase2}) must also be false if PI is to hold. So we can only conclude that PI fails to hold in the pilot wave model.   But we can conclude even more than that: any deterministic hidden variable model that gives the same predictions as quantum mechanics when averaged over the hidden variables must violate PI.\label{PIdeterminism} 
+
+Now the violation of PI in the pilot wave model does not sit easily with Einstein's theory of relativity, for according to Einstein's theory, it should be impossible to send signals faster than the speed of light. However, if PI is violated, then if Alice happened to know what $\lambda$ was for each run of the experiment, and if Bob made the same measurement, then because the distribution of Alice's outcomes will depend on Bob's choice of measurement, with enough runs of the experiment, Alice should be able to work out what measurement Bob is making. And this should be possible even if Alice and Bob are separated by many light years. So it seems faster than light communication would be possible. The only thing preventing such communication would be Alice's lack of knowledge of $\lambda$. 
+
