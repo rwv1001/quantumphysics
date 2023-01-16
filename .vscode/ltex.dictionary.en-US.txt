@@ -127,3 +127,4 @@ beable-subjects
 indetermination
 EPR-Bohm
 Bohm
+Schlosshauer

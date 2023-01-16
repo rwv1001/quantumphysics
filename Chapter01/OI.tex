@@ -1,0 +1,41 @@
+\section{Outcome Independence}\label{OI}
+
+Although a PI violation can account for the violation of Bell's Inequality, this is not the only possible culprit to consider. Another assumption of Bell's Inequality that might be violated is \textbf{Outcome Independence} (OI). Outcome independence is the assumption
+\begin{equation}\label{OI}
+P_{\lambda,x,y}(X,Y)=P_{A,\lambda,x,y}(X)\cdot P_{B,\lambda,x,y}(Y),
+\end{equation}
+We can see that if OI holds in any model which gives the same predictions as standard quantum theory when averaged over the hidden variables, then PI must be violated in such a model. For if both PI and OI hold, then for any measurement choices $\vb{\hat{a}},$ $\vb{\hat{b}},$ and $\vb{\hat{c}}$, and hidden variable $\lambda$, we have
+\begin{equation}\label{OIPI1}
+\begin{split}
+ P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}&(\uvbp{a};\uvbp{c})=P_{A,\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a})\cdot P_{B,\lambda,\bm{\hat{c}},\bm{\hat{a}}}(\uvbp{c})\\
+ &= \Big( P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbp{c})+ P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbm{c})\Big)\cdot\Big( P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbp{c})+ P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbm{a};\uvbp{c})\Big)\\
+ &= \Big( P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbp{c})+ P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbm{c})\Big)\cdot\Big( \cancelto{0}{P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c};\uvbp{c})}+ P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c};\uvbp{c})\Big)\\
+ &=\Big( P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a};\uvbp{b})+ P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a};\uvbm{b})\Big)\cdot P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c};\uvbp{c})\\
+ &\geq P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a};\uvbp{b})\cdot P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c};\uvbp{c}) 
+\end{split}
+\end{equation}
+Similarly, we have
+\begin{equation}\label{OIPI2}
+\begin{split}
+ P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}&(\uvbp{c};\uvbp{b})=P_{A,\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c})\cdot P_{B,\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{b})\\
+ &= \Big( P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c};\uvbp{b})+ P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c};\uvbm{b})\Big)\cdot\Big( P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c};\uvbp{b})+ P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbm{c};\uvbp{b})\Big)\\
+ &= \Big(  \cancelto{0}{P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c};\uvbp{c})}+ P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c};\uvbm{c})\Big)\cdot\Big(P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c};\uvbp{b})+ P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbm{c};\uvbp{b})\Big)\\
+ &=P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c};\uvbm{c})\cdot\Big( P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a};\uvbp{b})+ P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbm{a};\uvbp{b})\Big)\\
+ &\geq P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c};\uvbm{c})\cdot P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a};\uvbp{b}) .
+\end{split}
+\end{equation}
+But since the hidden variable $\lambda$ is assumed to be independent of Alice and Bob's measurement, and since Alice and Bob will always get opposite results when they make the same choice of measurement, it follows that 
+\begin{equation}\label{OIPI3}
+P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c};\uvbm{c})+P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c};\uvbp{c})=1
+\end{equation}
+Therefore, putting (\ref{OIPI1}), (\ref{OIPI2}), and (\ref{OIPI3}) together, we have
+\begin{equation}
+P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a};\uvbp{c})+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c};\uvbp{b})\geq P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a};\uvbp{b}).
+\end{equation}
+We have thus proved that OI and PI together imply Bell's Inequality (\ref{bellinequality2}). But since Bell's Inequality does not hold in reality, it follows that if OI is always true, then PI must be violated.\label{OIPIproofend}
+
+
+\label{OIdet}In the case of deterministic models, OI necessarily holds. To see why, we first note that for deterministic models, either $P_{\lambda,x,y}(X,Y)=1$ or $P_{\lambda,x,y}(X,Y)=0$. When $P_{\lambda,x,y}(X,Y)=1$, then by (\ref{PIone}), $P_{A, \lambda,x,y}(X)=1$, and by (\ref{PItwo}), $P_{B, \lambda,x,y}(Y)=1$, so (\ref{OI}) is seen to hold in this case. On the other hand, when $P_{\lambda,x,y}(X,Y)=0$,  if $P_{A, \lambda,x,y}(X)=1$, then by (\ref{PIone}), $P_{\lambda,x,y} (X,-Y)=1$ so that by (\ref{PItwo}), $P_{B, \lambda,x,y}(Y)=0$ in which case (\ref{OI}) holds. And similarly, if $P_{B, \lambda,x,y}(Y)=1$, by (\ref{PItwo}), $P_{\lambda,x,y} (-X,Y)=1$ so that by (\ref{PIone}), $P_{A, \lambda,x,y}(X)=0$, so again (\ref{OI}) holds. And (\ref{OI}) obviously holds when $P_{A, \lambda,x,y}(X)=P_{B, \lambda,x,y}(Y)=0$. It therefore follows that OI holds in any deterministic model.
+
+When it comes to standard quantum theory, however, OI fails to hold. For instance, if $x=y=\vb{\hat{a}}$, then $P_{\lambda,\vb{\hat{a}},\vb{\hat{a}}}(\vb{\hat{a}+},\vb{\hat{a}+})=0,$ but $P_{A, \lambda,\vb{\hat{a}},\vb{\hat{a}}}(\vb{\hat{a}+})=P_{B, \lambda,\vb{\hat{a}},\vb{\hat{a}}}(\vb{\hat{a}+})=1/2.$\footnote{See footnote \ref{onehalf}. } Hence, OI fails. 
+
