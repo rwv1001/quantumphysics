@@ -12,72 +12,73 @@
 \indexentry{conditional probability}{18}
 \indexentry{conditional independence}{18}
 \indexentry{Bell state}{19}
-\indexentry{hidden variables}{25}
-\indexentry{hidden variables!local}{25}
-\indexentry{Bell's inequality}{28}
-\indexentry{culprit, the}{30}
-\indexentry{Parameter Independence}{33}
-\indexentry{Parameter Dependence}{33}
-\indexentry{pilot wave interpretation}{34}
-\indexentry{pilot wave}{34}
-\indexentry{phase of a complex number}{34}
-\indexentry{modulus of a complex number}{34}
-\indexentry{Outcome Independence}{40}
-\indexentry{observable}{50}
-\indexentry{normalized state}{51}
-\indexentry{Hilbert space!rigorous definition}{51}
-\indexentry{complex vector space}{52}
-\indexentry{Hilbert space!basic definition}{52}
-\indexentry{orthonormality}{53}
-\indexentry{operator}{53}
-\indexentry{Hermitian Operator}{54}
-\indexentry{eigenstate}{55}
-\indexentry{eigenvalue}{55}
-\indexentry{basis}{55}
-\indexentry{linear combination}{55}
-\indexentry{composite systems}{58}
-\indexentry{entangled}{60}
-\indexentry{trace}{62}
-\indexentry{density matrix}{62}
-\indexentry{pure state}{63}
-\indexentry{mixed state}{63}
-\indexentry{coherence}{64}
-\indexentry{partial trace}{65}
-\indexentry{reduced density matrix}{66}
-\indexentry{improper mixtures}{68}
-\indexentry{von Neumann measurement scheme}{68}
-\indexentry{pointer state}{69}
-\indexentry{decoherence}{72}
-\indexentry{decoherence time}{72}
-\indexentry{problem of outcomes}{81}
-\indexentry{many-worlds interpretation}{85}
-\indexentry{branching}{86}
-\indexentry{unitary operator}{100}
-\indexentry{spacetime location}{101}
-\indexentry{spacelike-separation}{102}
-\indexentry{lightlike-separation}{102}
-\indexentry{timelike-separation}{103}
-\indexentry{mass-energy density}{104}
-\indexentry{Heisenberg picture}{105}
-\indexentry{Schr\"{o}dinger picture}{105}
-\indexentry{simultaneous $\hat{T}_S$-eigenstate}{110}
-\indexentry{simultaneous $\hat{T}_S$-eigenvalue}{110}
-\indexentry{beable}{112}
-\indexentry{stress-energy tensor}{113}
-\indexentry{conditional probability}{118}
-\indexentry{conditional expectation}{118}
-\indexentry{quantum wave functions}{121}
-\indexentry{projection}{128}
-\indexentry{Einstein summation convention}{131}
-\indexentry{Lorentz transformation}{133}
-\indexentry{scalar}{133}
-\indexentry{rest mass}{133}
-\indexentry{four-momentum}{134}
-\indexentry{four-vector}{135}
-\indexentry{four-vector field}{135}
-\indexentry{four-velocity}{135}
-\indexentry{relativistic mass}{135}
-\indexentry{four-covector}{136}
-\indexentry{Kronecker-delta}{136}
-\indexentry{Lorentz transformation!orthochronous}{137}
-\indexentry{empirical adequacy}{157}
+\indexentry{hidden variables}{26}
+\indexentry{hidden variables!local}{26}
+\indexentry{Bell's inequality}{29}
+\indexentry{culprit, the}{31}
+\indexentry{Parameter Independence}{34}
+\indexentry{Parameter Dependence}{34}
+\indexentry{pilot wave interpretation}{35}
+\indexentry{pilot wave}{35}
+\indexentry{phase of a complex number}{35}
+\indexentry{modulus of a complex number}{35}
+\indexentry{Outcome Independence}{41}
+\indexentry{observable}{54}
+\indexentry{normalized state}{55}
+\indexentry{Hilbert space!rigorous definition}{55}
+\indexentry{complex vector space}{56}
+\indexentry{Hilbert space!basic definition}{56}
+\indexentry{orthonormality}{57}
+\indexentry{operator}{57}
+\indexentry{Hermitian Operator}{58}
+\indexentry{eigenstate}{59}
+\indexentry{eigenvalue}{59}
+\indexentry{basis}{59}
+\indexentry{linear combination}{59}
+\indexentry{composite systems}{62}
+\indexentry{entangled}{64}
+\indexentry{trace}{66}
+\indexentry{density matrix}{66}
+\indexentry{pure state}{67}
+\indexentry{mixed state}{67}
+\indexentry{coherence}{68}
+\indexentry{partial trace}{69}
+\indexentry{reduced density matrix}{70}
+\indexentry{improper mixtures}{72}
+\indexentry{von Neumann measurement scheme}{72}
+\indexentry{pointer state}{73}
+\indexentry{decoherence}{76}
+\indexentry{decoherence time}{76}
+\indexentry{Superconducting Quantum Interference Devices (SQUID)}{80}
+\indexentry{problem of outcomes}{85}
+\indexentry{many-worlds interpretation}{89}
+\indexentry{branching}{90}
+\indexentry{unitary operator}{106}
+\indexentry{spacetime location}{107}
+\indexentry{spacelike-separation}{108}
+\indexentry{lightlike-separation}{108}
+\indexentry{timelike-separation}{109}
+\indexentry{mass-energy density}{110}
+\indexentry{Heisenberg picture}{111}
+\indexentry{Schr\"{o}dinger picture}{111}
+\indexentry{simultaneous $\hat{T}_S$-eigenstate}{116}
+\indexentry{simultaneous $\hat{T}_S$-eigenvalue}{116}
+\indexentry{beable}{118}
+\indexentry{stress-energy tensor}{119}
+\indexentry{conditional probability}{124}
+\indexentry{conditional expectation}{124}
+\indexentry{quantum wave functions}{127}
+\indexentry{projection}{134}
+\indexentry{Einstein summation convention}{137}
+\indexentry{Lorentz transformation}{139}
+\indexentry{scalar}{139}
+\indexentry{rest mass}{139}
+\indexentry{four-momentum}{140}
+\indexentry{four-vector}{141}
+\indexentry{four-vector field}{141}
+\indexentry{four-velocity}{141}
+\indexentry{relativistic mass}{141}
+\indexentry{four-covector}{142}
+\indexentry{Kronecker-delta}{142}
+\indexentry{Lorentz transformation!orthochronous}{143}
+\indexentry{empirical adequacy}{163}
