@@ -2,130 +2,133 @@
 
 \noindent\textbf{B}\par\nopagebreak
 
-\vspace{1pt}\item basis, 59
-\vspace{1pt}\item beable, 118
+\vspace{1pt}\item basis, 61
+\vspace{1pt}\item beable, 119
 \vspace{1pt}\item Bell state, 19
-\vspace{1pt}\item Bell's inequality, 29
+\vspace{1pt}\item Bell's inequality, 31
 \vspace{1pt}\item Born Rule, 12
-\vspace{1pt}\item branching, 90
+\vspace{1pt}\item branching, 92
 
   \indexspace
 
 \noindent\textbf{C}\par\nopagebreak
 
-\vspace{1pt}\item coherence, 68
-\vspace{1pt}\item complex vector space, 56
-\vspace{1pt}\item composite systems, 62
-\vspace{1pt}\item conditional expectation, 124
+\vspace{1pt}\item coherence, 70
+\vspace{1pt}\item complex vector space, 58
+\vspace{1pt}\item composite systems, 64
+\vspace{1pt}\item conditional expectation, 125
 \vspace{1pt}\item conditional independence, 18
 \vspace{1pt}\item conditional probability, 18, 124
 \vspace{1pt}\item Copenhagen Interpretation, 16
-\vspace{1pt}\item culprit, the, 31
+\vspace{1pt}\item culprit, the, 33
 
   \indexspace
 
 \noindent\textbf{D}\par\nopagebreak
 
-\vspace{1pt}\item decoherence, 76
-\vspace{1pt}\item decoherence time, 76
-\vspace{1pt}\item density matrix, 66
+\vspace{1pt}\item decoherence, 78
+\vspace{1pt}\item decoherence time, 78
+\vspace{1pt}\item density matrix, 68
 
   \indexspace
 
 \noindent\textbf{E}\par\nopagebreak
 
-\vspace{1pt}\item eigenstate, 59
-\vspace{1pt}\item eigenvalue, 59
-\vspace{1pt}\item Einstein summation convention, 137
+\vspace{1pt}\item eigenstate, 61
+\vspace{1pt}\item eigenvalue, 61
+\vspace{1pt}\item Einstein summation convention, 139
 \vspace{1pt}\item Einstein's locality principle, 17
-\vspace{1pt}\item empirical adequacy, 163
-\vspace{1pt}\item entangled, 64
+\vspace{1pt}\item empirical adequacy, 165
+\vspace{1pt}\item entangled, 66
+\vspace{1pt}\item expectation value
+    \subitem pilot wave, 38
+    \subitem standard quantum theory, 60
 
   \indexspace
 
 \noindent\textbf{F}\par\nopagebreak
 
-\vspace{1pt}\item four-covector, 142
-\vspace{1pt}\item four-momentum, 140
-\vspace{1pt}\item four-vector, 141
-\vspace{1pt}\item four-vector field, 141
-\vspace{1pt}\item four-velocity, 141
+\vspace{1pt}\item four-covector, 143
+\vspace{1pt}\item four-momentum, 142
+\vspace{1pt}\item four-vector, 143
+\vspace{1pt}\item four-vector field, 143
+\vspace{1pt}\item four-velocity, 142
 
   \indexspace
 
 \noindent\textbf{H}\par\nopagebreak
 
 \vspace{1pt}\item Heisenberg picture, 111
-\vspace{1pt}\item Hermitian Operator, 58
-\vspace{1pt}\item hidden variables, 26
-    \subitem local, 26
+\vspace{1pt}\item Hermitian Operator, 61
+\vspace{1pt}\item hidden variables, 28
+    \subitem local, 28
 \vspace{1pt}\item Hilbert space
-    \subitem basic definition, 56
-    \subitem rigorous definition, 55
+    \subitem basic definition, 58
+    \subitem rigorous definition, 57
 
   \indexspace
 
 \noindent\textbf{I}\par\nopagebreak
 
-\vspace{1pt}\item improper mixtures, 72
+\vspace{1pt}\item improper mixtures, 74
 
   \indexspace
 
 \noindent\textbf{K}\par\nopagebreak
 
 \vspace{1pt}\item ket-vector, 10
-\vspace{1pt}\item Kronecker-delta, 142
+\vspace{1pt}\item Kronecker-delta, 144
 
   \indexspace
 
 \noindent\textbf{L}\par\nopagebreak
 
-\vspace{1pt}\item lightlike-separation, 108
-\vspace{1pt}\item linear combination, 59
+\vspace{1pt}\item lightlike-separation, 109
+\vspace{1pt}\item linear combination, 61
 \vspace{1pt}\item linearity, 13
-\vspace{1pt}\item Lorentz transformation, 139
-    \subitem orthochronous, 143
+\vspace{1pt}\item Lorentz transformation, 141
+    \subitem orthochronous, 145
 
   \indexspace
 
 \noindent\textbf{M}\par\nopagebreak
 
-\vspace{1pt}\item many-worlds interpretation, 89
+\vspace{1pt}\item many-worlds interpretation, 91
 \vspace{1pt}\item mass-energy density, 110
-\vspace{1pt}\item mixed state, 67
-\vspace{1pt}\item modulus of a complex number, 35
+\vspace{1pt}\item mixed state, 69
+\vspace{1pt}\item modulus of a complex number, 37
 
   \indexspace
 
 \noindent\textbf{N}\par\nopagebreak
 
-\vspace{1pt}\item normalized state, 55
+\vspace{1pt}\item normalized state, 57
 
   \indexspace
 
 \noindent\textbf{O}\par\nopagebreak
 
-\vspace{1pt}\item observable, 54
-\vspace{1pt}\item operator, 57
-\vspace{1pt}\item orthonormality, 57
-\vspace{1pt}\item Outcome Independence, 41
+\vspace{1pt}\item observable, 56
+\vspace{1pt}\item operator, 59
+\vspace{1pt}\item orthonormality, 59
+\vspace{1pt}\item Outcome Independence, 43
 
   \indexspace
 
 \noindent\textbf{P}\par\nopagebreak
 
-\vspace{1pt}\item Parameter Dependence, 34
-\vspace{1pt}\item Parameter Independence, 34
-\vspace{1pt}\item partial trace, 69
-\vspace{1pt}\item phase of a complex number, 35
+\vspace{1pt}\item Parameter Dependence, 36
+\vspace{1pt}\item Parameter Independence, 36
+\vspace{1pt}\item partial trace, 71
+\vspace{1pt}\item phase of a complex number, 37
 \vspace{1pt}\item photon, 16
-\vspace{1pt}\item pilot wave, 35
-\vspace{1pt}\item pilot wave interpretation, 35
-\vspace{1pt}\item pointer state, 73
+\vspace{1pt}\item pilot wave, 37
+\vspace{1pt}\item pilot wave interpretation, 37
+\vspace{1pt}\item pointer state, 75
 \vspace{1pt}\item positron, 16
-\vspace{1pt}\item problem of outcomes, 85
-\vspace{1pt}\item projection, 134
-\vspace{1pt}\item pure state, 67
+\vspace{1pt}\item problem of outcomes, 87
+\vspace{1pt}\item projection, 136
+\vspace{1pt}\item pure state, 69
 
   \indexspace
 
@@ -138,33 +141,33 @@
 
 \noindent\textbf{R}\par\nopagebreak
 
-\vspace{1pt}\item reduced density matrix, 70
-\vspace{1pt}\item relativistic mass, 141
-\vspace{1pt}\item rest mass, 139
+\vspace{1pt}\item reduced density matrix, 72
+\vspace{1pt}\item relativistic mass, 142
+\vspace{1pt}\item rest mass, 141
 
   \indexspace
 
 \noindent\textbf{S}\par\nopagebreak
 
-\vspace{1pt}\item scalar, 139
+\vspace{1pt}\item scalar, 141
 \vspace{1pt}\item Schr\"{o}dinger picture, 111
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenstate, 116
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenvalue, 116
 \vspace{1pt}\item spacelike-separation, 108
-\vspace{1pt}\item spacetime location, 107
+\vspace{1pt}\item spacetime location, 108
 \vspace{1pt}\item spin singlet, 16
 \vspace{1pt}\item standard quantum theory, 17
 \vspace{1pt}\item statistical independence, 18
 \vspace{1pt}\item stress-energy tensor, 119
 \vspace{1pt}\item Superconducting Quantum Interference Devices (SQUID), 
-		80
+		82
 
   \indexspace
 
 \noindent\textbf{T}\par\nopagebreak
 
-\vspace{1pt}\item timelike-separation, 109
-\vspace{1pt}\item trace, 66
+\vspace{1pt}\item timelike-separation, 110
+\vspace{1pt}\item trace, 68
 
   \indexspace
 
@@ -176,6 +179,6 @@
 
 \noindent\textbf{V}\par\nopagebreak
 
-\vspace{1pt}\item von Neumann measurement scheme, 72
+\vspace{1pt}\item von Neumann measurement scheme, 74
 
 \end{theindex}
