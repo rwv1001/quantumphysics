@@ -37,6 +37,8 @@
 \indexentry{eigenvalue}{61}
 \indexentry{basis}{61}
 \indexentry{linear combination}{61}
+\indexentry{preferred basis problem}{62}
+\indexentry{preferred basis}{63}
 \indexentry{composite systems}{64}
 \indexentry{entangled}{66}
 \indexentry{trace}{68}
@@ -63,24 +65,25 @@
 \indexentry{mass-energy density}{110}
 \indexentry{Heisenberg picture}{111}
 \indexentry{Schr\"{o}dinger picture}{111}
+\indexentry{eigenspace}{116}
 \indexentry{simultaneous $\hat{T}_S$-eigenstate}{116}
 \indexentry{simultaneous $\hat{T}_S$-eigenvalue}{116}
 \indexentry{beable}{119}
 \indexentry{stress-energy tensor}{119}
-\indexentry{conditional probability}{124}
+\indexentry{conditional probability}{125}
 \indexentry{conditional expectation}{125}
-\indexentry{quantum wave functions}{127}
-\indexentry{projection}{136}
-\indexentry{Einstein summation convention}{139}
-\indexentry{Lorentz transformation}{141}
-\indexentry{scalar}{141}
-\indexentry{rest mass}{141}
-\indexentry{four-momentum}{142}
-\indexentry{four-velocity}{142}
-\indexentry{relativistic mass}{142}
-\indexentry{four-vector}{143}
-\indexentry{four-vector field}{143}
-\indexentry{four-covector}{143}
-\indexentry{Kronecker-delta}{144}
-\indexentry{Lorentz transformation!orthochronous}{145}
-\indexentry{empirical adequacy}{165}
+\indexentry{quantum wave functions}{129}
+\indexentry{projection}{138}
+\indexentry{Einstein summation convention}{141}
+\indexentry{Lorentz transformation}{143}
+\indexentry{scalar}{143}
+\indexentry{rest mass}{143}
+\indexentry{four-momentum}{144}
+\indexentry{four-velocity}{144}
+\indexentry{relativistic mass}{144}
+\indexentry{four-vector}{145}
+\indexentry{four-vector field}{145}
+\indexentry{four-covector}{145}
+\indexentry{Kronecker-delta}{146}
+\indexentry{Lorentz transformation!orthochronous}{147}
+\indexentry{empirical adequacy}{167}

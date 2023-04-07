@@ -18,7 +18,7 @@
 \vspace{1pt}\item composite systems, 64
 \vspace{1pt}\item conditional expectation, 125
 \vspace{1pt}\item conditional independence, 18
-\vspace{1pt}\item conditional probability, 18, 124
+\vspace{1pt}\item conditional probability, 18, 125
 \vspace{1pt}\item Copenhagen Interpretation, 16
 \vspace{1pt}\item culprit, the, 33
 
@@ -34,11 +34,12 @@
 
 \noindent\textbf{E}\par\nopagebreak
 
+\vspace{1pt}\item eigenspace, 116
 \vspace{1pt}\item eigenstate, 61
 \vspace{1pt}\item eigenvalue, 61
-\vspace{1pt}\item Einstein summation convention, 139
+\vspace{1pt}\item Einstein summation convention, 141
 \vspace{1pt}\item Einstein's locality principle, 17
-\vspace{1pt}\item empirical adequacy, 165
+\vspace{1pt}\item empirical adequacy, 167
 \vspace{1pt}\item entangled, 66
 \vspace{1pt}\item expectation value
     \subitem pilot wave, 38
@@ -48,11 +49,11 @@
 
 \noindent\textbf{F}\par\nopagebreak
 
-\vspace{1pt}\item four-covector, 143
-\vspace{1pt}\item four-momentum, 142
-\vspace{1pt}\item four-vector, 143
-\vspace{1pt}\item four-vector field, 143
-\vspace{1pt}\item four-velocity, 142
+\vspace{1pt}\item four-covector, 145
+\vspace{1pt}\item four-momentum, 144
+\vspace{1pt}\item four-vector, 145
+\vspace{1pt}\item four-vector field, 145
+\vspace{1pt}\item four-velocity, 144
 
   \indexspace
 
@@ -77,7 +78,7 @@
 \noindent\textbf{K}\par\nopagebreak
 
 \vspace{1pt}\item ket-vector, 10
-\vspace{1pt}\item Kronecker-delta, 144
+\vspace{1pt}\item Kronecker-delta, 146
 
   \indexspace
 
@@ -86,8 +87,8 @@
 \vspace{1pt}\item lightlike-separation, 109
 \vspace{1pt}\item linear combination, 61
 \vspace{1pt}\item linearity, 13
-\vspace{1pt}\item Lorentz transformation, 141
-    \subitem orthochronous, 145
+\vspace{1pt}\item Lorentz transformation, 143
+    \subitem orthochronous, 147
 
   \indexspace
 
@@ -126,15 +127,17 @@
 \vspace{1pt}\item pilot wave interpretation, 37
 \vspace{1pt}\item pointer state, 75
 \vspace{1pt}\item positron, 16
+\vspace{1pt}\item preferred basis, 63
+\vspace{1pt}\item preferred basis problem, 62
 \vspace{1pt}\item problem of outcomes, 87
-\vspace{1pt}\item projection, 136
+\vspace{1pt}\item projection, 138
 \vspace{1pt}\item pure state, 69
 
   \indexspace
 
 \noindent\textbf{Q}\par\nopagebreak
 
-\vspace{1pt}\item quantum wave functions, 127
+\vspace{1pt}\item quantum wave functions, 129
 \vspace{1pt}\item qunatization, 9
 
   \indexspace
@@ -142,14 +145,14 @@
 \noindent\textbf{R}\par\nopagebreak
 
 \vspace{1pt}\item reduced density matrix, 72
-\vspace{1pt}\item relativistic mass, 142
-\vspace{1pt}\item rest mass, 141
+\vspace{1pt}\item relativistic mass, 144
+\vspace{1pt}\item rest mass, 143
 
   \indexspace
 
 \noindent\textbf{S}\par\nopagebreak
 
-\vspace{1pt}\item scalar, 141
+\vspace{1pt}\item scalar, 143
 \vspace{1pt}\item Schr\"{o}dinger picture, 111
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenstate, 116
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenvalue, 116
