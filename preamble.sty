@@ -33,10 +33,90 @@
 \usepackage{bigfoot}
 \usepackage{cleveref}
 \usepackage{tensor}
-%\usepackage{makeidx}
- \usepackage{imakeidx}\makeindex[options = -s myindex] 
+\usepackage{imakeidx}\makeindex[options = -s myindex] 
 \usepackage[totoc, initsep = 10pt, unbalanced = true]{idxlayout}
 % \usepackage{hyperref}
+\usepackage{pgfplots}
+\usepgfplotslibrary{colormaps}
+\usepgfplotslibrary{external} 
+\tikzexternalize
+\usetikzlibrary{calc}
+\pgfplotsset{compat=1.16}
+\pgfkeys{/tikz/.cd,
+cube top color/.store in=\CubeTopColor,
+cube top color=blue!60,
+cube front color/.store in=\CubeFrontColor,
+cube front color=blue!30,
+cube side color/.store in=\CubeSideColor,
+cube side color=blue!40,
+}
+
+\makeatletter
+\pgfdeclareplotmark{my cube*}
+{%
+    \pgfplots@cube@gethalf@x
+    \let\pgfplots@cube@halfx=\pgfmathresult
+    \pgfplots@cube@gethalf@y
+    \let\pgfplots@cube@halfy=\pgfmathresult
+    \pgfplots@cube@gethalf@z
+    \let\pgfplots@cube@halfz=\pgfmathresult
+    \pgfmathparse{0*\pgfplots@cube@halfz}
+    \let\pgfplots@cube@topz=\pgfmathresult
+    %
+    \pgfplotsifaxissurfaceisforeground{0vv}{%
+        \pgfsetfillcolor{\CubeFrontColor}
+        \pgfpathmoveto{\pgfplotsqpointxyz{-\pgfplots@cube@halfx}{-\pgfplots@cube@halfy}{-\pgfplots@cube@halfz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{-\pgfplots@cube@halfx}{-\pgfplots@cube@halfy}{\pgfplots@cube@topz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{-\pgfplots@cube@halfx}{ \pgfplots@cube@halfy}{\pgfplots@cube@topz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{-\pgfplots@cube@halfx}{ \pgfplots@cube@halfy}{-\pgfplots@cube@halfz}}%
+        \pgfpathclose
+        \pgfusepathqfillstroke
+    }{% 
+        \pgfsetfillcolor{\CubeFrontColor}
+        \pgfpathmoveto{\pgfplotsqpointxyz{ \pgfplots@cube@halfx}{-\pgfplots@cube@halfy}{-\pgfplots@cube@halfz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{ \pgfplots@cube@halfx}{-\pgfplots@cube@halfy}{\pgfplots@cube@topz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{ \pgfplots@cube@halfx}{ \pgfplots@cube@halfy}{\pgfplots@cube@topz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{ \pgfplots@cube@halfx}{ \pgfplots@cube@halfy}{-\pgfplots@cube@halfz}}%
+        \pgfpathclose
+        \pgfusepathqfillstroke
+    }%
+    \pgfplotsifaxissurfaceisforeground{v0v}{%
+        \pgfsetfillcolor{\CubeSideColor}
+        \pgfpathmoveto{\pgfplotsqpointxyz{-\pgfplots@cube@halfx}{-\pgfplots@cube@halfy}{-\pgfplots@cube@halfz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{-\pgfplots@cube@halfx}{-\pgfplots@cube@halfy}{\pgfplots@cube@topz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{ \pgfplots@cube@halfx}{-\pgfplots@cube@halfy}{\pgfplots@cube@topz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{ \pgfplots@cube@halfx}{-\pgfplots@cube@halfy}{-\pgfplots@cube@halfz}}%
+        \pgfpathclose
+        \pgfusepathqfillstroke
+    }{% 
+        \pgfsetfillcolor{\CubeSideColor}
+        \pgfpathmoveto{\pgfplotsqpointxyz{-\pgfplots@cube@halfx}{ \pgfplots@cube@halfy}{-\pgfplots@cube@halfz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{-\pgfplots@cube@halfx}{ \pgfplots@cube@halfy}{\pgfplots@cube@topz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{ \pgfplots@cube@halfx}{ \pgfplots@cube@halfy}{\pgfplots@cube@topz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{ \pgfplots@cube@halfx}{ \pgfplots@cube@halfy}{-\pgfplots@cube@halfz}}%
+        \pgfpathclose
+        \pgfusepathqfillstroke
+    }%
+    \pgfplotsifaxissurfaceisforeground{vv0}{%
+        \pgfsetfillcolor{\CubeTopColor}
+        \pgfpathmoveto{\pgfplotsqpointxyz{-\pgfplots@cube@halfx}{-\pgfplots@cube@halfy}{-\pgfplots@cube@halfz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{-\pgfplots@cube@halfx}{ \pgfplots@cube@halfy}{-\pgfplots@cube@halfz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{ \pgfplots@cube@halfx}{ \pgfplots@cube@halfy}{-\pgfplots@cube@halfz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{ \pgfplots@cube@halfx}{-\pgfplots@cube@halfy}{-\pgfplots@cube@halfz}}%
+        \pgfpathclose
+        \pgfusepathqfillstroke
+    }{% 
+        \pgfsetfillcolor{\CubeTopColor}
+        \pgfpathmoveto{\pgfplotsqpointxyz{-\pgfplots@cube@halfx}{-\pgfplots@cube@halfy}{\pgfplots@cube@topz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{-\pgfplots@cube@halfx}{ \pgfplots@cube@halfy}{\pgfplots@cube@topz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{ \pgfplots@cube@halfx}{ \pgfplots@cube@halfy}{\pgfplots@cube@topz}}%
+        \pgfpathlineto{\pgfplotsqpointxyz{ \pgfplots@cube@halfx}{-\pgfplots@cube@halfy}{\pgfplots@cube@topz}}%
+        \pgfpathclose
+        \pgfusepathqfillstroke
+    }%
+}
+
+
 
 \setcounter{secnumdepth}{5}
 

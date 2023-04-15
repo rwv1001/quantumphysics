@@ -17,76 +17,10 @@ I will argue that in the light all these considerations, Kent's theory does prov
 
 \section{Consistency of Kent's Theory with Standard Quantum Physics\textsuperscript{*}\label{kentinterpretationconsistency}}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
-\footnotetext[1]{As mentioned in the introduction on page \pageref{asteriskmeaning}, sections marked with an asterisk may be challenging to readers who do not have a mathematics or physics background.}\label{LorentzInvarianceSection}\renewcommand*{\thefootnote}{\arabic{footnote}}If we are to take Kent's theory seriously, it should be just as good at making predictions as standard quantum theory, and it had better not contradict empirical observations. Over the last century, standard quantum theory has been firmly established scientifically, and so far, it has not been contradicted by any experimental observations. Standard quantum theory allows us form a quantum state description of a physical system based on how the system was set up in an experimental environment, and then Schr\"{o}dinger's equation can be used to evolve this state forwards in time, and finally, we can calculate expectation values for various physical quantities belonging to this physical system, and these agree with the average values measured on the system when the experiment is performed many times. In other words, standard quantum theory is empirically adequate in its domain of applicability. Thus, if we can show that Kent's theory is just as good at making predictions as standard quantum theory, then it too will be empirically adequate to the same degree. This doesn't necessarily mean that Kent's theory will make exactly the same predictions as standard quantum physics, for the additional information that Kent's theory requires beyond standard quantum theory may alter these predictions. Indeed, if this additional information made absolutely no difference to the predictions of standard quantum theory, then it seem rather redundant. But we should nevertheless be able to derive the predictions of standard quantum theory from Kent's theory by averaging over the unknown variables that describe the additional information in Kent's theory. 
+\footnotetext[1]{As mentioned in the introduction on page \pageref{asteriskmeaning}, sections marked with an asterisk may be challenging to readers who do not have a  background in physics.}\label{LorentzInvarianceSection}\renewcommand*{\thefootnote}{\arabic{footnote}}If we are to take Kent's theory seriously, it should be just as good at making predictions as standard quantum theory, and it had better not contradict empirical observations. Over the last century, standard quantum theory has been firmly established scientifically, and so far, it has not been contradicted by any experimental observations. Standard quantum theory allows us to form a quantum state description of a physical system based on how the system was set up in an experimental environment, and then Schr\"{o}dinger's equation can be used to evolve this state forwards in time, and finally, we can calculate expectation values for various physical quantities belonging to this physical system, and these agree with the average values measured on the system when the experiment is performed many times. In other words, standard quantum theory is \textbf{empirically adequate}\index{empirical adequacy!informal definition}\footnote{See p. \pageref{adeq} for a more formal definition of empirical adequacy.} in its domain of applicability. Thus, if we can show that Kent's theory is just as good at making predictions as standard quantum theory, then it too will be empirically adequate to the same degree. This doesn't necessarily mean that Kent's theory will make exactly the same predictions as standard quantum physics, for the additional information that Kent's theory requires beyond standard quantum theory may alter these predictions. Indeed, if this additional information made absolutely no difference to the predictions of standard quantum theory, then it would seem rather redundant. But we should nevertheless be able to derive the predictions of standard quantum theory from Kent's theory by averaging over the unknown variables that describe the additional information in Kent's theory. 
 
-In order to show that Kent's theory is just as good as standard quantum theory, we will need to express $\ev*{T^{\mu\nu}(y)}_{\tau_S}$ in terms of the observable $\hat{T}^{\mu\nu}(y)$ and the initial state $\ket{\Psi_0}$. To find such an expression, we would ideally like to find a spacelike hypersurface $S'$ that contains both $S^1(y)$ and $y$. Then we could consider how the observables $\hat{T}_S(x)$ and $\hat{T}^{\mu\nu}(y)$ act on the state $\ket{\Psi'}=U_{S'S_0}\ket{\Psi_0}$ and use this action to determine the probabilities $P(q(\tau),r)$ and $P(r)$ needed to define the conditional probability $P(q(\kappa)|r)$ as defined in (\ref{conditionalprobability}). However, since by definition, a spacelike hypersurface must be continuous with any two locations on it being spacelike-separated, it is going to be impossible to find a spacelike hypersurface $S'$ with the desired properties of containing both $S^1(y)$ and $y$. Nevertheless, what we can do is find a sequence of spacelike hypersurfaces $S_n(y)$ such that\label{siydef} $S_n(y)\subset S_{n'}(y)$ for $n<n'$, and such that for any $x\in S^1(y)$, there exists $n$ such that $x\in S_n(y)$. An example of one such $S_n(y)$ is shown in figure \ref{S3}. When there is no ambiguity, we will drop the $y$ and write $S_n$ instead of $S_n(y)$. 
+In order to show that Kent's theory is just as good as standard quantum theory, we will need to express $\ev*{T^{\mu\nu}(y)}_{\tau_S}$ in terms of the observable $\hat{T}^{\mu\nu}(y)$ and the initial state $\ket{\Psi_0}$. To find such an expression, we would ideally like to find a spacelike hypersurface $S'$ that contains both $S^1(y)$ and $y$. Then we could consider how the observables $\hat{T}_S(x)$ and $\hat{T}^{\mu\nu}(y)$ act on the state $\ket{\Psi'}=U_{S'S_0}\ket{\Psi_0}$ and use this action to determine the probabilities $P(q(\tau)\, \& \, r)$ and $P(r)$ needed to define the conditional probability $P(q(\tau)|r)$ as defined in (\ref{conditionalprobability}). However, as discussed in section \ref{kentcalculation}, it is going to be impossible to find a spacelike hypersurface $S'$ with the desired properties of containing both $S^1(y)$ and $y$. Instead, we take a sequence of spacelike hypersurfaces $S_n(y)$ such that\label{siydef} $S_n(y)\subset S_{n'}(y)$ for $n<n'$, and such that for any $x\in S^1(y)$, there exists $n$ such that $x\in S_n(y)$ as shown in figure \ref{S3} on page \pageref{S3}. We will again drop the $y$ and write $S_n$ instead of $S_n(y)$ when there is no ambiguity. 
 
- \begin{figure}[ht!]
-\captionsetup{justification=justified}
-\centering
-
-\tikzmath{
-\a= 1;  
-\e = 0.1;
-\lam=0.9;
-\h=-1;
-\hae=(3*\a*\a+6*\a*\e+7*\e*\e-3*\a*sqrt(\a*\a+4*\e*\e)-4*\e*sqrt(\a*\a+4\e*\e))/(4*\a+4*\e-2*sqrt(\a*\a+4*\e*\e));
-\hae=0.205678;
-\circsize=1.2;
-\md = (\a+\h)/2;
-\lrange = 4;
-\rrange=2;
-\fictlabel=(\rrange-\lrange)/2;
-\ss=(-\lrange-\a)/2;
-\sss=\a+(\rrange-\a)/2;
-\tlen=0.75;
-\labelpos=(-\lrange-\a)/2;
-} 
-
-\begin{tikzpicture}[thick, scale=2]
-
-\def\dotsize{0.7}
-
-\definecolor{tempcolor}{RGB}{0,151,76}
-\draw[<->] (-\lrange, \h) node[left] {$S_0$} -- (\rrange, \h) node[right] {$S_0$};
-\filldraw (0,0) circle (\dotsize pt) node [below right] {$y$} ;
-              
-\draw[->] (\rrange,\md-\tlen/2) --  (\rrange,\md+\tlen/2) node[midway,right]{time}; 
-
-\draw[->,blue, thick] [domain=-\a/2:-\lrange, samples=150]   plot (\x, {\a-\e/2-1/2*(sqrt(\lam*\lam*pow(\x+\hae+\a,2)+\e*\e)-\e+\lam*(\x+\hae+\a))}) node[left, black]{$S_n(y)$}  ;
-\draw[blue, thick] [domain=-\a/2:\a/2, samples=150] plot (\x, {sqrt(\lam*\lam*\x*\x+\e*\e)-\e})   node[right, black]{$S_n(y)$};
-\draw[->,blue, thick] [domain=\a/2:\rrange, samples=150]   plot (\x, {\a-\e/2-1/2*(sqrt(\lam*\lam*pow(\x-\hae-\a,2)+\e*\e)-\e-\lam*(\x-\hae-\a))}) node[right, black]{$S_n(y)$}  ;
-\draw[gray] (-\lrange, \a)  -- (\rrange, \a)  {};
-\draw[gray, dashed] (-\a, \a) -- (0,0) {};
-\draw[gray, dashed](0,0) -- (\a, \a) {};
-\draw[gray](\a, \a) --  (\rrange, \a)  ;         
-\coordinate (B) at (\a,\a);
-\node at (B)[red,circle,fill,inner sep=\circsize pt]{};
-\coordinate (A) at (-\a,\a);
-\node at (A)[red,circle,fill,inner sep=\circsize pt]{};
-\coordinate (C) at (0,0);
-\node at (C)[black,circle,fill,inner sep=\circsize pt]{};
-
-\coordinate[label = above:$S$]  (D) at (0,\a);
-
-\coordinate[label = above:$S$]  (D) at (\sss,\a);
-
-\filldraw (\ss,\a) circle (\dotsize pt) node [above] {$x\in S_n(y)\cap S$} ;
-
-
- 
-\node (start) at (\labelpos,\h) [below] {Initial State $\ket{\Psi_0}$};
-\node (evolution) at (\labelpos,\md+0.05) [below] {Unitary Evolution $\ket{\Psi_n}=U_{S_nS_0}\ket{\Psi_0}$};
-\node (final) at (\labelpos,\a) [below] {Unitary Evolution $U_{SS_0}\ket{\Psi_0}$};
-%\node at (-\ss+0.17,\mn-0.18){$-a_0$};
-\draw [->, shorten <= 5pt] (start) [above] -- (evolution); 
-\draw [->] (evolution) -- (final); 
-\end{tikzpicture}
-
-\vspace*{2px}
-\caption{$S_n\myeq S_n(y)$ is a spacelike hypersurface containing $y$ and all of $S^1(y)$ in the limit as $n\rightarrow\infty$.   }
-\label{S3}
-\end{figure}
  
  Now if $r_n$ is the statement that  $T_S(x)=\tau_S(x)$ for all $x\in S_n(y)\cap S$, then so long as $\tau_S(x)$ is chosen by the Born Rule so that $P(r)\neq 0$, it will follow that
  \begin{equation}
@@ -158,7 +92,9 @@ Now suppose an observer $O$ expresses spacetime locations in terms of $\{\hat{e}
 \begin{figure}[ht!]
 \captionsetup{justification=justified}
 \centering
-\tikzmath{
+\tikzmath{	
+\lrange = 4;
+\rrange=2;	
 \textscale = 0.7;
 \picscale = 0.58;
 \circsize=3.5;
@@ -1010,7 +946,7 @@ In addition to these five criteria for a hidden variable $\lambda$ of a system $
 \end{equation}
 where the summations on both sides are over all the possible measurement outcomes of $O_\mathcal{A}$ and $O_\mathcal{A}'$ respectively.
 
-As for the definition of \textbf{empirical adequacy}\index{empirical adequacy} (EA), using the notation of criteria \ref{hidden5} and \ref{hidden4}, this states that
+As for the definition of \textbf{empirical adequacy}\index{empirical adequacy!formal definition} (EA), using the notation of criteria \ref{hidden5} and \ref{hidden4}, this states that
 \begin{equation}\tag{EA}\label{adeq}
 	\sum_{\lambda\in\Lambda}p_\lambda P_\lambda^{\ket{\phi}_{\mathcal{S}+\mathcal{A}}}(O_\mathcal{S}=o_\mathcal{S},O_\mathcal{A}=o_\mathcal{A})=P^{\ket{\phi}_{\mathcal{S}+\mathcal{A}}}(O_\mathcal{S}=o_\mathcal{S},O_\mathcal{A}=o_\mathcal{A})
 \end{equation}
@@ -1028,7 +964,7 @@ Thus, the Colbeck-Renner theorem means that we cannot hope to make Kent's theory
 
 But nevertheless, it still seems that we should be able to make some kind of sense of PI and AE in Kent's theory and that we should be able to evaluate Kent's theory on the basis of whether these notions of PI and EA are true in this context. To achieve this aim, one strategy would be to relax one of the five criteria for a hidden variable. Since we still want to be able to make sense of PI and AE,  a process of elimination suggests that the most obvious hidden variable criterion to drop would be criterion \ref{hidden3}. In other words, instead of thinking of $\tau_S$ as an augmentation of standard quantum theory, we could instead think of $\tau_S$ as a rather elaborate way of stipulating the initial quantum states of experiments as well as the quantum states of measurement outcomes. The information of $\tau_S$ would then be non-redundant. Moreover, if we could appropriately partition the information in $\tau_S(x)$ on the basis of whether it determined the quantum state of the particle, or the quantum state of the apparatus, or the quantum state of the rest of the universe, we could then consider whether Kent's theory gave the same predictions as standard quantum theory. If it did, then PI and AE would hold in Kent's theory, since these both hold in standard quantum theory. And since Kent's theory is formulated in the Lorentz invariant setting of Schwinger and Tomonaga, this would mean that Kent's theory is a solution to the measurement problem!
 
-\section{Kent's Theory and standard quantum theory\textsuperscript{*}}
+\section{Kent's Theory and standard quantum theory\textsuperscript{*}\label{KentconsistentQT}}
 In this section, I will show that Kent's theory does indeed give the same predictions as standard quantum theory in the case of an experimental apparatus $\mathcal{A}$ measuring the properties of a particle $\mathcal{S}$.
 
 Let's assume that the  apparatus has already interacted with many photons during its existence up until the time $t_i$. Likewise, let's assume the particle has interacted with many photons up until this time. Now suppose that the spacelike hypersurface $S$ has energy density $\tau_S(x)$ indicating that some photons have been ``measured'' on $S$ to be in a state $\ket*{\gamma_i^{(\mathcal{A})}}$ which is correlated with the apparatus being in a state $\ket{a}$ shortly before time $t_i$ and in the vicinity of spatial location $z_1$ as depicted in figure \ref{pisolution}. Similarly, we suppose that $\tau_S(x)$ also indicates that some photons have been ``measured'' on $S$ to be in a state $\ket*{\gamma_i^{(\mathcal{S})}}$ which is correlated with the particle being in a state $\ket{s}$ also shortly before time $t_i$ and in the vicinity of spatial location $z_1$. We assume that the time $t_i$ is just before the particle enters the apparatus (given the measurement of $\ket*{\gamma_i^{(\mathcal{S})}}$ and  $\ket*{\gamma_i^{(\mathcal{A})}}$ on $S$) and that no more photons are measured on $S$ that have become entangled with particle  or the apparatus until the particle emerges from the apparatus at time $t_f$. Then some more photons interact with the apparatus $\mathcal{A}$ and get entangled with it shortly before time $t_m$, and these photons are detected on $S$ to be in a state  $\ket*{\gamma_f^{\prime\prime}}$, and this state is correlated with the apparatus now being in a state $\ket{a_{f}}$, and hence the particle being in state $\ket{s_f}$. 

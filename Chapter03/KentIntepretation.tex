@@ -125,7 +125,116 @@ $$\hat{T}_S(x)\hat{T}_S(y)=\hat{T}_S(y)\hat{T}_S(x).$$
 The commutativity of all the $\hat{T}_S(x)$ for $x\in S$ means that if $\ket{\Psi}\in H_S$ is an eigenstate of $\hat{T}_S(x)$, then for any $y\in S$, $\hat{T}_S(y)\ket{\Psi}$ is also an eigenstate of  $\hat{T}_S(x)$ with the same eigenvalue as $\ket{\Psi}$. The invariance of any $\hat{T}_S(x)$-\textbf{eigenspace}\index{eigenspace}\footnote{An eigenspace of a Hermitian operator $\hat{O}$ acting on a Hilbert space $H$ is just the space of all the eigenstates of $\hat{O}$ in $H$ which have the same eigenvalue.} under the action of   $\hat{T}_S(y)$ means that we can create an orthonormal basis of $H_S$ consisting of simultaneous eigenstates of both  $\hat{T}_S(x)$ and  $\hat{T}_S(y)$, albeit with different eigenvalues.\footnote{This is because any $\hat{T}_S(x)$-eigenspace is itself a Hilbert space on which $\hat{T}_S(y)$ acts as a Hermitian operator, so by (\ref{span}), we can find an orthonormal basis of states $\{\ket{\psi_1},\ldots\ket{\psi_N}\}$ of the $\hat{T}_S(x)$-eigenspace and real numbers $\tau^{(1)}(y),\ldots,\tau^{(N)}(y)$ such that $\hat{T}_S(y)\ket*{\psi_i}=\tau^{(i)}(y)\ket*{\psi_i}$ for $i=1,\ldots,N.$ Hence each of the $\ket*{\psi_i}$ will be a simultaneous eigenstate of both $\hat{T}_S(x)$ and $\hat{T}_S(y)$.} Moreover, for reasons that we need not go into, these eigenvalues must be greater than or equal to $0$.\footnote{In other words, we are not going to concern ourselves with theories that allow for negative mass-energy densities.} But because $x$ and $y$ are arbitrary points of $S$, this means  we can construct an orthonormal basis $\{\ket*{\Psi^{(i)}}:i\}$ of $H_S$ such that
   $\hat{T}_S(x)\ket{\Psi^{(i)}}=\tau^{(i)}_S(x)\ket{\Psi^{(i)}}$ for all $x\in S$, where $\tau^{(i)}_S(x)\geq 0$ is a possible energy-density measurement over the whole of $S$.\footnote{We will gloss over \label{glosssim}the details of how to make this rigorous for continuous variables $x$ and continuous indices $i$. It is sufficient to approximate the continuous variables and indices as discrete variables and indices when thinking about the simultaneous $\hat{T}_S(x)$-eigenspaces, and one can choose the granularity of this approximation to achieve whatever level of accuracy one desires.}\label{simultaneous} We will refer to a state $\ket*{\Psi}$ as a \textbf{simultaneous $\hat{T}_S$-eigenstate}\index{simultaneous $\hat{T}_S$-eigenstate}, and a real valued function $\tau_S$ defined on the whole of $S$ a  \textbf{simultaneous $\hat{T}_S$-eigenvalue}\index{simultaneous $\hat{T}_S$-eigenvalue} if and only if $\hat{T}_S(x)\ket*{\Psi}=\tau_S(x)\ket*{\Psi}$ for all $x\in S$.
 
-The additional values beyond standard quantum theory that are included in Kent's theory are given by one of these simultaneous $\hat{T}_S$-eigenvalues $\tau_S$ that described a possible outcome for an energy-density measurement over the whole of $S$.  But although we speak of the measurement of $T_S(x)$ over $S$ as being $\tau_S(x)$, this is only a notional measurement. Thus, we speak of the measurement of  $T_S(x)$ on $S$ only to mean that $T_S(x)$ has a determinate value for every $x\in S$ despite the quantum state of $S$ in general being in a superposition of $\hat{T}_S(x)$-eigenstates for any given $x\in S$. How this determination of $T_S(x)$ comes about is up to one's philosophical preferences. For example, one could suppose that it was simply by divine fiat that this determination  of $T_S(x)$ came about.\footnote{I will discuss my philosophical preference in the final chapter.} 
+At this point, it might be objected that there will be uncountably many simultaneous $\hat{T}_S$-eigenstates and  $\hat{T}_S$-eigenvalues so that we won't be able to form an orthonormal basis of states $\{\ket*{\Psi^{(i)}}:i\}$ with the index $i$ being over whole numbers. However, we can overcome this objection to some extent by supposing physical reality there will be a limit on how great the mass-energy density $\tau_S(x)$ can be and how rapidly it can change with respect to $x$. Although such an assumption will mean this theory will break down in extreme situations such as black holes, this theory won't be any worse off than quantum field theory which also breaks down in extreme situations. We can then suppose that with a suitably fine mesh on $S$, any mass energy density $\tau_S(x)$ (e.g. such as the one depicted in figure \ref{tauSexample}) can be approximated to a function (e.g. like the one depicted in figure \ref{tauSapprox}) that has constant values on each cell of this mesh and such that there are only countably many values $\tau_S(x)$ can have at each cell location.
+\begin{figure}[ht!]
+  \captionsetup{justification=justified}
+  \centering
+  
+  \begin{tikzpicture}
+     \begin{axis}[
+            view={40}{40},
+          %x dir=reverse,
+          %y dir=reverse,
+          width=320pt,
+          height=280pt,
+          mesh,
+          colormap/cool,
+          %mesh/ordering=x varies,
+          z buffer=auto,%reverse xy seq,
+          xmin=-0.5,xmax=5.5,
+          ymin=-0.5,ymax=5.5,
+          zmin=0,zmax=0.3,
+          enlargelimits=upper,
+          xtick=data,
+          extra tick style={grid=major},
+          ytick={0,...,5},xtick={0,...,5},
+          grid=minor,
+          xticklabels=\empty,
+          yticklabels=\empty,
+          zticklabels=\empty,
+          xlabel={$x_1$},
+          ylabel={$x_2$},
+          zlabel={$\tau_S(x)$},
+          zlabel style={rotate=-90},
+          minor tick num=1,
+          samples=55]
+        \addplot3[surf, domain=-0.5:5.5, shader=interp] {0.04*(cos(50*x)+cos(50*y)+2)};
+        \foreach \xx in {-0.5,0.5,...,5.5}
+        {
+          \addplot3+[domain=-0.5:5.5, line width=0.1mm, mark=none, color=black, samples y=0]
+           ({\xx}, {x}, {0.04*(cos(50*\xx)+cos(50*x)+2)});
+        }
+  
+        % y=constant grids lines
+        \foreach \yy in {-0.5,0.5,...,5.5}
+        {
+           \addplot3[domain=-0.5:5.5, line width=0.1mm, mark=none, color=black, samples y=0]
+           ({x}, {\yy}, {0.04*(cos(50*x)+cos(50*\yy)+2)});
+        }
+  
+  
+     \end{axis}
+  \end{tikzpicture}
+  \vspace*{2px}
+  \caption{An example of an arbitrary mass-energy density $\tau_S$ plotted against two dimension $x_1$ and $x_2$ belonging to the spacelike hypersurface $S$. }\label{tauSexample}
+  \end{figure}
+
+  \begin{figure}[ht!]
+    \captionsetup{justification=justified}
+    \centering
+    
+    \pgfmathsetmacro{\gconv}{2*326.32446}
+    % from https://tex.stackexchange.com/a/435234/121799
+    \begin{tikzpicture}[declare function={% (0.00001*\n!/(0.01*\x!*0.01*\y!*0.01*(\n-\x-\y)!))*
+    f(\x,\y,\px,\py,\n)=(0.000001*\n!/(0.01*\x!*0.01*\y!*0.01*(\n-\x-\y)!))*pow(\px,\x)*pow(\py,\y)*pow(1-\px-\py,\n-\x-\y);}] % 
+    \pgfplotsset{set layers}
+    \begin{axis}[% from section 4.6.4 of the pgfplotsmanual
+            view={40}{40},
+            %x dir=reverse,
+            %y dir=reverse,
+            width=320pt,
+            height=280pt,
+            mesh,
+            %mesh/ordering=x varies,
+            z buffer=auto,%reverse xy seq,
+            xmin=-0.5,xmax=5.5,
+            ymin=-0.5,ymax=5.5,
+            zmin=0,zmax=0.3,
+            enlargelimits=upper,
+            xtick=data,
+            extra tick style={grid=major},
+            ytick={0,...,5},xtick={0,...,5},
+            grid=minor,
+            xticklabels=\empty,
+            yticklabels=\empty,
+            zticklabels=\empty,
+            xlabel={$x_1$},
+            ylabel={$x_2$},
+            zlabel={$\tau_S(x)$},
+            zlabel style={rotate=-90},
+            minor tick num=1,
+            ]
+    
+      \addplot3 [point meta=0,visualization depends on={
+      \gconv*z \as \myz}, % you'll get told how to adjust the prefactor
+      scatter/@pre marker code/.append style={/pgfplots/cube/size z=\myz},%
+      scatter/@pre marker code/.append style={/pgfplots/cube/size x=24.3018pt},%
+      scatter/@pre marker code/.append style={/pgfplots/cube/size y=21.71275pt},%
+      scatter,only marks,
+      mark=my cube*,mark size=5,opacity=1,domain=0:5,domain y=0:5,samples=6,samples y=6]
+      {0.04*(((cos(50*x)+cos(50*y))+2))};
+        \end{axis}
+    \end{tikzpicture}
+    \vspace*{2px}
+    \caption{Here, the arbitrary mass-energy density $\tau_S$ depicted in figure \ref{tauSexample} has been approximated by a function which is constant in each mesh cell.}\label{tauSapprox}
+    \end{figure}
+There will then only need to be a countable number of approximations to approximate any arbitrary mass-energy density $\tau_S$ on $S$.  As long as we choose the cells in the mesh to be sufficiently small, we can describe physical reality up to our desired level of accuracy. Thus, we assume that for each of the countable states in the orthonormal basis $\{\ket*{\Psi^{(i)}}:i\}$, there will be a corresponding function $\tau_S^{(i)}$ defined on $S$ which is constant on every cell of $S$ and in which 
+\begin{equation}\label{approxeigen}
+\hat{T}_S(x)\ket{\Psi^{(i)}}\approx \tau_S(x)^{(i)}\ket{\Psi^{(i)}}
+\end{equation} 
+for all $x\in S$. Although we only require there to be an approximation rather than an equality in (\ref{approxeigen}), we will still refer to the $\ket{\Psi^{(i)}}$ and the $\tau_S(x)^{(i)}$ as simultaneous $\hat{T}_S$-eigenstates and simultaneous $\hat{T}_S$-eigenvalues respectively.
+
+The additional values beyond standard quantum theory that are included in Kent's theory are given by one of these simultaneous $\hat{T}_S$-eigenvalues $\tau_S^{(i)}$ that (approximately) describe a possible outcome for an energy-density measurement over the whole of $S$.  But although we speak of the measurement of $T_S(x)$ over $S$ as being $\tau_S^{(i)}(x)$, this is only a notional measurement. Thus, we speak of the measurement of  $T_S(x)$ on $S$ only to mean that $T_S(x)$ has a determinate value for every $x\in S$ despite the quantum state of $S$ in general being in a superposition of $\hat{T}_S(x)$-eigenstates for any given $x\in S$. How this determination of $T_S(x)$ comes about is up to one's philosophical preferences. For example, one could suppose that it was simply by divine fiat that this determination  of $T_S(x)$ came about.\footnote{I will discuss my philosophical preference in the final chapter.} 
 
 Nevertheless, the particular density $\tau_S(x)$ which is found to describe $S$ can't be absolutely anything. Rather, we suppose there is a much earlier spacelike hypersurface $S_0$ which is described by a state $\ket{\Psi_0}$ belonging to a Hilbert space $H_{S_0}$ as shown in figure \ref{S1}.  It is assumed that all physics that we wish to describe takes place between these two spacelike hypersurfaces $S_0$ and $S$. In figure \ref{S1}, we therefore let $y$ depicts a generic spacetime location that we wish to describe. 
 
@@ -159,9 +268,11 @@ Nevertheless, the particular density $\tau_S(x)$ which is found to describe $S$ 
 
 \vspace*{2px}
 \caption{A notional measurement of $T_S(x)$ is made for all $x\in S$. The simultaneous  $\hat{T}_S$-eigenstate $\ket{\Psi}$ with $\hat{T}_S(x)\ket{\Psi}=\tau_S(x)\ket{\Psi}$ is selected with probability $\abs{\mel{\Psi}{U_{SS_0}}{\Psi_0}}^2$. The values $\tau_S(x)$ obtained for $T_S(x)$ are then used to calculate the physical properties at the spacetime location $y$.  }
-\label{S1}
+\label{tauSapprox}
 \end{figure} 
 \vspace*{-12px}
+
+
 
  If we now define $U_{SS_0}=U[S]U[S_0]^{-1}$,\label{SchwingerUnitaryOP} then $U_{SS_0}$ will be a unitary operator that maps states in $H_{S_0}$ such as $\ket{\Psi_0}$ to states in $H_S$. Then the probability $P(\Psi|\Psi_0)$ that  $S$ will be found to be in the state $\ket{\Psi}$ with mass-energy density $\tau_S(x)$ given that $S_0$ was initially in the state $\ket{\Psi_0}$ will be given by the Born Rule (see page \pageref{bornrule}):
  \begin{equation}\label{bornpsi}
@@ -262,7 +373,7 @@ To this end, we recall the definition of expectation in equation (\ref{expectati
 \end{figure}
 So in the case of Schr\"{o}dinger's cat, if the cat were dead,  light reflecting off the dead cat and going off into outer space would eventually intersect the spacelike hypersurface $S$, and the light distribution on $S$ would register the inanimate status of the cat. On the other hand, if the cat were alive, the light reflecting off the living cat and going off into outer space would also intersect $S$, but now the light distribution on $S$ would register the different locations the living cat was in as it moved about. Because light travels at a constant speed in a vacuum, the state of the cat at earlier times would be described by light distributions in regions on $S$ that were further away from the cat than those light distributions in regions of $S$ that described the cat in more recent times. 
 
-Now if the cat was in a superposition of dead and alive states, then assuming there is no intermediate collapse of the global quantum state,  the spacelike hypersurface $S$ would also enter into a superposition of different states corresponding to these different distributions of light registered on $S$. But if a notional measurement on $S$ is made that determines which of these distributions is actually realized on $S$, then this determination will determine which history was actualized, and hence determine whether the cat actually survived Schr\"{o}dinger's experiment or whether it perished. Thus, by conditioning on one of these two distributions on $S$ being actualized, the conditional expectation of the stress-energy tensor in the vicinity of where Schr\"{o}dinger's cat might be 
+Now if the cat was in a superposition of dead and alive states, then assuming there is no intermediate collapse of the global quantum state,  the spacelike hypersurface $S$ would also enter into a superposition of different states corresponding to these different distributions of light registered on $S$. But if a notional measurement on $S$ is made that determines which of these distributions is actually realized on $S$, then this determination will determine which history was actualized, and hence determine whether the cat actually survived Schr\"{o}dinger's experiment or whether it perished.   Thus, by conditioning on one of these two distributions on $S$ being actualized, the conditional expectation of the stress-energy tensor in the vicinity of where Schr\"{o}dinger's cat might be 
 will not describe a situation like the one depicted in figure \ref{deadlivecat}.   Rather, it will either describe a situation like the one depicted in figure \ref{livecat}, or it will describe a situation like the one depicted in figure \ref{deadcat}. Which of these two situations occur will be determined by whether the measurement outcome on $S$ corresponds to a light distribution reflected from a living cat, or to a light distribution reflected from a dead cat. 
 \begin{figure}[ht!]
   \captionsetup{justification=justified}
@@ -281,6 +392,8 @@ will not describe a situation like the one depicted in figure \ref{deadlivecat}.
     \label{deadcat}
     \end{figure}
     \footnotetext{ Original by Dhatfield. Altered by removing numbers and making into two separate figures. This image is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. Source: https://upload.wikimedia.org/wikipedia/commons/archive/9/91/20080627113554!Schrodingers\_cat.svg}
+    We assume that the outcome of the notional measurement (which determines which mass-energy distribution on $S$ is realized) occurs with a probability given by the Born rule. Under this assumption, we would then expect that in the history conditioned on this notional measurement, any scientists who performed measurements (in the normal sense of measurement) would measure average values of physical quantities consistent with the expectation values predicted by standard quantum mechanics. This intuition will be discussed in more detail in section \ref{KentconsistentQT}.
+    
 
 \section{Calculating Kent's $T^{\mu\nu}(y)$-beables \label{kentcalculation}}
 Having given a qualitative description in the last section of how a measurement outcome on $S$ determines which facts obtain in reality such as whether Schr\"{o}dinger's cat is alive or dead, we now give a more quantitative description of how Kent's beables are calculated. Kent's beables specify $T^{\mu\nu}(y)$ values for all $y$ between $S_0$ and $S$, and for all $\mu,\nu = 0, 1, 2,$ and $3$. Kent's $T^{\mu\nu}(y)$-beables are conditional expectation values, and the conditional expectation that we need to calculate depends on the notion of \textbf{conditional probability}\index{conditional probability}. In probability theory, the conditional probability $P(q|r)$ that a statement $q$ is true given that a statement $r$ is true is given by the formula
@@ -309,7 +422,7 @@ We can see how the formula (\ref{conditionalexpectation}) relates to the Sch\"{o
   \hat{O}(x)=U[S]\hat{\bm{O}}(x)U[S]^{-1}
 \end{equation}
 requires that $x\in S$.
-This means that we can't define $\hat{T}^{\mu\nu}(y)$ according to (\ref{tsobservable}) since $y\not\in S$.\footnote{If we did attempt to use (\ref{tsobservable}) to define $\hat{T}^{\mu\nu}(y)=U[S]\hat{\bm{T}}^{{\mu\nu}}(y)U[S]^{-1}$, then $\hat{T}^{\mu\nu}(y)$ would have a (non-local) dependence on $S$, and such a dependence would not be desirable.} However, we do not face such restrictions in the Heisenberg picture, so one approach would be to calculate $P(q(\tau) \, \&\,  r(\tau_S,y))$ in the Heisenberg picture. As we will see in section \ref{kentinterpretationconsistency}, this is not the approach that Kent takes, but nevertheless, in the Heisenberg picture, it is easier to see why we don't include information from $S$ within the light cone (without begging the question of why we don't) when calculating $P(q(\tau) \, \&\,  r(\tau_S,y))$. To see why this is so, consider the simpler case of just two measurable quantities ${F}$ and ${G}$ which we assume to have a discrete range of possible values and for which we wish to calculate the joint probability $P((F=f)\, \&\, (G=g))$. To do this in the Heisenberg picture, we need an orthonormal basis of the state space $\{\ket*{\Phi^{(i)}}:i\}$ consisting of simultaneous eigenstate of the observables $\hat{\bm{F}}$ and $\hat{\bm{G}}$ with eigenvalues $f^{(i)}$ and $g^{(i)}$ respectively so that $\hat{\bm{F}}\ket*{\Phi^{(i)}}=f^{(i)}\ket*{\Phi^{(i)}}$ and $\hat{\bm{G}}\ket*{\Phi^{(i)}}=g^{(i)}\ket*{\Phi^{(i)}}$, and when the system is in the state $\ket*{\Phi^{(i)}}$, the quantity $F$ will have the value $f^{(i)}$, and the quantity $G$ will have the value $g^{(i)}$. Given that the system is in the state $\ket*{\Phi}$, the joint probability $P((F=f)\, \&\, (G=g))$ can then be calculated using the Born rule to get
+This means that we can't define $\hat{T}^{\mu\nu}(y)$ according to (\ref{tsobservable}) since $y\not\in S$.\footnote{If we did attempt to use (\ref{tsobservable}) to define $\hat{T}^{\mu\nu}(y)=U[S]\hat{\bm{T}}^{{\mu\nu}}(y)U[S]^{-1}$, then $\hat{T}^{\mu\nu}(y)$ would have a (non-local) dependence on $S$, and such a dependence would not be desirable.} However, we do not face such restrictions in the Heisenberg picture, so one approach would be to calculate $P(q(\tau) \, \&\,  r(\tau_S,y))$ in the Heisenberg picture. As we will see shortly, this is not the approach that Kent takes, but nevertheless, in the Heisenberg picture, it is easier to see why we don't include information from $S$ within the light cone (without begging the question of why we don't) when calculating $P(q(\tau) \, \&\,  r(\tau_S,y))$. To see why this is so, consider the simpler case of just two measurable quantities ${F}$ and ${G}$ which we assume to have a discrete range of possible values and for which we wish to calculate the joint probability $P((F=f)\, \&\, (G=g))$. To do this in the Heisenberg picture, we need an orthonormal basis of the state space $\{\ket*{\Phi^{(i)}}:i\}$ consisting of simultaneous eigenstate of the observables $\hat{\bm{F}}$ and $\hat{\bm{G}}$ with eigenvalues $f^{(i)}$ and $g^{(i)}$ respectively so that $\hat{\bm{F}}\ket*{\Phi^{(i)}}=f^{(i)}\ket*{\Phi^{(i)}}$ and $\hat{\bm{G}}\ket*{\Phi^{(i)}}=g^{(i)}\ket*{\Phi^{(i)}}$, and when the system is in the state $\ket*{\Phi^{(i)}}$, the quantity $F$ will have the value $f^{(i)}$, and the quantity $G$ will have the value $g^{(i)}$. Given that the system is in the state $\ket*{\Phi}$, the joint probability $P((F=f)\, \&\, (G=g))$ can then be calculated using the Born rule to get
 $$P((F=f)\, \&\, (G=g))=\sum_{\substack{i \text{ such that} \\ f^{(i)}=f \text{ and } g^{(i)}=g}}\abs{\ip{\Phi^{(i)}}{\Phi}}^2.$$
 But  in order for such an orthonormal basis to exist, it is necessary that $\hat{F}$ and $\hat{G}$ commute.\footnote{This is because given such an orthonormal basis $\{\ket*{\Phi^{(i)}}:i\}$ of simultaneous eigenstates of $\hat{\bm{F}}$ and $\hat{\bm{G}}$, we have 
 $$\hat{\bm{F}}\hat{\bm{G}}\ket*{\Phi^{(i)}}=f^{(i)}g^{(i)}\ket*{\Phi^{(i)}}=g^{(i)}f^{(i)}\ket*{\Phi^{(i)}}=\hat{\bm{G}}\hat{\bm{F}}\ket*{\Phi^{(i)}}$$ so for any arbitrary state $\ket*{\Phi}=\sum_i c_i \ket*{\Phi^{(i)}},$ we have 
@@ -318,7 +431,7 @@ $$\hat{\bm{F}}\hat{\bm{G}}\ket*{\Phi}=\sum_i c_i \hat{\bm{F}}\hat{\bm{G}}\ket*{\
 
 Now quantum field theory is so constructed that $\hat{\bm{T}}^{{00}}(x)$ and $\hat{\bm{T}}^{{\mu\nu}}(y)$ will not commute when $x$ and $y$ are not spacelike separated, but $\hat{\bm{T}}^{{\mu'\nu'}}(x)$ and $\hat{\bm{T}}^{{\mu\nu}}(y)$ will commute when $x$ and $y$ are spacelike separated.\footnote{The proof of this statement need not concern us, but one can see that this is the case by considering the four potential commutation relations and the decomposition of the stress-energy tensors as in terms of the four-potentials  -- see \cite[p. 1443--1444]{SchwingerJulianI}.} As we will see on page \pageref{TSdef}, $T_S(x)$ will have a $T^{00}(x)$ component, and so we can only be sure that $\hat{\bm{T}}_S(x)$ will commute with  $\hat{\bm{T}}^{{\mu\nu}}(y)$ if $x$ and $y$ are spacelike separated. In other words, $\hat{\bm{T}}_S(x)$ and $\hat{\bm{T}}^{{\mu\nu}}(y)$ will commute if $x$ is outside the light cone of $y$. Extending this argument to multiple $x\in S$, we see that we can only guarantee that the conditional expectation of $T^{\mu\nu}(y)$ is definable if we restrict our conditioning on the value of $T_S(x)$ to $x\in S^1(y)$, that is, to $x$ in $S$ outside the light cone of $y$.
 
-Having explained why we don't include any information about $\tau_S(x)$ for $x\in S$ from within the light cone of $y$, we can now proceed to calculate  $P(q(\tau) \, \&\,  r(\tau_S,y))$. Now although there is no spacelike hypersurface that contains both $y$ and $S^1(y)$, we can find a sequence of spacelike hypersurfaces $S_n(y)$ such that\label{siydef} $S_n(y)\subset S_{n'}(y)$ for $n<n'$, and such that for any $x\in S^1(y)$, there exists $n$ such that $x\in S_n(y)$. An example of one such $S_n(y)$ is shown in figure \ref{S3}. When there is no ambiguity, we will drop the $y$ and write $S_n$ instead of $S_n(y)$. 
+Having explained why we don't include any information about $\tau_S(x)$ for $x\in S$ from within the light cone of $y$, we can now proceed to calculate  $P(q(\tau) \, \&\,  r(\tau_S,y))$. Now although there is no spacelike hypersurface that contains both $y$ and $S^1(y)$, we can find a sequence of spacelike hypersurfaces $S_n(y)$ such that\label{siydef} $S_n(y)\subset S_{n'}(y)$ for $n<n'$, and such that for any $x\in S^1(y)$, there exists $n$ and an open subset $U_n(x)\subset S$ containing $x$ such that $U_n(x)\subset S_n(y)$. An example of one such $S_n(y)$ is shown in figure \ref{S3}. When there is no ambiguity, we will drop the $y$ and write $S_n$ instead of $S_n(y)$. 
 
  \begin{figure}[ht!]
 \captionsetup{justification=justified}
@@ -386,7 +499,7 @@ Having explained why we don't include any information about $\tau_S(x)$ for $x\i
 \caption{$S_n\myeq S_n(y)$ is a spacelike hypersurface containing $y$ and all of $S^1(y)$ in the limit as $n\rightarrow\infty$.   }
 \label{S3}
 \end{figure}
-Such a sequence $S_n$ of hypersurfaces will be sufficient to calculate  $P(q(\tau) \, \&\,  r(\tau_S,y))$. So let us define $r_n$ to be the statement that  $T_S(x)$ has the determinate value $\tau_S(x)$ for all $x\in S_n\cap S$. We recall that in the Tomonaga-Schwinger formulation of relativistic quantum physics, the operators $\hat{T}_S(x)$ and $\hat{T}^{\mu\nu}(y)$ for fixed $\mu,\nu$ commute when $x$ and $y$ are spacelike-separated. It therefore follows that we can express any state of $H_{S_n}$ as a superposition of simultaneous eigenstates of $\hat{T}^{\mu\nu}(y)$ and $\hat{T}_S(x)$ for $x\in S_n\cap S$.\footnote{We make the same approximation as mentioned on page \pageref{simultaneous} in footnote \ref{glosssim}.}  For a particular choice of $\mu,\nu$, we can then form an orthonormal basis $\{\ket*{\Psi_{n}^{(i)}}:i\}$ of $H_{S_n}$ consisting of simultaneous $\hat{T}^{\mu\nu}(y)$, $\hat{T}_S(x)$-eigenstates so that $\hat{T}^{\mu\nu}(y)\ket*{\Psi_{n}^{(i)}}=\tau^{(i)}\ket*{\Psi_{n}^{(i)}}$ and $\hat{T}_{S}(x)\ket*{\Psi_{n}^{(i)}}=\tau_S^{(i)}(x)\ket*{\Psi_{n}^{(i)}}$ for $x\in S_n\cap S$, where $\tau^{(i)}$ and $\tau_S^{(i)}(x)$ are the corresponding eigenvalues. The probability $P(q(\tau) \, \&\,  r_n)$ will then be
+Such a sequence $S_n$ of hypersurfaces will be sufficient to calculate  $P(q(\tau) \, \&\,  r(\tau_S,y))$. So let us define $r_n$ to be the statement that  $T_S(x)$ has the determinate value $\tau_S(x)$ for all $x\in S_n\cap S$.\footnote{A possible worry someone might have about this statement $r_n$ is that $\tau_S(x)$ is the value of a beable for $x$ in $S^1(y)\cap S$ but it's not the value of a beable for $x$ in $S_n\cap S$. } We recall that in the Tomonaga-Schwinger formulation of relativistic quantum physics, the operators $\hat{T}_S(x)$ and $\hat{T}^{\mu\nu}(y)$ for fixed $\mu,\nu$ commute when $x$ and $y$ are spacelike-separated. It therefore follows that we can express any state of $H_{S_n}$ as a superposition of simultaneous eigenstates of $\hat{T}^{\mu\nu}(y)$ and $\hat{T}_S(x)$ for $x\in S_n\cap S$.\footnote{We make the same approximation as mentioned on page \pageref{simultaneous} in footnote \ref{glosssim}.}  For a particular choice of $\mu,\nu$, we can then form an orthonormal basis $\{\ket*{\Psi_{n}^{(i)}}:i\}$ of $H_{S_n}$ consisting of simultaneous $\hat{T}^{\mu\nu}(y)$, $\hat{T}_S(x)$-eigenstates so that $\hat{T}^{\mu\nu}(y)\ket*{\Psi_{n}^{(i)}}=\tau^{(i)}\ket*{\Psi_{n}^{(i)}}$ and $\hat{T}_{S}(x)\ket*{\Psi_{n}^{(i)}}=\tau_S^{(i)}(x)\ket*{\Psi_{n}^{(i)}}$ for $x\in S_n\cap S$, where $\tau^{(i)}$ and $\tau_S^{(i)}(x)$ are the corresponding eigenvalues. The probability $P(q(\tau) \, \&\,  r_n)$ will then be
 $$P(q(\tau) \, \&\,  r_n) =\sum_{\substack{i \text{ such that } \tau^{(i)}=\tau \\ \text{and }\tau_S^{(i)}(x)=\tau_S(x)\\ \text{ for all }x\in S_n\\ }}\abs{\mel{\Psi_n^{(i)}}{U_{SS_0}}{\Psi_0}}^2.$$
 Taking the limit as $n$ tends to infinity, we can calculate the probability $P(q(\tau) \, \&\,  r(\tau_S,y))$ to be
 \begin{equation}\label{qrProb}
