@@ -35,6 +35,8 @@
 \usepackage{tensor}
 \usepackage{imakeidx}\makeindex[options = -s myindex] 
 \usepackage[totoc, initsep = 10pt, unbalanced = true]{idxlayout}
+\usepackage{mathtools}
+
 % \usepackage{hyperref}
 \usepackage{pgfplots}
 \usepgfplotslibrary{colormaps}
@@ -50,6 +52,12 @@ cube front color=blue!30,
 cube side color/.store in=\CubeSideColor,
 cube side color=blue!40,
 }
+
+\makeatletter
+\def\@makefnmark{%
+  \leavevmode
+  \raise.9ex\hbox{\fontsize\sf@size\z@\normalfont\tiny\@thefnmark}}
+\makeatother
 
 \makeatletter
 \pgfdeclareplotmark{my cube*}
@@ -188,6 +196,9 @@ cube side color=blue!40,
 \renewcommand{\Tr}{\operatorname{Tr}}
 \newcommand{\diag}{\operatorname{diag}}
 
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 
 \title{The EPR-Bohm Paradox and Kent's One-World Solution}
