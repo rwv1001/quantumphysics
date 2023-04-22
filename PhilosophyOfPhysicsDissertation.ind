@@ -3,7 +3,7 @@
 \noindent\textbf{B}\par\nopagebreak
 
 \vspace{1pt}\item basis, 61
-\vspace{1pt}\item beable, 121
+\vspace{1pt}\item beable, 122
 \vspace{1pt}\item Bell state, 19
 \vspace{1pt}\item Bell's inequality, 31
 \vspace{1pt}\item Born Rule, 12
@@ -18,7 +18,7 @@
 \vspace{1pt}\item composite systems, 64
 \vspace{1pt}\item conditional expectation, 128
 \vspace{1pt}\item conditional independence, 18
-\vspace{1pt}\item conditional probability, 18, 127
+\vspace{1pt}\item conditional probability, 18, 128
 \vspace{1pt}\item Copenhagen Interpretation, 16
 \vspace{1pt}\item culprit, the, 33
 
@@ -37,11 +37,11 @@
 \vspace{1pt}\item eigenspace, 116
 \vspace{1pt}\item eigenstate, 61
 \vspace{1pt}\item eigenvalue, 61
-\vspace{1pt}\item Einstein summation convention, 145
+\vspace{1pt}\item Einstein summation convention, 146
 \vspace{1pt}\item Einstein's locality principle, 17
 \vspace{1pt}\item empirical adequacy
-    \subitem formal definition, 173
-    \subitem informal definition, 141
+    \subitem formal definition, 175
+    \subitem informal definition, 142
 \vspace{1pt}\item entangled, 66
 \vspace{1pt}\item expectation value
     \subitem pilot wave, 38
@@ -51,11 +51,11 @@
 
 \noindent\textbf{F}\par\nopagebreak
 
-\vspace{1pt}\item four-covector, 151
-\vspace{1pt}\item four-momentum, 149
-\vspace{1pt}\item four-vector, 149
-\vspace{1pt}\item four-vector field, 150
-\vspace{1pt}\item four-velocity, 149
+\vspace{1pt}\item four-covector, 152
+\vspace{1pt}\item four-momentum, 150
+\vspace{1pt}\item four-vector, 150
+\vspace{1pt}\item four-vector field, 151
+\vspace{1pt}\item four-velocity, 150
 
   \indexspace
 
@@ -80,7 +80,7 @@
 \noindent\textbf{K}\par\nopagebreak
 
 \vspace{1pt}\item ket-vector, 10
-\vspace{1pt}\item Kronecker-delta, 151
+\vspace{1pt}\item Kronecker-delta, 152
 
   \indexspace
 
@@ -89,8 +89,8 @@
 \vspace{1pt}\item lightlike-separation, 109
 \vspace{1pt}\item linear combination, 61
 \vspace{1pt}\item linearity, 13
-\vspace{1pt}\item Lorentz transformation, 147
-    \subitem orthochronous, 152
+\vspace{1pt}\item Lorentz transformation, 148
+    \subitem orthochronous, 153
 
   \indexspace
 
@@ -132,7 +132,7 @@
 \vspace{1pt}\item preferred basis, 63
 \vspace{1pt}\item preferred basis problem, 62
 \vspace{1pt}\item problem of outcomes, 87
-\vspace{1pt}\item projection, 142
+\vspace{1pt}\item projection, 143
 \vspace{1pt}\item pure state, 69
 
   \indexspace
@@ -147,14 +147,14 @@
 \noindent\textbf{R}\par\nopagebreak
 
 \vspace{1pt}\item reduced density matrix, 72
-\vspace{1pt}\item relativistic mass, 149
-\vspace{1pt}\item rest mass, 148
+\vspace{1pt}\item relativistic mass, 150
+\vspace{1pt}\item rest mass, 149
 
   \indexspace
 
 \noindent\textbf{S}\par\nopagebreak
 
-\vspace{1pt}\item scalar, 148
+\vspace{1pt}\item scalar, 149
 \vspace{1pt}\item Schr\"{o}dinger picture, 111
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenstate, 116
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenvalue, 116
