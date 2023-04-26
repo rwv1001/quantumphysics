@@ -23,7 +23,7 @@ In order to show that Kent's theory is just as good as standard quantum theory, 
 \begin{equation}\tag{\ref{beable1} revisited}
 	\ev*{T^{\mu\nu}(y)}_{\tau_S}=\sum_\tau P(q(\tau) | r(\tau_S,y))\tau=\lim_{n\rightarrow\infty}\sum_\tau\frac{P(q(\tau) \, \& \, r_n)\tau}{P(r_n)}.
 \end{equation}
-We proceed to calculate $P(r_n)$ and $P(q(\tau)\, \& \,r_n)$ in order to calculate  $\ev*{T^{\mu\nu}(y)}_{\tau_S}$. We first note that since $S_n$ is a spacelike hypersurface,   there will exist a unitary operator $U_{S_nS_0}$ defined by equation (\ref{SchwingerUnitaryOP}) which maps the Hilbert space\footnote{The Hilbert space $H_S$ for any spacelike hypersurface $S$ is defined on page \pageref{HSdef}.} of states $H_{S_0}$ describing $S_0$ to the Hilbert space of states $H_{S_n}$\label{HSidef} describing $S_n$ in accord with how the states of $H_{S_0}$  evolve over time. Now let $H_{S_n,\tau_S}\subset H_{S_n}$ be the subspace of states $\ket{\xi}$ for which  $\hat{T}_S(x)\ket{\xi}=\tau_S(x)\ket{\xi}$  for all $x\in S_n\cap S$, and  let $\{\ket{\xi_1},\ket{\xi_2},\ldots\}$ be an orthonormal basis of $H_{S_n,\tau_S}$. Given that the initial state of the world is $\ket{\Psi_0}$, the probability $P(r_n)$ of ``measuring'' the value of $T_S(x)$ on $S_n\cap S$ to be $\tau_S(x)$ will be 
+We proceed to calculate $P(r_n)$ and $P(q(\tau)\, \& \,r_n)$ in order to calculate  $\ev*{T^{\mu\nu}(y)}_{\tau_S}$. We first note that since $S_n$ is a spacelike hypersurface,   there will exist a unitary operator $U_{S_nS_0}$ defined by equation (\ref{SchwingerUnitaryOP}) which maps the Hilbert space\footnote{The Hilbert space $H_S$ for any spacelike hypersurface $S$ is defined on page \pageref{HSdef}.} of states $H_{S_0}$ describing $S_0$ to the Hilbert space of states $H_{S_n}$\label{HSidef} describing $S_n$ in accord with how the states of $H_{S_0}$  evolve over time. Now let $H_{S_n,\tau_S}\label{HStau}\subset H_{S_n}$ be the subspace of states $\ket{\xi}$ for which  $\hat{T}_S(x)\ket{\xi}=\tau_S(x)\ket{\xi}$  for all $x\in S_n\cap S$, and  let $\{\ket{\xi_1},\ket{\xi_2},\ldots\}$ be an orthonormal basis of $H_{S_n,\tau_S}$. Given that the initial state of the world is $\ket{\Psi_0}$, the probability $P(r_n)$ of ``measuring'' the value of $T_S(x)$ on $S_n\cap S$ to be $\tau_S(x)$ will be 
 \begin{equation}\label{Pri}
 P(r_n)=\sum_j \abs{ \ip{\xi_j}{\Psi_n}}^2,
 \end{equation}
@@ -72,7 +72,6 @@ Since there is an orthonormal basis $\{\ket{\eta_j}:j\}$ of $H_{S_n}$ consisting
 	\lim_{n\rightarrow\infty}\sum_jP\big(r_n(\tau^{(j)}_{S_n\cap S})\big)\ev*{T^{\mu\nu}(y)}_{\tau^{(j)}_{S_n\cap S}}=\lim_{n\rightarrow\infty}\ev*{\hat{T}^{\mu\nu}(y)}{\Psi_n}
 	\end{equation}
 In the notation of equation (\ref{schwingerformula}), we have $\ket*{\Psi_n}=\ket*{\Psi[S_n]}$, and according to (\ref{schwingerformula}) the expectation value $\ev*{\hat{T}^{\mu\nu}(y)}{\Psi[S_n]}$ will be independent of the hypersurface $S_n$ so long as it contains $y$, and the result will be equal to the expectation value $\ev*{\hat{\bm{T}}^{\mu\nu}(y)}{\Psi_0}$ in the Heisenberg picture which is the value that is predicted by standard quantum mechanics. Therefore, equation (\ref{kentconsistency}) follows from (\ref{schwingerformula}) and (\ref{kentconsistency2}) which is what we were aiming to show for standard quantum consistency to hold.
-
 
 
 
@@ -155,9 +154,9 @@ for all $x$, it follows that
 \footnotetext{To see why this is, note that if  $x_\mu x^\mu={x'}_\mu{x'}^\mu$ for all $x$, then  for any other spacetime location $y$, we have $(x+y)_\mu (x+y)^\mu={(x'+y')}_\mu{(x'+y')}^\mu$. If we expand this out and cancel $x_\mu x^\mu$ with ${x'}_\mu{x'}^\mu$ and cancel $y_\mu y^\mu$ with ${y'}_\mu{y'}^\mu$, and using the fact that $y_\mu x^\mu=x_\mu y^\mu$, etc. we find that  $x_\mu y^\mu={x'}_\mu{y'}^\mu$ for all $x$ and $y$. Hence,
 $$\eta_{\nu\mu}x^\mu y^\nu = x_\mu y^\mu=\eta_{\sigma\rho}\Lambda\indices{^\rho_\mu}\Lambda\indices{^\sigma_\nu}x^\mu y^\nu.$$  
 Since we can choose $x$ such that $x^\mu=1$ and $x^\alpha = 0$ for $\alpha\neq\mu$, and can choose $y$ such that $y^\nu=1$ and $y^\beta=0$ for $\beta\neq\nu$. Then we get
-$$\eta_{\mu\nu} = \eta_{\sigma\rho}\Lambda\indices{^\rho_\mu}\Lambda\indices{^\sigma_\nu}, $$ and hence the result follows.}Having considered how the coordinates of a spacetime location viewed by one observer relate to the coordinates of the same spacetime location viewed by a different observer, we can now consider how physical quantities viewed by different observers relate to each other. The simplest kind of physical quantity is called a \textbf{scalar}\index{scalar}. A scalar defined at a particular spacetime location has the same value no matter what frame of reference an observer uses. One example of a scalar is an object's \textbf{rest mass}\index{rest mass} which is the mass an object would have if it had no velocity. There is still a transformation rule for scalars since the spacetime location at which the scalar is measured is usually expressed in terms of an observer's coordinate system, and the coordinates of  such a location  will differ for different observers. Thus, if $\phi(x)\myeq\phi(x^0, x^1, x^2, x^3)$ is the value of a scalar defined at the spacetime location $(x^0, x^1, x^2, x^3)$ as described by an observer $O$, then another observer $O'$ using a different set of coordinate $({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ to describe the spacetime location $(x^0, x^1, x^2, x^3)$ will describe this same scalar as $\phi'(x')\myeq\phi'({x'}^0, {x'}^1, {x'}^2, {x'}^3)$  where $\phi'(x')=\phi(x)$. Since $\phi'$ is just a function of the four numbers ${x'}^0, {x'}^1, {x'}^2,$ and ${x'}^3$, we can rename these numbers ${x}^0, {x}^1, {x}^2,$ and ${x}^3$, and then 
+$$\eta_{\mu\nu} = \eta_{\sigma\rho}\Lambda\indices{^\rho_\mu}\Lambda\indices{^\sigma_\nu}, $$ and hence the result follows.}Having considered how the coordinates of a spacetime location viewed by one observer relate to the coordinates of the same spacetime location viewed by a different observer, we can now consider how physical quantities viewed by different observers relate to each other. The simplest kind of physical quantity is called a \textbf{scalar}\index{scalar}. A scalar defined at a particular spacetime location has the same value no matter what frame of reference an observer uses. One example of a scalar is an object's \textbf{rest mass}\index{rest mass} which is the mass an object would have if it had no velocity. There is still a transformation rule for scalars since the spacetime location at which the scalar is measured is usually expressed in terms of an observer's coordinate system, and the coordinates of  such a location  will differ for different observers. Thus, if $\phi(x)\myeq\phi(x^0, x^1, x^2, x^3)$ is the value of a scalar defined at the spacetime location $(x^0, x^1, x^2, x^3)$ as described by an observer $O$, then another observer $O'$ using a different set of coordinate $({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ to describe the spacetime location $(x^0, x^1, x^2, x^3)$ will describe this same scalar as $\phi'(x')\myeq\phi'({x'}^0, {x'}^1, {x'}^2, {x'}^3)$  where $\phi'(x')=\phi(x)$. Therefore
 \begin{equation}\label{lorentzscalar}
-\phi'(x)=\phi(\Lambda^{-1}x)
+\phi'(x')=\phi(\Lambda^{-1}x')
 \end{equation} 
 where $\Lambda^{-1}$ is the inverse Lorentz transformation that takes the coordinates $x'=({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ of a spacetime location to the coordinates $x=(x^0, x^1, x^2, x^3)$ describing that spacetime location. Thus, equation (\ref{lorentzscalar}) shows us how a scalar transforms under a Lorentz transformation $\Lambda$. 
 
@@ -220,7 +219,7 @@ four-velocity $u$ of an object whose classical velocity is $\vb{v}$. For we must
 	$${\varphi'}^\mu(x')=\Lambda\indices{^\mu_\nu}\varphi^\nu(x).$$
 	Hence, under the Lorentz transformation $\Lambda$,  a vector field $\varphi^\mu(x)$ transforms as ${\varphi}^\mu(x)\rightarrow {\varphi'}^\mu(x')$ where
 	\begin{equation}\label{lorentzvector}
-	{\varphi'}^\mu(x)=\Lambda\indices{^\mu_\nu}\varphi^\nu(\Lambda^{-1}x).
+	{\varphi'}^\mu(x')=\Lambda\indices{^\mu_\nu}\varphi^\nu(\Lambda^{-1}x').
 	\end{equation} 
 
 
@@ -242,13 +241,13 @@ $(\Lambda^{-1})\indices{^\nu_\rho}\Lambda\indices{^\rho_\mu}=\delta^\nu_\mu,$
  we have $(\Lambda^{-1})\indices{^\nu_\rho}=\Lambda\indices{_\rho^\nu}.$  From (\ref{lorentzvector}), (\ref{covector}), and (\ref{colambda}), we therefore see that under a Lorentz transformation $\Lambda$, a four-covector field $\varphi_\mu(x)$ transforms as $\varphi_\mu(x)\rightarrow\varphi'_\mu(x')$
 where
 \begin{equation}\label{lorentzcovector}
-\varphi'_\mu(x)=\Lambda\indices{_\mu^\nu}\varphi_\nu(\Lambda^{-1}x)
+\varphi'_\mu(x')=\Lambda\indices{_\mu^\nu}\varphi_\nu(\Lambda^{-1}x')
 \end{equation}
  
 
 Besides scalars, four-vectors, and four-covectors, we also need to consider physical quantities called rank-two tensors. The stress-energy tensor $T^{\mu\nu}$ introduced on page \pageref{stressenergy} is an example of a rank-two tensor. The defining property of a rank-two tensor field $\varphi^{\mu\nu}(x)$ is that under a Lorentz transformation $\Lambda$, it transforms as $\varphi^{\mu\nu}(x)\rightarrow{\varphi'}^{\mu\nu}(x')$ where
 \begin{equation}\label{lorentztensor}
-{\varphi'}^{\mu\nu}(x)=\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}\varphi^{\rho\sigma}(\Lambda^{-1}x).
+{\varphi'}^{\mu\nu}(x')=\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}\varphi^{\rho\sigma}(\Lambda^{-1}x').
 \end{equation}
 On page \pageref{massenergydensity}, we introduced the mass-energy density $T_S(x)$ on a spacelike hypersurface $S$. As explained in section \ref{massenergydensity}, the values of $T_S(x)$ for all $x\in S$ are the additional values that Kent uses to supplement standard quantum theory.  It was mentioned in passing that $T_S(x)$ does not depend on which frame of reference one is in. In other words, $T_S(x)$ is a scalar. I will now explain why this is so. 
 
@@ -284,64 +283,79 @@ Given that $\hat{T}^{\mu\nu}(x)$ is the observable in the Tomonaga-Schwinger pic
 	\end{equation}
 will be the observable whose eigenstates with eigenvalues $\tau_S(x)$ are the states of $S_n$ for which an observer $O$ observes $T_S(x)$ to take the value $\tau_S(x)$ at $x$ when $x\in S_n\cap S$.\footnote{So long as $S_n$ and $S$ are tangential at $x$ as noted in footnote \ref{tangentialnote}.}
  
-Now two observers $O$ and $O'$ will typically assign different physical states to $S_n$ based on their frame of reference. E.g. if $O$ and $O'$ are traveling at different speeds, they will attribute different energy levels and momenta to the spacetime locations of $S_n$. To understand the relationship between the states $O$ assigns to $S_n$ and the states $O'$ assigns, suppose $\ket*{\psi}$ and  $\ket*{\chi}$ are two states that an observer $O$ might judge $S_n$ to be in. As usual, we suppose the coordinates $x^\mu$ of observer $O$ transform to coordinates ${x'}^\mu=\Lambda\indices{^\mu_\nu}x^\nu$ of observer $O'$ for some Lorentz transformation $\Lambda.$ We also suppose that the states $\ket*{\psi}$ and $\ket*{\chi}$ that $O$ observes will transform to states $\ket*{\psi'}$  and $\ket*{\chi'}$ that $O'$ observes. Now if  $O$ judged $S_n$ to be in the superposition state $\ket{\psi}+\ket{\chi}$, then $O'$ would judge $S_n$ to be proportional to the superposition state $\ket{\psi'}+\ket{\chi'}$. Also recall that $\ket*{\psi'}$ and $\lambda\ket*{\psi'}$ represent the same physical state for any complex number $\lambda$, so there is sufficient flexibility as to which state we deem $\ket*{\psi}$ transforms to that we can deem the transformation $\ket{\psi}\rightarrow\ket*{\psi'}$ to be a linear transformation. But also note that if observer $O$ uses the Born rule to calculate the transition probability from state $\ket*{\psi}$ to state $\ket*{\chi}$, and  observer $O'$ uses the Born rule to calculate the transition probability from state $\ket*{\psi'}$ to state $\ket*{\chi'}$, then they should calculate the same probabilities. We must therefore have
+Now two observers $O$ and $O'$ will typically assign different physical states to $S_n$ based on their frame of reference. E.g. if $O$ and $O'$ are traveling at different speeds, they will attribute different energy levels and momenta to the spacetime locations of $S_n$. To understand the relationship between the states $O$ assigns to $S_n$ and the states $O'$ assigns, suppose $\ket*{\psi}$ and  $\ket*{\chi}$ are two states that an observer $O$ might judge $S_n$ to be in. As usual, we suppose the coordinates $x^\mu$ of observer $O$ transform to coordinates ${x'}^\mu=\Lambda\indices{^\mu_\nu}x^\nu$ of observer $O'$ for some Lorentz transformation $\Lambda.$ We also suppose that the states $\ket*{\psi}$ and $\ket*{\chi}$ that $O$ observes will transform to states $\ket*{\psi'}$  and $\ket*{\chi'}$ that $O'$ observes. We will denote the Hilbert space of the states on $S_n$ that $O'$ can observe as $H_{S_n}'$.\label{Hprimespace}\footnote{As we will discuss shortly, there is a map inner product preserving map $U(\Lambda)$ via which there is a one-to-one correspondence between states in $H_{S_n}$ and states in $H_{S_n}'$ so we can identify $H_{S_n}'$ with $H_{S_n}$ in which case $U(\Lambda)$ will be a unitary operator.}
+
+Now if  $O$ judged $S_n$ to be in the superposition state $\ket{\psi}+\ket{\chi}$, then $O'$ would judge $S_n$ to be proportional to the superposition state $\ket{\psi'}+\ket{\chi'}$. Also recall that $\ket*{\psi'}$ and $\lambda\ket*{\psi'}$ represent the same physical state for any complex number $\lambda$, so there is sufficient flexibility as to which state we deem $\ket*{\psi}$ transforms to that we can deem the transformation $\ket{\psi}\rightarrow\ket*{\psi'}$ to be a linear transformation. But also note that if observer $O$ uses the Born rule to calculate the transition probability from state $\ket*{\psi}$ to state $\ket*{\chi}$, and  observer $O'$ uses the Born rule to calculate the transition probability from state $\ket*{\psi'}$ to state $\ket*{\chi'}$, then they should calculate the same probabilities. We must therefore have
 $$|\ip*{\chi}{\psi}|^2=|\ip*{\chi'}{\psi'}|^2.$$
 Using this fact together with the fact that $\ket*{\psi}$ and $\lambda\ket*{\psi}$ represent the same physical states, it can be shown that there is a unitary operator $U(\Lambda)$ which relates the states $\ket*{\psi}$ and $\ket*{\psi'}$ via the formulated
-$$\ket*{\psi'}=U(\Lambda)\ket*{\psi}.\protect\footnotemark$$\footnotetext{For more details, see \cite{Wigner1939}.}We now wish to describe how observables transform under the action of $U(\Lambda)$. First notice that when I said that $\hat{T}^{\mu\nu}(x)$ is the observable in the Tomonaga-Schwinger picture whose eigenstates with eigenvalues $\tau$ are the states of $S_n$ for which an observer $O$ observes the stress-energy tensor $T^{\mu\nu}(x)$ to take the value $\tau$ at $x$, I made no indication that the Hermitian operator $\hat{T}^{\mu\nu}(x)$ had any dependence on the observer $O$. A different observer will indeed make different observations, but we adopt the convention that these differences are encapsulated in the different states that $O$ and $O'$ deem $S_n$ to be in. 
+$$\ket*{\psi'}=U(\Lambda)\ket*{\psi}.\protect\footnotemark$$\footnotetext{For more details, see \cite{Wigner1939}. Since a unitary operator maps a Hilbert space to itself, we first need to identify $H_{S_n}$ and $H_{S_n}'$ in order for $U(\Lambda)$ to be unitary.}
 
-At this point, it is worth clarifying the slightly different meanings of $T^{\mu\nu}(x)$, $T^{\prime\mu\nu}(x)$, $\tau^{\mu\nu}(x)$, $\tau^{\prime\mu\nu}(x)$, and $\hat{T}^{\mu\nu}(x)$. We use $T^{\mu\nu}(x)$ to refer to the description of the physical quantity that is being observed by $O$. Thus, $T^{\mu\nu}(x)$ is shorthand for the description ``the $\mu\nu$-component of the stress-energy tensor that $O$ observes at the spacetime location belonging to $S$ that $O$ describes as  $x$.'' Similarly,  $T^{\prime\mu\nu}(x)$ is shorthand for the description ``the $\mu\nu$-component of the stress-energy tensor that $O'$ observes at a spacetime location  belonging to $S$ that $O'$ describes as $x'$.'' $\tau^{\mu\nu}(x)$ stands for a particular (real) value of the physical quantity described by $T^\mu\nu(x)$ that $O$ observes, and $\tau^{\prime\mu\nu}(x)$ is defined similarly with respect to observer $O'$. $\hat{T}^{\mu\nu}(x)$ for $x\in S$ is the observable (i.e. Hermitian operator) such that if observer $O$ deemed $S$ to be in an eigenstate $\ket*{\psi}$ of $\hat{T}^{\mu\nu}(x)$ with eigenvalue $\tau$ (a real number), then observer $O$ would observe the physical quantity described by  $T^{\mu\nu}(x)$ to have the value $\tau$,\footnote{Note that we consider a real number $\tau$ here rather than a real valued function $\tau^{\mu\nu}(x)$ of spacetime locations $x\in S$ and indices $\mu$ and $\nu$ since $\hat{T}^{\mu\nu}(x)$ will not in general commute for different values of $\mu$, $\nu$, so we won't be able to find a state which is a simultaneous eigenstate for all the different observables $\hat{T}^{\mu\nu}(x)$, though we may find a state which is very close to being an eigenstate of all the  $\hat{T}^{\mu\nu}(x)$ for different $\mu$ and $\nu$.} and likewise, $\hat{T}^{\mu\nu}(x')$ is the observable such that if observer $O'$ deemed $S$ to be in an eigenstate $\ket*{\psi'}$ of  $\hat{T}^{\mu\nu}(x')$ with eigenvalue $\tau'$, then observer $O'$ would observe the physical quantity described by  $T^{\prime\mu\nu}(x')$ to have the value $\tau'$. 
+At this point, it is worth clarifying the different meanings of $T^{\mu\nu}(x)$, $T^{\prime\mu\nu}(x')$, $\tau^{\mu\nu}(x)$, $\tau^{\prime\mu\nu}(x')$,  $\hat{T}^{\mu\nu}(x)$ and $\hat{T}^{\prime\mu\nu}(x')$. 
+\texttt{itemize} environment
+\begin{itemize}
+\item We use $T^{\mu\nu}(x)$ to refer to the description of the physical quantity that is being observed by $O$. Thus, $T^{\mu\nu}(x)$ is shorthand for the description ``the $\mu\nu$-component of the stress-energy tensor that $O$ observes at the spacetime location belonging to $S$ that $O$ describes as  $x$.'' 
+\item Similarly,  $T^{\prime\mu\nu}(x')$ is shorthand for the description ``the $\mu\nu$-component of the stress-energy tensor that $O'$ observes at a spacetime location  belonging to $S$ that $O'$ describes as $x'$.'' 
+\item $\tau^{\mu\nu}(x)$ stands for a particular (real) value of the physical quantity described by $T^{\mu\nu}(x)$ that $O$ observes, and 
+\item $\tau^{\prime\mu\nu}(x')$ stands for a particular (real) value of the physical quantity described by $T^{\prime\mu\nu}(x')$ that $O'$ observes.
+\item $\hat{T}^{\mu\nu}(x)$ for $x\in S_n$ is the Tomonaga-Schwinger observable acting on $H_{S_n}$ such that if observer $O$ deemed $S_n$ to be in an eigenstate $\ket*{\psi}$ of $\hat{T}^{\mu\nu}(x)$ with eigenvalue $\tau$ (a real number), then observer $O$ would observe the physical quantity described by  $T^{\mu\nu}(x)$ to have the value $\tau$.\footnote{Note that we consider a real number $\tau$ here rather than a real valued function $\tau^{\mu\nu}(x)$ of spacetime locations $x\in S$ and indices $\mu$ and $\nu$ since $\hat{T}^{\mu\nu}(x)$ will not in general commute for different values of $\mu$, $\nu$, so we won't be able to find a state which is a simultaneous eigenstate for all the different observables $\hat{T}^{\mu\nu}(x)$, though we may find a state which is very close to being an eigenstate of all the  $\hat{T}^{\mu\nu}(x)$ for different $\mu$ and $\nu$.} 
+\item $\hat{T}^{\prime\mu\nu}(x')$ is the Tomonaga-Schwinger observable acting on $H_{S_n}'$ such that if observer $O'$ deemed $S_n$ to be in an eigenstate $\ket*{\psi'}$ of  $\hat{T}^{\prime\mu\nu}(x')$ with eigenvalue $\tau'$, then observer $O'$ would observe the physical quantity described by  $T^{\prime\mu\nu}(x')$ to have the value $\tau'$. 
+\item $T_S(x)={T}^{\mu\nu}(x)\eta_{\mu}(x)\eta_{\nu}(x)$ is shorthand for the description ``the mass-energy density of the spacelike hypersurface $S$ observed by observer $O$ at a spacetime location that $O$ describes as $x$''. 
+\item $T'_S(x')={T}^{\prime\mu\nu}(x')\eta'_{\mu}(x')\eta'_{\nu}(x')$ is shorthand for the description ``the mass-energy density of the spacelike hypersurface $S$ observed by observer $O'$ at a spacetime location that $O'$ describes as $x'$''. 
+\item The function $\tau_S(x)$ stands for a particular range of values for each $x\in S$ of the physical quantity described by $T_S(x)$ observed by $O$. 
+\item The function $\tau'_S(x')$ stands for a particular range of values for each $x'\in S$ of the physical quantity described by $T'_S(x')$ observed by $O'$. 
+\item For each $x\in S$, $\hat{T}_S(x)=\hat{T}^{\mu\nu}(x)\eta_{\mu}(x)\eta_{\nu}(x)$ is the Tomonaga-Schwinger observable  such that if an observer $O$ deems $S$ to be in an eigenstate $\ket*{\psi}\in H_{S_n}$ of  $\hat{T}_S(x)$ with eigenvalue $\tau$ (a real number), then  $O$ would observe the physical quantity described by  $T_S(x)$ to have the value $\tau$. 
+\item For each $x'\in S$, $\hat{T}'_S(x')=\hat{T}^{\prime\mu\nu}(x)\eta'_{\mu}(x')\eta'_{\nu}(x')$ is the Tomonaga-Schwinger observable  such that if an observer $O'$ deems $S$ to be in an eigenstate $\ket*{\psi'}\in H'_{S_n}$ of  $\hat{T}'_S(x')$ with eigenvalue $\tau'$ (a real number), then  $O'$ would observe the physical quantity described by  $T'_S(x')$ to have the value $\tau'$. 
+\end{itemize}
 
 
-Having made this point of clarifcation, since we are adopting the convention that the differences between the observations of $O$ and $O'$ are encapsulated in the different states that $O$ and $O'$ deem $S_n$ to be in, it follows that if $\ket*{\psi}\in H_{S_n}$ is a state for which $T^{\mu\nu}(x)\approx \tau^{\mu\nu}(x)$,\footnote{We say approximately ($\approx$) here since the operators $\hat{T}^{\mu\nu}$ will not in general commute, so we won't typically be able to find a state $\ket*{\psi}$ which is an eigenstate for all the observables $\hat{T}^{\mu\nu}$. It is the non-commutativity of observables that is responsible for Heisenberg's uncertainty principle.} and if $\ket*{\psi'}\in H_{S_n}$ is a state for which $T^{\prime\mu\nu}(x')\approx \tau^{\mu\nu}(x')$, then
+
+Having clarified this terminology, we see that if $\ket*{\psi}\in H_{S_n}$ is a state for which $T^{\mu\nu}(x)\approx \tau^{\mu\nu}(x)$,\footnote{We say approximately ($\approx$) here since the operators $\hat{T}^{\mu\nu}$ will not in general commute, so we won't typically be able to find a state $\ket*{\psi}$ which is an eigenstate for all the observables $\hat{T}^{\mu\nu}$. It is the non-commutativity of observables that is responsible for Heisenberg's uncertainty principle.} and if $\ket*{\psi'}\in H_{S_n}'$ is a state for which $T^{\prime\mu\nu}(x')\approx \tau^{\mu\nu}(x')$, then
 \begin{subequations}
 \begin{align}
 \hat{T}^{\mu\nu}(x)\ket{\psi}&\approx\tau^{\mu\nu}(x)\ket{\psi}, \text{ and }\label{stres1}\\ 
-\hat{T}^{\mu\nu}(x')\ket{\psi'}&\approx{\tau'}^{\mu\nu}(x')\ket{\psi'}\label{stres1}
+\hat{T}^{\prime\mu\nu}(x')\ket{\psi'}&\approx{\tau'}^{\mu\nu}(x')\ket{\psi'}.\label{stres1}
 \end{align}
 \end{subequations}
 It then follows from (\ref{stres1}) that if $\ket{\psi'}=U(\Lambda)\ket{\psi}$, then
 \begin{equation}\label{stress3}
-    U(\Lambda)^{-1}\hat{T}^{\mu\nu}(x')U(\Lambda)\ket{\psi}\approx{T'}^{\mu\nu}(x')\ket{\psi}.
+    U(\Lambda)^{-1}\hat{T}^{\prime\mu\nu}(x')U(\Lambda)\ket{\psi}\approx{T'}^{\mu\nu}(x')\ket{\psi}.
 \end{equation}
-Therefore, in order for (\ref{lorentztensor}) to hold for ${T'}^{\mu\nu}(x')$ in the classical limit (where we treat the stress-energy observables as though they commute with each other and replace the approximations by equalities), plugging an operator form of  (\ref{lorentztensor}) into (\ref{stress3}), we must have
+Therefore, in order for (\ref{lorentztensor}) to hold for ${T'}^{\mu\nu}(x')$ in the classical limit (where we treat the stress-energy observables as though they commute with each other and replace the approximations by equalities), by plugging an operator form of  (\ref{lorentztensor}) into (\ref{stress3}), we see that we must have
 \begin{equation}\label{TUrelation}
-U(\Lambda)^{-1}\hat{T}^{\mu\nu}(x)U(\Lambda)=\Lambda\indices{^\mu_\rho}\Lambda{^\nu_\sigma}\hat{T}^{\rho\sigma}(\Lambda^{-1}x).
+U(\Lambda)^{-1}\hat{T}^{\prime\mu\nu}(x')U(\Lambda)=\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}\hat{T}^{\rho\sigma}(\Lambda^{-1}x').
 \end{equation}
 
 
 
-Now to say that Kent's model is Lorentz invariant, is to say that (\ref{kentconsistency0}) defines a rank-two tensor, for then this quantity and the quantities on which it depends will transform in the way that physical quantities should transform under a Lorentz transformation $\Lambda$ when the spacetime coordinates of two observers $O$ and $O'$ are related by the formula ${x'}^\mu=\Lambda\indices{^\mu_\nu}x^\nu$.\footnote{Note that having a privileged spacelike hypersurface $S$ in which a notional measurement of $T_S$ is made does not of itself break Lorentz invariance. Just because we are privileging a spacelike hypersurface $S$, we are not making any assumptions about simultaneity being defined by $S$. Because spacelike separation is a Lorentz invariant proper, both $O$ and $O'$ will deem the spacetime locations on $S$ to be spacelike separated. The Lorentz transformation itself has absolutely no effect on what $S$ is. It is just that $O$ and $O'$ will use different coordinates to describe a particular spacetime location on $S$. It maybe that in the coordinate system of $O$, some of the spacetime locations of $S$ are simultaneous (i.e. have the same $x^0$ value), but there is no requirement of simultaneity, and there is no claim that a reference frame in which the spacetime locations of $S$ are simultaneous is particularly special. In Kent's theory, it is sufficient for there to be just one hypersurface on which  $T_S$ has a determinate value. But if another hypersurface were to be chosen instead, it would make no difference to empirical adequacy since (\ref{kentconsistency}) will hold regardless of what spacelike hypersurface $S$ is chosen.} Thus, in order to show that Kent's model is Lorentz invariant, we need to show that if $\{\ket{\xi_j}:j\}$ is an orthonormal basis of the Hilbert space of states $H_{S_n,\tau_S}$ for which $O$ observes $T_S(x)$ to be $\tau_S(x)$ for all $x\in S_n(y)\cap S$, and if $\{\ket{\xi_j'}:j\}$ is an orthonormal basis of the Hilbert space of states $H_{S_n,\tau_S'}$ for which $O'$ observes $T'_S(x')$ to be $\tau'_S(x')$ for all $x'\in S_n(y')\cap S$, then
+Now to say that Kent's model is Lorentz invariant, is to say that (\ref{kentconsistency0}) defines a rank-two tensor, for then this quantity and the quantities on which it depends will transform in the way that physical quantities should transform under a Lorentz transformation $\Lambda$ when the spacetime coordinates of two observers $O$ and $O'$ are related by the formula ${x'}^\mu=\Lambda\indices{^\mu_\nu}x^\nu$.\footnote{Note that having a privileged spacelike hypersurface $S$ in which a notional measurement of $T_S$ is made does not of itself break Lorentz invariance. Just because we are privileging a spacelike hypersurface $S$, we are not making any assumptions about simultaneity being defined by $S$. Because spacelike separation is a Lorentz invariant proper, both $O$ and $O'$ will deem the spacetime locations on $S$ to be spacelike separated. The Lorentz transformation itself has absolutely no effect on what $S$ is. It is just that $O$ and $O'$ will use different coordinates to describe a particular spacetime location on $S$. It maybe that in the coordinate system of $O$, some of the spacetime locations of $S$ are simultaneous (i.e. have the same $x^0$ value), but there is no requirement of simultaneity, and there is no claim that a reference frame in which the spacetime locations of $S$ are simultaneous is particularly special. In Kent's theory, it is sufficient for there to be just one hypersurface on which  $T_S$ has a determinate value. But if another hypersurface were to be chosen instead, it would make no difference to empirical adequacy since (\ref{kentconsistency}) will hold regardless of what spacelike hypersurface $S$ is chosen.} Thus, in order to show that Kent's model is Lorentz invariant, we need to show that if $\{\ket{\xi_j}:j\}$ is an orthonormal basis of the Hilbert space of states\footnote{Thus, $H_{S_n,\tau_S}$ is the subspace of states $\ket{\xi}\in H_{S_n}$ for which  $\hat{T}_S(x)\ket{\xi}=\tau_S(x)\ket{\xi}$  for all $x\in S_n\cap S$ as mentioned on page \pageref{HStau}.} $H_{S_n,\tau_S}$ for which $O$ observes $T_S(x)$ to be $\tau_S(x)$ for all $x\in S_n(y)\cap S$, and if $\{\ket{\xi_j'}:j\}$ is an orthonormal basis of the Hilbert space of states\footnote{Thus,  $H'_{S_n,\tau'_S}$ is the subspace of states $\ket{\xi'}\in H'_{S_n}$ for which  $\hat{T}'_S(x')\ket{\xi'}=\tau'_S(x')\ket{\xi'}$  for all $x'\in S_n\cap S$. } $H'_{S_n,\tau_S'}$ for which $O'$ observes $T'_S(x')$ to be $\tau'_S(x')$ for all $x'\in S_n(y')\cap S$, then
 \begin{equation}\label{kentlorentz}
-\lim_{n\rightarrow\infty}\frac{\ev{\pi_n'\hat{T}^{\mu\nu}(y')}{\Psi_n'}}{\ev{\pi_n'}{\Psi_n'}}=\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma} \lim_{n\rightarrow\infty}\frac{\ev{\pi_n\hat{T}^{\rho\sigma}(y)}{\Psi_n}}{\ev{\pi_n}{\Psi_n}}
+\lim_{n\rightarrow\infty}\frac{\ev{\pi_n'\hat{T}^{\prime\mu\nu}(y')}{\Psi_n'}}{\ev{\pi_n'}{\Psi_n'}}=\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma} \lim_{n\rightarrow\infty}\frac{\ev{\pi_n\hat{T}^{\rho\sigma}(y)}{\Psi_n}}{\ev{\pi_n}{\Psi_n}}
 \end{equation}
 where $\pi_n=\sum_j\dyad{\xi_j}$, $\pi_n'=\sum_j\dyad{\xi_j'}$, and $\ket{\Psi_n'}=U(\Lambda)\ket{\Psi_n}$. 
 
 To see why (\ref{kentlorentz}) holds, we first recall that $\pi_n'$ will be independent of which orthonormal basis we choose for $H_{S_n,\tau_S'}$.\footnote{We showed this was the case for $\pi_n$ in footnote \ref{priproof} on page \pageref{priproof}.} Therefore, if we can show that $\{\ket{\xi_j'}\myeq U(\Lambda)\ket{\xi_j}:j\}$ is an orthonormal basis of $H_{S_n,\tau_S'}$, it will follow that $\pi_n'=U(\Lambda)\pi_nU(\Lambda)^{-1}$. 
 
-That the elements of $\{U(\Lambda)\ket{\xi_j}:j\}$ are orthonormal follows from the unitarity of $U(\Lambda)$ together with the orthonormality of  $\{\ket{\xi_j}:j\}$.  Since $\hat{T}^{\mu\nu}(x')$ is the observable whose eigenstates with eigenvalue $\tau'$ are the states of $S_n(y')$ for which $O'$ observes the $\mu\nu$ component of stress-energy tensor at $x'$ to be $T^{\prime\mu\nu}(x')=\tau'$, then if we define 
-\begin{equation}\label{TShatprime}
-	\hat{T}'_S(x')\myeq\eta_\mu'(x')\eta_\nu'(x')\hat{T}^{\mu\nu}(x')
-\end{equation}
-it will follow from (\ref{TSprimedef}) $\hat{T}'_S(x')$ will be the observable whose eigenstates with eigenvalue $\tau'_S$ are the states of $S_n(y')$ for which $O'$ observes $T'_S(x')$ to take the value $\tau'_S$ at $x'$, where as usual, $\eta^{\prime\mu}(x')$ is the unit four-vector orthogonal to $S_n(y')$ at $x'$. Now if $x'\in S_n(y')\cap S$ in the coordinates of $O'$, then $x=\Lambda^{-1}x'\in S_n(y)\cap S$ in the coordinates of $O$. Using the same calculation as in (\ref{invariantTS1}) together with (\ref{lorentzcovector}), we have
-\begin{equation}\label{TSLambda}
-\begin{split}
-\hat{T}_S(x)&\myeq\eta_\mu(x)\eta_\nu(x)\hat{T}^{\mu\nu}(x)\\
-&=\eta_{\mu}'(x')\eta_{\nu}'(x') \Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}\hat{T}^{\rho\sigma}(x).
-\end{split}
-\end{equation}
-By (\ref{TUrelation}) we have
+That the elements of $\{U(\Lambda)\ket{\xi_j}:j\}$ are orthonormal follows from the unitarity of $U(\Lambda)$ together with the orthonormality of  $\{\ket{\xi_j}:j\}$. 
+It remains for us to show that each $U(\Lambda)\ket*{\xi_j}\in H'_{S_n,\tau_S'},$ and that any $\ket*{\xi'}\in H'_{S_n,\tau_S'}$ can be expressed as a linear combination of the $U(\Lambda)\ket*{\xi_j}$.
+
+Well, first note that by (\ref{TUrelation}) and a calculation similar to (\ref{invariantTS1})
 \begin{equation}
-	U(\Lambda)^{-1}\hat{T}^{\mu\nu}(x')=\Lambda\indices{^\mu_\rho}\Lambda{^\nu_\sigma}\hat{T}^{\rho\sigma}(x)U(\Lambda)^{-1},
-\end{equation}
-so using this with (\ref{TSLambda}) and (\ref{TShatprime}), we have
-\begin{equation}\label{TSU}
-\begin{split}
-\hat{T}_S(x)U(\Lambda)^{-1}&=\eta_{\mu}'(x')\eta_{\nu}'(x')\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}\hat{T}^{\rho\sigma}(x)U(\Lambda)^{-1}\\
-&=U(\Lambda)^{-1} \eta_{\mu}'(x')\eta_{\nu}'(x')\hat{T}^{\mu\nu}(x')\\
-&=U(\Lambda)^{-1} \hat{T}_S'(x').
+\begin{split}\label{invariantTShat}
+U(\Lambda)^{-1}\hat{T}'_S(x')U(\Lambda)&=U(\Lambda)^{-1}\hat{T}^{\prime\mu\nu}(x')\eta'_{\mu}(x')\eta'_{\nu}(x')U(\Lambda)\\
+&=\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma}\hat{T}^{\rho\sigma}(x)\Lambda\indices{_\mu^\alpha}\eta_{\alpha}(x)\Lambda\indices{_\nu^\beta}\eta_{\beta}(x)\\
+&=\Lambda\indices{^\mu_\rho}\Lambda\indices{_\mu^\alpha} \Lambda\indices{^\nu_\sigma}\Lambda\indices{_\nu^\beta}\hat{T}^{\rho\sigma}(x)\eta_{\alpha}(x)\eta_{\beta}(x)\\
+&=\delta^\alpha_\rho\delta^\beta_\sigma \hat{T}^{\rho\sigma}(x)\eta_{\alpha}(x)\eta_{\beta}(x)\\
+&=\hat{T}^{\alpha\beta}(x)\eta_{\alpha}(x)\eta_{\beta}(x)\\
+&=\hat{T}_S(x)
 \end{split}
 \end{equation}
-Now suppose that $\ket{\xi'}$ is a state for which $O'$ observes $T'_S(x')$ to be $\tau'_S(x')$ for all $x'\in S_n(y')\cap S$. Then $\hat{T}_S'(x')\ket{\xi'}=\tau_S'(x'),$ and so by (\ref{TSU}), 
+From (\ref{invariantTShat}), we see that  $U(\Lambda)\hat{T}_S(x)=\hat{T}'_S(x')U(\Lambda)$, so
+$$
+\hat{T}_S'(x')U(\Lambda)\ket{\xi_j}=U(\Lambda)\hat{T}_S(x)\ket{\xi_j}=\tau_S(x)U(\Lambda)\ket{\xi_j}=\tau_S'(x')U(\Lambda)\ket{\xi_j}
+$$
+for all $x'\in S_n(y')\cap S$, where we have used the fact $\tau_S'(x')=\tau_S(x)$ since $T_S(x)$ is a scalar. Therefore, $U(\Lambda)\ket{\xi_j}\in H'_{S_n,\tau_S'}$. 
+
+Now suppose that $\ket{\xi'}$ is a state for which $O'$ observes $T'_S(x')$ to be $\tau'_S(x')$ for all $x'\in S_n(y')\cap S$, i.e.  $\hat{T}_S'(x')\ket{\xi'}=\tau_S'(x')\ket{\xi'}$. From (\ref{invariantTShat}) we see that  $\hat{T}_S(x)U(\Lambda)^{-1}=U(\Lambda)^{-1}\hat{T}'_S(x')$, so
 \begin{equation}\label{TSUxi}
 \begin{split}
 \hat{T}_S(x)U(\Lambda)^{-1}\ket{\xi'}&= U(\Lambda)^{-1} \hat{T}_S'(x')\ket{\xi'}\\
@@ -349,12 +363,12 @@ Now suppose that $\ket{\xi'}$ is a state for which $O'$ observes $T'_S(x')$ to b
 &=\tau_S(x)U(\Lambda)^{-1}\ket{\xi'}
 \end{split}
 \end{equation}
-where on the last line we have used the fact that $T_S(x)$ is a scalar. Therefore, $U(\Lambda)^{-1}\ket{\xi'}$ can be expressed as a linear combination of the basis elements $\{\ket{\xi_j}:j\}$ of $H_{S_n,\tau_S}$, and hence  $\ket{\xi'}$  can be expressed as a linear combination of $\{U(\Lambda)\ket{\xi_j}:j\}$. From (\ref{TSU}) we also see that  $U(\Lambda)\hat{T}_S(x)=\hat{T}_S'(x')U(\Lambda)$, so
-$$
-\hat{T}_S'(x')U(\Lambda)\ket{\xi_j}=U(\Lambda)\hat{T}_S(x)\ket{\xi_j}=\tau_S(x)U(\Lambda)\ket{\xi_j}=\tau_S'(x')U(\Lambda)\ket{\xi_j}
-$$
-for all $x'\in S_n(y')\cap S$. Therefore, $U(\Lambda)\ket{\xi_j}\in H_{S_n,\tau_S'}$.
-Since $\{\ket{\xi_j'}\myeq U(\Lambda)\ket{\xi_j}:j\}$ is a spanning orthonormal subset of $H_{S_n,\tau_S'}$, it must therefore be an orthonormal basis of $H_{S_n,\tau_S'}$. From this it follows that $\pi_n'=U(\Lambda)\pi_nU(\Lambda)^{-1}$. Therefore, 
+where on the last line we have used the fact that $T_S(x)$ is a scalar. Therefore, $U(\Lambda)^{-1}\ket{\xi'}$ can be expressed as a linear combination of the basis elements $\{\ket{\xi_j}:j\}$ of $H_{S_n,\tau_S}$, and hence  $\ket{\xi'}$  can be expressed as a linear combination of $\{U(\Lambda)\ket{\xi_j}:j\}$. 
+
+
+
+
+Thus, we see that $\{\ket{\xi_j'}\myeq U(\Lambda)\ket{\xi_j}:j\}$ is a spanning orthonormal subset of $H'_{S_n,\tau_S'}$, so it must therefore be an orthonormal basis of $H'_{S_n,\tau_S'}$. From this it follows that $\pi_n'=U(\Lambda)\pi_nU(\Lambda)^{-1}$. Therefore, 
 \begin{equation}\label{kentlorentz2}
 \begin{split}
 \frac{\ev{\pi_n'\hat{T}^{\mu\nu}(y')}{\Psi_n'}}{\ev{\pi_n'}{\Psi_n'}}&=\frac{\ev{U(\Lambda)^{-1}U(\Lambda)\pi_nU(\Lambda)^{-1}\hat{T}^{\mu\nu}(y')U(\Lambda)}{\Psi_n}}{\ev{U(\Lambda)^{-1}U(\Lambda)\pi_n U(\Lambda)^{-1}U(\Lambda)}{\Psi_n}}\\
@@ -365,8 +379,6 @@ Since $\{\ket{\xi_j'}\myeq U(\Lambda)\ket{\xi_j}:j\}$ is a spanning orthonormal 
 where on the last line we have used (\ref{TUrelation}). Thus, equation (\ref{kentlorentz}) holds, and hence Kent's model is Lorentz invariant.
 
 Note that in this proof of Lorentz invariance, we don't need to take the limit of $S_n$ as $n\rightarrow\infty$. That is, we could remove the $\lim_{n\rightarrow\infty}$ from equation (\ref{kentconsistency0}) and consider a particular $S_n$, and the corresponding $\ev*{T^{\mu\nu}(y)}_{\tau_S}$ would still be a rank-two tensor. Butterfield tells us that Kent's theory is  Lorentz invariant because his algorithm respects the light cone structure of $y$.\footnote{See \cite[30]{Butterfield}.} However, this statement could be slightly misleading because we don't need to consider the subset $S^1(y)\subset S$ of locations outside the light cone of $y$ in order to obtain a Lorentz invariant model. Doing the calculation on any Tomonaga-Schwinger spacelike hypersurface is sufficient to guarantee Lorentz invariance since any such spacelike hypersurface (e.g. $S_n$) is not altered at all by a Lorentz transformation -- only its coordinate description changes under a Lorentz transformation, and so the additional information of the scalar $\tau_S(x)$ on $S_n\cap S$ is Lorentz invariant. The only reason we need to consider the limit $\lim_{n\rightarrow \infty}S_n$ and hence $S^1(y)=\lim_{n\rightarrow \infty}S_n\cap S$ is that it is only in the limit that we use all the available information in $\tau_S(x)$ to calculate $\ev*{T^{\mu\nu}(y)}_{\tau_S}$. 
-
-
 
 
 \section{Kent's Theory\label{Kentdecoherencesection} and Decoherence Theory\textsuperscript{*}}
