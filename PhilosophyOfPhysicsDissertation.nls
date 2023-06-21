@@ -1,0 +1,15 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{$>$}]\begingroup a partial order on states of regions of $S$ expressing the notion `occurs after'\nomrefeqpage\nomeqref {4.61}\nompageref{218}
+  \item [{$\ket*{\Gamma_{\tau_S}}$}]\begingroup simultaneous $\hat{T}_S$-eigenstate of the hypersurface $S$ with simultaneous $\hat{T}_S$-eigenvalue $\tau_S(x)$ where $x$ ranges over $S$\nomrefpage\nomeqref {4.62}\nompageref{219}
+  \item [{$\ket*{\Phi_{Ri}}$}]\begingroup entangled component of $\pi_R\ket*{\Psi_R}$ and beable candidate\nomrefeq\nomrefpage\nomeqref {4.56}\nompageref{210}
+  \item [{$\ket*{\Psi_R}$}]\begingroup the state given by $U_{RS_0}\ket*{\Psi_0}$ that describes the hypersurface $R$ \nomrefpage\nomeqref {4.55}\nompageref{209}
+  \item [{$\mathbb{N}$}]\begingroup  the set of positive integers greater than $0$\nomrefpage\nomeqref {4.31}\nompageref{163}
+  \item [{$\pi_R$}]\begingroup the projection analogous to $\pi_n$ for the hypersurface $R$ rather than the hypersurface $S_n$\nomrefpage\nomeqref {4.55}\nompageref{209}
+  \item [{$\sim$}]\begingroup we write $\ket*{\phi}\sim \ket*{\gamma}$ to mean that  $\ket*{\phi}$ and $\ket*{\gamma}$ are simultaneous\nomrefpage\nomeqref {4.61}\nompageref{219}
+  \item [{$R$}]\begingroup a generic hypersurface which intersects $S$ and in which $R\setminus S$ is a bounded region that is prior to $S$\nomrefpage\nomeqref {4.55}\nompageref{209}
+  \item [{$R_{i}$}]\begingroup Disjoint region of the hypersurface $R$ which  $\ket*{\Phi_{Ri}}$ describes and such that $R=\bigcup_i R_{i}$\nomrefpage\nomeqref {4.56}\nompageref{210}
+  \item [{$t^{\mu\nu}(y)$}]\begingroup Approximate eigenvalues of  $\hat{T}^{\mu\nu}(y)$ for all $\mu, \nu$\nomrefpage\nomeqref {4.54}\nompageref{207}
+
+\end{thenomenclature}
