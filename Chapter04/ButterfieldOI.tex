@@ -1,0 +1,137 @@
+
+
+\section{Butterfield's Analysis of Outcome Independence  in Kent's theory\label{butterfieldtoy}}
+Let us now consider Kent's theory in the light of Shimony's notion of Outcome Independence (OI)  as defined in section \ref{OISec}. 
+
+Butterfield\footnote{See \cite[30-32]{Butterfield}} tries to answer the question of whether OI holds in Kent's theory by considering an example that builds on Kent's toy model. Butterfield's example is designed to capture the salient features of a Bell experiment where two spatially separated observers always observe opposite outcomes of some measurement. Following Kent, Butterfield thus considers a universe in one spatial dimensional. In this universe, there are two entangled systems, a left-system and a right-system as depicted in figure \ref{ButterfieldOI}. 
+
+\begin{figure}[ht!]
+	\captionsetup{justification=justified}
+	\centering
+	\tikzmath{
+	\a=5.3;  
+	\psione=-1;
+	\psitwo=-0.5;
+	\psioneq=2;
+	\psitwoq=2.5;
+	\psioner=0;
+	\psitwor=1;
+	\e = 0.1;
+	\h=-0.8;
+	\phstartx=-3.9;
+	\phstarty=-.8;
+	\tbeg=\phstarty;
+	\ca=\phstartx-\tbeg;
+	\ttwo=\psitwo-\ca;
+	\cb=\ttwo+\ca;
+	\xend=\ttwo-\a+\cb;
+	\tone=\psione-\ca;
+	\cc=\tone+\ca;
+	\xendz=\tone-\a+\cc;
+	\tthree=\cc+\tone-\psitwo;
+	\phstartxq=\psitwoq+2.9;
+	\phstartyq=-.8;
+	\tbegq=\phstartyq;
+	\ttwoq=\tbegq-(\psitwoq-\phstartxq);
+	\xendq=-\ttwoq+\a+\psitwoq;
+	\toneq=\tbegq-(\psioneq-\phstartxq);
+	\xendzq=-\toneq+\a+\psioneq;
+	\circsize=0.05;
+	\md = (\a+\h)/2;
+	\tlen=0.75;
+	\textscale = 0.8;
+	\picscale = 0.95;
+	\nudge=0.1;
+	\tnudge=(\ttwo-\tone)/2;
+	\ttesta=2*\tone-\ttwo-\tnudge;
+	\ttestb=2*\tone-\ttwo+\tnudge;
+	\ttestc=\ttwo-\tnudge;
+	\ttestd=\ttwo+\tnudge;
+	\sonea=\a+\psione-\ttesta;
+	\sadd=0.5;
+	\lrange = -(\psioner-\a+\ttesta)+\sadd;
+	\rrange =\a+\psitwor-\ttesta+\sadd+0.5; 
+	\timex=\rrange-0.7;
+	} 
+	\begin{tikzpicture}[scale=1.2,
+	declare function={
+		testxonep(\ps,\t)=\a+\ps-\t;
+		testxonem(\ps,\t)=\ps-\a+\t; 
+	},
+	 ] 
+	
+	 \definecolor{tempcolor}{RGB}{250,190,0}
+	 \definecolor{darkgreen}{RGB}{40,190,40}
+	 \draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+	 \draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+	 
+				   
+	 \draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$Z=z_1$}-- (\psione,\a);
+	 \draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$Z=z_2$}-- (\psitwo,\a);
+	 
+	 \draw[->, shorten <= 5pt,  shorten >= 1pt] (\psioneq,\h) node[below, scale=\textscale]{$\psi_3^{\text{sys}}$} node[above left, scale=\textscale]{$Z=z_3$}-- (\psioneq,\a);
+	 \draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwoq,\h) node[below, scale=\textscale]{$\psi_4^{\text{sys}}$} node[above right, scale=\textscale]{$Z=z_4$}-- (\psitwoq,\a);
+	 
+	 %\draw[dashed, tempcolor, ultra thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo );
+	 \draw[dashed, tempcolor, ultra thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tone );
+	 \draw[dashed, gray, ultra thick](\psitwo,\ttwo)--(\xend,\a);
+	 \draw[dashed, gray, ultra thick](\psione,\tone)--(\psitwo,\ttwo) ;
+	 \draw[dashed, tempcolor, ultra thick](\psione,\tone)--(\xendz,\a) ;
+	 
+	 \draw [red,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
+	 \draw [black,fill] (\xend,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_2$}; 
+	 
+	 \draw[dashed, tempcolor, ultra thick](\phstartxq,\tbegq) node[below left=-2,scale=\textscale]{}--(\psitwoq,\ttwoq );
+	 \draw[dashed, tempcolor, ultra thick](\psitwoq,\ttwoq)--(\xendq,\a)  ;
+	 \draw[dashed, gray, ultra thick](\psioneq,\toneq)--(\psitwoq,\ttwoq) ;
+	 \draw[dashed, gray, ultra thick](\psioneq,\toneq)--(\xendzq,\a) ;
+	 
+	 \draw [black,fill] (\xendzq,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_3$}; 
+	 \draw [red,fill] (\xendq,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_4$}; 
+	 %\draw[dashed, darkgreen, ultra thick](\psione,\tone)--(\psitwo,\tthree);
+	 %\draw [black,fill] (\psitwo,\tthree) circle [radius=\circsize] node [black,below=4,right,scale=\textscale] {$t=2t_1-t_2$}; 
+	 
+	 
+	 \draw [red,fill] (\psione,\tone) circle [radius=\circsize]; 
+	 \draw [black,fill](\psitwo,\ttwo)circle [radius=\circsize]; 
+	 
+	 \draw [black,fill] (\psioneq,\toneq) circle [radius=\circsize]; 
+	 \draw [red,fill](\psitwoq,\ttwoq)circle [radius=\circsize]; 
+	 
+	 %\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\ttwo) --  (\psitwo+\nudge,\tone+\nudge/4) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+	 %\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\tone-\nudge/4) --  (\psitwo+\nudge,2*\tone-\ttwo) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+
+	\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+	 
+	%\draw[dotted](\psione,\ttesta)--({testxonep(\psione,\ttesta)},\a);
+	%\draw[dotted](\psione,\ttesta)--({testxonem(\psione,\ttesta)},\a);
+	%\draw [black,fill](\psione,\ttesta) circle [radius=\circsize] node [black,below=5,right,scale=\textscale] {$y_a$}; 
+	
+	%\draw[magenta,->,ultra thick] ({testxonem(\psione,\ttesta)},\a)--(-\lrange,\a);
+	%\draw[magenta,->,ultra thick] ({testxonep(\psione,\ttesta)},\a)--(\rrange,\a);
+	
+	\end{tikzpicture}% pic 1
+	
+	\vspace*{2px}
+	\caption{Butterfield's thought experiment for analyzing OI}
+	\label{ButterfieldOI}
+	\end{figure}
+
+Two locations $z_1$ and $z_2$ with $z_2>z_1$ belong to a left-system, and there are two possible outcomes for a measurement on the left-system: either all the mass/energy of the left-system is localized at $z_1$ or all the mass/energy of the left-system  is localized at $z_2$. These two possibilities are analogous to a spin up or a spin down measurement outcome in a Stern-Gerlach statement. Likewise, two locations $z_3$ and $z_4$ with $z_3<z_4$ and $z_3\gg z_2$ belong to a right-system, and again, there are two possible measurement outcomes: either all the mass/energy of the right-system is localized at $z_3$ or all the mass/energy of the right-system  is localized at $z_4$. 
+
+The initial joint state of the two systems is 
+$a \ket*{\psi_1}\ket*{\psi_4} +b \ket*{\psi_2}\ket*{\psi_3}.$
+This means that the left-system will be found to be localized at $z_1$ with probability $\abs{a}^2$, and at $z_2$ with probability $\abs{b}^2$, and if the left-system is localized at $z_1$, the  right system must be localized at $z_4$, whereas if the left-system is localized at $z_2$, then the right system must be localized at $z_3$.  
+
+Now Butterfield supposes that there are two photons, one coming in from the left that interacts with the left system, and one coming in from the right that interacts with the right system. As in Kent's toy model, there is a late time hypersurface $S$, on which the photons are ``measured''. Since the joint state of the two systems  is in superposition, there will be two possible measurement outcomes for the two photons that arrive at $S$. Either the left-photon is measured at $\gamma_1$ and the right-photon is measured at $\gamma_4$, or the left-photon is measured at $\gamma_2$ and the right photon is measured at $\gamma_3$. Thus, if we suppose that the (notional) measurement for $T_S(x)$ yields an energy distribution $\tau_S(x)$ that is nonzero at $\gamma_1$ and $\gamma_4$, but is zero at $\gamma_2$ and $\gamma_3$, then we can say that the outcome of the measurement on the two systems is that the left system is localized at $z_1$ and the right system is localized at $z_4$. Moreover, the probability of this outcome is $1$ given that the (notional) measurement of $T_S(x)$ on $S$ is $\tau_S(x)$. In other words, this model is deterministic. But as we saw on page \pageref{OIdet}, if a model is deterministic, then OI must hold. This is the conclusion that Butterfield draws. 
+
+Now if Kent's theory is to be consistent with special relativity, OI being satisfied might initially seem concerning. Indeed, we saw in section \ref{OISec} that OI implies the negation of PI, and the negation of PI is not consistent with special relativity.\footnote{At this point, one might make the following remark: the argument that a violation of PI constitutes a violation of relativity is based on the idea that if one knew the value of the hidden data, one could transmit messages at superluminal speed. But when the hidden data is grounded in data about the future hypersurface $S$, then the fact that if one knew this data, one could transmit messages superluminally should not be a cause for concern since all sorts of things become possible if you can know future contingents.
+\vspace{1em}
+\\
+To this remark, there are two responses that one could make. Firstly, it would be somewhat misleading in the context of Kent's interpretation to say that a knowledge of data about $S$ implies a knowledge of future contingents since when calculating Kent's $T^{\mu\nu}(y)$-beables $\ev*{T^{\mu\nu}(y)}_{\tau_S}$, the only knowledge about the data of $S$ that is needed is for regions of $S$ outside the light cone of $y$, and whether this data is about something in the future or in the past is going to depend on what frame of reference one is in. Only when the data is within the light cone of $y$ will we be able to say categorically that knowledge of this data constitutes knowledge of future contingents. But Kent's beables are not dependent on such data.
+\vspace{1em}
+\\
+Secondly, as mentioned on page \pageref{lambdaknowledge}, the main concern with a violation of PI is not simply the possibility of superluminal signally, but rather the possibility of the propatation of superluminal effects, of which superluminal signallying would be a very clear demonstration. But whether or not there is such a demonstration, a violation of PI seems to be saying that effects can be propagated superluminally, and this is unacceptable to adherents of relativity theory.} However, there is one salient feature of a Bell experiment that is not captured in Butterfield's scenario, namely, in a Bell experiment, one can perform different measurements.  PI and its negation only make sense when there are parameters that can be changed. Furthermore, in the proof that OI implies the negation of PI,\footnote{The proof  that determinism implies the negation of PI (on pages \pageref{bellinequality2} to \pageref{PIdeterminism}), also assumes that the choice of parameter is not determined by the hidden variable $\lambda$.} it is assumed that the choice of parameter is not determined by the hidden variable $\lambda$. If the choice of parameters was determined by $\lambda$, then for $\hat{a}\neq\hat{b}$, at least one of the probabilities $P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a},\uvbp{c}),$ $P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c},\uvbp{b})$ or $P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a},\uvbp{b})$ would not be well-defined.\footnote{If $\lambda$ \label{lambdadetermineprob} did determine the choice of measurements, either $P(\lambda,\bm{\hat{a}},\bm{\hat{c}})=0$, $P(\lambda,\bm{\hat{c}},\bm{\hat{b}})=0$, or $P(\lambda,\bm{\hat{a}},\bm{\hat{b}})=0$. So for example, if we thought of $P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(X,Y)$ as a conditional probability $P(X,Y|\lambda,\bm{\hat{a}},\bm{\hat{b}})$, and the probability $P(\lambda,\bm{\hat{a}},\bm{\hat{b}})=0$, then according to the definition of conditional probability,  $P(X,Y|\lambda,\bm{\hat{a}},\bm{\hat{b}})=\frac{0}{0}.$} Even though Butterfield is only considering OI in his thought experiment, a proper analysis of OI shouldn't be undertaken without considering an experiment with parameters (e.g. knob settings that correspond to measurement axes of a Stern-Gerlach experiment). This is because the determination of whether OI holds will depend on what one counts as being the hidden variable data of a system, and we need the hidden variable of a system to be such that the notion of PI is well-defined. Otherwise, one's verdict on OI will be irrelevant to Shimony's analysis of why Bell's inequality fails to hold. 
+
+In the next section I will discuss Leegwater's criteria for what one should count as being the hidden variable data of a system, and in the following section \ref{KentconsistentQT}, I will consider a toy model that takes parameter settings into account.
+
