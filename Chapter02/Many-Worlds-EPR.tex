@@ -1,0 +1,30 @@
+
+\section{The Many-Worlds Solution to the EPR-Bohm Paradox}
+We are now in a position to consider how proponents of the many-worlds interpretation attempt to resolve the EPR-Bohm paradox. We thus suppose there is a spin-singlet as described in section \ref{eprsec} consisting of two particles $q_A$ and $q_B$ that are in the entangled Bell state 
+\begin{equation}\tag{\ref{bell} revisited}
+      \ket*{\Psi_{\text{Bell}}}=\frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B-\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B).
+\end{equation}
+If we assume that the two experimenters Alice and Bob (themselves constituting physical systems $\mathcal{P}_A$ and $\mathcal{P}_B$ respectively) set their Stern-Gerlach apparatuses $\mathcal{A}_A$ and $\mathcal{A}_B$ to measure their respective particles along the same axis, then by (\ref{bellstate2}), we can assume they both perform their measurements along the $\uvb{a}$-axis. This means that $\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B$ and $\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B$ will be pointer states of the composite system $\mathcal{A}_A+\mathcal{A}_B+\mathcal{P}_A+\mathcal{P}_B$. There will thus be ready states $\ket{a_{r,A}(t)}\in H_{\mathcal{A}_A}$, $\ket{a_{r,B}(t)}\in H_{\mathcal{A}_B}$, $\ket{p_{r,A}(t)}\in H_{\mathcal{P}_A}$ and $\ket{p_{r,B}(t)}\in H_{\mathcal{P}_B}$, and normalized states  $\ket{a_{\pm,A}(t)}\in H_{\mathcal{A}_A}$, $\ket{a_{\pm,B}(t)}\in H_{\mathcal{A}_B}$, $\ket{p_{\pm,A}(t)}\in H_{\mathcal{P}_A}$ and $\ket{p_{\pm,B}(t)}\in H_{\mathcal{P}_B}$ such that 
+\begin{align*}\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B&\ket{a_{r,A}(t)}\ket{a_{r,B}(t)}\ket{p_{r, A}(t)}\ket{p_{r, B}(t)}\\ &\xrightarrow{\text{time evolution}}\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B\ket{a_{+,A}(t)}\ket{a_{-,B}(t)}\ket{p_{+, A}(t)}\ket{p_{-, B}(t)},\end{align*}
+and similarly
+\begin{align*}\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B&\ket{a_{r,A}(t)}\ket{a_{r,B}(t)}\ket{p_{r, A}(t)}\ket{p_{r, B}(t)}\\ &\xrightarrow{\text{time evolution}}\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B\ket{a_{-,A}(t)}\ket{a_{+,B}(t)}\ket{p_{-, A}(t)}\ket{p_{+, B}(t)}.\end{align*}
+It will therefore follow that 
+\begin{equation}\label{manyworldsEPR}
+  \begin{split}\ket*{\Psi_{\text{Bell}}}\ket{a_{r,A}(t)}&\ket{a_{r,B}(t)}\ket{p_{r, A}(t)}\ket{p_{r, B}(t)}\\ 
+    \xrightarrow{\text{time evolution}}&\frac{1}{\sqrt{2}}\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B\ket{a_{+,A}(t)}\ket{a_{-,B}(t)}\ket{p_{+, A}(t)}\ket{p_{-, B}(t)}\\
+  +& \frac{1}{\sqrt{2}}\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B\ket{a_{-,A}(t)}\ket{a_{+,B}(t)}\ket{p_{-, A}(t)}\ket{p_{+, B}(t)}.\end{split}
+\end{equation}
+Thus, in the language of the many-worlds interpretation, the first summand of (\ref{manyworldsEPR}) corresponds to a world in which Alice observes her particle to be spin up, and Bob observes his particle to be spin down, and the second summand of (\ref{manyworldsEPR}) corresponds to a world in which Alice observes her particle to be spin down, and Bob observes his particle to be spin up. So in each world, Alice and Bob obtain opposite results. But if on the other hand, Bob chooses to make his measurement along a different axis, then $\ket*{\uvbp{a}}_B$ and $\ket*{\uvbm{a}}_B$ won't be pointer states for the composite system $\mathcal{A}_B+\mathcal{P}_B$, and so if   $\ket{a_{r,B}'(t)}\ket{p_{r, B}'(t)}$ is the ready state for Bob's measurement choice, we must assume that
+$$\ket*{\uvbpm{a}}_B\ket{a_{r,B}'(t)}\ket{p_{r, B}'(t)}\xrightarrow{\text{time evolution}}\ket*{E_{\pm,B}(t)}$$ 
+for some entangled state $\ket*{E_{\pm,B}(t)}$ of the composite system $q_B+\mathcal{A}_B+\mathcal{P}_B$ with $\ip{E_{\pm,B}(t)}{E_{\pm,B}(t)}=1$ and   $\ip{E_{\pm,B}(t)}{E_{\mp,B}(t)}=0.$ It will then follow that 
+\begin{equation}\label{manyworldsEPR2}
+  \begin{split}\ket*{\Psi_{\text{Bell}}}\ket{a_{r,A}(t)}\ket{a_{r,B}'(t)}\ket{p_{r, A}(t)}&\ket{p_{r, B}'(t)}\\ 
+    \xrightarrow{\text{time evolution}}&\frac{1}{\sqrt{2}}\ket*{\uvbp{a}}_A\ket{a_{+,A}(t)}\ket{p_{+, A}(t)}\ket*{E_{-,B}(t)}\\
+  +& \frac{1}{\sqrt{2}}\ket*{\uvbm{a}}_A\ket{a_{-,A}(t)}\ket{p_{-, A}(t)}\ket*{E_{+,B}(t)}.\end{split}
+\end{equation}
+Thus, treating $q_B+\mathcal{A}_B+\mathcal{P}_B$ as though it were an environment of $q_A+\mathcal{A}_A+\mathcal{P}_A$, then according to the definition of a world on page \pageref{rigorousworld}, the first summand of (\ref{manyworldsEPR2}) will correspond to a world in which Alice observes her particle to be spin up, and the second summand of (\ref{manyworldsEPR2}) will correspond to a world in which Alice observes her particle to be spin down, and this will be the case regardless of what axis Bob chooses to make his measurement along. Moreover, since there is no state collapse when Bob makes his measurement, and since Bob's choice has no effect on the state 
+$$\ket*{\xi_{\pm,A}(t)}=\ket*{\uvbpm{a}}_A\ket{a_{\pm,A}(t)}\ket{p_{\pm, A}(t)}$$
+describing Alice's observation, the many-worlds interpretation gives us no reason to worry about there being a violation of special relativity. So that is how proponents of the many-worlds interpretation attempt to resolve the EPR-Bohm paradox.
+
+
+

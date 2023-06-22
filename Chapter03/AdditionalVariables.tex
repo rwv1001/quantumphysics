@@ -1,0 +1,283 @@
+
+\section{The Additional Values of Kent's theory\textsuperscript{*}\label{additional}}
+The second similarity Kent's theory has in common with the pilot wave interpretation is that it posits the reality of some additional values beyond standard quantum theory (i.e. in addition to the quantum state\footnote{We may wish to think of these additional values as hidden variables, but we are not obliged to since we don't speculate on whether these additional variables are necessarily unknowable. Rather, we just see them as supplementing the quantum state so as to provide a complete description of the system.}). In the pilot wave interpretation, these additional values are the positions and momenta of all the particles, whereas in Kent's theory, the additional values specify the mass-energy density on a three-dimensional distant future spacelike hypersurface in spacetime to be described shortly. We let $S$ denote this spacelike hypersurface.
+
+To describe the nature of this three-dimensional hyperspace $S$, we will need some terminology and notation used in special relativity. A \textbf{spacetime location}\index{spacetime location} is a point $(x^1,x^2,x^3)$ in three-dimensional space at a particular instant of time $t$, and hence described by four numbers $(x^0,x^1,x^2,x^3)$ where $x^0=c t$ and where $c$ is the speed of light.\footnote{Multiplying time by the speed of light means that $x^0$ is a distance like $x^1,x^2$, and $x^3$. } We will use the convention of boldface type to depict spatial locations, e.g. $\bm{x}=(x^1,x^2,x^3)$, and non-boldface type to depict a spacetime location, e.g. $x=(x^0,x^1,x^2,x^3)$. 
+
+Now a key insight of special relativity is that there is no such thing as absolute time. So for instance, two spacetime locations might seem to be simultaneous from one frame of reference, but another person travelling at a different velocity would judge with equal propriety the same two spacetime locations to be non-simultaneous. But it is not the case that for any two spacetime locations we can always find a frame of reference in which the two spacetime locations are simultaneous -- sometimes this is not possible. But we refer to spacetime locations that could be simultaneous in some frame of references as being \textbf{spacelike-separated}\index{spacelike-separation}. For example, the two spacetime locations $o$ and $a           $  in figure \ref{cone} are spacelike-separated. 
+
+\begin{figure}[!h]
+\centering
+
+ \tikzset{surface/.style={draw=blue!70!black, fill=yellow!20!white, fill opacity=.6}}
+
+ \newcommand{\coneback}[4][]{
+ \draw[canvas is xy plane at z=#2, #1] (45-#4:#3) arc (45-#4:225+#4:#3) -- (O) --cycle;
+ }
+ \newcommand{\conefront}[4][]{
+ \draw[canvas is xy plane at z=#2, #1] (45-#4:#3) arc (45-#4:-135+#4:#3) -- (O) --cycle;
+ }
+ \begin{tikzpicture}[tdplot_main_coords, grid/.style={help lines,violet!40!white,opacity=0.5},scale=1.25]
+  \coordinate (O) at (0,0,0);
+  
+     \coneback[surface]{-3}{2}{-12}
+   \conefront[surface]{-3}{2}{-12} 
+  
+   \fill[brown!40!white,opacity=0.5] (-4,-4,0) -- (-4,4,0) -- (4,4,0) -- (4,-4,0) -- cycle;
+  
+   \foreach \x in {-4,...,4}
+     \foreach \y in {-4,...,4}
+     {
+         \draw[grid] (\x,-4) -- (\x,4);
+         \draw[grid] (-4,\y) -- (4,\y);
+         \draw[violet] (-4,4)--(-4,-4)--(4,-4)--(4,4)--cycle;
+     }
+
+   \draw[->] (-4,0,0) -- (4,0,0) {};
+   \draw[->] (0,-4,0) -- (0,4,0) {};
+   \coneback[surface]{3}{2}{12}
+   \draw[-,dashed] (0,0,-2.65) -- (0,0,2.65) node[above] {};
+   \draw[-,dashed] (0,0,-4) -- (0,0,-3.35) node[above] {};
+   \draw[->,dashed] (0,0,3.35) -- (0,0,4) node[above] {time};
+   \conefront[surface]{3}{2}{12}
+
+   \draw[red, thick] (0,0,0) -- (4,0,2) node[below, pos=0.6, rotate=26.5651,scale=0.80,black] {spacelike-separated};
+   \draw[red, thick] (0,0,0) -- (1.56,0.6,2.4) node[below, pos=0.62, rotate=55.1459,scale=0.80,black] {lightlike-separated};
+   \draw[red, thick] (0,0,0) -- (-0.5,-0.85,2.2) node[above, pos=0.57, rotate=-65.8557,scale=0.80,black] {timelike-separated};
+   \node[black] at (0,0,3) {Future Light Cone};
+   \node[black] at (0,0,-3) {Past Light Cone};
+   
+   \fill (4,0,2) circle (2pt) node[above right] {$a$};
+   \fill (0,0,0) circle (2pt) node[below ] {$o$};
+   \fill (-0.5,-0.85,2.2) circle (2pt) node[above left] {$c$};
+   \fill (1.56,0.6,2.4) circle (2pt) node[above left] {$b$};
+  
+   \node[black] at (0,4.7,0) {space};
+   \node[black] at (5,-0.3,0) {space};
+ \end{tikzpicture}
+ \caption{The meaning of spacelike, timelike and lightlike-separation when there are two space dimensions and one time dimension.}
+ \label{cone}
+\end{figure}
+There are also spacetime locations in spacetime that could be connected by a beam of light such as the two spacetime locations $o$ and $b$ in figure \ref{cone}. Such spacetime locations are referred to as being \textbf{lightlike-separated}\index{lightlike-separation}. For any given spacetime location, the spacetime locations that are lightlike-separated from it form two cones\footnote{Strictly speaking, the set of spacetime locations that are lightlike-separated from a give spacetime location form the surface of a cone rather than a cone (which is a convex object). But among physicists, the terminology light cone has stuck.} called the future light cone and the past light cone as shown in figure \ref{cone}. Because light appears to travel at the same speed no matter what frame of reference one uses, the light cone of a spacetime location remains invariant when one changes from one reference frame to another. In other words, if another spacetime location lies on the light cone of a spacetime location in one frame of reference, then it must lie on the light cone of this spacetime location in every frame of reference. 
+
+Figure \ref{cone} also depicts two spacetime locations $o$ and $c$ that are \textbf{timelike-separated}\index{timelike-separation}. Such spacetime locations lie within the light cones of each other, and when two spacetime locations are timelike-separated, it is always possible to choose a frame of reference in which the two spacetime locations are located at the same point in space, but with one spacetime location occuring after the other  depending on which spacetime location is in  the future light cone of the other. 
+
+Now a three-dimensional spacelike hypersurface $S$ in spacetime is a maximal\footnote{That is, it cannot be extended any further along any of its three dimensions, so it is not a small local surface contained within a boundary.} three-dimensional surface in which any two spacetime locations of $S$ are spacelike-separated. In this dissertation, we will assume that all hypersurfaces are spacelike and maximal.
+Kent assumes that the hypersurface $S$ is in the distant future of an expanding universe so that nearly all the particles that can decay have already done so, and that all the particles that are not bound together are very far from each other so that the probability of any particle collisions is very small. In other words, all the interesting physics in the universe has played its course before $S$.
+
+At every spacetime location $x\in S$, there is a quantity $T_S(x)$ called the \label{massenergydensity}\textbf{mass-energy density}\index{mass-energy density}.\footnote{The definition of $T_S(x)$ will be discussed in section \ref{massenergydensity}.} The important thing to note about $T_S(x)$ is that it does not depend on which frame of reference one is in.\footnote{The reason for why this is will be discussed in section \ref{massenergydensity}.}
+  This property is in contrast to many physical properties that do depend on which frame of reference one is in. For example, the kinetic energy of an object will depend on the calculated velocity of the object, and this velocity will in turn depend on the frame of reference in which this calculation is done. 
+  
+Now in order to specify the additional values that Kent's theory requires, we need to discuss the Tomonaga-Schwinger picture of relativistic quantum physics.\footnote{See \cite{SchwingerJulianI}; \cite{TomonagaI}} In order to explain their formulation, it is helpful to consider first the distinction between the Heisenberg picture and the Schr\"{o}dinger picture of quantum mechanics. 
+
+In the \textbf{Heisenberg picture}\index{Heisenberg picture}, the states describing a system do not change over time. Rather, the observables change over time. So for instance, if there is a time-independent state $\ket*{\Phi}$ describing a system and there is some measurable quantity whose expectation value we wish to know at time $t$ given the state $\ket*{\Phi}$, then we will need a time dependent observable $\hat{\bm{O}}(t)$,\footnote{See footnote \ref{boldref} for an explanation of the convention of using a boldface font for this observable.} say, corresponding to the measurable quantity at time $t$ from which we can calculate the expectation value $\ev*{\hat{\bm{O}}(t)}{\Phi}$ at time $t$  given the system is in state $\ket*{\Phi}$. In the context of quantum field theory, any observable $\hat{\bm{O}}(t)$ in the Heisenberg picture will be expressible as a sum (or integral) of observables of the form $\hat{\bm{O}}(t, \bm{x})$, where $\hat{\bm{O}}(t, \bm{x})$ is an observable of some quantity at a particular time $t$ and spatial location $\bm{x}$.\footnote{For example, in quantum electrodynamics (which is one kind of quantum field theory), the observables will be expressible in terms of fields such as the four-vector potential $A^\mu(x)$ and the bispinor field $\psi(x)$ which are defined at all spacetime locations $(t, \bm{x})=(t, x^1, x^2, x^3)$. The four-vector potential $A^\mu(x)$ can be used to determine the electromagnetic field, and the bispinor field $\psi(x)$ can be used to determine the electric current density. In the Heisenberg picture, these fields will have corresponding Hilbert space operators at each spacetime location $x$ from which expectation values can be calculated at the spacetime location $x$ for a given time-independent state.}
+\strut \\[\baselineskip]
+The Heisenberg picture is contrasted with the \textbf{Schr\"{o}dinger picture}\index{Schr\"{o}dinger picture} in which the observables do not change over time, but rather the states change over time. So for instance, if there is a time-dependent state $\ket*{\Phi(t)}$ describing a system at a specific time $t$ and there is some measurable quantity whose expectation value we wish to know at time $t$ given the state $\ket*{\Phi(t)}$, then we will only require a time-independent observable $\hat{\bm{O}}$, say, corresponding to the measurable quantity from which we can calculate the expectation value $\ev*{\hat{\bm{O}}}{\Phi(t)}$. As in the Heisenberg picture, we can introduce a spatial dependence into the observables so that any observable  $\hat{\bm{O}}$ is expressible as a sum (or integral) of observables of the form $\hat{\bm{O}}(\bm{x})$ where $\hat{\bm{O}}(\bm{x})$ is an observable of some quantity at a particular spatial location $\bm{x}$.
+\strut \\[\baselineskip] 
+Now despite the Schr\"{o}dinger and Heisenberg pictures taking these different perspectives, they are nevertheless physically equivalent. This is because in both pictures, there is a unitary operator $U(\Delta t)$ for any time interval $\Delta t$ such that $U(\Delta t)\ket*{\Phi(t)}=\ket*{\Phi(t+\Delta t)}$, and $U(\Delta t)\hat{\bm{O}}(t, \bm{x})U(\Delta t)^{-1}=\hat{\bm{O}}(t+\Delta t, \bm{x})$. Thus, given the Schr\"{o}dinger picture, to get the Heisenberg picture, all we need to do is the following: firstly, we fix a time $t_0$ and let all the states of the form $\ket*{\Phi(t_0)}$ at time $t_0$ in the Schr\"{o}dinger picture be the state space for the Heisenberg picture; then for any Schr\"{o}dinger picture observable $\hat{\bm{O}}(\bm{x})$, we define the corresponding Heisenberg picture time-dependent observable 
+$$\hat{\bm{O}}(t, \bm{x})=U(t-t_0)\hat{\bm{O}}(\bm{x})U(t-t_0)^{-1}.$$ 
+Conversely, to move from the Heisenberg picture to the Schr\"{o}dinger, we first fix a reference time $t_0$. Then for any state $\ket*{\Phi}$ and observable $\hat{\bm{O}}(\bm{x})\myeq\hat{\bm{O}}(t, \bm{x})$ in the Heisenberg picture, the corresponding Schr\"{o}dinger picture time-dependent state at time $t$ will be $U(t-t_0)\ket*{\Phi}$, and the corresponding Schr\"{o}dinger picture time-independent observable will be $\hat{\bm{O}}(t_0, \bm{x})$.
+
+Now if there is a quantity we wish to measure at time $t_0$ with corresponding observable $\hat{\bm{O}}(\bm{x})\myeq\hat{\bm{O}}(t_0, \bm{x})$, then in both pictures, the expectation value of this measurable quantity given $\ket*{\Phi}\myeq\ket*{\Phi(t_0)}$ will be 
+\begin{equation}\label{heisshrodeq}
+  \ev*{\hat{\bm{O}}(\bm{x})}{\Phi(t_0)}=\ev*{\hat{\bm{O}}(t_0,\bm{x})}{\Phi(t_0)}=\ev*{\hat{\bm{O}}(t_0, \bm{x})}{\Phi}
+\end{equation}
+Since the left-hand side of (\ref{heisshrodeq}) is the Schr\"{o}dinger picture expectation value of $\hat{\bm{O}}(\bm{x})$, and the right-hand side of (\ref{heisshrodeq}) is the Heisenberg picture expectation value of $\hat{\bm{O}}(t_0,\bm{x})$, it follows that whatever picture we choose, it will make no difference to the calculated expectation values of observables -- in other words, the two pictures are physically equivalent.
+
+Now although it is easy to move between both the Schr\"{o}dinger and Heisenberg pictures, they both give a privileged status to hypersurfaces of the form $t=\text{const}$. However, according to special relativity, there are no privileged hypersurfaces. One of the advantages of the Tomonaga-Schwinger picture is that it gives no privileged status to any class of hypersurfaces, but rather all hypersurfaces are placed on the same footing. We are going to see that the expectation value $\ev*{\hat{\bm{O}}(t_0,\bm{x})}{\Phi(t_0)}$  of equation (\ref{heisshrodeq}) is a special case of what Tomonaga and Schwinger consider more generally. 
+
+We first note that if we can calculate $\ev*{\hat{\bm{O}}(t_0,\bm{x})}{\Phi(t_0)}$ for any $t_0$ and any $\bm{x}$, then we can calculate all the expectation values that might interest us. But we also note that in the expectation value $\ev*{\hat{\bm{O}}(t_0,\bm{x})}{\Phi(t_0)}$,  the $\ket*{\Phi(t_0)}$-state is the state of a hypersurface $t=t_0$, and $(t_0,\bm{x})$ is a spacetime location on this hypersurface. Now if we are to place all hypersurfaces on the same footing, then in specifying expectation values, we should be just as content in specifying expectation values of the form $\ev*{\hat{O}(x)}{\Psi[S]}$, where $S$ is any hypersurface, $\ket*{\Psi[S]}$ is any state of this hypersurface,\footnote{The convention of using square brackets such as in $\ket*{\Psi[S]}$ indicates that the thing in question is a functional. Functions and functionals are closely related. A function $f$ is a mapping from one set (the domain) to another set (the codomain), such that each input yields a single output. The typical convention is to use round brackets to denote the output, e.g. $f(x)$ where $x$ is the input. A functional $g$, on the other hand, is a function that maps a space of functions or other mathematical objects (such as surfaces or volumes) to a some value. The typical convention is to use square brackets to denote the output, e.g. $g[y]$ where $y$ is the input function or other mathematical object. So in the present case, $\ket*{\Phi[\cdot]}$ is a functional that takes a surface $S$ as input to produce a state $\ket*{\Phi[S]}$ as output.} $x$ is any spacetime location on the hypersurface $S$, and where $\hat{O}(x)$ is any observable of $S$.\footnote{\label{boldref}Here I am following the convention of Schwinger of always using non-boldface type to indicate Tomonaga-Schwinger picture observables, and boldface type to indicate Heisenberg picture and Schr\"{o}dinger picture observables. See \cite[p. 1448]{SchwingerJulianI}.} The Tomonaga-Schwinger picture thus works with states of the form $\ket*{\Psi[S]}$ for any hypersurface $S$, and observables of the form $\hat{O}(x)$ with $x\in S$ acting on the state space of the hypersurface $S$ from which one can calculate the expectation value $\ev*{\hat{O}(x)}{\Psi[S]}$.
+
+In order to construct $\ket*{\Psi[S]}$ and $\hat{O}(x)$, Schwinger introduces a unitary operator\footnote{See \cite[p. 1448]{SchwingerJulianI}.} $U[S]$ that maps the $\ket*{\Phi}$-state of the Heisenberg picture to the corresponding $\ket*{\Psi[S]}$-state that describes the state of the hypersurface $S$, i.e. $\ket*{\Psi[S]}=U[S]\ket*{\Phi}$. Schwinger then defines the observable  
+\begin{equation}\label{tsobservable}
+  \hat{O}(x)=U[S]\hat{\bm{O}}(x)U[S]^{-1}
+\end{equation}
+on $S$ where $x$ is any spacetime location on $S$, and where $\hat{\bm{O}}(x)$ is any Heisenberg picture observable. Ostensibly, $\hat{O}(x)$ depends on the surface $S$,  but Schwinger shows that under conditions that are readily satisfied, $\hat{O}(x)$ is independent of the hypersurface $S$.\footnote{
+  The required condition is that 
+  $$i\hbar\fdv{U[S]}{S(x)}=\mathcal{H}(x)U[S] $$
+  where $\mathcal{H}(x)$ is a Hermitian operator that is a Lorentz invariant function of the field quantities at the spacetime location $x$ and has the dimensions of an energy density, and where the functional derivative $U[S]$ is given by
+  $$\fdv{U[S]}{S(x)}=\lim_{\delta \omega\rightarrow 0}\frac{U[S']-U[S]}{\delta\omega} $$
+  where $S'$ is a surface that only differs from $S$ in the vicinity of $x$, and where $\delta\omega$ is the volume enclosed by $S$ and $S'$. The Hermitian operator $$\mathcal{H}(x)=-(1/c)j^\mu(x)A_\mu(x)$$
+  has the desired property where $j^\mu(x)$ is the current density and where $A^\mu(x)$ is the four-vector potential of the electromagnetic field. With this choice for $\hat{H}(x)$, Schwinger shows that $\Box A^\mu(x)=0$ and $\partial_\mu A^\mu(x)\ket*{\Psi[S]}=0,$ where $\Box=\partial_\mu\partial^\mu$ is the d'Alembert operator -- see \cite[p. 1449-1450]{SchwingerJulianI}.\label{Sindepedence}  }
+  Also, since 
+\begin{equation}\label{schwingerformula}
+\ev*{\hat{O}(x)}{\Psi[S]}=\ev*{\hat{\bm{O}}(x)}{\Phi},
+\end{equation}
+the Tomonaga-Schwinger picture will give the same physics as the Heisenberg and Schr\"{o}dinger picture. In order to avoid our notation becoming cluttered, we will write $\ket*{\Psi}$ instead of $\ket*{\Psi[S]}$, and say that $\ket*{\Psi}$ is a state of the hypersurface $S$, and we will speak of the Hilbert space $H_S$\label{HSdef} of all such states of the hypersurface $S$ so that we can write $\ket*{\Psi}\in H_S$.\footnote{Though to be clear,\label{HSclarification} the $H_S$ are really identical for all hypersurfaces $S$ since each $H_S$ is the image of the unitary operator $U[S]$ acting on the Heisenberg-picture Hilbert space, and the image of a unitary operator is always equal to the Hilbert space it is acting on.}
+
+We are now in a position to come back to the question of what the additional values of Kent's theory are. As mentioned on page \pageref{massenergydensity}, for a given hypersurface $S$,  there will be a mass-energy density $T_S(x)$. Corresponding to this, there will be a Heisenberg picture observable $\hat{\bm{T}}_S(x)$, and from this we can construct the Tomonaga-Schwinger observable $\hat{T}_S(x)=U[S]\hat{\bm{T}}_S(x)U[S]^{-1}$.\footnote{Note that $\hat{T}_S(x)$ will depend on $S$. The remark above about $\hat{O}(x)$ not depending on $S$ does not apply here since the independence of $\hat{O}(x)$ from $S$ assumes that the Heisenberg picture observable $\hat{\bm{O}}(x)$ is independent of $S$, but this is not the case for  $\hat{\bm{T}}_S(x)$. However,  $\hat{T}_S(x)$ will only depend on $S$ in the vicinity of $x$, so if $S'$ only differs from $S$ outside a neighborhood of $x$, then $\hat{T}_S(x) =\hat{T}_{S'}(x)$.} These mass-energy density observables have the property that if $x$ and $y$ are any two spacetime locations of $S$, then $\hat{T}_S(x)$ and $\hat{T}_S(y)$ will commute. In other words,
+$$\hat{T}_S(x)\hat{T}_S(y)=\hat{T}_S(y)\hat{T}_S(x).$$
+The commutativity of all the $\hat{T}_S(x)$ for $x\in S$ means that if $\ket{\Psi}\in H_S$ is an eigenstate of $\hat{T}_S(x)$, then for any $y\in S$, $\hat{T}_S(y)\ket{\Psi}$ is also an eigenstate of  $\hat{T}_S(x)$ with the same eigenvalue as $\ket{\Psi}$. The invariance of any $\hat{T}_S(x)$-\textbf{eigenspace}\index{eigenspace}\footnote{An eigenspace of a Hermitian operator $\hat{O}$ acting on a Hilbert space $H$ is just the space of all the eigenstates of $\hat{O}$ in $H$ which have the same eigenvalue.} under the action of   $\hat{T}_S(y)$ means that we can create an orthonormal basis of $H_S$ consisting of simultaneous eigenstates of both  $\hat{T}_S(x)$ and  $\hat{T}_S(y)$, albeit with different eigenvalues.\footnote{This is because any $\hat{T}_S(x)$-eigenspace is itself a Hilbert space on which $\hat{T}_S(y)$ acts as a Hermitian operator, so by (\ref{span}), we can find an orthonormal basis of states $\{\ket{\psi_1},\ldots\ket{\psi_N}\}$ of the $\hat{T}_S(x)$-eigenspace and real numbers $\tau^{(1)}(y),\ldots,\tau^{(N)}(y)$ such that $\hat{T}_S(y)\ket*{\psi_i}=\tau^{(i)}(y)\ket*{\psi_i}$ for $i=1,\ldots,N.$ Hence each of the $\ket*{\psi_i}$ will be a simultaneous eigenstate of both $\hat{T}_S(x)$ and $\hat{T}_S(y)$.} Moreover, for reasons that we need not go into, these eigenvalues must be greater than or equal to $0$.\footnote{In other words, we are not going to concern ourselves with theories that allow for negative mass-energy densities.} But because $x$ and $y$ are arbitrary points of $S$, this means  we can construct an orthonormal basis $\{\ket*{\Psi^{(i)}}:i\}$ of $H_S$ such that
+  $\hat{T}_S(x)\ket{\Psi^{(i)}}=\tau^{(i)}_S(x)\ket{\Psi^{(i)}}$ for all $x\in S$, where $\tau^{(i)}_S(x)\geq 0$ is a possible mass-energy density measurement defined for every $x$ in $S$. We will refer to a state $\ket*{\Psi}$ as a \textbf{simultaneous $\hat{T}_S$-eigenstate}\index{simultaneous $\hat{T}_S$-eigenstate}, and a real valued function $\tau_S$ defined on the whole of $S$ as a  \textbf{simultaneous $\hat{T}_S$-eigenvalue}\index{simultaneous $\hat{T}_S$-eigenvalue} if and only if $\hat{T}_S(x)\ket*{\Psi}=\tau_S(x)\ket*{\Psi}$ for all $x\in S$.\label{simultaneous}
+
+ At this point, it is worth clarifying the different meanings of $T_S(x)$, $\hat{T}_S(x)$, and $\tau_S(x)$.\label{TSclarification} We use $T_S(x)$ to refer to the description of the physical quantity that is being observed. Thus, $T_S(x)$ is shorthand for the description ``the mass-energy density of the hypersurface $S$ observed at spacetime location $x$''. The function $\tau_S(x)$ stands for a particular range of values for each $x\in S$ of the physical quantity described by $T_S(x)$. And for each $x\in S$, $\hat{T}_S(x)$ is the observable (i.e. Hermitian operator) such that if an observer deems $S$ to be in an eigenstate $\ket*{\psi}$ of  $\hat{T}_S(x)$ with eigenvalue $\tau$ (a real number), then the observer would observe the physical quantity described by  $T_S(x)$ to have the value $\tau$. We will add a further clarification to this when we come to consider different observers in section \ref{LorentzInvariance}.
+
+Now in describing simultaneous $\hat{T}_S$-eigenstates and  $\hat{T}_S$-eigenvalues as we've done above, it might be objected that there will be uncountably many simultaneous $\hat{T}_S$-eigenstates and  $\hat{T}_S$-eigenvalues so that we won't be able to form an orthonormal basis of states $\{\ket*{\Psi^{(i)}}:i\}$ with the index $i$ being taken over the whole numbers. However, we can overcome this objection to some extent by supposing that in physical reality there will be a limit on how great the mass-energy density $\tau_S(x)$ can be and how rapidly it can change with respect to $x$. Although such an assumption will mean this theory will break down in extreme situations such as in the case of black holes, this theory won't be any worse off than quantum field theory which also breaks down in extreme situations.
+\begin{figure}[ht!]
+  \captionsetup{justification=justified}
+  \centering
+  
+  \begin{tikzpicture}
+     \begin{axis}[
+            view={40}{40},
+          %x dir=reverse,
+          %y dir=reverse,
+          width=320pt,
+          height=280pt,
+          mesh,
+          colormap/cool,
+          %mesh/ordering=x varies,
+          z buffer=auto,%reverse xy seq,
+          xmin=-0.5,xmax=5.5,
+          ymin=-0.5,ymax=5.5,
+          zmin=0,zmax=0.3,
+          enlargelimits=upper,
+          xtick=data,
+          extra tick style={grid=major},
+          ytick={0,...,5},xtick={0,...,5},
+          grid=minor,
+          xticklabels=\empty,
+          yticklabels=\empty,
+          zticklabels=\empty,
+          xlabel={$x_1$},
+          ylabel={$x_2$},
+          zlabel={$\tau_S(x)$},
+          zlabel style={rotate=-90},
+          minor tick num=1,
+          samples=70]
+        \addplot3[surf, domain=-0.5:5.5, shader=interp] {0.35*(exp(-0.2*(x-2.5)*(x-2.5)-0.2*(y-2.5)*(y-2.5))};
+        \foreach \xx in {-0.5,0.5,...,5.5}
+        {
+          \addplot3+[domain=-0.5:5.5, line width=0.1mm, mark=none, color=black, samples y=0]
+           ({\xx}, {x}, {0.35*(exp(-0.2*(\xx-2.5)*(\xx-2.5)-0.2*(x-2.5)*(x-2.5))});
+        }
+  
+        % y=constant grids lines
+        \foreach \yy in {-0.5,0.5,...,5.5}
+        {
+           \addplot3[domain=-0.5:5.5, line width=0.1mm, mark=none, color=black, samples y=0]
+           ({x}, {\yy}, {0.35*(exp(-0.2*(x-2.5)*(x-2.5)-0.2*(\yy-2.5)*(\yy-2.5))});
+        }
+  
+  
+     \end{axis}
+  \end{tikzpicture}
+  \vspace*{2px}
+  \caption{An example of an arbitrary mass-energy density $\tau_S$ plotted against two dimension $x_1$ and $x_2$ belonging to the hypersurface $S$. }\label{tauSexample}
+  \end{figure}
+
+  \begin{figure}[ht!]
+    \captionsetup{justification=justified}
+    \centering
+    
+    \pgfmathsetmacro{\gconv}{2*326.32446}
+    % from https://tex.stackexchange.com/a/435234/121799
+    \begin{tikzpicture}[declare function={% (0.00001*\n!/(0.01*\x!*0.01*\y!*0.01*(\n-\x-\y)!))*
+    f(\x,\y,\px,\py,\n)=(0.000001*\n!/(0.01*\x!*0.01*\y!*0.01*(\n-\x-\y)!))*pow(\px,\x)*pow(\py,\y)*pow(1-\px-\py,\n-\x-\y);}] % 
+    \pgfplotsset{set layers}
+    \begin{axis}[% from section 4.6.4 of the pgfplotsmanual
+            view={40}{40},
+            %x dir=reverse,
+            %y dir=reverse,
+            width=320pt,
+            height=280pt,
+            mesh,
+            %mesh/ordering=x varies,
+            z buffer=auto,%reverse xy seq,
+            xmin=-0.5,xmax=5.5,
+            ymin=-0.5,ymax=5.5,
+            zmin=0,zmax=0.3,
+            enlargelimits=upper,
+            xtick=data,
+            extra tick style={grid=major},
+            ytick={0,...,5},xtick={0,...,5},
+            grid=minor,
+            xticklabels=\empty,
+            yticklabels=\empty,
+            zticklabels=\empty,
+            xlabel={$x_1$},
+            ylabel={$x_2$},
+            zlabel={$\tau_S(x)$},
+            zlabel style={rotate=-90},
+            minor tick num=1,
+            ]
+    
+      \addplot3 [point meta=0,visualization depends on={
+      \gconv*z \as \myz}, % you'll get told how to adjust the prefactor
+      scatter/@pre marker code/.append style={/pgfplots/cube/size z=\myz},%
+      scatter/@pre marker code/.append style={/pgfplots/cube/size x=24.3018pt},%
+      scatter/@pre marker code/.append style={/pgfplots/cube/size y=21.71275pt},%
+      scatter,only marks,
+      mark=my cube*,mark size=5,opacity=1,domain=0:5,domain y=0:5,samples=6,samples y=6]
+      {0.35*(exp(-0.2*(x-2.5)*(x-2.5)-0.2*(y-2.5)*(y-2.5))};
+        \end{axis}
+    \end{tikzpicture}
+    \vspace*{2px}
+    \caption{Here, the arbitrary mass-energy density $\tau_S$ depicted in figure \ref{tauSexample} has been approximated by a function which is constant in each mesh cell.}\label{tauSapprox}
+    \end{figure}
+    We can then suppose that with a suitably fine mesh\label{meshref} on $S$,\footnote{Note that the mesh is only a mesh in $S$, so the cells of the mesh are cube-like subsets of $S$. The time might not be constant across each cell because of the possible curvature of $S$.} any mass energy density $\tau_S(x)$ (e.g. such as the one depicted in figure \ref{tauSexample}) can be approximated to a function (e.g. like the one depicted in figure \ref{tauSapprox}) that has constant values on each cell of this mesh and such that the approximation value at a cell belongs to a finite pool of possible values. For instance, if $c_x$ is the cell which contains $x\in S$, and $\tau_{\text{max}}$ is the maximum possible value the mass-energy density could be, then we could define the approximation to $\tau_S(x)$ at cell $c_x$ to be
+    \begin{equation}\label{tauapproxformula}
+    \tau_S(c_x)=\frac{\tau_{\text{max}}}{N}\floor*{N\Big(\frac{\text{average of }\tau_S\text{ over }c_x}{\tau_{\text{max}}}\Big)+0.5}
+    \end{equation}
+    where $\floor*{z}$ is the biggest integer $n\leq z$, and where $N$ is a fixed large number. Then $\tau_S(c_x)$ will have $N+1$ possible values between $0$ and $\tau_{\text{max}}$.  There will then only need to be a countable number of approximations $\tau_S^{(i)}$ to approximate any arbitrary mass-energy density $\tau_S$ on $S$.  As long as we choose the cells in the mesh to be sufficiently small and $N$ to be sufficiently large, we can describe physical reality up to our desired level of accuracy. Thus, we assume that for each of the countable states in the orthonormal basis $\{\ket*{\Psi^{(i)}}:i\}$, there will be a corresponding function $\tau_S^{(i)}$ defined on $S$ which is constant on every cell of $S$ and in which 
+\begin{equation}\label{approxeigen}
+\hat{T}_S(c_x)\ket{\Psi^{(i)}}= \tau_S^{(i)}(c_x)\ket{\Psi^{(i)}}
+\end{equation} 
+for all $x\in S$ where $ \tau_S^{(i)}(c_x)= \tau_S^{(i)}(x)$ and where $\hat{T}_S(c_x)$ is the observable corresponding to the average approximated value of the physical quantity $T_S(x)$ over the cell $c_x$ (approximated as in (\ref{tauapproxformula}) with $\tau_S$ replaced by $T_S$), but we will normally just write
+\begin{equation}\label{approxeigen2}
+  \hat{T}_S(x)\ket{\Psi^{(i)}}= \tau_S^{(i)}(x)\ket{\Psi^{(i)}}
+  \end{equation}
+with the implicit understanding that by (\ref{approxeigen2}) we really mean (\ref{approxeigen}), and that when we speak of $\ket{\Psi^{(i)}}$ and $\tau_S^{(i)}$ as simultaneous $\hat{T}_S$-eigenstates and simultaneous $\hat{T}_S$-eigenvalues respectively, we implicitly understand $\hat{T}_S$ and $\tau_S^{(i)}$ to be defined over cells of the form $c_x\subset S$ rather than over spacetime locations $x\in S$.
+
+Now the additional values beyond standard quantum theory that are included in Kent's theory are given by one of these simultaneous $\hat{T}_S$-eigenvalues $\tau_S^{(i)}$ that (approximately) describe a possible outcome for an mass-energy density measurement over the whole of $S$.  But although we speak of the measurement of $T_S(x)$ as being $\tau_S^{(i)}(x)$, this is only a notional measurement. Thus, we speak of the measurement of  $T_S(x)$ only to mean that $T_S(x)$ has a determinate value for every $x\in S$ despite the quantum state of $S$ in general being in a superposition of $\hat{T}_S(x)$-eigenstates for any given $x\in S$. How this determination of $T_S(x)$ comes about is up to one's philosophical preferences. For example, one could suppose that it was simply by divine fiat that this determination  of $T_S(x)$ came about.\footnote{I will discuss my philosophical preference in the final chapter.} 
+
+Nevertheless, the particular density $\tau_S(x)$ which is found to describe $S$ can't be absolutely anything. Rather, we suppose there is a much earlier hypersurface $S_0$ which is described by a state $\ket{\Psi_0}$ belonging to a Hilbert space $H_{S_0}$ as shown in figure \ref{S1}.  It is assumed that all physics that we wish to describe takes place between these two hypersurfaces $S_0$ and $S$. In figure \ref{S1}, we therefore let $y$ depicts a generic spacetime location that we wish to describe. 
+
+ \begin{figure}[ht!]
+\captionsetup{justification=justified}
+\centering
+
+\tikzmath{
+\a= 1;  
+\h=-1;
+\md = (\a+\h)/2;
+\lrange = 4;
+\rrange=2;
+\fictlabel=(\rrange-\lrange)/2;
+\tlen=0.75;
+\labelpos=(-\lrange-\a)/2;
+} 
+
+\begin{tikzpicture}[thick, scale=2]
+\def\dotsize{0.7}
+\definecolor{tempcolor}{RGB}{0,151,76}
+\draw[<->] (-\lrange, \h) node[left] {$S_0$} -- (\rrange, \h) node[right] {$S_0$};
+\draw[<->](-\lrange, \a) node[left] {$S$} --  (\rrange, \a)  node[right] {$S$};                   
+\draw[->] (\rrange,\md-\tlen/2) --  (\rrange,\md+\tlen/2) node[midway,right]{time}; 
+\coordinate[label = above: Notional Measurement of $T_S(x)$ on $S$]  (D) at (\fictlabel,\a+0.2); 
+\node (start) at (\labelpos,\h) [below] {Initial State $\ket{\Psi_0}$};
+\node (final) at (\labelpos,\a) [below] {Unitary Evolution $\ket*{\Psi_S}=U_{SS_0}\ket*{\Psi_0}$};
+\draw [->, shorten <= 5pt] (start) [above] -- (final); 
+\filldraw (0,0) circle (\dotsize pt) node [below right] {$y$} ;
+\end{tikzpicture}
+
+\vspace*{2px}
+\caption{A notional measurement of $T_S(x)$ is made for all $x\in S$. The simultaneous  $\hat{T}_S$-eigenstate $\ket{\Psi}$ with $\hat{T}_S(x)\ket{\Psi}=\tau_S(x)\ket{\Psi}$ is selected with probability $\abs{\mel{\Psi}{U_{SS_0}}{\Psi_0}}^2$ $=\abs{\ip{\Psi}{\Psi_S}}^2$. The values $\tau_S(x)$ obtained for $T_S(x)$ are then used to calculate the physical properties at the spacetime location $y$.  }
+\label{S1}
+\end{figure} 
+\vspace*{-12px}
+
+
+
+ If we now define 
+ \begin{equation}\label{SchwingerUnitaryOP}
+ U_{SS_0}=U[S]U[S_0]^{-1}
+ \end{equation} 
+ then $U_{SS_0}$ will be a unitary operator that maps states in $H_{S_0}$ such as $\ket{\Psi_0}$ to states in $H_S$. Then the probability $P(\Psi|\Psi_0)$ that  $S$ will be found to be in the state $\ket{\Psi}$ with mass-energy density $\tau_S(x)$ given that $S_0$ was initially in the state $\ket{\Psi_0}$ will be given by the Born Rule (see page \pageref{bornrule}):
+ \begin{equation}\label{bornpsi}
+ P(\Psi|\Psi_0) = \abs{\mel{\Psi}{U_{SS_0}}{\Psi_0}}^2=\abs{\ip{\Psi}{\Psi_S}}^2
+ \end{equation}
+ where $\ket*{\Psi_S}=U_{SS_0}\ket*{\Psi_0}.$
+It's possible that there might be several different states of $H_S$ that have the same mass-energy density $\tau_S(x)$ for all $x\in S$, but one of these states is still realized with probability given by equation (\ref{bornpsi}). But it is the mass-energy density $\tau_S$ itself rather than one of the eigenstates with mass-energy density $\tau_S$ that constitute the additional values that Kent adds to standard quantum theory. 
+
+Also note that  if every simultaneous $\hat{T}_S$-eigenstate $\ket*{\Psi}$ with simultaneous $\hat{T}_S$-eigenvalue $\tau_S$ satisfies $\abs{\mel{\Psi}{U_{SS_0}}{\Psi_0}}=0$, then by (\ref{bornpsi}), $\tau_S$ will not be a possible measurement outcome for $T_S$ given $\ket*{\Psi_0}$. It is for this reason that we can't expect the measurement outcome of $T_S$ on $S$ to be absolutely anything.

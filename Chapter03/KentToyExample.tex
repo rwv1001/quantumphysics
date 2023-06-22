@@ -1,0 +1,494 @@
+ 
+\section{Kent's toy example}\label{toysection}
+To get a feel for how all the elements of Kent's theory fit together, we will conclude this chapter by describing Kent's toy model example that he discusses in his 2014 paper.\footnote{See \cite[p. 3--4]{Kent2014}.} In his toy model, Kent considers a system in one spatial dimension which is the superposition of two localized states/wave functions\footnote{So far in this chapter, we have been describing systems in terms of their quantum states rather than their \textbf{quantum wave functions}\index{quantum wave functions}.\label{wavefunctionfootnote} It is easiest to understand what a quantum wave function is in the context of a single particle system. In the Schr\"{o}dinger picture, a particle in state $\ket*{\psi(t)}$ allows us to calculate the expectation value of a quantity $O$ belonging to the particle via the formula $\ev{\hat{\bm{O}}}{\psi(t)}$ where $\hat{\bm{O}}$ is the observable corresponding to $O$. One such quantity is the particle's spatial location. If the particle is at spatial location $\bm{x}$, then the particle will be in the state $\ket*{\bm{x}}$ (c.f. the definition of $\ket*{x}$ in footnote \ref{ketx} on page \pageref{ketx}.) where the position observable $\hat{\bm{X}_i}$ satisfies $\hat{\bm{X}_i}\ket*{\bm{x}}=x_i\ket*{\bm{x}}$ for $i=1,2$, or $3$. The corresponding wave function for this particle is then   $\psi(\bm{x}, t)=\ip*{\bm{x}}{\psi(t)}$. For a particle restricted to one spatial dimension, the particle would have a wave function $\psi(z, t)=\ip*{z}{\psi(t)}$ where $z$ is now just a single number that specifies the particle's possible position. We will write $\psi$ to denote the wave function itself, and $\psi(z,t)$ to denote the value of the wave function $\psi$ at spacetime location $(z,t)$.}  $\psi_0^\text{sys}=c_1 \psi_1^\text{sys}+c_2\psi_2^\text{sys}$ where $\psi_1^\text{sys}$ is localized at spatial location $z_1$, $\psi_2^\text{sys}$ is localized at spatial location $z_2$, and $\abs{c_1}^2+\abs{c_2}^2=1$. According to the Copenhagen interpretation, a measurement on this system would collapse the wave function of $\psi_0^\text{sys}$ to the wave function of $\psi_1^\text{sys}$ with probability $\abs{c_1}^2$, and to the wave function of $\psi_2^\text{sys}$ with probability $\abs{c_2}^2$. The purpose of Kent's toy model is to show that within his interpretation, there is something analogous to wave function collapse.  In order for this ``collapse'' to happen, one needs to consider how the system interacts with light. Thus, Kent supposes that a photon (which is modelled as a point particle) comes in from the left, and as it interacts with the two states $\psi_1^\text{sys}$ and $\psi_2^\text{sys}$, the photon enters into a superposition of states, corresponding to whether the photon reflects off the localized $\psi_1^\text{sys}$-state at time $t_1$ or the localized $\psi_2^\text{sys}$-state at time $t_2$. The photon in superposition then travels to the left and eventually reaches the one dimensional hypersurface $S$ at locations $\gamma_1$ and $\gamma_2$ as shown in figure  \ref{TM1}.
+
+ \begin{figure}[ht!]
+\captionsetup{justification=justified}
+\centering
+\tikzmath{
+\a=5.3;  
+\psione=0;
+\psitwo=1;
+\e = 0.1;
+\h=-0.8;
+\phstartx=-2.9;
+\phstarty=-.8;
+\tbeg=\phstarty;
+\ca=\phstartx-\tbeg;
+\ttwo=\psitwo-\ca;
+\cb=\ttwo+\ca;
+\xend=\ttwo-\a+\cb;
+\tone=\psione-\ca;
+\cc=\tone+\ca;
+\xendz=\tone-\a+\cc;
+\tthree=\cc+\tone-\psitwo;
+\circsize=0.05;
+\md = (\a+\h)/2;
+\tlen=0.75;
+\textscale = 0.8;
+\picscale = 0.95;
+\nudge=0.1;
+\tnudge=(\ttwo-\tone)/2;
+\ttesta=2*\tone-\ttwo-\tnudge;
+\ttestb=2*\tone-\ttwo+\tnudge;
+\ttestc=\ttwo-\tnudge;
+\ttestd=\ttwo+\tnudge;
+\sonea=\a+\psione-\ttesta;
+\sadd=0.5;
+\lrange = -(\psione-\a+\ttesta)+\sadd;
+\rrange =\a+\psitwo-\ttesta+\sadd; 
+\timex=\rrange-0.7;
+} 
+\begin{tikzpicture}[scale=1.2,
+declare function={
+	testxonep(\ps,\t)=\a+\ps-\t;
+	testxonem(\ps,\t)=\ps-\a+\t; 
+},
+ ] 
+
+\definecolor{tempcolor}{RGB}{250,190,0}
+\definecolor{darkgreen}{RGB}{40,190,40}
+\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+
+              
+\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$Z=z_1$}-- (\psione,\a);
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$Z=z_2$}-- (\psitwo,\a);
+
+\draw[dashed, tempcolor, ultra thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo ) node[above, pos=0.3, rotate=45,scale=0.7,black] {$Z=c(t-t_1)+z_1$} node[below, pos=0.3, rotate=45,scale=0.7,black] {photon};
+\draw[dashed, tempcolor, ultra thick](\psitwo,\ttwo)--(\xend,\a) node[above, pos=0.48, rotate=-45,scale=0.7,black] {$Z=c(t_2-t)+z_2$} ;
+\draw[dashed, tempcolor, ultra thick](\psione,\tone)--(\xendz,\a)node[above, pos=0.45, rotate=-45,scale=0.7,black] {$Z=c(t_1-t)+z_1$} ;
+
+\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
+\draw [black,fill] (\xend,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_2$}; 
+%\draw[dashed, darkgreen, ultra thick](\psione,\tone)--(\psitwo,\tthree);
+%\draw [black,fill] (\psitwo,\tthree) circle [radius=\circsize] node [black,below=4,right,scale=\textscale] {$t=2t_1-t_2$}; 
+
+
+\draw [black,fill] (\psione,\tone) circle [radius=\circsize] node [black,left=4,scale=\textscale] {$t_1$}; 
+\draw [black,fill](\psitwo,\ttwo)circle [radius=\circsize] node [black,right,scale=\textscale, align=left] {$t_2=t_1+\frac{z_2-z_1}{c}$.}; 
+
+%\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\ttwo) --  (\psitwo+\nudge,\tone+\nudge/4) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+%\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\tone-\nudge/4) --  (\psitwo+\nudge,2*\tone-\ttwo) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+
+\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+ 
+%\draw[dotted](\psione,\ttesta)--({testxonep(\psione,\ttesta)},\a);
+%\draw[dotted](\psione,\ttesta)--({testxonem(\psione,\ttesta)},\a);
+%\draw [black,fill](\psione,\ttesta) circle [radius=\circsize] node [black,below=5,right,scale=\textscale] {$y_a$}; 
+
+%\draw[magenta,->,ultra thick] ({testxonem(\psione,\ttesta)},\a)--(-\lrange,\a);
+%\draw[magenta,->,ultra thick] ({testxonep(\psione,\ttesta)},\a)--(\rrange,\a);
+
+\end{tikzpicture}% pic 1
+
+\vspace*{2px}
+\caption{Kent's toy model}
+\label{TM1}
+\end{figure}
+We now suppose that when the mass-energy density $S$ is ``measured'', the energy of the photon is found to be at $\gamma_1$ rather than at $\gamma_2$. We then consider the mass-density at early spacetime locations $y^a_1=(z_1,t_a)$ and $y^a_2=(z_2,t_a)$ as shown in figure \ref{TM2} (a) and (b). 
+ 
+ 
+  \begin{figure}[ht!]
+\captionsetup{justification=justified}
+\centering
+\tikzmath{
+\a=5.3;  
+\psione=0;
+\psitwo=1;
+\e = 0.1;
+\h=-0.8;
+\labelx=(\psione+\psitwo)/2;
+\labely=-1.5;
+\phstartx=-2.9;
+\phstarty=-.8;
+\tbeg=\phstarty;
+\ca=\phstartx-\tbeg;
+\ttwo=\psitwo-\ca;
+\cb=\ttwo+\ca;
+\xend=\ttwo-\a+\cb;
+\tone=\psione-\ca;
+\cc=\tone+\ca;
+\xendz=\tone-\a+\cc;
+\tthree=\cc+\tone-\psitwo;
+\circsize=0.08;
+\md = (\a+\h)/2;
+\tlen=0.75;
+\textscale = 0.7;
+\picscale = 0.58;
+\nudge=0.1;
+\tnudge=(\ttwo-\tone)/2;
+\ttesta=2*\tone-\ttwo-\tnudge;
+\ttestb=2*\tone-\ttwo+\tnudge;
+\ttestc=\ttwo-\tnudge;
+\ttestd=\ttwo+\tnudge;
+\sonea=\a+\psione-\ttesta;
+\sadd=0.5;
+\lrange = -(\psione-\a+\ttesta)+\sadd;
+\rrange =\a+\psitwo-\ttesta+\sadd; 
+\timex=\rrange-1.5;
+} 
+\begin{tikzpicture}[scale=\picscale,
+declare function={
+	testxonep(\ps,\t)=\a+\ps-\t;
+	testxonem(\ps,\t)=\ps-\a+\t; 
+},
+ ] 
+\definecolor{tempcolor}{RGB}{250,190,0}
+\definecolor{darkgreen}{RGB}{40,190,40}
+\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+              
+\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$z_1$}-- (\psione,\a);
+\coordinate[label = below: (a)]  (D) at (\labelx,\labely); 
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$z_2$}-- (\psitwo,\a);
+
+\draw[dashed, tempcolor, ultra thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tone) node[above, pos=0.3, rotate=45,scale=0.7,black] {} node[below, pos=0.3, rotate=45,scale=0.7,black] {};
+\draw[dashed, gray](\psione,\tone) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo );
+\draw[dashed, gray](\psitwo,\ttwo)--(\xend,\a); 
+\draw[dashed, tempcolor, ultra thick](\psione,\tone)--(\xendz,\a);
+
+\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
+
+\draw[dashed, darkgreen, ultra thick](\psione,\tone)--(\psitwo,\tthree);
+\draw [black,fill] (\psitwo,\tthree) circle [radius=\circsize] node [black,below=4,right,scale=\textscale] {$2t_1-t_2$}; 
+
+
+\draw [black,fill] (\psione,\tone) circle [radius=\circsize] node [black,left=4,scale=\textscale] {$t_1$}; 
+\draw [black,fill](\psitwo,\ttwo)circle [radius=\circsize] node [black,above right,scale=\textscale, align=left] {$t_2$}; 
+
+\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\ttwo) --  (\psitwo+\nudge,\tone+\nudge/4) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\tone-\nudge/4) --  (\psitwo+\nudge,2*\tone-\ttwo) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+
+\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+ 
+\draw[dotted](\psione,\ttesta)--({testxonep(\psione,\ttesta)},\a);
+\draw[dotted](\psione,\ttesta)--({testxonem(\psione,\ttesta)},\a);
+\draw [black,fill](\psione,\ttesta) circle [radius=\circsize] node [black,below=5,right,scale=\textscale] {$y^a_1$}; 
+
+\draw[magenta,->,ultra thick] ({testxonem(\psione,\ttesta)},\a)--(-\lrange,\a);
+\draw[magenta,->,ultra thick] ({testxonep(\psione,\ttesta)},\a)--(\rrange,\a);
+
+\end{tikzpicture}% pic 1
+ % <----------------- SPACE BETWEEN PICTURES
+\begin{tikzpicture}[scale=\picscale,  %[x={10.0pt},y={10.0pt}]
+declare function={
+	testxonep(\ps,\t)=\a+\ps-\t;
+	testxonem(\ps,\t)=\ps-\a+\t; 
+},
+ ] 
+\definecolor{tempcolor}{RGB}{250,190,0}
+\definecolor{darkgreen}{RGB}{40,190,40}
+\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+              
+\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$z_1$}-- (\psione,\a);
+\coordinate[label = below: (b)]  (D) at (\labelx,\labely); 
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$z_2$}-- (\psitwo,\a);
+
+\draw[dashed, tempcolor, ultra thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tone) node[above, pos=0.3, rotate=45,scale=0.7,black] {} node[below, pos=0.3, rotate=45,scale=0.7,black] {};
+\draw[dashed, gray](\psione,\tone) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo );
+\draw[dashed, gray](\psitwo,\ttwo)--(\xend,\a); 
+\draw[dashed, tempcolor, ultra thick](\psione,\tone)--(\xendz,\a);
+
+\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
+
+\draw[dashed, darkgreen, ultra thick](\psione,\tone)--(\psitwo,\tthree);
+\draw [black,fill] (\psitwo,\tthree) circle [radius=\circsize] node [black,below=4,right,scale=\textscale] {$2t_1-t_2$}; 
+
+
+\draw [black,fill] (\psione,\tone) circle [radius=\circsize] node [black,left=4,scale=\textscale] {$t_1$}; 
+\draw [black,fill](\psitwo,\ttwo)circle [radius=\circsize] node [black,above right,scale=\textscale, align=left] {$t_2$}; 
+
+\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\ttwo) --  (\psitwo+\nudge,\tone+\nudge/4) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\tone-\nudge/4) --  (\psitwo+\nudge,2*\tone-\ttwo) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+
+\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+ 
+\draw[dotted](\psitwo,\ttesta)--({testxonep(\psitwo,\ttesta)},\a);
+\draw[dotted](\psitwo,\ttesta)--({testxonem(\psitwo,\ttesta)},\a);
+\draw [black,fill](\psitwo,\ttesta) circle [radius=\circsize] node [black,below=5,right,scale=\textscale] {$y^a_2$}; 
+
+\draw[magenta,->,ultra thick] ({testxonem(\psitwo,\ttesta)},\a)--(-\lrange,\a);
+\draw[magenta,->,ultra thick] ({testxonep(\psitwo,\ttesta)},\a)--(\rrange,\a);
+
+
+\end{tikzpicture}% pic 1
+
+
+\vspace*{2px}
+\caption{(a) highlights the part of $S$ used to calculate the energy density at $y^a_1$ whose time is less than $2t_1-t_2$. (b) highlights the part of $S$ used to calculate the energy density at $y^a_2$ whose time is less than $2t_1-t_2$.}
+\label{TM2}
+\end{figure}
+
+By early, we mean that $t_a<2t_1-t_2$. This will mean that the possible detection locations $\gamma_1$ and $\gamma_2$ will be inside the forward light cones of $y^a_1$ and $y^a_2$. Hence, $S^1(y^a_1)\cap S$ and $S^1(y^a_2)\cap S$  contain no additional information beyond standard quantum theory by which we could calculate the conditional expectation values of the energy at $y^a_1$  and $y^a_2$. Hence, according to Kent's theory, the total energy at time $t_a$ will be divided between the two spatial locations with a proportion of $\abs{c_1}^2$ at $z_1$  and a proportion of $\abs{c_2}^2$ at $z_2$.
+
+However, the situation is different for two spacetime locations $y^b_1=(z_1, t_b)$ and $y^b_2=(z_2, t_b)$ with $t_b$ slightly after $2t_1-t_2$ as depicted in figure \ref{TM3}.
+
+\begin{figure}[ht!]
+\captionsetup{justification=justified}
+\centering
+\tikzmath{
+\a=5.3;  
+\psione=0;
+\psitwo=1;
+\e = 0.1;
+\h=-0.8;
+\labelx=(\psione+\psitwo)/2;
+\labely=-1.5;
+\phstartx=-2.9;
+\phstarty=-.8;
+\tbeg=\phstarty;
+\ca=\phstartx-\tbeg;
+\ttwo=\psitwo-\ca;
+\cb=\ttwo+\ca;
+\xend=\ttwo-\a+\cb;
+\tone=\psione-\ca;
+\cc=\tone+\ca;
+\xendz=\tone-\a+\cc;
+\tthree=\cc+\tone-\psitwo;
+\circsize=0.08;
+\md = (\a+\h)/2;
+\tlen=0.75;
+\textscale = 0.7;
+\picscale = 0.58;
+\nudge=0.1;
+\tnudge=(\ttwo-\tone)/2;
+\ttesta=2*\tone-\ttwo-\tnudge;
+\ttestb=2*\tone-\ttwo+\tnudge;
+\ttestc=\ttwo-\tnudge;
+\ttestd=\ttwo+\tnudge;
+\sonea=\a+\psione-\ttesta;
+\sadd=0.5;
+\lrange = -(\psione-\a+\ttesta)+\sadd;
+\rrange =\a+\psitwo-\ttesta+\sadd; 
+\timex=\rrange-1.5;
+} 
+\begin{tikzpicture}[scale=\picscale,
+declare function={
+	testxonep(\ps,\t)=\a+\ps-\t;
+	testxonem(\ps,\t)=\ps-\a+\t; 
+},
+ ] 
+\definecolor{tempcolor}{RGB}{250,190,0}
+\definecolor{darkgreen}{RGB}{40,190,40}
+\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+              
+\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$z_1$}-- (\psione,\a);
+\coordinate[label = below: (a)]  (D) at (\labelx,\labely); 
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$z_2$}-- (\psitwo,\a);
+
+\draw[dashed, tempcolor, ultra thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tone) node[above, pos=0.3, rotate=45,scale=0.7,black] {} node[below, pos=0.3, rotate=45,scale=0.7,black] {};
+\draw[dashed, gray](\psione,\tone) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo );
+\draw[dashed, gray](\psitwo,\ttwo)--(\xend,\a); 
+\draw[dashed, tempcolor, ultra thick](\psione,\tone)--(\xendz,\a);
+
+\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
+
+\draw[dashed, darkgreen, ultra thick](\psione,\tone)--(\psitwo,\tthree);
+\draw [black,fill] (\psitwo,\tthree) circle [radius=\circsize] node [black,below=4,right,scale=\textscale] {$2t_1-t_2$}; 
+
+
+\draw [black,fill] (\psione,\tone) circle [radius=\circsize] node [black,left=4,scale=\textscale] {$t_1$}; 
+\draw [black,fill](\psitwo,\ttwo)circle [radius=\circsize] node [black,above right,scale=\textscale, align=left] {$t_2$}; 
+
+%\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\ttwo) --  (\psitwo+\nudge,\tone+\nudge/4) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+%\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\tone-\nudge/4) --  (\psitwo+\nudge,2*\tone-\ttwo) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+
+\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+ 
+\draw[dotted](\psione,\ttestb)--({testxonep(\psione,\ttestb)},\a);
+\draw[dotted](\psione,\ttestb)--({testxonem(\psione,\ttestb)},\a);
+\draw [black,fill](\psione,\ttestb) circle [radius=\circsize] node [black,below=6,left,scale=\textscale] {$y^b_1$}; 
+
+\draw[magenta,->,ultra thick] ({testxonem(\psione,\ttestb)},\a)--(-\lrange,\a);
+\draw[magenta,->,ultra thick] ({testxonep(\psione,\ttestb)},\a)--(\rrange,\a);
+
+\end{tikzpicture}% pic 1
+ % <----------------- SPACE BETWEEN PICTURES
+\begin{tikzpicture}[scale=\picscale,  %[x={10.0pt},y={10.0pt}]
+declare function={
+	testxonep(\ps,\t)=\a+\ps-\t;
+	testxonem(\ps,\t)=\ps-\a+\t; 
+},
+ ] 
+\definecolor{tempcolor}{RGB}{250,190,0}
+\definecolor{darkgreen}{RGB}{40,190,40}
+\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+              
+\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$z_1$}-- (\psione,\a);
+\coordinate[label = below: (b)]  (D) at (\labelx,\labely); 
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$z_2$}-- (\psitwo,\a);
+
+\draw[dashed, tempcolor, ultra thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tone) node[above, pos=0.3, rotate=45,scale=0.7,black] {} node[below, pos=0.3, rotate=45,scale=0.7,black] {};
+\draw[dashed, gray](\psione,\tone) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo );
+\draw[dashed, gray](\psitwo,\ttwo)--(\xend,\a); 
+\draw[dashed, tempcolor, ultra thick](\psione,\tone)--(\xendz,\a);
+
+
+
+\draw[dashed, darkgreen, ultra thick](\psione,\tone)--(\psitwo,\tthree);
+\draw [black,fill] (\psitwo,\tthree) circle [radius=\circsize] node [black,below=4,right,scale=\textscale] {$2t_1-t_2$}; 
+
+
+\draw [black,fill] (\psione,\tone) circle [radius=\circsize] node [black,left=4,scale=\textscale] {$t_1$}; 
+\draw [black,fill](\psitwo,\ttwo)circle [radius=\circsize] node [black,above right,scale=\textscale, align=left] {$t_2$}; 
+
+%\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\ttwo) --  (\psitwo+\nudge,\tone+\nudge/4) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+%\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\tone-\nudge/4) --  (\psitwo+\nudge,2*\tone-\ttwo) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+
+\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+ 
+\draw[dotted](\psitwo,\ttestb)--({testxonep(\psitwo,\ttestb)},\a);
+\draw[dotted](\psitwo,\ttestb)--({testxonem(\psitwo,\ttestb)},\a);
+\draw [black,fill](\psitwo,\ttestb) circle [radius=\circsize] node [black,right,scale=\textscale] {$y^b_2$}; 
+
+\draw[magenta,->,ultra thick] ({testxonem(\psitwo,\ttestb)},\a)--(-\lrange,\a);
+\draw[magenta,->,ultra thick] ({testxonep(\psitwo,\ttestb)},\a)--(\rrange,\a);
+\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
+
+\end{tikzpicture}% pic 1
+\vspace*{2px}
+\caption{(a) highlights the part of $S$ used to calculate the energy density at $y^b_1$ whose time is greater than $2t_1-t_2$. (b) highlights the part of $S$ used to calculate the energy density at $y^b_2$ whose time is greater than $2t_1-t_2$.}
+\label{TM3}
+\end{figure}
+In this situation, when we consider the location $y^b_1$, there is no additional information in $S^1(y^b_1)\cap S$ beyond standard quantum theory, so there will be a proportion of $\abs{c_1}^2$ of the total initial energy of the system at $y^b_1$. But at location $y^b_2$, the information in $S^1(y^b_2)\cap S$ shows that the photon has reflected from the localized $\psi_1^\text{sys}$-state, and so this additional information tells us that after time $t_b$, there is no energy localized at $z_2$ since from the perspective of $y^b_2$, the energy is known to be localized at $z_1$. So it is as though the information of $S^1(y^b_2)\cap S$ has determined that we are in a world in which there is an energy density of zero at $y^b_2$, and there are no other worlds in which the energy density  at $y^b_2$ is non-zero since all worlds have to be consistent with the notional measurement made on $S$. So for a short time the total energy of the system is reduced by $\abs{c_1}^2$.  
+
+However, as shown in figure \ref{TM4}, for times $t_c$ greater than $t_1$, the total energy of the system is once again restored to the initial energy the system had when in the state $\psi_{0}^\text{sys}$. 
+
+  \begin{figure}[ht!]
+\captionsetup{justification=justified}
+\centering
+\tikzmath{
+\a=5.3;  
+\psione=0;
+\psitwo=1;
+\e = 0.1;
+\h=-0.8;
+\labelx=(\psione+\psitwo)/2;
+\labely=-1.5;
+\phstartx=-2.9;
+\phstarty=-.8;
+\tbeg=\phstarty;
+\ca=\phstartx-\tbeg;
+\ttwo=\psitwo-\ca;
+\cb=\ttwo+\ca;
+\xend=\ttwo-\a+\cb;
+\tone=\psione-\ca;
+\cc=\tone+\ca;
+\xendz=\tone-\a+\cc;
+\tthree=\cc+\tone-\psitwo;
+\circsize=0.08;
+\md = (\a+\h)/2;
+\tlen=0.75;
+\textscale = 0.7;
+\picscale = 0.58;
+\nudge=0.1;
+\tnudge=(\ttwo-\tone)/2;
+\ttesta=2*\tone-\ttwo-\tnudge;
+\ttestb=2*\tone-\ttwo+\tnudge;
+\ttestc=\ttwo-\tnudge;
+\ttestd=\ttwo+\tnudge;
+\sonea=\a+\psione-\ttesta;
+\sadd=0.5;
+\lrange = -(\psione-\a+\ttesta)+\sadd;
+\rrange =\a+\psitwo-\ttesta+\sadd; 
+\timex=\rrange-1.5;
+} 
+\begin{tikzpicture}[scale=\picscale,
+declare function={
+	testxonep(\ps,\t)=\a+\ps-\t;
+	testxonem(\ps,\t)=\ps-\a+\t; 
+},
+ ] 
+\definecolor{tempcolor}{RGB}{250,190,0}
+\definecolor{darkgreen}{RGB}{40,190,40}
+\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+              
+\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$z_1$}-- (\psione,\a);
+\coordinate[label = below: (a)]  (D) at (\labelx,\labely); 
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$z_2$}-- (\psitwo,\a);
+
+\draw[dashed, tempcolor, ultra thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tone) node[above, pos=0.3, rotate=45,scale=0.7,black] {} node[below, pos=0.3, rotate=45,scale=0.7,black] {};
+\draw[dashed, gray](\psione,\tone) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo );
+\draw[dashed, gray](\psitwo,\ttwo)--(\xend,\a); 
+\draw[dashed, tempcolor, ultra thick](\psione,\tone)--(\xendz,\a);
+
+
+\draw[dashed, darkgreen, ultra thick](\psione,\tone)--(\psitwo,\tthree);
+\draw [black,fill] (\psitwo,\tthree) circle [radius=\circsize] node [black,below=4,right,scale=\textscale] {$2t_1-t_2$}; 
+
+
+\draw [black,fill] (\psione,\tone) circle [radius=\circsize] node [black,left=4,scale=\textscale] {$t_1$}; 
+\draw [black,fill](\psitwo,\ttwo)circle [radius=\circsize] node [black,above right,scale=\textscale, align=left] {$t_2$}; 
+
+%\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\ttwo) --  (\psitwo+\nudge,\tone+\nudge/4) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+%\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\tone-\nudge/4) --  (\psitwo+\nudge,2*\tone-\ttwo) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+
+\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+ 
+\draw[dotted](\psione,\ttestc)--({testxonep(\psione,\ttestc)},\a);
+\draw[dotted](\psione,\ttestc)--({testxonem(\psione,\ttestc)},\a);
+\draw [black,fill](\psione,\ttestc) circle [radius=\circsize] node [black,right,scale=\textscale] {$y^c_1$}; 
+
+\draw[magenta,->,ultra thick] ({testxonem(\psione,\ttestc)},\a)--(-\lrange,\a);
+\draw[magenta,->,ultra thick] ({testxonep(\psione,\ttestc)},\a)--(\rrange,\a);
+
+\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
+
+\end{tikzpicture}% pic 1
+ % <----------------- SPACE BETWEEN PICTURES
+\begin{tikzpicture}[scale=\picscale,  %[x={10.0pt},y={10.0pt}]
+declare function={
+	testxonep(\ps,\t)=\a+\ps-\t;
+	testxonem(\ps,\t)=\ps-\a+\t; 
+},
+ ] 
+\definecolor{tempcolor}{RGB}{250,190,0}
+\definecolor{darkgreen}{RGB}{40,190,40}
+\draw[<->] (-\lrange, \h) node[left, scale=\textscale] {$S_0$} -- (\rrange, \h) node[right, scale=\textscale] {$S_0$};
+\draw[<->] (-\lrange, \a) node[left, scale=\textscale] {$S$} -- (\rrange, \a) node[right, scale=\textscale] {$S$};
+              
+\draw[->, shorten <= 5pt,  shorten >= 1pt] (\psione,\h) node[below, scale=\textscale]{$\psi_1^{\text{sys}}$} node[above left, scale=\textscale]{$z_1$}-- (\psione,\a);
+\coordinate[label = below: (b)]  (D) at (\labelx,\labely); 
+\draw[->,  shorten <= 5pt,  shorten >= 1pt] (\psitwo,\h) node[below, scale=\textscale]{$\psi_2^{\text{sys}}$} node[above right, scale=\textscale]{$z_2$}-- (\psitwo,\a);
+
+\draw[dashed, tempcolor, ultra thick](\phstartx,\tbeg) node[below left=-2,scale=\textscale]{}--(\psione,\tone) node[above, pos=0.3, rotate=45,scale=0.7,black] {} node[below, pos=0.3, rotate=45,scale=0.7,black] {};
+\draw[dashed, gray](\psione,\tone) node[below left=-2,scale=\textscale]{}--(\psitwo,\ttwo );
+\draw[dashed, gray](\psitwo,\ttwo)--(\xend,\a); 
+\draw[dashed, tempcolor, ultra thick](\psione,\tone)--(\xendz,\a);
+
+
+
+\draw[dashed, darkgreen, ultra thick](\psione,\tone)--(\psitwo,\tthree);
+\draw [black,fill] (\psitwo,\tthree) circle [radius=\circsize] node [black,below=4,right,scale=\textscale] {$2t_1-t_2$}; 
+
+
+\draw [black,fill] (\psione,\tone) circle [radius=\circsize] node [black,left=4,scale=\textscale] {$t_1$}; 
+\draw [black,fill](\psitwo,\ttwo)circle [radius=\circsize] node [black,above right,scale=\textscale, align=left] {$t_2$}; 
+
+%\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\ttwo) --  (\psitwo+\nudge,\tone+\nudge/4) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+%\draw [decorate, decoration = {calligraphic brace}] (\psitwo+\nudge,\tone-\nudge/4) --  (\psitwo+\nudge,2*\tone-\ttwo) node[midway,right, scale=\textscale]{$t_2-t_1$}; 
+
+\draw[->] (\timex,\md-\tlen/2) --  (\timex,\md+\tlen/2) node[midway,right, scale=\textscale]{time}; 
+ 
+\draw[dotted](\psitwo,\ttestc)--({testxonep(\psitwo,\ttestc)},\a);
+\draw[dotted](\psitwo,\ttestc)--({testxonem(\psitwo,\ttestc)},\a);
+\draw [black,fill](\psitwo,\ttestc) circle [radius=\circsize] node [black,below=5,right,scale=\textscale] {$y^c_2$}; 
+
+\draw[magenta,->,ultra thick] ({testxonem(\psitwo,\ttestc)},\a)--(-\lrange,\a);
+\draw[magenta,->,ultra thick] ({testxonep(\psitwo,\ttestc)},\a)--(\rrange,\a);
+\draw [black,fill] (\xendz,\a) circle [radius=\circsize] node [black,above,scale=\textscale] {$\gamma_1$}; 
+
+\end{tikzpicture}% pic 1
+
+
+\vspace*{2px}
+\caption{(a) highlights the part of $S$ used to calculate the energy density at $y^c_1$ whose time is greater than $t_1$. (b) highlights the part of $S$ used to calculate the energy density at $y^c_2$ whose time is greater than $t_1$.}
+\label{TM4}
+\end{figure}
+
+In this situation, there is now information in $S^1(y^c_1)\cap S$ that determines that the photon reflected off the localized $\psi_1^\text{sys}$-state. This means that when the conditional expectation of the energy density of $y^c_1$ is calculated, the extra information in $S^1(y^c_1)\cap S$ determines that all the energy of the system is located at location $z_1$ for times $t_c$ greater than $t_1$, and the energy is equal to the initial energy of the system so that energy is conserved.
