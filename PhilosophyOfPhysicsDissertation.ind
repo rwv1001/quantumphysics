@@ -2,7 +2,7 @@
 
 \noindent\textbf{A}\par\nopagebreak
 
-\vspace{1pt}\item additional variables theories, 210
+\vspace{1pt}\item additional variables theories, 214
 
   \indexspace
 
@@ -20,12 +20,13 @@
 \noindent\textbf{C}\par\nopagebreak
 
 \vspace{1pt}\item coherence, 70
-\vspace{1pt}\item completeness of basic entities, 214
+\vspace{1pt}\item completeness of basic entities, 218
 \vspace{1pt}\item complex vector space, 58
 \vspace{1pt}\item composite systems, 64
 \vspace{1pt}\item conditional expectation, 131
 \vspace{1pt}\item conditional independence, 18
 \vspace{1pt}\item conditional probability, 18, 131
+\vspace{1pt}\item conditioned quantum state, 193
 \vspace{1pt}\item Copenhagen Interpretation, 16
 \vspace{1pt}\item culprit, the, 33
 
@@ -44,11 +45,11 @@
 \vspace{1pt}\item eigenspace, 118
 \vspace{1pt}\item eigenstate, 61
 \vspace{1pt}\item eigenvalue, 61
-\vspace{1pt}\item Einstein summation convention, 150
+\vspace{1pt}\item Einstein summation convention, 154
 \vspace{1pt}\item Einstein's locality principle, 17
 \vspace{1pt}\item empirical adequacy
-    \subitem formal definition, 185
-    \subitem informal definition, 145
+    \subitem formal definition, 189
+    \subitem informal definition, 146
 \vspace{1pt}\item entangled, 66
 \vspace{1pt}\item expectation value
     \subitem pilot wave, 38
@@ -58,11 +59,11 @@
 
 \noindent\textbf{F}\par\nopagebreak
 
-\vspace{1pt}\item four-covector, 155
-\vspace{1pt}\item four-momentum, 153
-\vspace{1pt}\item four-vector, 154
-\vspace{1pt}\item four-vector field, 154
-\vspace{1pt}\item four-velocity, 154
+\vspace{1pt}\item four-covector, 159
+\vspace{1pt}\item four-momentum, 157
+\vspace{1pt}\item four-vector, 158
+\vspace{1pt}\item four-vector field, 158
+\vspace{1pt}\item four-velocity, 158
 
   \indexspace
 
@@ -87,7 +88,7 @@
 \noindent\textbf{K}\par\nopagebreak
 
 \vspace{1pt}\item ket-vector, 10
-\vspace{1pt}\item Kronecker-delta, 155
+\vspace{1pt}\item Kronecker-delta, 159
 
   \indexspace
 
@@ -96,8 +97,8 @@
 \vspace{1pt}\item lightlike-separation, 111
 \vspace{1pt}\item linear combination, 61
 \vspace{1pt}\item linearity, 13
-\vspace{1pt}\item Lorentz transformation, 152
-    \subitem orthochronous, 157
+\vspace{1pt}\item Lorentz transformation, 156
+    \subitem orthochronous, 161
 
   \indexspace
 
@@ -139,7 +140,7 @@
 \vspace{1pt}\item preferred basis, 63
 \vspace{1pt}\item preferred basis problem, 62
 \vspace{1pt}\item problem of outcomes, 88
-\vspace{1pt}\item projection, 147
+\vspace{1pt}\item projection, 150
 \vspace{1pt}\item pure state, 69
 
   \indexspace
@@ -154,18 +155,18 @@
 \noindent\textbf{R}\par\nopagebreak
 
 \vspace{1pt}\item reduced density matrix, 72
-\vspace{1pt}\item relativistic mass, 154
-\vspace{1pt}\item rest mass, 152
+\vspace{1pt}\item relativistic mass, 158
+\vspace{1pt}\item rest mass, 156
 
   \indexspace
 
 \noindent\textbf{S}\par\nopagebreak
 
-\vspace{1pt}\item scalar, 152
+\vspace{1pt}\item scalar, 156
 \vspace{1pt}\item Schr\"{o}dinger picture, 114
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenstate, 119
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenstate of a subregion, 
-		191
+		195
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenvalue, 119
 \vspace{1pt}\item spacelike-separation, 111
 \vspace{1pt}\item spacetime location, 110
@@ -175,7 +176,7 @@
 \vspace{1pt}\item stress-energy tensor, 125
 \vspace{1pt}\item Superconducting Quantum Interference Devices (SQUID), 
 		83
-\vspace{1pt}\item superdeterminism, 184
+\vspace{1pt}\item superdeterminism, 188
 
   \indexspace
 
