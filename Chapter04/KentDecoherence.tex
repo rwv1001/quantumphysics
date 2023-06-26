@@ -1,9 +1,13 @@
 
-
-\section{Kent's Theory\label{Kentdecoherencesection} and the Problem of Outcomes\textsuperscript{*}}
+\section{Kent's Theory\label{Kentdecoherencesection} and the Problem of Outcomes}
+\subsection{Overview}
 In section \ref{probOutcomes} we saw that decoherence theory by itself does not offer a solution to the problem of outcomes. In this section, we consider how the additional information in Kent's theory is sufficient to address this problem. We will explain this by again considering  Kent's toy model discussed in section \ref{toysection}.
 
 We thus suppose that a system is in a superposition $\psi_0^\text{sys} = c_1\psi_1^\text{sys}+c_2\psi_2^\text{sys}$ of two local states $\psi_1^\text{sys}$ and $\psi_2^\text{sys}$ where $\abs{c_1}^2+\abs{c_2}^2=1$, and that there is a photon coming in from the left that interacts with the system.\footnote{As in footnote \ref{wavefunctionfootnote} on page \pageref{wavefunctionfootnote}, we write $\psi_i^\text{sys}$ for the wave function that corresponds to the state $\ket*{\psi_i^\text{sys}(t)}$ with $\psi_i^\text{sys}(z, t)=\ip{z}{\psi_i^\text{sys}(t)}$.} We also suppose that  $y_1$ is a spacetime location with spatial location $z_1$ between the two hypersurfaces $S_0$ and $S$, and we consider a hypersurface $S_n=S_n(y_1)$  in a sequence of hypersurfaces that each contain $y_1$ as described on page \pageref{siydef}. 
+
+In what follows, I use the equation (\ref{kentconsistency0}) to show how the state of the system in question goes from being an improper mixture  to being a pure state as the additional variables in the measurement on the hypersurface $S$ become available to condition on when calculating $\ev*{T^{\mu\nu}(y)}_{\tau_S}$. This solves the problem of outcomes because when a state is given by an improper mixture, in reality, the system is not in any one of two state described by $\psi_1$ and $\psi_2$; rather, the system together with its environment is in a superposition of two states, the first being the state $\psi_1$ state of the system with its corresponding environment state, and second being the state $\psi_2$ state of the system with its corresponding environment state.  However, once the system is described by a pure state, we can either say that the system is definitely in the state described by $\psi_1$, or say that the system is definitely in the state described by $\psi_2$. Thus, there is a definite outcome to the measurement of which of the two states $\psi_1$ or $\psi_2$ the system is in. Hence, in this example, we can see how Kent's theory is able to solve the problem of outcomes.    
+
+\subsection{Technical Details\textsuperscript{*}}
 
 In order to obtain a sufficiently simple description of the state $\ket{\Psi_n}\in H_{S_n}$ of $S_n$ for which we can use the formula (\ref{kentconsistency0}) to calculate Kent's beable, we will  
 use a coarse-grained model so that $S_n$ is treated as a mesh of tiny cells\footnote{For a more detailed discussion of coarse-graining, see pp. \pageref{meshref} ff.} labeled by a sequence $(y_k)_{k=1}^\infty$. Thus, for each cell $y_k$ there will be a Hilbert space $H_k$ describing the state of that cell. We can think of each of these $y_k$ as systems that can become entangled with one another, but we will assume that $y_1$ is entangled with only a finite number $M$ of the other $y_k$ which we label as $y_{k_1}, \ldots, y_{k_M}$. What this means is that the most general expression for $\ket{\Psi_n}$ will be of the form
@@ -425,3 +429,10 @@ In this case, the state of $S_n(y^c_1)$ will be
 which is again a pure state.
 
 In these examples we have therefore seen how the additional information concerning photon detection on $S_n(y_1)\cap S$ is able to determine whether the reduced density matrix at $y_1$ is a pure state or an improper mixture. Hence, Kent's theory offers an answer to d'Espagnat's problem of outcomes. As mentioned in section \ref{probOutcomes}, d'Espagnat noticed that with decoherence theory alone, we are not entitled to give an ignorance interpretation to the reduced density matrix for a system that is an improper mixture, and thus we are not able to conclude that an outcome has occurred. However, if the reduced density matrix of a system goes from being an improper mixture to a pure state of the form $\dyad{\psi}$ as it does when Kent's additional information is taken into account, then we can say that an outcome has occurred, namely the outcome of the system being in the state $\ket{\psi}.$  
+
+
+
+
+
+
+
