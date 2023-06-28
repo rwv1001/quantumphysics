@@ -1,24 +1,70 @@
-\nomenclatureentry{a$\ket*{+}$@[{$\ket*{+}$}]\begingroup Generic spin up state, \nomrefpage\nomeqref {1.1.0.0}|nompageref}{7}
-\nomenclatureentry{a$\ket*{-}$@[{$\ket*{-}$}]\begingroup Generic spin down state, \nomrefpage\nomeqref {1.1.0.0}|nompageref}{7}
-\nomenclatureentry{a$\uvb{a}$@[{$\uvb{a}$}]\begingroup Unit vector in a particular direction, \nomrefpage\nomeqref {1.1.0.0}|nompageref}{8}
-\nomenclatureentry{a$\ket*{\uvbp{a}}$@[{$\ket*{\uvbp{a}}$}]\begingroup Spin up state in the $\uvb{a}$-direction, \nomrefpage\nomeqref {1.1.0.0}|nompageref}{8}
-\nomenclatureentry{a$\ket*{\uvbm{a}}$@[{$\ket*{\uvbm{a}}$}]\begingroup Spin down state in the $\uvb{a}$-direction, \nomrefpage\nomeqref {1.1.0.0}|nompageref}{8}
-\nomenclatureentry{a$\uvbp{a}$@[{$\uvbp{a}$}]\begingroup The location a particle in the state $\ket*{\uvbp{a}}$ would hit the detection screen, \nomrefpage\nomeqref {1.1.0.0}|nompageref}{8}
-\nomenclatureentry{a$\uvbm{a}$@[{$\uvbm{a}$}]\begingroup The location a particle in the state $\ket*{\uvbm{a}}$ would hit the detection screen, \nomrefpage\nomeqref {1.1.0.0}|nompageref}{8}
-\nomenclatureentry{a$\ip*{\psi}{\chi}$@[{$\ip*{\psi}{\chi}$}]\begingroup The bra-ket of two states $\ket*{\psi}$ and $\ket*{\chi}$, \nomrefpage\nomeqref {1.1.0.0}|nompageref}{10}
-\nomenclatureentry{a$\mathbb {C}$@[{$\mathbb {C}$}]\begingroup The set of complex numbers, \nomrefpage \nomeqref {1.1.0.0}|nompageref}{10}
-\nomenclatureentry{a$i$@[{$i$}]\begingroup The square root of $-1$, $\sqrt {-1}$, \nomrefpage \nomeqref {1.1.0.0}|nompageref}{10}
-\nomenclatureentry{a$\overline {z}$@[{$\overline {z}$}]\begingroup The complex conjugate of a complex number $z$, \nomrefpage \nomeqref {1.1.0.0}|nompageref}{10}
-\nomenclatureentry{a$\abs {z}$@[{$\abs {z}$}]\begingroup The magnitude of the complex number $z$, \nomrefpage \nomeqref {1.1.0.0}|nompageref}{10}
-\nomenclatureentry{a$\pi_n$@[{$\pi_n$}]\begingroup $\pi_n \ket*{\Psi_n}$ is the (weighted) sum of all the states in the superposition of $\ket*{\Psi_n}$ for which the mass-energy density has a definite value that is equal to the fictional mass-energy density measurement $\tau_S(x)$ for all $x\in S\cap S_n$, p. \pageref{overviewpi}, see also equation (\ref{tauprojection}), \nomrefpage\nomeqref {4.1.2.2}|nompageref}{169}
-\nomenclatureentry{a$\ev*{T^{\mu\nu}(y)}_{\tau_S}$@[{$\ev*{T^{\mu\nu}(y)}_{\tau_S}$}]\begingroup Kent's proposed beable, see equation (\ref{beable1}), p. \pageref{beable1}, see also equation (\ref{kentconsistency0}), p. \pageref{kentconsistency0}.\nomeqref {4.1.2.6}|nompageref}{170}
-\nomenclatureentry{a$\mathbb{N}$@[{$\mathbb{N}$}]\begingroup  the set of positive integers greater than $0$, \nomrefpage\nomeqref {4.3.2.1}|nompageref}{198}
-\nomenclatureentry{a$t^{\mu\nu}(y)$@[{$t^{\mu\nu}(y)$}]\begingroup Approximate eigenvalues of  $\hat{T}^{\mu\nu}(y)$ for all $\mu, \nu$, \nomrefpage\nomeqref {4.8.0.0}|nompageref}{252}
-\nomenclatureentry{a$R$@[{$R$}]\begingroup a generic hypersurface which intersects $S$ and in which $R\setminus S$ is a bounded region that is prior to $S$, \nomrefpage\nomeqref {4.8.0.1}|nompageref}{254}
-\nomenclatureentry{a$\ket*{\Psi_R}$@[{$\ket*{\Psi_R}$}]\begingroup the state given by $U_{RS_0}\ket*{\Psi_0}$ that describes the hypersurface $R$ , \nomrefpage\nomeqref {4.8.0.1}|nompageref}{254}
-\nomenclatureentry{a$\pi_R$@[{$\pi_R$}]\begingroup the projection analogous to $\pi_n$ for the hypersurface $R$ rather than the hypersurface $S_n$, \nomrefpage\nomeqref {4.8.0.1}|nompageref}{254}
-\nomenclatureentry{a$\ket*{\Phi_{Ri}}$@[{$\ket*{\Phi_{Ri}}$}]\begingroup entangled component of $\pi_R\ket*{\Psi_R}$ and beable candidate\nomrefeq, \nomrefpage\nomeqref {4.8.0.2}|nompageref}{255}
-\nomenclatureentry{a$R_{i}$@[{$R_{i}$}]\begingroup Disjoint region of the hypersurface $R$ which  $\ket*{\Phi_{Ri}}$ describes and such that $R=\bigcup_i R_{i}$, \nomrefpage\nomeqref {4.8.0.2}|nompageref}{255}
-\nomenclatureentry{a$>$@[{$>$}]\begingroup a partial order on states of regions of $S$ expressing the notion `occurs after'\nomrefeqpage\nomeqref {4.8.0.7}|nompageref}{264}
-\nomenclatureentry{a$\sim$@[{$\sim$}]\begingroup we write $\ket*{\phi}\sim \ket*{\gamma}$ to mean that  $\ket*{\phi}$ and $\ket*{\gamma}$ are simultaneous, \nomrefpage\nomeqref {4.8.0.7}|nompageref}{265}
-\nomenclatureentry{a$\ket*{\Gamma_{\tau_S}}$@[{$\ket*{\Gamma_{\tau_S}}$}]\begingroup simultaneous $\hat{T}_S$-eigenstate of the hypersurface $S$ with simultaneous $\hat{T}_S$-eigenvalue $\tau_S(x)$ where $x$ ranges over $S$, \nomrefpage\nomeqref {4.8.0.8}|nompageref}{265}
+\nomenclatureentry{a$\ket*{+}$@[{$\ket*{+}$}]\begingroup Generic spin up state, \nomrefpage\nomeqref {1.1.0}|nompageref}{7}
+\nomenclatureentry{a$\ket*{-}$@[{$\ket*{-}$}]\begingroup Generic spin down state, \nomrefpage\nomeqref {1.1.0}|nompageref}{7}
+\nomenclatureentry{a$\uvb{a}$@[{$\uvb{a}$}]\begingroup Unit vector in a particular direction, \nomrefpage\nomeqref {1.1.0}|nompageref}{8}
+\nomenclatureentry{a$\ket*{\uvbp{a}}$@[{$\ket*{\uvbp{a}}$}]\begingroup Spin up state in the $\uvb{a}$-direction, \nomrefpage\nomeqref {1.1.0}|nompageref}{8}
+\nomenclatureentry{a$\ket*{\uvbm{a}}$@[{$\ket*{\uvbm{a}}$}]\begingroup Spin down state in the $\uvb{a}$-direction, \nomrefpage\nomeqref {1.1.0}|nompageref}{8}
+\nomenclatureentry{a$\uvbp{a}$@[{$\uvbp{a}$}]\begingroup The location a particle in the state $\ket*{\uvbp{a}}$ would hit the detection screen, \nomrefpage\nomeqref {1.1.0}|nompageref}{8}
+\nomenclatureentry{a$\uvbm{a}$@[{$\uvbm{a}$}]\begingroup The location a particle in the state $\ket*{\uvbm{a}}$ would hit the detection screen, \nomrefpage\nomeqref {1.1.0}|nompageref}{8}
+\nomenclatureentry{a$\ip*{\psi}{\chi}$@[{$\ip*{\psi}{\chi}$}]\begingroup The bra-ket of two states $\ket*{\psi}$ and $\ket*{\chi}$, \nomrefpage\nomeqref {1.1.0}|nompageref}{10}
+\nomenclatureentry{a$\mathbb {C}$@[{$\mathbb {C}$}]\begingroup The set of complex numbers, \nomrefpage \nomeqref {1.1.0}|nompageref}{10}
+\nomenclatureentry{a$i$@[{$i$}]\begingroup The square root of $-1$, $\sqrt {-1}$, \nomrefpage \nomeqref {1.1.0}|nompageref}{10}
+\nomenclatureentry{a$\overline {z}$@[{$\overline {z}$}]\begingroup The complex conjugate of a complex number $z$, \nomrefpage \nomeqref {1.1.0}|nompageref}{10}
+\nomenclatureentry{a$\abs {z}$@[{$\abs {z}$}]\begingroup The magnitude of the complex number $z$, \nomrefpage \nomeqref {1.1.0}|nompageref}{10}
+\nomenclatureentry{a$q_A, q_B$@[{$q_A, q_B$}]\begingroup Two particles of a spin singlet, \nomrefpage\nomeqref {1.2.0}|nompageref}{15}
+\nomenclatureentry{a$\mathcal{S}_1, \mathcal{S}_2$@[{$\mathcal{S}_1, \mathcal{S}_2$}]\begingroup Two spatially separated systems, \nomrefpage\nomeqref {1.2.0}|nompageref}{16}
+\nomenclatureentry{a$\ket{\alpha}_A, \ket{\beta}_B$@[{$\ket{\alpha}_A, \ket{\beta}_B$}]\begingroup The states of two particles $q_A$ and $q_B$ respectively, \nomrefpage\nomeqref {1.2.0}|nompageref}{16}
+\nomenclatureentry{a$P(X)$@[{$P(X)$}]\begingroup The probability an event $X$ occurs, \nomrefpage\nomeqref {1.2.1}|nompageref}{16}
+\nomenclatureentry{a$P(X\mid Y)$@[{$P(X\mid Y)$}]\begingroup The probability an event $X$ occurs given that the event $Y$ occurs, \nomrefpage\nomeqref {1.2.1}|nompageref}{17}
+\nomenclatureentry{a$P_{AB}(\alpha'\,\&\,\beta'\mid\alpha\,\&\,\beta)$@[{$P_{AB}(\alpha'\,\&\,\beta'\mid\alpha\,\&\,\beta)$}]\begingroup The conditional probability particle $q_A$ will be found to be in state $\ket{\alpha'}$ and particle $q_B$ will be found to be in state $\ket{\beta'}$ given that particle $q_A$ is currently in the state $\ket{\alpha}$ and particle $q_B$ is currently in the state $\ket{\beta}$, see equation (\ref{indepprob}), \nomrefpage\nomeqref {1.2.4}|nompageref}{18}
+\nomenclatureentry{a$\ket{\alpha}_A\ket{\beta}_B$@[{$\ket{\alpha}_A\ket{\beta}_B$}]\begingroup The composite state of two particles $q_A$ and $q_B$ where particle $q_A$ is in the $\ket{\alpha}_A$-state and particle $q_B$ is in the $\ket{\beta}_B$-state, \nomrefpage\nomeqref {1.2.4}|nompageref}{18}
+\nomenclatureentry{a$\ip{\alpha'}{\alpha}_A$@[{$\ip{\alpha'}{\alpha}_A$}]\begingroup The inner product of the two states $\ket{\alpha}_A$ and $\ket{\alpha'}_A$, \nomrefpage\nomeqref {1.2.5}|nompageref}{18}
+\nomenclatureentry{a$\ket*{\Psi_{\text{Bell}}}$@[{$\ket*{\Psi_{\text{Bell}}}$}]\begingroup A Bell state, see equation (\ref{bell}), \nomrefpage\nomeqref {1.2.6}|nompageref}{18}
+\nomenclatureentry{a$\vb {v}$@[{$\vb {v}$}]\begingroup A vector $\vb {v}= (v_x, v_y, v_z)$ denoting a velocity, \nomrefpage \nomeqref {1.2.11}|nompageref}{22}
+\nomenclatureentry{a$(t, x, y, z)$@[{$(t, x, y, z)$}]\begingroup A spacetime location where $t$ parameterizes time, and $x$, $y$, and $z$ parameterize the three dimensions of space, \nomrefpage \nomeqref {1.2.11}|nompageref}{22}
+\nomenclatureentry{a$\vb {x}$@[{$\vb {x}$}]\begingroup A vector $\vb {x}= (x, y, z)$ representing a location in three-dimensional space, \nomrefpage \nomeqref {1.2.11}|nompageref}{22}
+\nomenclatureentry{a$c$@[{$c$}]\begingroup The speed of light, \nomrefpage \nomeqref {1.2.11}|nompageref}{22}
+\nomenclatureentry{a$\ket*{\uvbm{a},\uvbp{b},\ldots}_A$@[{$\ket*{\uvbm{a},\uvbp{b},\ldots}_A$}]\begingroup An example of a state of a particle $q_A$ with hidden variables specifying all the spin outcomes of every possible axis along which the spin of the particle could be measured, \nomrefpage\nomeqref {1.4.0}|nompageref}{28}
+\nomenclatureentry{a$P_{AB}(\uvbp{a}\,\&\,\uvbp{b})$@[{$P_{AB}(\uvbp{a}\,\&\,\uvbp{b})$}]\begingroup The probability particle $q_A$ is in the $\ket*{\uvbp{a}}$-state and particle $q_B$ is in the $\ket*{\uvbp{b}}$-state in the hidden variables interpretation, \nomrefpage\nomeqref {1.4.0}|nompageref}{31}
+\nomenclatureentry{a$\sum _{i=1}^8 N_i$@[{$\sum _{i=1}^8 N_i$}]\begingroup Shorthand for $N_1+N_2+N_3+N_4+N_5+N_6+N_7+N_8$, \nomrefpage \nomeqref {1.4.0}|nompageref}{31}
+\nomenclatureentry{aOI@[{OI}]\begingroup Outcome Independence, \nomrefpage\nomeqref {1.5.0}|nompageref}{34}
+\nomenclatureentry{aPI@[{PI}]\begingroup Parameter Independence, \nomrefpage\nomeqref {1.5.0}|nompageref}{34}
+\nomenclatureentry{a$a_i$@[{$a_i$}]\begingroup One of Alice's measurement choices, \nomrefpage\nomeqref {1.6.0}|nompageref}{35}
+\nomenclatureentry{a$A_i$@[{$A_i$}]\begingroup Alice's measurement outcome when she makes the measurement choice $a_i$, \nomrefpage\nomeqref {1.6.0}|nompageref}{35}
+\nomenclatureentry{a$X$@[{$X$}]\begingroup A variable representing an unknown outcome for Alice's measurement, \nomrefpage\nomeqref {1.6.0}|nompageref}{35}
+\nomenclatureentry{a$x$@[{$x$}]\begingroup A variable representing an unknown choice for Alice's measurement, \nomrefpage\nomeqref {1.6.0}|nompageref}{35}
+\nomenclatureentry{a$b_i$@[{$b_i$}]\begingroup One of Bob's measurement choices, \nomrefpage\nomeqref {1.6.0}|nompageref}{35}
+\nomenclatureentry{a$B_i$@[{$B_i$}]\begingroup Bob's measurement outcome when he makes the measurement choice $b_i$, \nomrefpage\nomeqref {1.6.0}|nompageref}{35}
+\nomenclatureentry{a$Y$@[{$Y$}]\begingroup A variable representing an unknown outcome for Bob's measurement, \nomrefpage\nomeqref {1.6.0}|nompageref}{35}
+\nomenclatureentry{a$y$@[{$y$}]\begingroup A variable representing an unknown choice for Bob's measurement, \nomrefpage\nomeqref {1.6.0}|nompageref}{35}
+\nomenclatureentry{a$\lambda$@[{$\lambda$}]\begingroup A complete state describing both $q_A$ and $q_B$ that is independent of Alice and Bob's measurement choices, but that encodes all other features that would influence the corresponding measurement outcomes, \nomrefpage\nomeqref {1.6.0}|nompageref}{36}
+\nomenclatureentry{a$\Lambda$@[{$\Lambda$}]\begingroup The set of $\lambda$ that describe both $q_A$ and $q_B$, \nomrefpage\nomeqref {1.6.0}|nompageref}{36}
+\nomenclatureentry{a$P_{\lambda,x,y}(X \,\&\, Y)$@[{$P_{\lambda,x,y}(X \,\&\, Y)$}]\begingroup The probability  Alice obtains outcome $X$ and Bob obtains outcome $Y$ give the complete state $\lambda$ and Alice's measurement choice $x$ and Bob's measurement choice $y$, \nomrefpage\nomeqref {1.6.1}|nompageref}{36}
+\nomenclatureentry{a$P_{A, \lambda,x,y}(X)$@[{$P_{A, \lambda,x,y}(X)$}]\begingroup The probability Alice obtains the outcome $X$ given the complete state $\lambda$ and Alice's measurement choice $x$ and Bob's measurement choice $y$, see equation (\ref{PIone}), \nomrefpage\nomeqref {1.6.4}|nompageref}{37}
+\nomenclatureentry{a$P_{B, \lambda,x,y}(Y)$@[{$P_{B, \lambda,x,y}(Y)$}]\begingroup The probability Bob obtains the outcome $Y$ given the complete state $\lambda$ and Alice's measurement choice $x$ and Bob's measurement choice $y$, see equation (\ref{PItwo}), \nomrefpage\nomeqref {1.6.4}|nompageref}{37}
+\nomenclatureentry{aPD@[{PD}]\begingroup Parameter Dependence, \nomrefpage\nomeqref {1.6.4}|nompageref}{38}
+\nomenclatureentry{a$\vb{x}_A, \vb{x}_B$@[{$\vb{x}_A, \vb{x}_B$}]\begingroup Exact locations of particles $q_A$ and $q_B$ in the pilot wave model, \nomrefpage\nomeqref {1.7.0}|nompageref}{39}
+\nomenclatureentry{a$\vb{p}_A, \vb{p}_B$@[{$\vb{p}_A, \vb{p}_B$}]\begingroup Exact momenta of particles $q_A$ and $q_B$ in the pilot wave interpretation, \nomrefpage\nomeqref {1.7.0}|nompageref}{39}
+\nomenclatureentry{a$r(\vb{x}_A, \vb{x}_B, t)$@[{$r(\vb{x}_A, \vb{x}_B, t)$}]\begingroup Modulus of the pilot wave $\psi(\vb{x}_A, \vb{x}_B, t)$, \nomrefpage\nomeqref {1.7.1}|nompageref}{39}
+\nomenclatureentry{a$\psi(\vb{x}_A, \vb{x}_B, t)$@[{$\psi(\vb{x}_A, \vb{x}_B, t)$}]\begingroup Pilot wave, \nomrefpage\nomeqref {1.7.1}|nompageref}{39}
+\nomenclatureentry{a$S(\vb{x}_A, \vb{x}_B,t )$@[{$S(\vb{x}_A, \vb{x}_B,t )$}]\begingroup Phase of the pilot wave $\psi(\vb{x}_A, \vb{x}_B, t)$, \nomrefpage\nomeqref {1.7.1}|nompageref}{39}
+\nomenclatureentry{a$e^{i \theta }$@[{$e^{i \theta }$}]\begingroup Defined to be equal to $\cos \theta + i\sin \theta $, \nomrefpage \nomeqref {1.7.1}|nompageref}{39}
+\nomenclatureentry{a$\grad_A{S}(\vb{x}_A, \vb{x}_B)$@[{$\grad_A{S}(\vb{x}_A, \vb{x}_B)$}]\begingroup Gradient of the function ${S}(\vb{x}_A, \vb{x}_B)$ with respect to the variable $\vb{x}_A$, \nomrefpage\nomeqref {1.7.2}|nompageref}{40}
+\nomenclatureentry{a$\grad_B{S}(\vb{x}_A, \vb{x}_B)$@[{$\grad_B{S}(\vb{x}_A, \vb{x}_B)$}]\begingroup Gradient of the function ${S}(\vb{x}_A, \vb{x}_B)$ with respect to the variable $\vb{x}_B$, \nomrefpage\nomeqref {1.7.2}|nompageref}{40}
+\nomenclatureentry{a$V$ @[{$V$ }]\begingroup The region particles $q_A$ and $q_B$ are confined to in the pilot wave interpretation, \nomrefpage\nomeqref {1.7.2}|nompageref}{40}
+\nomenclatureentry{a$p(V_i, V_j)$ @[{$p(V_i, V_j)$ }]\begingroup The probability given our knowledge that particle  $q_A$ belongs to the region $V_i$ and particle $q_B$ belongs to the region $V_j$, \nomrefpage\nomeqref {1.7.2}|nompageref}{40}
+\nomenclatureentry{a$V_i$ @[{$V_i$ }]\begingroup Small non-overlapping regions whose union is $V=\bigcup_iV_i$, \nomrefpage\nomeqref {1.7.2}|nompageref}{40}
+\nomenclatureentry{a$O(\vb{x}_A, \vb{x}_B)$ @[{$O(\vb{x}_A, \vb{x}_B)$ }]\begingroup A physical quantity dependent on the locations of the particles $q_A$ and $q_B$ in the pilot wave interpretation, \nomrefpage\nomeqref {1.7.2}|nompageref}{40}
+\nomenclatureentry{a$\ev{O}$ @[{$\ev{O}$ }]\begingroup Expectation value of the physical quantity $O(\vb{x}_A, \vb{x}_B)$ in the pilot wave interpretation \nomrefpage\nomeqref {1.7.3}|nompageref}{41}
+\nomenclatureentry{a$P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a}\,\&\,\uvbp{b})$@[{$P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a}\,\&\,\uvbp{b})$}]\begingroup The probability particle $q_A$ is measured to be in the $\ket*{\uvbp{a}}$-state and particle $q_B$ is measured to be in the $\ket*{\uvbp{b}}$-state given the complete state $\lambda$ of both particles, \nomrefpage\nomeqref {1.7.3}|nompageref}{41}
+\nomenclatureentry{a$\pi_n$@[{$\pi_n$}]\begingroup $\pi_n \ket*{\Psi_n}$ is the (weighted) sum of all the states in the superposition of $\ket*{\Psi_n}$ for which the mass-energy density has a definite value that is equal to the fictional mass-energy density measurement $\tau_S(x)$ for all $x\in S\cap S_n$, p. \pageref{overviewpi}, see also equation (\ref{tauprojection}), \nomrefpage\nomeqref {4.1.2}|nompageref}{169}
+\nomenclatureentry{a$\ev*{T^{\mu\nu}(y)}_{\tau_S}$@[{$\ev*{T^{\mu\nu}(y)}_{\tau_S}$}]\begingroup Kent's proposed beable, see equation (\ref{beable1}), p. \pageref{beable1}, see also equation (\ref{kentconsistency0}), p. \pageref{kentconsistency0}.\nomeqref {4.1.6}|nompageref}{170}
+\nomenclatureentry{a$\mathbb{N}$@[{$\mathbb{N}$}]\begingroup  the set of positive integers greater than $0$, \nomrefpage\nomeqref {4.3.1}|nompageref}{198}
+\nomenclatureentry{a$t^{\mu\nu}(y)$@[{$t^{\mu\nu}(y)$}]\begingroup Approximate eigenvalues of  $\hat{T}^{\mu\nu}(y)$ for all $\mu, \nu$, \nomrefpage\nomeqref {4.8.0}|nompageref}{252}
+\nomenclatureentry{a$R$@[{$R$}]\begingroup a generic hypersurface which intersects $S$ and in which $R\setminus S$ is a bounded region that is prior to $S$, \nomrefpage\nomeqref {4.8.1}|nompageref}{254}
+\nomenclatureentry{a$\ket*{\Psi_R}$@[{$\ket*{\Psi_R}$}]\begingroup the state given by $U_{RS_0}\ket*{\Psi_0}$ that describes the hypersurface $R$ , \nomrefpage\nomeqref {4.8.1}|nompageref}{254}
+\nomenclatureentry{a$\pi_R$@[{$\pi_R$}]\begingroup the projection analogous to $\pi_n$ for the hypersurface $R$ rather than the hypersurface $S_n$, \nomrefpage\nomeqref {4.8.1}|nompageref}{254}
+\nomenclatureentry{a$\ket*{\Phi_{Ri}}$@[{$\ket*{\Phi_{Ri}}$}]\begingroup entangled component of $\pi_R\ket*{\Psi_R}$ and beable candidate\nomrefeq, \nomrefpage\nomeqref {4.8.2}|nompageref}{255}
+\nomenclatureentry{a$R_{i}$@[{$R_{i}$}]\begingroup Disjoint region of the hypersurface $R$ which  $\ket*{\Phi_{Ri}}$ describes and such that $R=\bigcup_i R_{i}$, \nomrefpage\nomeqref {4.8.2}|nompageref}{255}
+\nomenclatureentry{a$>$@[{$>$}]\begingroup a partial order on states of regions of $S$ expressing the notion `occurs after'\nomrefeqpage\nomeqref {4.8.7}|nompageref}{264}
+\nomenclatureentry{a$\sim$@[{$\sim$}]\begingroup we write $\ket*{\phi}\sim \ket*{\gamma}$ to mean that  $\ket*{\phi}$ and $\ket*{\gamma}$ are simultaneous, \nomrefpage\nomeqref {4.8.7}|nompageref}{264}
+\nomenclatureentry{a$\ket*{\Gamma_{\tau_S}}$@[{$\ket*{\Gamma_{\tau_S}}$}]\begingroup simultaneous $\hat{T}_S$-eigenstate of the hypersurface $S$ with simultaneous $\hat{T}_S$-eigenvalue $\tau_S(x)$ where $x$ ranges over $S$, \nomrefpage\nomeqref {4.8.8}|nompageref}{265}
