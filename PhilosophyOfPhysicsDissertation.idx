@@ -77,13 +77,13 @@
 \indexentry{timelike-separation}{127}
 \indexentry{mass-energy density}{128}
 \indexentry{Heisenberg picture}{130}
-\indexentry{Schr\"{o}dinger picture}{130}
 \indexentry{four-vector potential}{130}
+\indexentry{Schr\"{o}dinger picture}{131}
 \indexentry{functional}{133}
 \indexentry{functional derivative}{134}
 \indexentry{current density}{134}
-\indexentry{d'Alembert operator}{134}
 \indexentry{eigenspace}{135}
+\indexentry{d'Alembert operator}{135}
 \indexentry{simultaneous $\hat{T}_S$-eigenstate}{136}
 \indexentry{simultaneous $\hat{T}_S$-eigenvalue}{136}
 \indexentry{beable}{143}
@@ -111,7 +111,5 @@
 \indexentry{Lorentz transformation!orthochronous}{189}
 \indexentry{superdeterminism}{221}
 \indexentry{empirical adequacy!formal definition}{223}
-\indexentry{conditioned quantum state}{227}
-\indexentry{simultaneous $\hat{T}_S$-eigenstate of a subregion}{229}
-\indexentry{additional variables theories}{252}
-\indexentry{completeness of basic entities}{257}
+\indexentry{additional variables theories}{236}
+\indexentry{completeness of basic entities}{241}

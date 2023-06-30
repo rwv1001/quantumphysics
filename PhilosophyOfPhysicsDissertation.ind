@@ -2,7 +2,7 @@
 
 \noindent\textbf{A}\par\nopagebreak
 
-\vspace{1pt}\item additional variables theories, 252
+\vspace{1pt}\item additional variables theories, 236
 \vspace{1pt}\item adjoint, 75
 \vspace{1pt}\item angular momentum, 5
 \vspace{1pt}\item angular velocity, 6
@@ -24,13 +24,12 @@
 \noindent\textbf{C}\par\nopagebreak
 
 \vspace{1pt}\item coherence, 77
-\vspace{1pt}\item completeness of basic entities, 257
+\vspace{1pt}\item completeness of basic entities, 241
 \vspace{1pt}\item complex vector space, 63
 \vspace{1pt}\item composite systems, 70
 \vspace{1pt}\item conditional expectation, 151
 \vspace{1pt}\item conditional independence, 17
 \vspace{1pt}\item conditional probability, 17, 151
-\vspace{1pt}\item conditioned quantum state, 227
 \vspace{1pt}\item Copenhagen Interpretation, 14
 \vspace{1pt}\item culprit, the, 34
 \vspace{1pt}\item current density, 134
@@ -39,7 +38,7 @@
 
 \noindent\textbf{D}\par\nopagebreak
 
-\vspace{1pt}\item d'Alembert operator, 134
+\vspace{1pt}\item d'Alembert operator, 135
 \vspace{1pt}\item decoherence, 86
 \vspace{1pt}\item decoherence time, 86
 \vspace{1pt}\item density matrix, 75
@@ -190,10 +189,8 @@
 \noindent\textbf{S}\par\nopagebreak
 
 \vspace{1pt}\item scalar, 178
-\vspace{1pt}\item Schr\"{o}dinger picture, 130
+\vspace{1pt}\item Schr\"{o}dinger picture, 131
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenstate, 136
-\vspace{1pt}\item simultaneous $\hat{T}_S$-eigenstate of a subregion, 
-		229
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenvalue, 136
 \vspace{1pt}\item spacelike-separation, 126
 \vspace{1pt}\item spacetime location, 125

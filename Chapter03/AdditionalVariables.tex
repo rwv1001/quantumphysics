@@ -2,7 +2,7 @@
 The second similarity Kent's theory has in common with the pilot wave interpretation is that it posits the reality of some additional variables beyond standard quantum theory (i.e. in addition to the quantum state\footnote{We may wish to think of these additional variables as hidden variables, but we are not obliged to since we don't speculate on whether these additional variables are necessarily unknowable. Rather, we just see them as supplementing the quantum state so as to provide a complete description of the system.}). Some of the details in the section are rather technical, so I've split this section into two subsections: the first section gives an overview, and the second section is more technical and can be skipped if desired. 
 \subsection{Overview}
 In the pilot wave interpretation, the additional variables are the positions and momenta of all the particles, whereas in Kent's theory, the additional variables specify the mass-energy density on a three-dimensional distant future spacelike hypersurface $S$  %
-\nomenclature{$S$}{A distant future hypersurface on which a fictional energy-density measurement is made, \nomrefpage}%
+\nomenclature{$S$}{A distant future hypersurface on which a notional energy-density measurement is made, \nomrefpage}%
  in spacetime.
 
 To describe what is meant by a three-dimensional hyperspace $S$, we will need some terminology and notation that is used in special relativity. A \textbf{spacetime location}\index{spacetime location}\label{spacetimedef} is a point $(x^1,x^2,x^3)$ in three-dimensional space at a particular instant of time $t$, and hence described by four numbers $(x^0,x^1,x^2,x^3)$  %
@@ -75,20 +75,18 @@ Figure \ref{cone} also depicts two spacetime locations $o$ and $c$ that are \tex
 Now a three-dimensional spacelike hypersurface $S$ in spacetime is a maximal\footnote{That is, it cannot be extended any further along any of its three dimensions, so it is not a small local surface contained within a boundary.} three-dimensional surface in which any two spacetime locations of $S$ are spacelike-separated. In this dissertation, we will assume that all hypersurfaces are spacelike and maximal.
 Kent assumes that the hypersurface $S$ is in the distant future of an expanding universe so that nearly all the particles that can decay have already done so, and that all the particles that are not bound together are very far from each other so that the probability of any particle collisions is very small. In other words, all the interesting physics in the universe has played its course before $S$.
 
-At every spacetime location $x\in S$, there is a quantity $T_S(x)$  %
-\nomenclature{$T_S(x)$  }{The mass-energy density on a hypersurface $S$, \nomrefpage}%
+At every spacetime location $x\in S$, there is a quantity $T_S(x)$\label{firstTS}  
 called the \label{massenergydensity}\textbf{mass-energy density}\index{mass-energy density}.\footnote{The definition of $T_S(x)$ will be discussed in section \ref{massenergydensity}.} The important thing to note about $T_S(x)$ is that it does not depend on which frame of reference one is in.\footnote{The reason for why this is will be discussed in section \ref{massenergydensity}.}
   This property is in contrast to many physical properties that do depend on which frame of reference one is in. For example, the kinetic energy of an object will depend on the calculated velocity of the object, and this velocity will in turn depend on the frame of reference in which this calculation is done. 
 
-Now Kent supposes that a fictional measurement is made over the whole of $S$ to determine a measurement outcome for $T_S(x)$ which we denote as $\tau_S(x)$ for every $x\in S$.
+Now Kent supposes that a notional measurement is made over the whole of $S$ to determine a measurement outcome for $T_S(x)$ which we denote as $\tau_S(x)$ for every $x\in S$.
  %
- \nomenclature{$\tau_S(x)$}{A real valued function which specifies the outcome of the fictional measurement $T_S(x)$ for every $x\in S$, \nomrefpage}%
+ \nomenclature{$\tau_S(x)$}{A real valued function which specifies the outcome of the notional measurement $T_S(x)$ for every $x\in S$, \nomrefpage}%
   It is these $\tau_S(x)$ that are the additional variables of his theory. 
 
-Clearly,  Kent is not assuming that such a measurement could be performed on $S$ in reality, hence his reason for referring to the measurement as fictional. However, Kent does seem to be saying that there would be a fact of the matter about what value $T_S(x)$ would have at each $x\in S$. So although $S$ is in the far distant future, one can think of the values $\tau_S(x)$ for $T_S(x)$ as being determined primordially, and as a consequence of this primordial determination, physical reality will evolve in a particular way consistent with $T_S(x)$ being $\tau_S(x)$ if a measurement were to be made on $S$. 
+Clearly,  Kent is not assuming that such a measurement could be performed on $S$ in reality, hence his reason for referring to the measurement as fictitious/notional.\footnote{Kent uses the word fictitious when referring to these measurements, e.g. \cite[3]{Kent2014}. Butterfield refers to these measurements as notional e.g. \cite[17]{Butterfield}.} However, Kent does seem to be saying that there would be a fact of the matter about what value $T_S(x)$ would have approximately had at each $x\in S$ if it had been measured.\footnote{\label{asymptoticfootnote}Kent talks about taking the asymptotic limit as $S$ tends to the infinite future of $S_0$. In saying this, he supposes that the physics we are interested in happens between two hypersurfaces $S_0$ and $S_1$. Then given some measurement outcome $\tau_S$ on a hypersurface $S$ after $S_1$, for every hypersurface $S'$ after $S$, there is a range of possible measurements $\tau_{S'}$ on $S'$ that together occur with approximately the same probability as the measurement outcome of $\tau_S$ on $S$ and such that the beables between $S_0$ and $S_1$ determined by any one of the $\tau_S'$ outcomes on $S'$ in this range would be approximately the same as the beables determined by $\tau_S$ on $S$. See \cite[3]{Kent2014}.} So although $S$ is in the far distant future, one can think of the values $\tau_S(x)$ for $T_S(x)$ as being determined primordially, and as a consequence of this primordial determination, physical reality will evolve in a particular way consistent with $T_S(x)$ being $\tau_S(x)$ if a measurement were to be made on $S$. 
 
-Now we saw on page \pageref{eigendef}, that for any measurement on a physical system, we can associate an observable whose eigenstates describe a possible state of the physical system in which the measurement is given by the observable's corresponding eigenvalue. Now in the case of the fictional measurement of $T_S(x)$, there will be lots of observables, denoted by $\hat{T}_S(x)$, corresponding to all the different places $x\in S$ where the measurement could be made. Therefore, if a measurement were made on $S$ for all $x\in S$, the corresponding state of $S$ would not just be an eigenstate of one observable $\hat{T}_S(x)$, %
-\nomenclature{$\hat{T}_S(x)$}{The observable corresponding to $T_S(x)$, \nomrefpage}%
+Now we saw on page \pageref{eigendef}, that for any measurement on a physical system, we can associate an observable whose eigenstates describe a possible state of the physical system in which the measurement is given by the observable's corresponding eigenvalue. Now in the case of the notional measurement of $T_S(x)$, there will be lots of observables, denoted by $\hat{T}_S(x)$, corresponding to all the different places $x\in S$ where the measurement could be made. Therefore, if a measurement were made on $S$ for all $x\in S$, the corresponding state of $S$ would not just be an eigenstate of one observable $\hat{T}_S(x)$,\label{firstHatTS} 
 but rather, it would have to be an eigenstate of every observable $\hat{T}_S(x)$ for every $x\in S$. We will therefore need to speak of simultaneous $\hat{T}_S$-eigenstates and simultaneous $\hat{T}_S$-eigenvalues in order to specify the quantum state of $S$ on which $T_S(x)$ has a determinate value of $\tau_S(x)$ for every $x\in S$. This terminology will be described in more detail on page \pageref{simultaneous}.  Given that there is such a simultaneous $\hat{T}_S$-eigenstate, we can then work out via the Born Rule the probability this state would be selected given the initial state of the universe.
 
 \subsection{Technical Details\textsuperscript{*}}  
@@ -97,9 +95,9 @@ In order to specify more precisely the additional variables that Kent's theory r
 In the \textbf{Heisenberg picture}\index{Heisenberg picture}, the states describing a system do not change over time. Rather, the observables change over time. So for instance, if there is a time-independent state $\ket*{\Phi}$ describing a system and there is some measurable quantity whose expectation value we wish to know at time $t$ given the state $\ket*{\Phi}$, %
 \nomenclature{$\ket*{\Phi}$}{A state in the Heisenberg picture, \nomrefpage}%
  then we will need a time dependent observable $\hat{\bm{O}}(t)$,\footnote{See footnote \ref{boldref} for an explanation of the convention of using a boldface font for this observable.} say, corresponding to the measurable quantity at time $t$ from which we can calculate the expectation value $\ev*{\hat{\bm{O}}(t)}{\Phi}$ at time $t$  given the system is in state $\ket*{\Phi}$. In the context of quantum field theory, any observable $\hat{\bm{O}}(t)$ %
- \nomenclature{$\hat{\bm{O}}(t)$ }{A time dependent observable in the Heisenberg picture, \nomrefpage}%
+ \nomenclature{$\hat{\bm{O}}(t)$}{A time dependent observable in the Heisenberg picture, \nomrefpage}%
   in the Heisenberg picture will be expressible as a sum (or integral) of observables of the form $\hat{\bm{O}}(t, \bm{x})$, where $\hat{\bm{O}}(t, \bm{x})$ %
-  \nomenclature{$\hat{\bm{O}}(t, \bm{x})$ }{An observable in the Heisenberg picture at a particular time $t$ and spatial location $\bm{x}$, \nomrefpage}%
+  \nomenclature{$\hat{\bm{O}}(t, \bm{x})$}{An observable in the Heisenberg picture at a particular time $t$ and spatial location $\bm{x}$, \nomrefpage}%
    is an observable of some quantity at a particular time $t$ and spatial location $\bm{x}$.\footnote{For example, in quantum electrodynamics (which is one kind of quantum field theory), the observables will be expressible in terms of fields such as the \emph{four-vector potential}\index{four-vector potential} potential $A^\mu(x)$  %
    \nomenclature{$A^\mu(x)$}{The four-vector potential of the electromagnetic field, \nomrefpage}%  
    and the bispinor field $\psi(x)$ %
@@ -107,7 +105,7 @@ In the \textbf{Heisenberg picture}\index{Heisenberg picture}, the states describ
     which are defined at all spacetime locations $(t, \bm{x})=(t, x^1, x^2, x^3)$. The four-vector potential $A^\mu(x)$ can be used to determine the electromagnetic field, and the bispinor field $\psi(x)$ can be used to determine the electric current density. In the Heisenberg picture, these fields will have corresponding Hilbert space operators at each spacetime location $x$ from which expectation values can be calculated at the spacetime location $x$ for a given time-independent state.}
 \strut \\[\baselineskip]
 The Heisenberg picture is contrasted with the \textbf{Schr\"{o}dinger picture}\index{Schr\"{o}dinger picture} in which the observables do not change over time, but rather the states change over time. So for instance, if there is a time-dependent state $\ket*{\Phi(t)}$  %
-\nomenclature{$\ket*{\Phi(t)}$ }{Time dependent state in the Schr\"{o}dinger picture, \nomrefpage}%
+\nomenclature{$\ket*{\Phi(t)}$}{Time dependent state in the Schr\"{o}dinger picture, \nomrefpage}%
  describing a system at a specific time $t$ and there is some measurable quantity whose expectation value we wish to know at time $t$ given the state $\ket*{\Phi(t)}$, then we will only require a time-independent observable $\hat{\bm{O}}$, %
  \nomenclature{$\hat{\bm{O}}$}{Time independent observable in the Schr\"{o}dinger picture, \nomrefpage}%
   say, corresponding to the measurable quantity from which we can calculate the expectation value $\ev*{\hat{\bm{O}}}{\Phi(t)}$. As in the Heisenberg picture, we can introduce a spatial dependence into the observables so that any observable  $\hat{\bm{O}}$ is expressible as a sum (or integral) of observables of the form $\hat{\bm{O}}(\bm{x})$  %
@@ -150,7 +148,7 @@ on $S$ where $x$ is any spacetime location on $S$, and where $\hat{\bm{O}}(x)$ i
   \nomenclature{$\fdv{U[S]}{S(x)}$}{Functional derivative, see equation (\ref{fddef}), \nomrefpage}%  
   where $S'$ is a surface that only differs from $S$ in the vicinity of $x$, and where $\delta\omega$ is the volume enclosed by $S$ and $S'$. The Hermitian operator $$\mathcal{H}(x)=-(1/c)j^\mu(x)A_\mu(x)$$
   has the desired property where $j^\mu(x)$ %
-  \nomenclature{$j^\mu(x)$ }{current density, \nomrefpage}%
+  \nomenclature{$j^\mu(x)$}{current density, \nomrefpage}%
   is the \emph{current density}\index{current density} and where $A^\mu(x)$ %
   \nomenclature{$A^\mu(x)$}{The four-vector potential of the electromagnetic field, \nomrefpage}%  
    is the four-vector potential of the electromagnetic field. With this choice for $\mathcal{H}(x)$, Schwinger shows that $\Box A^\mu(x)=0$ and $\partial_\mu A^\mu(x)\ket*{\Psi[S]}=0,$ where $\Box=\partial_\mu\partial^\mu$ is %
@@ -343,7 +341,7 @@ which is described by a state $\ket{\Psi_0}$ belonging to a Hilbert space $H_{S_
  then $U_{SS_0}$ will %
  \nomenclature{$U_{SS_0}$}{Unitary operator that maps states in $H_{S_0}$ such as $\ket{\Psi_0}$ to states in $H_S$ in the Tomonaga-Schwinger picture, see equation (\ref{SchwingerUnitaryOP}), \nomrefpage}%
   be a unitary operator that maps states in $H_{S_0}$ such as $\ket{\Psi_0}$ to states in $H_S$. Then the probability $P(\Psi|\Psi_0)$ %
-  \nomenclature{$P(\Psi|\Psi_0)$ }{The probability that  $S$ will be found to be in the state $\ket{\Psi}$ with mass-energy density $\tau_S(x)$ given that $S_0$ was initially in the state $\ket{\Psi_0}$, see equation (\ref{bornrule}), \nomrefpage}%
+  \nomenclature{$P(\Psi|\Psi_0)$}{The probability that  $S$ will be found to be in the state $\ket{\Psi}$ with mass-energy density $\tau_S(x)$ given that $S_0$ was initially in the state $\ket{\Psi_0}$, see equation (\ref{bornrule}), \nomrefpage}%
    that  $S$ will be found to be in the state $\ket{\Psi}$ with mass-energy density $\tau_S(x)$ given that $S_0$ was initially in the state $\ket{\Psi_0}$ will be given by the Born Rule (see page \pageref{bornrule}):
  \begin{equation}\label{bornpsi}
  P(\Psi|\Psi_0) = \abs{\mel{\Psi}{U_{SS_0}}{\Psi_0}}^2=\abs{\ip{\Psi}{\Psi_S}}^2

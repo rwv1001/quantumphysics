@@ -28,19 +28,19 @@ if we fix $\vb{x}_B$ %
 and consider $S$ to be just a function of $\vb{x}_A$, then the momentum $\vb{p}_A$ is in the direction and has the magnitude of the steepest ascent of $S$ considered as a function of $\vb{x}_A$. The momentum $\vb{p}_B$ is determined similarly. 
 
 In reality, we don't know the exact positions of all the particles, but based on what we know about an experimental setup, we can average over our uncertainty and recover exactly the same predictions that standard quantum theory would make.\footnote{See \cite{BohmDavid1952A} and \cite{BohmDavid1952B}.} So for instance, our knowledge of the experimental setup above should enable us  to know that $q_A$ and $q_B$ are contained within a region $V,$ %
-\nomenclature{$V$ }{The region particles $q_A$ and $q_B$ are confined to in the pilot wave interpretation, \nomrefpage}%
+\nomenclature{$V$}{The region particles $q_A$ and $q_B$ are confined to in the pilot wave interpretation, \nomrefpage}%
 and the experimental setup should also enable us to work out the probability  $p(V_i, V_j)$ %
-\nomenclature{$p(V_i, V_j)$ }{The probability given our knowledge that particle  $q_A$ belongs to the region $V_i$ and particle $q_B$ belongs to the region $V_j$, \nomrefpage}%
+\nomenclature{$p(V_i, V_j)$}{The probability given our knowledge that particle  $q_A$ belongs to the region $V_i$ and particle $q_B$ belongs to the region $V_j$, \nomrefpage}%
 that particle $q_A$  will be in a region $V_i$, and particle $q_B$ will be in a region $V_j,$ where the $V_i$ are small non-overlapping regions such that $V=\bigcup_iV_i$. %
-\nomenclature{$V_i$ }{Small non-overlapping regions whose union is $V=\bigcup_iV_i$, \nomrefpage}%
+\nomenclature{$V_i$}{Small non-overlapping regions whose union is $V=\bigcup_iV_i$, \nomrefpage}%
 If we are interested in some physical quantity $O(\vb{x}_A, \vb{x}_B)$ %
-\nomenclature{$O(\vb{x}_A, \vb{x}_B)$ }{A physical quantity dependent on the locations of the particles $q_A$ and $q_B$ in the pilot wave interpretation, \nomrefpage}%
+\nomenclature{$O(\vb{x}_A, \vb{x}_B)$}{A physical quantity dependent on the locations of the particles $q_A$ and $q_B$ in the pilot wave interpretation, \nomrefpage}%
 that depends on the positions $\vb{x}_A$ and $\vb{x}_B$ of the two particles, then when the regions $V_i$ are  sufficiently small so that almost everywhere,\footnote{When $O(\vb{x}_A,\vb{x}_B)$ is discontinuous, there may be some  $V_i\times V_j$ cells in which $O(\vb{x}_A,\vb{x}_B)$ varies non-negligibly for $(\vb{x}_A,\vb{x}_B)\in V_i\times V_j$. But we assume that the sum of the $p(V_i, V_j)\max_{(\vb{x}_i,\vb{x}_j)\in V_i\times V_j}|O(\vb{x}_i,\vb{x}_j)|$ terms for such cells is negligible.} $O(\vb{x}_i, \vb{x}_j)$ varies negligibly for any $\vb{x}_i\in V_i$ and $\vb{x}_j\in V_j$,  the average value (also known as the \textbf{expectation value}\index{expectation value!pilot wave})
 \begin{equation}\label{bohmconsistency}
 \ev{O}=\sum_{i,j}p(V_i, V_j)O(\vb{x}_i, \vb{x}_j)
 \end{equation}
 calculated %
-\nomenclature{$\ev{O}$ }{Expectation value of the physical quantity $O(\vb{x}_A, \vb{x}_B)$ in the pilot wave interpretation \nomrefpage}%
+\nomenclature{$\ev{O}$}{Expectation value of the physical quantity $O(\vb{x}_A, \vb{x}_B)$ in the pilot wave interpretation \nomrefpage}%
 in the pilot wave interpretation turns out to be the same as the expectation value\footnote{See (\ref{expectation2}) for the definition of the expectation value of an observable in standard quantum theory.} for $O$ predicted by standard quantum theory.\footnote{In this explanation, I've refrained from using measure theory, but basically this explanation is saying that when we construct a measure $\mu$ on $V\times V$ based on our knowledge of the experimental setup,  $\int_{V\times V}O(\vb{x}_i, \vb{x}_j)\dd\mu$ will be the same as the expectation value for $O$ predicted by standard quantum theory. }
 
 To see why PI fails to hold in the pilot wave interpretation, we first note that since the pilot wave interpretation makes the same predictions as standard quantum theory when averaged over all the hidden variables, the violation of Bell's inequality (\ref{bellinequality}) implies there must be some hidden variable $\lambda$ and choices of measurement directions $\bm{\hat{a}}$, $\bm{\hat{b}}$, and $\bm{\hat{c}}$ such that  %
