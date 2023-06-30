@@ -156,29 +156,29 @@ cube side color=blue!40,
 \newcommand{\uvbpm}[1]{{\uvb{#1}\bm{\pm}}}
 \newcommand{\uvbmp}[1]{{\uvb{#1}\bm{\mp}}}
 \newcommand{\dotsize}{2pt}
-\makeatletter 
-\def\footnoterule{\kern-6\p@ % you can put other values to increase vertical space between rule and notes (just try out); difference between the values after "kern" is the width of the rule!
-\hrule \@width 2in \kern 5.7\p@} % the in value is the length of the footnoterule
-% footnotemark
+% \makeatletter 
+% \def\footnoterule{\kern-6\p@ % you can put other values to increase vertical space between rule and notes (just try out); difference between the values after "kern" is the width of the rule!
+% \hrule \@width 2in \kern 5.7\p@} % the in value is the length of the footnoterule
+% % footnotemark
 
-\renewcommand{\@makefntext}[1]{%
-\if@optraggedright
-%\raggedright%
-\fi
-\justifying
-\setlength{\parindent}{\footnotemargin}%
-\textsuperscript{\@thefnmark}#1%
-}
+% \renewcommand{\@makefntext}[1]{%
+% \if@optraggedright
+% %\raggedright%
+% \fi
+% \justifying
+% \setlength{\parindent}{\footnotemargin}%
+% \textsuperscript{\@thefnmark}#1%
+% }
 
-\addtolength{\skip\footins}{2pt} % vertical space between rule and main text
-\setlength{\footnotesep}{12pt} % vertical space between footnotes
-\let\origfootnote\footnote % font size of footnotes; changes \footnotesize command only inside footnotes!
-\setlength{\footnotemargin}{0in}
-\renewcommand{\footnote}[1]{%
-\noindent % here there is scriptsize in footnotes (example) 
-\origfootnote{#1}} 
+% \addtolength{\skip\footins}{2pt} % vertical space between rule and main text
+% \setlength{\footnotesep}{12pt} % vertical space between footnotes
+% \let\origfootnote\footnote % font size of footnotes; changes \footnotesize command only inside footnotes!
+% \setlength{\footnotemargin}{0in}
+% \renewcommand{\footnote}[1]{%
+% \noindent % here there is scriptsize in footnotes (example) 
+% \origfootnote{#1}} 
 
-\makeatother
+% \makeatother
 
 
 

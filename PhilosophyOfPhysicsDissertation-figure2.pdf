@@ -3062,7 +3062,7 @@ q
 0 g 
 1 0 0 1 -304.96 -196.27 cm
 BT
-/F57 11.9552 Tf 304.96 196.27 Td [(a)]TJ
+/F39 11.9552 Tf 304.96 196.27 Td [(a)]TJ
 ET
 1 0 0 1 304.96 196.27 cm
 Q 
@@ -3087,7 +3087,7 @@ q
 0 g 
 1 0 0 1 -197.825 -130.532 cm
 BT
-/F57 11.9552 Tf 197.825 130.532 Td [(o)]TJ
+/F39 11.9552 Tf 197.825 130.532 Td [(o)]TJ
 ET
 1 0 0 1 197.825 130.532 cm
 Q 
@@ -3112,7 +3112,7 @@ q
 0 g 
 1 0 0 1 -157.676 -219.127 cm
 BT
-/F57 11.9552 Tf 157.676 219.127 Td [(c)]TJ
+/F39 11.9552 Tf 157.676 219.127 Td [(c)]TJ
 ET
 1 0 0 1 157.676 219.127 cm
 Q 
@@ -3137,7 +3137,7 @@ q
 0 g 
 1 0 0 1 -245.68 -223.452 cm
 BT
-/F57 11.9552 Tf 245.68 223.452 Td [(b)]TJ
+/F39 11.9552 Tf 245.68 223.452 Td [(b)]TJ
 ET
 1 0 0 1 245.68 223.452 cm
 Q 
@@ -3210,7 +3210,7 @@ endobj
 4 0 obj
 <<
  /ColorSpace 3 0 R /Pattern 2 0 R /ExtGState 1 0 R 
-/Font << /F28 7 0 R /F57 8 0 R >>
+/Font << /F28 7 0 R /F39 8 0 R >>
 /ProcSet [ /PDF /Text ]
 >>
 endobj
@@ -3720,8 +3720,8 @@ endobj
 <<
 /Producer (MiKTeX pdfTeX-1.40.24)
 /Creator (TeX)
-/CreationDate (D:20230525171924+01'00')
-/ModDate (D:20230525171924+01'00')
+/CreationDate (D:20230630223434+01'00')
+/ModDate (D:20230630223434+01'00')
 /Trapped /False
 /PTEX.Fullbanner (This is MiKTeX-pdfTeX 4.10.0 (1.40.24))
 >>
@@ -3752,7 +3752,7 @@ trailer
 << /Size 20
 /Root 18 0 R
 /Info 19 0 R
-/ID [<8D937CDCBC9FECDC90BD374611631FA9> <8D937CDCBC9FECDC90BD374611631FA9>] >>
+/ID [<AD1A953489806401C662E17F008B76E5> <AD1A953489806401C662E17F008B76E5>] >>
 startxref
 65427
 %%EOF
