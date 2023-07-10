@@ -19,27 +19,28 @@ so that if Alice were to perform a Stern-Gerlach experiment on particle $q_A$ in
 
 Now in order to decide how to represent the joint state of the particles $q_A$ and $q_B$, we recall that  in probability theory, we say that two events $X$ and $Y$ are \textbf{statistically independent}\index{statistical independence} if and only if 
 \begin{equation}\label{indep}
-    P(X\,\&\,Y)=P(X)P(Y)
+    P(X, Y)=P(X)P(Y)
 \end{equation}
 where $P(X)$ %
 \nomenclature{$P(X)$}{The probability an event $X$ occurs, \nomrefpage}%
-is the probability that $X$ occurs, $P(Y)$ is the probability that $Y$ occurs, and $P(X\,\&\,Y)$ is the probability that both $X$ and $Y$ both occur. We define the \textbf{conditional probability}\index{conditional probability} $P(X|Y)$ %
+is the probability that $X$ occurs, $P(Y)$ is the probability that $Y$ occurs, and $P(X, Y)$ is the probability that both $X$ and $Y$ both occur. We define the \textbf{conditional probability}\index{conditional probability} $P(X|Y)$ %
 \nomenclature{$P(X\mid Y)$}{The probability an event $X$ occurs given that the event $Y$ occurs, \nomrefpage}%
 of $X$ given $Y$ to be
 \begin{equation}\label{conditionaprob}
-P(X|Y)= \frac{P(X\,\&\,Y)}{P(Y)}.
+P(X|Y)= \frac{P(X, Y)}{P(Y)}.
 \end{equation}
-From (\ref{indep}), it is easy to see that when $X$ and $Y$ are independent, $P(X|Y)=P(X)$. We also say that two events $X$ and $Y$ are \textbf{conditionally independent}\index{conditional independence} given some third event $Z$ if and only if 
+From (\ref{indep}), it is easy to see that when $X$ and $Y$ are independent with $P(Y)\neq 0$, $P(X|Y)=P(X)$. We also say that two events $X$ and $Y$ are \textbf{conditionally independent}\index{conditional independence} given some third event $Z$ if and only if 
 \begin{equation}\label{indepcond}
-P(X\,\&\,Y|Z)=P(X|Z)P(Y|Z)
-\end{equation} where $P(X|Z)$ is the conditional probability that $X$ occurs given $Z$, $P(Y|Z)$ is the conditional probability that $Y$ occurs given $Z$, and $P(X\,\&\,Y|Z)$ is the conditional probability that both $X$ and $Y$  occur given $Z$.   
+P(X, Y|Z)=P(X|Z)P(Y|Z)
+\end{equation} where $P(X|Z)$ is the conditional probability that $X$ occurs given $Z$, $P(Y|Z)$ is the conditional probability that $Y$ occurs given $Z$, and $P(X, Y|Z)$ is the conditional probability that both $X$ and $Y$  occur given $Z$.   
 
-Now if $q_A$ can be described by the $\ket*{\alpha}_A$-state and $q_B$ can be described by the $\ket*{\beta}_B$-state, the Born Rule implies that the conditional probability that Alice would measure her particle to be in the state $\ket*{\alpha'}_A$ is not going to depend on $\ket*{\beta}_B$,  and so  $P(\alpha'|\alpha\,\&\,\beta)=P(\alpha'|\alpha)$. Likewise, $P(\beta'|\alpha\,\&\,\beta)=P(\beta'|\beta)$. 
-Therefore, if Alice and Bob's measurement outcomes are conditionally independent, then according to (\ref{indepcond}) and the Born Rule, we would obtain the conditional probability
+Now if $q_A$ can be described by the $\ket*{\alpha}_A$-state and $q_B$ can be described by the $\ket*{\beta}_B$-state, the Born Rule implies that the conditional probability (conditioned on $q_A$ being in the $\ket*{\alpha}_A$-state and $q_B$ being in the $\ket*{\beta}_B$-state) that Alice would measure her particle to be in the state $\ket*{\alpha'}_A$ is not going to depend on $\ket*{\beta}_B$,  and so  $P(\alpha'|\alpha, \beta)=P(\alpha'|\alpha)$.\footnote{ $P(\alpha'|\alpha, \beta)$ denotes the conditional probablility that $q_A$ will be measured to be in the $\ket*{\alpha'}_A$-state given that $q_A$ is in the $\ket*{\alpha}_A$-state and $q_B$ is in the $\ket*{\beta}_B$-state.} state given that Likewise, $P(\beta'|\alpha, \beta)=P(\beta'|\beta)$. 
+Therefore, if Alice and Bob's measurement outcomes are conditionally independent given the prior states of their particles, then according to (\ref{indepcond}) and the Born Rule, we would obtain the conditional probability
 \begin{equation}\label{indepprob}
-    P_{AB}(\alpha'\,\&\,\beta'|\alpha\,\&\,\beta)=|\ip{\alpha'}{\alpha}_A|^2\times|\ip{\beta'}{\beta}_B|^2=|\ip{\alpha'}{\alpha}_A\ip{\beta'}{\beta}_B|^2.
-\end{equation} %
-\nomenclature{$P_{AB}(\alpha'\,\&\,\beta'\mid\alpha\,\&\,\beta)$}{The conditional probability particle $q_A$ will be found to be in state $\ket{\alpha'}$ and particle $q_B$ will be found to be in state $\ket{\beta'}$ given that particle $q_A$ is currently in the state $\ket{\alpha}$ and particle $q_B$ is currently in the state $\ket{\beta}$, see equation (\ref{indepprob}), \nomrefpage}%
+    P_{AB}(\alpha', \beta'|\alpha, \beta)=|\ip{\alpha'}{\alpha}_A|^2\times|\ip{\beta'}{\beta}_B|^2=|\ip{\alpha'}{\alpha}_A\ip{\beta'}{\beta}_B|^2
+\end{equation}
+where $P_{AB}(\alpha', \beta'|\alpha, \beta)$ is the conditional probability Alice will measure $q_A$ to be in the $\ket*{\alpha'}_A$-state and Bob will measure $q_B$ to be in the $\ket*{\beta'}_B$-state given that $q_A$ is initially in the $\ket*{\alpha}_A$-state and particle $q_B$ is initially in the state $\ket{\beta}$.%
+\nomenclature{$P_{AB}(\alpha', \beta'\mid\alpha, \beta)$}{The conditional probability particle $q_A$ will be found to be in state $\ket{\alpha'}$ and particle $q_B$ will be found to be in state $\ket{\beta'}$ given that particle $q_A$ is currently in the state $\ket{\alpha}$ and particle $q_B$ is currently in the state $\ket{\beta}$, see equation (\ref{indepprob}), \nomrefpage}%
 This suggests that if we write $\ket{\alpha}_A\ket{\beta}_B$ %
 \nomenclature{$\ket{\alpha}_A\ket{\beta}_B$}{The composite state of two particles $q_A$ and $q_B$ where particle $q_A$ is in the $\ket{\alpha}_A$-state and particle $q_B$ is in the $\ket{\beta}_B$-state, \nomrefpage}%
 for the state of the composite system of both particles, then the bra-ket of $\ket{\alpha'}_A\ket{\beta'}_B$ and $\ket{\alpha}_A\ket{\beta}_B$ 
@@ -49,7 +50,7 @@ would be
 \end{equation} %
 \nomenclature{$\ip{\alpha'}{\alpha}_A$}{The inner product of the two states $\ket{\alpha}_A$ and $\ket{\alpha'}_A$, \nomrefpage}%
 We extend this bracket to sums of states so that it satisfies the linearity property (see page \pageref{linearity}).
-However, when the particles $q_A$ and $q_B$ form a spin singlet, it will not be possible to express their joint state as $\ket{\alpha}_A\ket{\beta}_B$ because otherwise, according to (\ref{indepprob}), we will always be able to find a direction $\uvb{a}$ such that $P_{AB}(\uvbp{a}\,\&\,\uvbp{a}|\alpha\,\&\,\beta)\neq 0$, whereas in reality, the state $Z$ describing the singlet has to satisfy $P_{AB}(\uvbp{a}\,\&\,\uvbp{a}|Z)=0$ for all  $\uvb{a}$.
+However, when the particles $q_A$ and $q_B$ form a spin singlet, it will not be possible to express their joint state as $\ket{\alpha}_A\ket{\beta}_B$ because otherwise, according to (\ref{indepprob}), we will always be able to find a direction $\uvb{a}$ such that $P_{AB}(\uvbp{a}, \uvbp{a}|\alpha, \beta)\neq 0$, whereas in reality, the state $Z$ describing the singlet has to satisfy $P_{AB}(\uvbp{a}, \uvbp{a}|Z)=0$ for all  $\uvb{a}$.
 But it turns out that the summation of states:
 \begin{equation}\label{bell}
     \ket*{\Psi_{\text{Bell}}}=\frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B-\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B).
@@ -58,14 +59,14 @@ But it turns out that the summation of states:
 can describe the singlet state of the two particles. We refer to the state (\ref{bell}) as a \textbf{Bell state}\index{Bell state}.\footnote{By convention, the states $ \frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B+\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B)$, $ \frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbp{a}}_B-\ket*{\uvbm{a}}_A\ket*{\uvbm{a}}_B)$, and $ \frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbp{a}}_B+\ket*{\uvbm{a}}_A\ket*{\uvbm{a}}_B)$ are also referred to as Bell states.} If the composite system is in the Bell state $\ket*{\Psi_{\text{Bell}}}$, then according to the Born Rule, the probability that Alice measures her particle to be in state $\ket*{\alpha}$ and Bob measures his particle to be in the state $\ket*{\beta}$ will be:
 \begin{equation}
 \begin{split}
-    P_{AB}(\alpha\,\&\,\beta|\Psi_{\text{Bell}})&=|\prescript{}{B}{ \bra*{\beta}}\prescript{}{A}{ \ip{\alpha}{\Psi_{\text{Bell}}}}|^2\\
+    P_{AB}(\alpha, \beta|\Psi_{\text{Bell}})&=|\prescript{}{B}{ \bra*{\beta}}\prescript{}{A}{ \ip{\alpha}{\Psi_{\text{Bell}}}}|^2\\
         &=\frac{1}{2}|\ip*{\alpha}{\uvbp{a}}_A\ip*{\beta}{\uvbm{a}}_B-\ip*{\alpha}{\uvbm{a}}_A\ip*{\beta}{\uvbp{a}}_B|^2
 \end{split}
 \end{equation}
 This means that whatever axis Bob decides to measure along, if Alice measures her particle along the $\uvb{a}$-axis, then the Born Rule predicts that she will measure the particle to be in either the $\ket*{\uvbp{a}}_A$-state or the $\ket*{\uvbm{a}}_A$-state, each with probability of $\frac{1}{2}$.\footnote{To see this, suppose Bob performs his measurement along an arbitrary axis $\uvb{b}$. Then the probability Alice measures her particle to be in the $\ket*{\uvbp{a}}$-state will be 
 \begin{equation}
     \begin{split}
-        P_{AB}(\uvbp{a}\,\&\,\uvbp{b}|\Psi_{\text{Bell}})&+P_{AB}(\uvbp{a}\,\&\,\uvbm{b}|\Psi_{\text{Bell}})= \\
+        P_{AB}(\uvbp{a}, \uvbp{b}|\Psi_{\text{Bell}})&+P_{AB}(\uvbp{a}, \uvbm{b}|\Psi_{\text{Bell}})= \\
         =&\frac{1}{2}\big| \ip*{\uvbp{a}}{\uvbp{a}}_A\ip*{\uvbp{b}}{\uvbm{a}}_B-\ip*{\uvbp{a}}{\uvbm{a}}_A\ip*{\uvbp{b}}{\uvbp{a}}_B\big|^2\\
         &+\frac{1}{2}\big|\ip*{\uvbp{a}}{\uvbp{a}}_A\ip*{\uvbm{b}}{\uvbm{a}}_B-\ip*{\uvbp{a}}{\uvbm{a}}_A\ip*{\uvbm{b}}{\uvbp{a}}_B\big|^2\\
         =&\frac{1}{2}\big|\ip*{\uvbp{b}}{\uvbm{a}}_B|^2+\frac{1}{2}|\ip*{\uvbm{b}}{\uvbm{a}}_B\big|^2=\frac{1}{2}
@@ -80,19 +81,12 @@ $$|\ip*{\uvbp{b}}{\uvbm{a}}_B|^2+\ip*{\uvbm{b}}{\uvbm{a}}_B|^2=1.$$
 } But also, the Born Rule implies that if both Alice and Bob measure their respective particles along the same $\uvb{a}$-axis, then the probability Bob will measure his particle to have the same spin as Alice's particle will be zero, and the probability that Bob measures his particle to have the opposite spin from Alice's particle will be one.\footnote{This is because the probability Alice and Bob will measure their particles to have the same spin will be 
 \begin{equation*}
 \begin{split}
-    P_{AB}(\uvbp{a}\,\&\,\uvbp{a}|\Psi_{\text{Bell}})&+P_{AB}(\uvbm{a}\,\&\,\uvbm{a}|\Psi_{\text{Bell}})= \\
+    P_{AB}(\uvbp{a}, \uvbp{a}|\Psi_{\text{Bell}})&+P_{AB}(\uvbm{a}, \uvbm{a}|\Psi_{\text{Bell}})= \\
     =&\frac{1}{2}\big| \ip*{\uvbp{a}}{\uvbp{a}}_A\ip*{\uvbp{a}}{\uvbm{a}}_B-\ip*{\uvbp{a}}{\uvbm{a}}_A\ip*{\uvbp{a}}{\uvbp{a}}_B\big|^2\\
-    &+\frac{1}{2}\big|\ip*{\uvbm{a}}{\uvbp{a}}_A\ip*{\uvbm{a}}{\uvbm{a}}_B-\ip*{\uvbm{a}}{\uvbm{a}}_A\ip*{\uvbm{a}}{\uvbp{a}}_B\big|^2=0,
+    &+\frac{1}{2}\big|\ip*{\uvbm{a}}{\uvbp{a}}_A\ip*{\uvbm{a}}{\uvbm{a}}_B-\ip*{\uvbm{a}}{\uvbm{a}}_A\ip*{\uvbm{a}}{\uvbp{a}}_B\big|^2=0.
 \end{split}
 \end{equation*}
-and the probability Alice and Bob will measure their particles to have different spins will be
-\begin{equation*}
-\begin{split}
-    P_{AB}(\uvbp{a}\,\&\,\uvbm{a}|\Psi_{\text{Bell}})&+P_{AB}(\uvbm{a}\,\&\,\uvbp{a}|\Psi_{\text{Bell}})= \\
-    =&\frac{1}{2}\big| \ip*{\uvbp{a}}{\uvbp{a}}_A\ip*{\uvbm{a}}{\uvbm{a}}_B-\ip*{\uvbp{a}}{\uvbm{a}}_A\ip*{\uvbm{a}}{\uvbp{a}}_B\big|^2\\
-    &+\frac{1}{2}\big|\ip*{\uvbm{a}}{\uvbp{a}}_A\ip*{\uvbp{a}}{\uvbm{a}}_B-\ip*{\uvbm{a}}{\uvbm{a}}_A\ip*{\uvbp{a}}{\uvbp{a}}_B\big|^2=1.
-\end{split}
-\end{equation*}} 
+It therefore follows that Alice and Bob will measure their particles to have different spins with probability $1$, since for any proposition $q$ and its negation $\neg q$ (e.g. $q = \text{Alice and Bob measure their particles to have the same spin}$ and $\neg q = \text{Alice and Bob measure their particles to have different spins.}$), the sum of the probabilities of $q$ and of $\neg q$ conditioned on any other proposition $\Psi$ that has non-zero probability (e.g. the particles $q_A$ and $q_B$ are in the $\ket*{\Psi_{\text{Bell}}}$ state) must be equal to $1$, i.e. we must have $P(q|\Psi)+P(\neg q|\Psi)=1.$} 
 These probabilities predicted by the Born Rule using the Bell state $\ket*{\Psi_{\text{Bell}}}$ correspond to the probabilities observed experimentally. Also note that despite the appearance of the formula (\ref{bell}), $\ket*{\Psi_{\text{Bell}}}$ is independent of the axis $\uvb{a}$. That is, for any other direction $\uvb{b}$, it can be shown that,
 \begin{equation}\label{bellstate2}\frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B-\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B)=\frac{1}{\sqrt{2}}(\ket*{\uvbp{b}}_A\ket*{\uvbm{b}}_B-\ket*{\uvbm{b}}_A\ket*{\uvbp{b}}_B).\protect\footnotemark\end{equation}
 \footnotetext{\label{bellstate2pf}To see this, using the transformation rules given in equation (\ref{spintrans}) we have 
@@ -128,4 +122,4 @@ where $c$  %
 \nomenclature{$c$}{The speed of light, \nomrefpage}%
 is the speed of light and $\gamma=\Big(\sqrt{1-\frac{v^2}{c^2}}\Big)^{-1}.$ For details of the derivation of this transformation, see footnote \ref{srdefivation} on page \pageref{srdefivation}.} Thus, if we are moving at one velocity, it may appear that Alice makes her measurement first meaning that Alice causes the state collapse and thus affects the state of Bob's particle, whereas if we are moving at another velocity, it may appear that Bob makes his measurement first causing the state to collapse and thus affects the state of Alice's particle. Once the collapse has occurred, there is no further collapse when the second experimenter makes his or her measurement along the same axis as the first experimenter. Thus, the thesis of the Copenhagen interpretation that it is the act of measurement that causes the state to collapse is not compatible with Einstein's theory of special relativity, for if special relativity is correct, then one and the same measurement both will and will not cause the state to collapse depending upon which frame of reference one is in.
 
-Therefore, if one is more convinced (as most physicists are) of the truth of special relativity than the truth of the Copenhagen interpretation, then one must reject the Copenhagen interpretation. Thus, in the light of the EPR-Bohm paradox we need an alternative to the Copenhagen interpretation of quantum states that can account for how the two experimenters of the paradox always obtain opposite results when they make their measurement along the same axis. The obvious approach to take is to suppose that the quantum state $\ket*{\Psi_{\text{Bell}}}$ is an incomplete description of the spin state of the two particles. This is the hidden variables approach, but as we will see shortly, this approach is also problematic. But before we consider the hidden variables approach, we will turn to what is traditionally considered to be one of the most troubling aspect of the Copenhagen interpretation, namely the possibility of scenarios exemplified by Schr\"{o}dinger's cat thought experiment.
+Therefore, if one is more convinced (as most physicists are) of the truth of special relativity than the truth of the Copenhagen interpretation, then one must reject the Copenhagen interpretation.\footnote{One might still try to imagine models of reality in which special relativity and the Copenhagen interpretation are compatible. For example, suppose that whenever there are two spacelike separated measurements of an entangled system of two particles, an angel flips a coin to decide which measurement collapses the system first in the causal order. Then if reality were like this, perhaps special relativity and the Copenhagen interpretation could be compatible. However, a problem with this model is that it entails the possibility of backwards in time causality. This is because according to the Copenhagen interpretation, a measurement causes the state to collapse if and only if the system being measured is in a superposition of different measurement outcomes immediately before the measurement is made. So if an angel flips a coin which determines that Alice is the person whose measurement makes the state collapse, then if we choose an inertial frame in which Bob makes his measurement before Alice, then since Bob's measurement doesn't cause the state to collapse, the state of the particle he is measuring must already be in one of the measurement outcome states. But since the angel determines that Alice makes the state collapse, this would mean that as the entangled state of both particles evolved via the Schr\"{o}dinger equation towards the time when Alice makes her measurement, Bob's particle would have to be in a superposition of possible measurement outcomes until Alice made her measurement. So for Bob not to collapse the state, the act of Alice’s measurement would have to change the history of Bob's particle so that it was in a definite outcome state immediately before he made his measurement. So if one is willing to grant the possibility of backwards in time causality so that some action could change the past, then maybe special relativity and the Copenhagen interpretation are compatible. However, if one were to insist that the impossibility of backwards in time causality was an implicit assumption of special relativity and/or quantum mechanics, then at least in the model just considered here, it doesn’t look like special relativity and the Copenhagen interpretation would be compatible.} Thus, in the light of the EPR-Bohm paradox we need an alternative to the Copenhagen interpretation of quantum states that can account for how the two experimenters of the paradox always obtain opposite results when they make their measurement along the same axis. The obvious approach to take is to suppose that the quantum state $\ket*{\Psi_{\text{Bell}}}$ is an incomplete description of the spin state of the two particles. This is the hidden variables approach, but as we will see shortly, this approach is also problematic. But before we consider the hidden variables approach, we will turn to what is traditionally considered to be one of the most troubling aspect of the Copenhagen interpretation, namely the possibility of scenarios exemplified by Schr\"{o}dinger's cat thought experiment.

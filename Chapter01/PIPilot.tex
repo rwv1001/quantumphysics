@@ -1,9 +1,9 @@
 
-\section{Parameter Dependence in the Pilot Wave Interpretation}\label{PI}
-One model which exhibits PD is the \textbf{pilot wave interpretation}\index{pilot wave interpretation} of standard quantum theory. In this interpretation, it is assumed that at any instant of time $t$, the particles $q_A$ and $q_B$ will have definite positions $\vb{x}_A$ and $\vb{x}_B$ %
+\section{Parameter Dependence in the Bohmian interpretation}\label{PI}
+One model which exhibits PD is the \textbf{Bohmian interpretation}\index{Bohmian interpretation} of standard quantum theory. In this interpretation, it is assumed that at any instant of time $t$, the particles $q_A$ and $q_B$ will have definite positions $\vb{x}_A$ and $\vb{x}_B$ %
 \nomenclature{$\vb{x}_A, \vb{x}_B$}{Exact locations of particles $q_A$ and $q_B$ in the pilot wave model, \nomrefpage}%
 and definite momenta $\vb{p}_A$ and $\vb{p}_B$ %
-\nomenclature{$\vb{p}_A, \vb{p}_B$}{Exact momenta of particles $q_A$ and $q_B$ in the pilot wave interpretation, \nomrefpage}%
+\nomenclature{$\vb{p}_A, \vb{p}_B$}{Exact momenta of particles $q_A$ and $q_B$ in the Bohmian interpretation, \nomrefpage}%
 respectively. But in addition to the positions and momenta of the particles, it is also assumed that there is a so-called \textbf{pilot wave}\index{pilot wave} 
 \begin{equation}\label{pilotwave}
 \psi(\vb{x}_A, \vb{x}_B, t)=r(\vb{x}_A, \vb{x}_B, t)e^{i S(\vb{x}_A, \vb{x}_B, t)} 
@@ -27,106 +27,78 @@ if we fix $\vb{x}_B$ %
 \nomenclature{$\grad_B{S}(\vb{x}_A, \vb{x}_B)$}{Gradient of the function ${S}(\vb{x}_A, \vb{x}_B)$ with respect to the variable $\vb{x}_B$, \nomrefpage}%
 and consider $S$ to be just a function of $\vb{x}_A$, then the momentum $\vb{p}_A$ is in the direction and has the magnitude of the steepest ascent of $S$ considered as a function of $\vb{x}_A$. The momentum $\vb{p}_B$ is determined similarly. 
 
-In reality, we don't know the exact positions of all the particles, but based on what we know about an experimental setup, we can average over our uncertainty and recover exactly the same predictions that standard quantum theory would make.\footnote{See \cite{BohmDavid1952A} and \cite{BohmDavid1952B}.} So for instance, our knowledge of the experimental setup above should enable us  to know that $q_A$ and $q_B$ are contained within a region $V,$ %
-\nomenclature{$V$}{The region particles $q_A$ and $q_B$ are confined to in the pilot wave interpretation, \nomrefpage}%
+In reality, we don't know the exact positions of all the particles, but based on what we know about an experimental setup, we can average over our uncertainty and recover exactly the same predictions that standard quantum theory would make.\footnote{See \cite{BohmDavid1952A} and \cite{BohmDavid1952B}.} So for instance, our knowledge of the experimental setup above should enable us  to know that $q_A$ and $q_B$ are contained within a bounded region $V,$ %
+\nomenclature{$V$}{The region particles $q_A$ and $q_B$ are confined to in the Bohmian interpretation, \nomrefpage}%
 and the experimental setup should also enable us to work out the probability  $p(V_i, V_j)$ %
 \nomenclature{$p(V_i, V_j)$}{The probability given our knowledge that particle  $q_A$ belongs to the region $V_i$ and particle $q_B$ belongs to the region $V_j$, \nomrefpage}%
 that particle $q_A$  will be in a region $V_i$, and particle $q_B$ will be in a region $V_j,$ where the $V_i$ are small non-overlapping regions such that $V=\bigcup_iV_i$. %
 \nomenclature{$V_i$}{Small non-overlapping regions whose union is $V=\bigcup_iV_i$, \nomrefpage}%
 If we are interested in some physical quantity $O(\vb{x}_A, \vb{x}_B)$ %
-\nomenclature{$O(\vb{x}_A, \vb{x}_B)$}{A physical quantity dependent on the locations of the particles $q_A$ and $q_B$ in the pilot wave interpretation, \nomrefpage}%
-that depends on the positions $\vb{x}_A$ and $\vb{x}_B$ of the two particles, then when the regions $V_i$ are  sufficiently small so that almost everywhere,\footnote{When $O(\vb{x}_A,\vb{x}_B)$ is discontinuous, there may be some  $V_i\times V_j$ cells in which $O(\vb{x}_A,\vb{x}_B)$ varies non-negligibly for $(\vb{x}_A,\vb{x}_B)\in V_i\times V_j$. But we assume that the sum of the $p(V_i, V_j)\max_{(\vb{x}_i,\vb{x}_j)\in V_i\times V_j}|O(\vb{x}_i,\vb{x}_j)|$ terms for such cells is negligible.} $O(\vb{x}_i, \vb{x}_j)$ varies negligibly for any $\vb{x}_i\in V_i$ and $\vb{x}_j\in V_j$,  the average value (also known as the \textbf{expectation value}\index{expectation value!pilot wave})
+\nomenclature{$O(\vb{x}_A, \vb{x}_B)$}{A physical quantity dependent on the locations of the particles $q_A$ and $q_B$ in the Bohmian interpretation, \nomrefpage}%
+that depends on the positions $\vb{x}_A$ and $\vb{x}_B$ of the two particles, then when the regions $V_i$ are  sufficiently small so that almost everywhere,\footnote{I am using the expression ``almost everywhere'' in a measure theoretic sense to mean that the set of all points where discontinuities occur has measure $0$. The motivation for this qualification is that whilst it might seem reasonable to suppose that there could be physical quantities that are discontinuous in some places, it doesn't seem reasonable to suppose that there are physical quantities that could be pathologically discontinuous, e.g. we wouldn't expect there to be a physical quantity that took the value of $1$ unit when all the coordinates of a location were rational and a value of $2$ units when one of the coordinates was irrational. Given this qualification about $O(\vb{x}_A,\vb{x}_B)$ being continuous almost everywhere, then even though $O(\vb{x}_A,\vb{x}_B)$ could be discontinuous at some points so that there could be some  $V_i\times V_j$ cells in which $O(\vb{x}_A,\vb{x}_B)$ varied non-negligibly for $(\vb{x}_A,\vb{x}_B)\in V_i\times V_j$, it would still be the case that the sum of the $p(V_i, V_j)\max_{(\vb{x}_i,\vb{x}_j)\in V_i\times V_j}|O(\vb{x}_i,\vb{x}_j)|$ terms for such cells would be negligible. This follows from the Lebesgue-Vitali theorem that states that any bounded function on a compact interval is Riemann integrable if and only if it is continuous almost everywhere. See \cite{wiki:Riemann}.} $O(\vb{x}_i, \vb{x}_j)$ varies negligibly for any $\vb{x}_i\in V_i$ and $\vb{x}_j\in V_j$,  the average value (also known as the \textbf{expectation value}\index{expectation value!pilot wave})
 \begin{equation}\label{bohmconsistency}
 \ev{O}=\sum_{i,j}p(V_i, V_j)O(\vb{x}_i, \vb{x}_j)
 \end{equation}
 calculated %
-\nomenclature{$\ev{O}$}{Expectation value of the physical quantity $O(\vb{x}_A, \vb{x}_B)$ in the pilot wave interpretation \nomrefpage}%
-in the pilot wave interpretation turns out to be the same as the expectation value\footnote{See (\ref{expectation2}) for the definition of the expectation value of an observable in standard quantum theory.} for $O$ predicted by standard quantum theory.\footnote{In this explanation, I've refrained from using measure theory, but basically this explanation is saying that when we construct a measure $\mu$ on $V\times V$ based on our knowledge of the experimental setup,  $\int_{V\times V}O(\vb{x}_i, \vb{x}_j)\dd\mu$ will be the same as the expectation value for $O$ predicted by standard quantum theory. }
+\nomenclature{$\ev{O}$}{Expectation value of the physical quantity $O(\vb{x}_A, \vb{x}_B)$ in the Bohmian interpretation \nomrefpage}%
+in the Bohmian interpretation turns out to be the same as the expectation value\footnote{See (\ref{expectation2}) for the definition of the expectation value of an observable in standard quantum theory.} for $O$ predicted by standard quantum theory.\footnote{In this explanation, I've refrained from using measure theory, but basically this explanation is saying that when we construct a measure $\mu$ on $V\times V$ based on our knowledge of the experimental setup,  $\int_{V\times V}O(\vb{x}_i, \vb{x}_j)\dd\mu$ will be the same as the expectation value for $O$ predicted by standard quantum theory. }
 
-To see why PI fails to hold in the pilot wave interpretation, we first note that since the pilot wave interpretation makes the same predictions as standard quantum theory when averaged over all the hidden variables, the violation of Bell's inequality (\ref{bellinequality}) implies there must be some hidden variable $\lambda$ and choices of measurement directions $\bm{\hat{a}}$, $\bm{\hat{b}}$, and $\bm{\hat{c}}$ such that  %
-\nomenclature{$P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a}\,\&\,\uvbp{b})$}{The probability particle $q_A$ is measured to be in the $\ket*{\uvbp{a}}$-state and particle $q_B$ is measured to be in the $\ket*{\uvbp{b}}$-state given the complete state $\lambda$ of both particles, \nomrefpage}%
+To see why PI fails to hold in the Bohmian interpretation, we first note that since the Bohmian interpretation makes the same predictions as standard quantum theory when averaged over all the hidden variables, the violation of Bell's inequality (\ref{bellinequality}) implies there must be some hidden variable $\lambda$ and choices of measurement directions $\bm{\hat{a}}$, $\bm{\hat{b}}$, and $\bm{\hat{c}}$ such that  %
+\nomenclature{$P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a},\uvbp{b})$}{The probability particle $q_A$ is measured to be in the $\ket*{\uvbp{a}}$-state and particle $q_B$ is measured to be in the $\ket*{\uvbp{b}}$-state given the complete state $\lambda$ of both particles, \nomrefpage}%
  \begin{equation}\label{bellinequality2}
-P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a}\,\&\,\uvbp{b})> P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a}\,\&\,\uvbp{c})+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c}\,\&\,\uvbp{b}).\protect\footnotemark
+P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a},\uvbp{b})> P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a},\uvbp{c})+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c},\uvbp{b}).\protect\footnotemark
 \end{equation}\footnotetext{To see why this is, we consider the observable $O_{\uvbp{a},\uvbp{b}}(\vb{x}_A,\vb{x}_B)$ which returns $1$ if and only if the particle $q_A$ will end up at location $\uvbp{a}$ and particle $q_B$ will end up at location $\uvbp{b}$ as determined by the pilot wave, and otherwise  $O_{\uvbp{a},\uvbp{b}}(\vb{x}_A,\vb{x}_B)$ returns $0$. Then by (\ref{bohmconsistency}), 
 \begin{equation}\label{bohmconsistency2}
-P_{AB}(\uvbp{a}\,\&\,\uvbp{b})=\sum_{\lambda}p_{\lambda}P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a}\,\&\,\uvbp{b})
+P_{AB}(\uvbp{a},\uvbp{b})=\sum_{\lambda}p_{\lambda}P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a},\uvbp{b})
 \end{equation} 
-where $P_{AB}(\uvbp{a}\,\&\,\uvbp{b})$ is the probability described in section \ref{hiddenbellsection}, $\lambda$ ranges over the pairs of indices $(i,j)$ corresponding to the cell $V_i\times V_j$, $p_{\lambda}=p(V_i,V_j)$ for $\lambda=(i,j)$, and we have used the fact that  $P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a}\,\&\,\uvbp{b})=O_{\uvbp{a},\uvbp{b}}(\vb{x}_i\,\&\,\vb{x}_j)$ for almost all $(\vb{x}_i,\vb{x}_j)\in V_i\times V_j$. Now if (\ref{bellinequality2}) is false, then for all $\lambda$, $\bm{\hat{a}}$, and $\bm{\hat{b}}$,  
+where $P_{AB}(\uvbp{a},\uvbp{b})$ is the probability described in section \ref{hiddenbellsection}, $\lambda$ ranges over the pairs of indices $(i,j)$ corresponding to the cell $V_i\times V_j$, $p_{\lambda}=p(V_i,V_j)$ for $\lambda=(i,j)$, and we have used the fact that  $P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a},\uvbp{b})=O_{\uvbp{a},\uvbp{b}}(\vb{x}_i,\vb{x}_j)$ for almost all $(\vb{x}_i,\vb{x}_j)\in V_i\times V_j$. Now if (\ref{bellinequality2}) is false, then for all $\lambda$, $\bm{\hat{a}}$, and $\bm{\hat{b}}$,  
 \begin{equation}\label{falsebellinequality2}
-P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a}\,\&\,\uvbp{b})\leq P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a}\,\&\,\uvbp{c})+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c}\,\&\,\uvbp{b})
+P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a},\uvbp{b})\leq P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a},\uvbp{c})+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c},\uvbp{b})
 \end{equation} Therefore, since $p_{\lambda}\geq 0$, it follows that 
 \begin{equation}\label{falsebellinequality3}
-\sum_\lambda p_{\lambda}P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a}\,\&\,\uvbp{b})\leq \sum_\lambda p_{\lambda}P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a}\,\&\,\uvbp{c})+\sum_\lambda p_{\lambda} P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c}\,\&\,\uvbp{b}).
+\sum_\lambda p_{\lambda}P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a},\uvbp{b})\leq \sum_\lambda p_{\lambda}P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a},\uvbp{c})+\sum_\lambda p_{\lambda} P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c},\uvbp{b}).
 \end{equation} 
-It would therefore follow from (\ref{falsebellinequality3}) and  (\ref{bohmconsistency2}) that Bell's inequality (\ref{bellinequality}) would hold. But since (\ref{bellinequality}) is experimentally violated, it is not the case that (\ref{falsebellinequality2}) holds for all $\lambda$, $\bm{\hat{a}}$, and $\bm{\hat{b}}$. Hence, there must be some $\lambda$, $\bm{\hat{a}}$, and $\bm{\hat{b}}$,  for which (\ref{bellinequality2}) holds.}Since physics in the pilot wave interpretation is deterministic, probabilities must be either $0$ or $1$. Therefore, the only way (\ref{bellinequality2}) can be satisfied is for
+It would therefore follow from (\ref{falsebellinequality3}) and  (\ref{bohmconsistency2}) that Bell's inequality (\ref{bellinequality}) would hold. But since (\ref{bellinequality}) is experimentally violated, it is not the case that (\ref{falsebellinequality2}) holds for all $\lambda$, $\bm{\hat{a}}$, and $\bm{\hat{b}}$. Hence, there must be some $\lambda$, $\bm{\hat{a}}$, and $\bm{\hat{b}}$,  for which (\ref{bellinequality2}) holds.}Since physics in the Bohmian interpretation is deterministic, probabilities must be either $0$ or $1$. Therefore, the only way (\ref{bellinequality2}) can be satisfied is for
  \begin{align}
-P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a}\,\&\,\uvbp{b})&=1, \label{PDproof1}\\
-P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a}\,\&\,\uvbp{c})&=0,\label{PDproof2}\\
-P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c}\,\&\,\uvbp{b})&=0. \label{PDproof3}
+P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a},\uvbp{b})&=1, \label{PDproof1}\\
+P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a},\uvbp{c})&=0,\label{PDproof2}\\
+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c},\uvbp{b})&=0. \label{PDproof3}
  \end{align}
- We suppose that PI holds, and we will try to arrive at a contradiction. If both Alice and Bob make their measurement in the $\bm{\hat{c}}$-direction, there are two possibilities: either Alice measures $q_A$ to be in the state $\uvbm{c}$ and Bob measures $q_B$ to be in the state $\uvbp{c}$, or Alice measures $q_A$ to be in the state $\uvbp{c}$ and Bob measures $q_B$ to be in the state $\uvbm{c}.$ So expressed in terms of probabilities, these two possibilities are equivalent to either 
+ We suppose that PI holds, and we will try to arrive at a contradiction.\footnote{For another proof of this result, see \cite{BellJ.S.1964OtEP}.} If both Alice and Bob make their measurement in the $\bm{\hat{c}}$-direction, there are two possibilities: either Alice measures $q_A$ to be in the state $\uvbm{c}$ and Bob measures $q_B$ to be in the state $\uvbp{c}$, or Alice measures $q_A$ to be in the state $\uvbp{c}$ and Bob measures $q_B$ to be in the state $\uvbm{c}.$ So expressed in terms of probabilities, these two possibilities are equivalent to either 
  \begin{equation}\label{PDproofcase1}
- P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c}\,\&\,\uvbp{c})=1 \qquad\text{and}\qquad  P_{\lambda,\bm{\hat{c}}\,\&\,\bm{\hat{c}}}(\uvbp{c},\uvbm{c})=0.
+ P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c},\uvbp{c})=1 \qquad\text{and}\qquad  P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c},\uvbm{c})=0.
  \end{equation}
  or 
   \begin{equation}\label{PDproofcase2}
- P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c}\,\&\,\uvbm{c})=1 \qquad\text{and}\qquad P_{\lambda,\bm{\hat{c}}\,\&\,\bm{\hat{c}}}(\uvbm{c},\uvbp{c})=0
+ P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c},\uvbm{c})=1 \qquad\text{and}\qquad P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c},\uvbp{c})=0
  \end{equation}
- Let's first consider case (\ref{PDproofcase1}). Note that
+ It will be sufficient to show that (\ref{PDproofcase1}) lead to a contradiction, since then we can just swap Alice and Bob to show that (\ref{PDproofcase2}) also leads to a contradiction. So note that
 \begin{equation}
- P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c}\,\&\,\uvbm{c})+P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c}\,\&\,\uvbm{c})=0.
+ P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbp{c},\uvbm{c})+P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c},\uvbm{c})=0.
 \end{equation}
  Therefore, since we are assuming PI, 
  \begin{equation}
- P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a}\,\&\,\uvbm{c})+P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbm{a}\,\&\,\uvbm{c})=0.
+ P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a},\uvbm{c})+P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbm{a},\uvbm{c})=0.
 \end{equation}
  In particular, 
   \begin{equation}\label{PDproof4}
-  P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a}\,\&\,\uvbm{c})=0.
+  P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a},\uvbm{c})=0.
   \end{equation}
   But by (\ref{PDproof1}), we know that 
   \begin{equation}
-  P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a}\,\&\,\uvbp{b})+P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a}\,\&\,\uvbm{b})=1,
+  P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a},\uvbp{b})+P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a},\uvbm{b})=1,
   \end{equation}
   so using this together with PI, we must have
     \begin{equation}\label{PDproof5}
-  P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a}\,\&\,\uvbp{c})+P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a}\,\&\,\uvbm{c})=1.
+  P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a},\uvbp{c})+P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a},\uvbm{c})=1.
   \end{equation}
  But by (\ref{PDproof2}) and (\ref{PDproof4})
 \begin{equation}\label{PDproof6}
-  P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a}\,\&\,\uvbp{c})+P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a}\,\&\,\uvbm{c})=0.
+  P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a},\uvbp{c})+P_{\lambda,\bm{\hat{a}},\bm{\hat{c}}}(\uvbp{a},\uvbm{c})=0.
 \end{equation}
-Since (\ref{PDproof5}) contradicts (\ref{PDproof6}), the assumption (\ref{PDproofcase1}) must be false if PI is to hold.
+Since (\ref{PDproof5}) contradicts (\ref{PDproof6}), the assumption (\ref{PDproofcase1}) must be false if PI is to hold. Similarly, we will find that (\ref{PDproofcase2}) must be false if PI is to hold. So we can only conclude that PI fails to hold in the Bohmian interpretation.   But we can conclude even more than that: any deterministic hidden variable model that gives the same predictions as standard quantum theory when averaged over the hidden variables must violate PI.\label{PIdeterminism} 
 
-So we now consider the alternative case when (\ref{PDproofcase2}) holds. We will again see that this assumption leads to a contradiction. First note that
-\begin{equation}
- P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c}\,\&\,\uvbp{c})+P_{\lambda,\bm{\hat{c}},\bm{\hat{c}}}(\uvbm{c}\,\&\,\uvbm{c})=0.
-\end{equation}
- By PI
-\begin{equation}
-P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbm{c}\,\&\,\uvbp{b})+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbm{c}\,\&\,\uvbm{b})=0.
-\end{equation}
-In particular, 
-\begin{equation}\label{PDproof8}
-P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbm{c}\,\&\,\uvbp{b})=0.
-\end{equation}
-   But by (\ref{PDproof1}), we know that 
-  \begin{equation}
-  P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a}\,\&\,\uvbp{b})+P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbm{a}\,\&\,\uvbp{b})=1,
-  \end{equation}   
- so using this together with PI, we must have
-    \begin{equation}\label{PDproof7}
-  P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c}\,\&\,\uvbp{b})+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbm{c}\,\&\,\uvbp{b})=1.
-  \end{equation} 
-   But by (\ref{PDproof3}) and (\ref{PDproof8})
-\begin{equation}\label{PDproof9}
- P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbp{c}\,\&\,\uvbp{b})+P_{\lambda,\bm{\hat{c}},\bm{\hat{b}}}(\uvbm{c}\,\&\,\uvbp{b})=0.
-\end{equation}
-Since (\ref{PDproof7}) contradicts (\ref{PDproof9}), the assumption (\ref{PDproofcase2}) must also be false if PI is to hold. So we can only conclude that PI fails to hold in the pilot wave interpretation.   But we can conclude even more than that: any deterministic hidden variable model that gives the same predictions as standard quantum theory when averaged over the hidden variables must violate PI.\label{PIdeterminism} 
-
-Now the violation of PI in the pilot wave interpretation does not sit easily with special relativity, for according to Einstein's theory, it should be impossible to send signals faster than the speed of light. However, if PI is violated, then if Alice happened to know what $\lambda$ was for each run of the experiment, and if Bob made the same measurement, then because the distribution of Alice's outcomes will depend on Bob's choice of measurement, with enough runs of the experiment, Alice should be able to work out what measurement Bob is making. And this should be possible even if Alice and Bob are separated by many light years. So it seems faster than light communication would be possible. The only thing preventing such communication would be Alice's lack of knowledge of $\lambda$. 
-
-One might still respond to this argument against PD by saying that in reality, Alice does not know anything about $\lambda$ and hence it won't be possible for Bob to send signals faster than the speed of light to Alice. However, it would nevertheless be very strange if the validity of special relativity hung on what human beings were capable of knowing rather than on the laws that actually governed physical reality itself. But even if it was metaphysically impossible for human beings to know $\lambda$, this would not allay the fears that adherents of special relativity would have against PD. For the real issue is not so much the possibility that Alice could translate a message that was transmitted from Bob at superluminal speed. Rather, the issue is that Bob could do something whose effect was propagated at superluminal speed. If PI fails, then superluminal propagation of effects will be possible.\label{lambdaknowledge} It's just that if Alice is to know the cause of this effect, she will need to know $\lambda$. But even if she doesn't know $\lambda$, it still seems as though some unknown effect has been transmitted to her superluminally.   
+  
 
 
 
