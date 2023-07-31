@@ -5,7 +5,7 @@ In section \ref{probOutcomes} we saw that decoherence theory by itself does not 
 
 We thus suppose that a system is in a superposition $\psi_0^\text{sys} = c_1\psi_1^\text{sys}+c_2\psi_2^\text{sys}$ of two local states $\psi_1^\text{sys}$ and $\psi_2^\text{sys}$ where $\abs{c_1}^2+\abs{c_2}^2=1$, and that there is a photon coming in from the left that interacts with the system.\footnote{As in footnote \ref{wavefunctionfootnote} on page \pageref{wavefunctionfootnote}, we write $\psi_i^\text{sys}$ for the wave function that corresponds to the state $\ket*{\psi_i^\text{sys}(t)}$ with $\psi_i^\text{sys}(z, t)=\ip{z}{\psi_i^\text{sys}(t)}$.} We also suppose that  $y_1$ is a spacetime location with spatial location $z_1$ between the two hypersurfaces $S_0$ and $S$, and we consider a hypersurface $S_n=S_n(y_1)$  in a sequence of hypersurfaces that each contain $y_1$ as described on page \pageref{siydef}. 
 
-In what follows, I use the equation (\ref{kentconsistency0}) to show how the state of the system in question goes from being an improper mixture  to being a pure state as the additional variables in the measurement on the hypersurface $S$ become available to condition on when calculating $\ev*{T^{\mu\nu}(y)}_{\tau_S}$. This solves the problem of outcomes because when a state is given by an improper mixture, in reality, the system is not in any one of two states described by $\psi_1$ and $\psi_2$; rather, the system together with its environment is in a superposition of two states, the first being the state $\psi_1$ state of the system with its corresponding environment state, and second being the state $\psi_2$ state of the system with its corresponding environment state.  However, once the system is described by a pure state, we can either say that the system is definitely in the state described by $\psi_1$, or say that the system is definitely in the state described by $\psi_2$. Thus, there is a definite outcome to the measurement of which of the two states $\psi_1$ or $\psi_2$ the system is in. Hence, in this example, we can see how Kent's theory is able to solve the problem of outcomes.    
+In what follows, I use the equation (\ref{kentconsistency0}) to show how the state of the system in question goes from being an improper mixture  to being a pure state as the additional variables in the measurement on the hypersurface $S$ become available to condition on when calculating $\ev*{T^{\mu\nu}(y)}_{\tau_S}$. This solves the problem of outcomes because when a state is given by an improper mixture, in reality, the system is not in any one of two states described by $\psi_1$ and $\psi_2$; rather, the system together with its environment is in a superposition of two states, the first being the $\psi_1$-state of the system with its corresponding environment state, and second being the $\psi_2$-state of the system with its corresponding environment state.  However, once the system is described by a pure state, we can either say that the system is definitely in the state described by $\psi_1$, or say that the system is definitely in the state described by $\psi_2$. Thus, there is a definite outcome to the measurement of which of the two states $\psi_1$ or $\psi_2$ the system is in. Hence, in this example, we can see how Kent's theory is able to solve the problem of outcomes.    
 
 \subsection{Technical Details\textsuperscript{*}}
 
@@ -22,8 +22,7 @@ use a coarse-grained model so that $S_n$ is treated as a mesh of tiny cells\foot
 \end{equation}
 In this expression, $\{\ket{\xi_{1,j}}:j\}$ %
 \nomenclature{$\{\ket{\xi_{k,j}}:j\}$}{An orthonormal basis of the Hilbert space $H_k$ that describes the space of states of the cell $y_k\in S_n$, \nomrefpage}%
- is an orthonormal basis of $H_1$, $\mathbb{N}^M$ means the set of all lists $(n_1,\ldots,n_M)$ with each $n_l\in\mathbb{N}$ where $\mathbb{N}$ % 
-\nomenclature{$\mathbb{N}$}{ the set of positive integers greater than $0$, \nomrefpage}%
+ is an orthonormal basis of $H_1$, $\mathbb{N}^M$ means the set of all lists $(n_1,\ldots,n_M)$ with each $n_l\in\mathbb{N}$ where $\mathbb{N}$
 is the set of positive integers greater than 0. The set of states $\{\ket{\xi_{k_{l},m}}:m\in\mathbb{N}\}$ form an orthonormal basis of $H_{k_{l}}$ for each $k_l$, and the $k_{l}$ are all distinct from each other and from $1$. Also, $M$ is chosen to be as small as possible so that any common factors of $\ket{\Psi_n}$ belong to $\ket*{\Xi}$ which is a sum of states of the form $\prod_l\ket{\xi_{\kappa_l}}$ where the states $\ket{\xi_{\kappa_l}}\in H_{\kappa_l}$ range over all the cells of $S_n$ not included in the set $\{k_{l}:l=1,\ldots,M\}.$ We also assume that each summand $c_{j,n}\ket{\xi_{1,j}}\prod_{l=1}^{M}\ket{\xi_{k_{l},n_l}}\ket*{\Xi}$ of $\ket*{\Psi_n}$ contains a state in each $H_k$ for every cell $k$ of $S_n$. In other words, if $k\neq 1$ and does not belong to the set $\{k_{l}:l=1,\ldots,M\}$, then $k$ belongs to the set $\{\kappa_l:\text{ there exists }\ket*{\xi_{\kappa_l}}\in H_{\kappa_l}\text{ appearing in }\ket*{\Xi}.\}$. Also, we will give $H_{S_n}$ an inner product so that if 
 $$ \ket{\Psi_n'}=\Big(\sum_j\sum_{n\in\mathbb{N}^M} c'_{j,n}\ket{\xi_{1,j}}\prod_{l=1}^{M}\ket{\xi_{k_{l},n_l}}\Big)\ket*{\Xi'},$$ then
 $$\ip{\Psi_n'}{\Psi_n}=\Big(\sum_j\sum_{n\in\mathbb{N}^M} \overline{c'_{j,n}}c_{j,n} \Big) \ip{\Xi'}{\Xi}$$
@@ -139,15 +138,15 @@ declare function={
 \end{tikzpicture}% pic 1
 
 \vspace*{2px}
-\caption[Depiction of localized states prior to any photon interaction]{Depiction of a superposition of two local states at $z_1$ and $z_2$ before the photon has interacted with them. The gray squares indicate cells in $S^1(y^a_1)$ whose states are among the summands in (\ref{Sistate}) rather than in $\Xi$. The white square indicates a cell in $S_n(y^a_1)$ whose state is a factor in $\Xi$.}
+\caption[Depiction of localized states prior to any photon interaction]{Depiction of a superposition of two local states at $z_1$ and $z_2$ before the photon has interacted with them. The small gray squares indicate cells in $S^1(y^a_1)$ whose states are among the summands in (\ref{Sistate}) rather than in $\Xi$. The white square indicates a cell in $S_n(y^a_1)$ whose state is a factor in $\Xi$.}
 \label{kentdeco1}
 \end{figure}
 
-The gray squares correspond to the summands that appear in (\ref{Sistate}). If the system were in the $\psi_1^\text{sys}$-state, then the state describing $S_n(y^a_1)$ would have a factor $\ket{\psi_1^\text{sys}}\in H_1$ indicating that there is a 
+The small gray squares correspond to the summands that appear in (\ref{Sistate}). If the system were in the $\psi_1^\text{sys}$-state, then the state describing $S_n(y^a_1)$ would have a factor $\ket{\psi_1^\text{sys}}\in H_1$ indicating that there is a 
 non-zero mass at the $y^a_1$-cell, and there would also be a factor $\ket{0_2}\in H_2$ which we use to indicate that there is zero mass/energy at $y^a_2$. 
 There is also an incoming photon at the $y^a_3$-cell, and so we use $\ket{\gamma_3}$ to indicate that there is a photon there.
  Thus, if  the system  were in the $\psi_1^\text{sys}$-state, we would write the state of $S_n(y^a_1)$ 
- as $\ket{\Psi_n}=\ket{\psi_1^\text{sys}}\ket{0_2}\ket{\gamma_3}\ket*{\Xi'}$, where $\ket*{\Xi'}$ describes the states of all the other cells of $S_n(y^a_1)$. In this very simple scenario, $\ket*{\Xi'}=\prod_{k\neq 1,2,3}\ket{0_k}$ indicating that there is zero mass/energy at all the other $y_k$.
+ as $\ket{\Psi_n}=\ket{\psi_1^\text{sys}}\ket{0_2}\ket{\gamma_3}\ket*{\Xi'}$, where $\ket*{\Xi'}$ describes the states of all the other cells of $S_n(y^a_1)$. In this very simple scenario, we set $\ket*{\Xi'}=\prod_{k\neq 1,2,3}\ket{0_k}$ to indicate that there is zero mass/energy at all the other $y_k$ cells belonging to $S_n(y^a_1)$.
 
  On the other hand, if the system were in the state $\psi_2^\text{sys}$, then the state describing $S_n(y^a_1)$ would have a factor $\ket{\psi_2^\text{sys}}\in H_2$ 
  indicating that there is a non-zero mass at the $y^a_2$-cell, and there would also be a factor $\ket{0_1}\in H_1$ which we use to indicate that there is zero mass at $y^a_1$,
@@ -293,7 +292,7 @@ declare function={
 \end{tikzpicture}% pic 1
 
 \vspace*{2px}
-\caption[Depiction of localized states after photon interaction]{Depiction of a superposition of two local states at $z_1$ and $z_2$ with $S_n(y^b_1)$ being after the photon has interacted without the photon intersecting $S_n(y^b_1)\cap S$. The gray squares indicate cells in $S^1(y^b_1)$ whose states are among the summands in (\ref{Sistate}).}
+\caption[Depiction of localized states after photon interaction]{Depiction of a superposition of two local states at $z_1$ and $z_2$ with $S_n(y^b_1)$ being after the photon has interacted without the photon intersecting $S_n(y^b_1)\cap S$. The small gray squares indicate cells in $S^1(y^b_1)$ whose states are among the summands in (\ref{Sistate}).}
 \label{kentdecoh2}
 \end{figure}The state of $S_n(y^b_1)$ will then be
  \begin{equation*}
@@ -405,7 +404,7 @@ declare function={
 \end{tikzpicture}% pic 1
 
 \vspace*{2px}
-\caption[Depiction of localized states with reflected photons intersecting $S_n(y^c_1)$]{Depiction of a superposition of two local states at $z_1$ and $z_2$ with $y^c_1$ sufficiently late that the photon intersects $S_n(y^c_1)\cap S$. The gray squares indicate cells in $S^1(y^c_1)$ whose states are among the summands in (\ref{Sistate})}
+\caption[Depiction of localized states with reflected photons intersecting $S_n(y^c_1)$]{Depiction of a superposition of two local states at $z_1$ and $z_2$ with $y^c_1$ sufficiently late that the photon intersects $S_n(y^c_1)\cap S$. The small gray squares indicate cells in $S^1(y^c_1)$ whose states are among the summands in (\ref{Sistate})}
 \label{kentdecoh3}
 \end{figure}
 

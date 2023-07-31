@@ -2,7 +2,7 @@
 
 \noindent\textbf{A}\par\nopagebreak
 
-\vspace{1pt}\item additional variables theories, 255
+\vspace{1pt}\item additional variables theories, 259
 \vspace{1pt}\item adjoint, 75
 \vspace{1pt}\item angular momentum, 4
 \vspace{1pt}\item angular velocity, 5
@@ -25,15 +25,15 @@
 \noindent\textbf{C}\par\nopagebreak
 
 \vspace{1pt}\item coherence, 77
-\vspace{1pt}\item completeness of basic entities, 259
+\vspace{1pt}\item completeness of basic entities, 263
 \vspace{1pt}\item complex vector space, 65
 \vspace{1pt}\item composite systems, 71
 \vspace{1pt}\item conditional expectation, 159
 \vspace{1pt}\item conditional independence, 16
 \vspace{1pt}\item conditional probability, 16, 159
-\vspace{1pt}\item conditioned quantum state, 232
+\vspace{1pt}\item conditioned quantum state, 235
 \vspace{1pt}\item conditioned quantum states
-    \subitem derivation, 240
+    \subitem derivation, 243
 \vspace{1pt}\item Copenhagen Interpretation, 13
 \vspace{1pt}\item culprit, the, 34
 \vspace{1pt}\item current density, 135
@@ -59,8 +59,8 @@
 \vspace{1pt}\item Einstein summation convention, 189
 \vspace{1pt}\item Einstein's locality principle, 14
 \vspace{1pt}\item empirical adequacy
-    \subitem formal definition, 228
-    \subitem informal definition, 175
+    \subitem formal definition, 231
+    \subitem informal definition, 176
 \vspace{1pt}\item entangled, 73
 \vspace{1pt}\item expectation value
     \subitem pilot wave, 44
@@ -166,14 +166,14 @@
 \vspace{1pt}\item preferred basis, 70
 \vspace{1pt}\item preferred basis problem, 69
 \vspace{1pt}\item problem of outcomes, 97
-\vspace{1pt}\item projection, 180
+\vspace{1pt}\item projection, 181
 \vspace{1pt}\item pure state, 77
 
   \indexspace
 
 \noindent\textbf{Q}\par\nopagebreak
 
-\vspace{1pt}\item quantum wave functions, 166
+\vspace{1pt}\item quantum wave functions, 167
 \vspace{1pt}\item qunatization, 6
 
   \indexspace
@@ -195,7 +195,7 @@
 \vspace{1pt}\item Schr\"{o}dinger picture, 131
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenstate, 137
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenstate of a subregion, 
-		234
+		237
 \vspace{1pt}\item simultaneous $\hat{T}_S$-eigenvalue, 137
 \vspace{1pt}\item spacelike-separation, 126
 \vspace{1pt}\item spacetime location, 125
@@ -205,7 +205,7 @@
 \vspace{1pt}\item stress-energy tensor, 145
 \vspace{1pt}\item Superconducting Quantum Interference Devices (SQUID), 
 		91
-\vspace{1pt}\item superdeterminism, 226
+\vspace{1pt}\item superdeterminism, 229
 
   \indexspace
 
