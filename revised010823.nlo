@@ -145,12 +145,12 @@
 \nomenclatureentry{a$P(r)$@[{$P(r)$}]\begingroup the probability a statement $r$ is true, \nomrefpage\nomeqref {3.4.1}|nompageref}{149}
 \nomenclatureentry{a$q(\tau)$@[{$q(\tau)$}]\begingroup The statement that some quantity $T$  takes the value $\tau$, \nomrefpage\nomeqref {3.4.1}|nompageref}{149}
 \nomenclatureentry{a$\ev*{T}_r$@[{$\ev*{T}_r$}]\begingroup The conditional expectation of $T$ given the statement $r$, see equation (\ref{conditionalexpectation}), \nomrefpage\nomeqref {3.4.2}|nompageref}{149}
-\nomenclatureentry{a$\ev*{T^{\mu\nu}(y)}_{\tau_S}$@[{$\ev*{T^{\mu\nu}(y)}_{\tau_S}$}]\begingroup Kent's beable, see equation (\ref{Kentbeable}), \nomrefpage\nomeqref {3.4.3}|nompageref}{149}
-\nomenclatureentry{a$r(\tau_S, y)$@[{$r(\tau_S, y)$}]\begingroup The statement that $T_S(x)$ has the determinate value $\tau_S(x)$ for all $x\in S^1(y)$, \nomrefpage\nomeqref {3.4.3}|nompageref}{149}
-\nomenclatureentry{a$q(\tau)$@[{$q(\tau)$}]\begingroup The statement that $T^{\mu\nu}(y)$ (understood in the conventional non-Kentian sense) takes the value $\tau$, \nomrefpage\nomeqref {3.4.3}|nompageref}{149}
+\nomenclatureentry{a$\ev*{T^{\mu\nu}(y)}_{\tau_S}$@[{$\ev*{T^{\mu\nu}(y)}_{\tau_S}$}]\begingroup Kent's beable, see equation (\ref{Kentbeable}), \nomrefpage\nomeqref {3.4.3}|nompageref}{150}
+\nomenclatureentry{a$r(\tau_S, y)$@[{$r(\tau_S, y)$}]\begingroup The statement that $T_S(x)$ has the determinate value $\tau_S(x)$ for all $x\in S^1(y)$, \nomrefpage\nomeqref {3.4.3}|nompageref}{150}
+\nomenclatureentry{a$q(\tau)$@[{$q(\tau)$}]\begingroup The statement that $T^{\mu\nu}(y)$ (understood in the conventional non-Kentian sense) takes the value $\tau$, \nomrefpage\nomeqref {3.4.3}|nompageref}{150}
 \nomenclatureentry{a$S_n(y)$@[{$S_n(y)$}]\begingroup One of a sequence of hypersurfaces which contain $y$ and intersect $S$, \nomrefpage\nomeqref {3.4.4}|nompageref}{153}
 \nomenclatureentry{a$S_n$@[{$S_n$}]\begingroup Shorthand for $S_n(y)$, \nomrefpage\nomeqref {3.4.4}|nompageref}{153}
-\nomenclatureentry{a$r_n$@[{$r_n$}]\begingroup The statement that  $T_S(x)$ has the determinate value $\tau_S(x)$ for all $x\in S_n\cap S$, \nomrefpage\nomeqref {3.4.4}|nompageref}{153}
+\nomenclatureentry{a$r_n$@[{$r_n$}]\begingroup The statement that  $T_S(x)$ has the determinate value $\tau_S(x)$ for all $x\in S_n\cap S$, \nomrefpage\nomeqref {3.4.4}|nompageref}{154}
 \nomenclatureentry{a$\psi_0^\text{sys}$@[{$\psi_0^\text{sys}$}]\begingroup A wave function in Kent's toy model that is the superposition of two localized wave functions $\psi_1^\text{sys}$ and $\psi_2^\text{sys}$, \nomrefpage\nomeqref {3.5.0}|nompageref}{156}
 \nomenclatureentry{a$\psi_1^\text{sys}, psi_2^\text{sys}$@[{$\psi_1^\text{sys}, psi_2^\text{sys}$}]\begingroup Wave functions localized at $z_1$ and $z_2$ respectively, \nomrefpage\nomeqref {3.5.0}|nompageref}{156}
 \nomenclatureentry{a$\tau$@[{$\tau$}]\begingroup The particular value the stress-energy tensor $T^{\mu\nu}(y)$ takes when a measurement of it is performed at $y\in S_n$, \nomrefpage\nomeqref {4.1.0}|nompageref}{168}
