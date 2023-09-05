@@ -266,4 +266,4 @@
 \nomenclatureentry{a$>$@[{$>$}]\begingroup A partial order on states of regions of $S$ expressing the notion `occurs after', see equation (\ref{timeordering}), \nomrefpage\nomeqref {4.8.7}|nompageref}{269}
 \nomenclatureentry{a$\sim$@[{$\sim$}]\begingroup we write $\ket*{\phi}\sim \ket*{\gamma}$ to mean that  $\ket*{\phi}$ and $\ket*{\gamma}$ are simultaneous, \nomrefpage\nomeqref {4.8.7}|nompageref}{269}
 \nomenclatureentry{a$\ket*{\Gamma_{\tau_S}}$@[{$\ket*{\Gamma_{\tau_S}}$}]\begingroup Simultaneous $\hat{T}_S$-eigenstate of the hypersurface $S$ with simultaneous $\hat{T}_S$-eigenvalue $\tau_S(x)$ where $x$ ranges over $S$, \nomrefpage\nomeqref {4.8.8}|nompageref}{270}
-\nomenclatureentry{a$p^1, p^2$, $p^3$@[{$p^1, p^2$, $p^3$}]\begingroup The three components of an object's momentum in the directions $\hat{e}_1$, $\hat{e}_2$, and $\hat{e}_3$ respectively, \nomrefpage\nomeqref {4.8.8}|nompageref}{294}
+\nomenclatureentry{a$p^1, p^2$, $p^3$@[{$p^1, p^2$, $p^3$}]\begingroup The three components of an object's momentum in the directions $\hat{e}_1$, $\hat{e}_2$, and $\hat{e}_3$ respectively, \nomrefpage\nomeqref {4.8.8}|nompageref}{295}

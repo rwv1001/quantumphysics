@@ -1,0 +1,271 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{$(t, x, y, z)$}]\begingroup A spacetime location where $t$ parameterizes time, and $x$, $y$, and $z$ parameterize the three dimensions of space, \nomrefpage\nomeqref {1.2.11}\nompageref{22}
+  \item [{$(x^0,x^1,x^2,x^3)$}]\begingroup A spacetime location, \nomrefpage\nomeqref {3.2.0}\nompageref{123}
+  \item [{$(y_k)_{k=1}^\infty$}]\begingroup A sequence of tiny cells that defines a mesh over the hypersurface $S_n$, \nomrefpage\nomeqref {4.3.0}\nompageref{208}
+  \item [{$>$}]\begingroup A partial order on states of regions of $S$ expressing the notion `occurs after', see equation (\ref{timeordering}), \nomrefpage\nomeqref {4.8.7}\nompageref{274}
+  \item [{$[\psi]$}]\begingroup The operator  $\dyad{\psi}$, \nomrefpage\nomeqref {4.6.5}\nompageref{242}
+  \item [{$[\uvbp{s}]_L, [\bm{\hat{s}_\theta+}]_R$}]\begingroup The observables $\ket*{\uvbp{s}}_L\prescript{}{L}{\bra{\uvbp{s}}}$ and $\ket*{\bm{\hat{s}_\theta+}}_R\prescript{}{R}{\bra{\bm{\hat{s}_\theta+}}}$ respectively, \nomrefpage\nomeqref {4.7.4}\nompageref{254}
+  \item [{$\abs{z}$}]\begingroup The magnitude of the complex number $z$, \nomrefpage\nomeqref {1.1.0}\nompageref{9}
+  \item [{$\approx$}]\begingroup Approximately equal to, see footnote \ref{approx}, \nomrefpage\nomeqref {2.4.15}\nompageref{82}
+  \item [{$\bm{x}$}]\begingroup A spatial location $(x^1,x^2,x^3)$, \nomrefpage\nomeqref {3.2.0}\nompageref{123}
+  \item [{$\Box$}]\begingroup d'Alembert operator $\Box=\partial_\mu\partial^\mu$, \nomrefpage\nomeqref {3.2.3}\nompageref{134}
+  \item [{$\delta^\nu_\mu$}]\begingroup The {Kronecker-delta} given by $\delta^\nu_\mu=1$ when $\mu=\nu$ and $\delta^\nu_\mu=0$ otherwise, \nomrefpage\nomeqref {4.2.6}\nompageref{194}
+  \item [{$\dyad{\psi}$}]\begingroup The operator which acts on a Hilbert space $H$ by sending an arbitrary state $\ket*{\psi'}$ to $\ip{\psi}{\psi'}\ket*{\psi}$, \nomrefpage\nomeqref {2.4.2}\nompageref{73}
+  \item [{$\eta^\mu(x)$}]\begingroup The future-directed  unit four-vector at $x$ that is orthogonal to $S$, \nomrefpage\nomeqref {4.2.9}\nompageref{195}
+  \item [{$\eta^{\nu\sigma}$}]\begingroup Defined so that  $\eta_{\mu\rho}\eta^{\nu\rho}=\delta^\nu_\mu$, \nomrefpage\nomeqref {4.2.6}\nompageref{194}
+  \item [{$\eta_{\mu\nu}$}]\begingroup $\eta_{00}=1$, $\eta_{ii}=-1$ for $i=1,2,3$ and $\eta_{\mu\nu}=0$ for $\mu\neq\nu$, \nomrefpage\nomeqref {4.2.1}\nompageref{190}
+  \item [{$\ev*{\hat{O}}_\psi$}]\begingroup The expectation value of the observable $\hat{O}$ given state $\ket*{\psi}$, see equation (\ref{expectation2}), \nomrefpage\nomeqref {2.2.1}\nompageref{65}
+  \item [{$\ev*{\hat{O}}_\rho$}]\begingroup The expectation value  for an observable $\hat{O}$ of a system given that the density matrix $\hat{\rho}$ describes all we know about the system, see equation (\ref{expdensity}), \nomrefpage\nomeqref {2.4.6}\nompageref{75}
+  \item [{$\ev*{T^{\mu\nu}(y)}_{\tau_S}$}]\begingroup Kent's beable, see equation (\ref{Kentbeable}), \nomrefpage\nomeqref {3.4.3}\nompageref{159}
+  \item [{$\ev*{T^{\mu\nu}(y)}_{\tau_S}$}]\begingroup Kent's proposed beable, see equation (\ref{beable1}), p. \pageref{beable1}, see also equation (\ref{kentconsistency0}), p. \pageref{kentconsistency0}.\nomeqref {4.1.6}\nompageref{181}
+  \item [{$\ev*{T}_r$}]\begingroup The conditional expectation of $T$ given the statement $r$, see equation (\ref{conditionalexpectation}), \nomrefpage\nomeqref {3.4.2}\nompageref{158}
+  \item [{$\ev{O}$}]\begingroup Expectation value of the physical quantity $O(\vb{x}_A, \vb{x}_B)$ in the Bohmian interpretation \nomrefpage\nomeqref {1.8.3}\nompageref{44}
+  \item [{$\fdv{U[S]}{S(x)}$}]\begingroup Functional derivative, see equation (\ref{fddef}), \nomrefpage\nomeqref {3.2.3}\nompageref{134}
+  \item [{$\gg$}]\begingroup Much greater than, \nomrefpage\nomeqref {4.4.0}\nompageref{218}
+  \item [{$\grad_A{S}(\vb{x}_A, \vb{x}_B)$}]\begingroup Gradient of the function ${S}(\vb{x}_A, \vb{x}_B)$ with respect to the variable $\vb{x}_A$, \nomrefpage\nomeqref {1.8.2}\nompageref{42}
+  \item [{$\grad_B{S}(\vb{x}_A, \vb{x}_B)$}]\begingroup Gradient of the function ${S}(\vb{x}_A, \vb{x}_B)$ with respect to the variable $\vb{x}_B$, \nomrefpage\nomeqref {1.8.2}\nompageref{42}
+  \item [{$\hat{\bm{O}}$}]\begingroup Time independent observable in the Schr\"{o}dinger picture, \nomrefpage\nomeqref {3.2.0}\nompageref{130}
+  \item [{$\hat{\bm{O}}(\bm{x})$}]\begingroup Spatial dependent but time independent observable in the Schr\"{o}dinger picture, \nomrefpage\nomeqref {3.2.0}\nompageref{130}
+  \item [{$\hat{\bm{O}}(t)$}]\begingroup A time dependent observable in the Heisenberg picture, \nomrefpage\nomeqref {3.2.0}\nompageref{129}
+  \item [{$\hat{\bm{O}}(t, \bm{x})$}]\begingroup An observable in the Heisenberg picture at a particular time $t$ and spatial location $\bm{x}$, \nomrefpage\nomeqref {3.2.0}\nompageref{129}
+  \item [{$\hat{\bm{T}}_S(x)$}]\begingroup Heisenberg picture observable corresponding to the  mass-energy density $T_S(x)$ measurement, \nomrefpage\nomeqref {3.2.4}\nompageref{135}
+  \item [{$\hat{\rho}$}]\begingroup A generic density matrix, \nomrefpage\nomeqref {2.4.5}\nompageref{74}
+  \item [{$\hat{\rho}_\mathcal{S}$}]\begingroup The reduced density matrix of a density matrix $\hat{\rho}\in M(H_\mathcal{U})$, \nomrefpage\nomeqref {2.4.15}\nompageref{80}
+  \item [{$\hat{\rho}_\psi$}]\begingroup The density matrix equal to $\dyad{\psi}$, \nomrefpage\nomeqref {2.4.2}\nompageref{73}
+  \item [{$\hat{e}_0, \hat{e}_1, \hat{e}_2, \hat{e}_3$}]\begingroup Spacetime locations corresponding to $(1,0,0,0)$,$(0,1,0,0)$, $(0,0,1,0)$, and $(0,0,0,1)$ respectively, \nomrefpage\nomeqref {4.2.0}\nompageref{188}
+  \item [{$\hat{O}(x)$}]\begingroup Observable for any $x\in S$ in the Tomonaga-Schwinger picture, see equation (\ref{tsobservable}), \nomrefpage\nomeqref {3.2.1}\nompageref{133}
+  \item [{$\hat{O}_\mathcal{U}$}]\begingroup Extension of the observable $\hat{O}_{\mathcal{S}}$ to the composite system $\mathcal{U}=\mathcal{S}+\mathcal{E}$, see equation (\ref{extension}),  \nomrefpage\nomeqref {2.4.2}\nompageref{72}
+  \item [{$\hat{O}_{\mathcal{S}}$}]\begingroup An observable for the system $\mathcal{S}$, \nomrefpage\nomeqref {2.4.0}\nompageref{70}
+  \item [{$\hat{O}_{\uvbp{a}}$}]\begingroup The observable corresponding to the measurement device $O_{\uvbp{a}}$, \nomrefpage\nomeqref {2.2.0}\nompageref{61}
+  \item [{$\hat{O}_{i,\mathcal{A}}(t), \hat{O}_{i,\mathcal{B}}(t)$}]\begingroup The observables $\dyad{p_{i,A}(t)}$ and $\dyad{p_{i,B}(t)}$ respectively,  \nomrefpage\nomeqref {2.8.1}\nompageref{99}
+  \item [{$\hat{T}'_S(x')$}]\begingroup The Tomonaga-Schwinger observable  such that if an observer $\mathcal{O}'$ deems $S$ to be in an eigenstate $\ket*{\psi'}\in H'_{S_n}$ of  $\hat{T}'_S(x')$ with eigenvalue $\tau'$ (a real number), then  $\mathcal{O}'$ would observe the physical quantity described by  $T'_S(x')$ to have the value $\tau'$, \nomrefpage\nomeqref {4.2.14}\nompageref{201}
+  \item [{$\hat{T}^{\mu\nu}(x)$}]\begingroup The observable corresponding to the stress-energy tensor $T^{\mu\nu}(y)$ in the Tomonaga-Schwinger picture, \nomrefpage\nomeqref {3.3.0}\nompageref{143}
+  \item [{$\hat{T}^{\prime\mu\nu}(x')$}]\begingroup The Tomonaga-Schwinger observable acting on $H_{S_n}'$ such that if observer $\mathcal{O}'$ deemed $S_n$ to be in an eigenstate $\ket*{\psi'}$ of  $\hat{T}^{\prime\mu\nu}(x')$ with eigenvalue $\tau'$, then observer $\mathcal{O}'$ would observe the physical quantity described by  $T^{\prime\mu\nu}(x')$ to have the value $\tau'$, \nomrefpage\nomeqref {4.2.14}\nompageref{200}
+  \item [{$\hat{T}_S(x)$}]\begingroup The observable corresponding to $T_S(x)$, p. \pageref{firstHatTS}. Also see equation (\pageref{TShat}), \nomrefpage\nomeqref {4.2.14}\nompageref{198}
+  \item [{$\hat{U}^*$}]\begingroup The adjoint of an operator $\hat{U}$, \nomrefpage\nomeqref {2.4.3}\nompageref{74}
+  \item [{$\ip*{\psi}{\chi}$}]\begingroup The bra-ket of two states $\ket*{\psi}$ and $\ket*{\chi}$, \nomrefpage\nomeqref {1.1.0}\nompageref{9}
+  \item [{$\ip{\alpha'}{\alpha}_A$}]\begingroup The inner product of the two states $\ket*{\alpha}_A$ and $\ket*{\alpha'}_A$, \nomrefpage\nomeqref {1.2.5}\nompageref{18}
+  \item [{$\ket*{+}$}]\begingroup Generic spin up state, \nomrefpage\nomeqref {1.1.0}\nompageref{6}
+  \item [{$\ket*{-}$}]\begingroup Generic spin down state, \nomrefpage\nomeqref {1.1.0}\nompageref{6}
+  \item [{$\ket*{\alpha}_A, \ket*{\beta}_B$}]\begingroup The states of two particles $q_A$ and $q_B$ respectively, \nomrefpage\nomeqref {1.2.0}\nompageref{15}
+  \item [{$\ket*{\alpha}_A\ket*{\beta}_B$}]\begingroup The composite state of two particles $q_A$ and $q_B$ where particle $q_A$ is in the $\ket*{\alpha}_A$-state and particle $q_B$ is in the $\ket*{\beta}_B$-state, \nomrefpage\nomeqref {1.2.4}\nompageref{17}
+  \item [{$\ket*{\bm{\hat{s}_\theta+}}_R, \ket*{\bm{\hat{s}_\theta-}}_R$}]\begingroup Pointer states for the apparatus on the right-wing of the experiment, \nomrefpage\nomeqref {4.7.1}\nompageref{252}
+  \item [{$\ket*{\gamma'_j}$}]\begingroup The simultaneous $\hat{T}_S$-eigenstate of the subregion $S_{\mathcal{A}}'$ of $S$ that corresponds to the apparatus $\mathcal{A}$ being in state $\ket*{a_j}$, \nomrefpage\nomeqref {4.6.2}\nompageref{239}
+  \item [{$\ket*{\gamma^{(\mathcal{S})}_i}, \ket*{\gamma^{(\mathcal{A})}_i}$}]\begingroup The two components of $\ket*{\gamma^{(S^1(y_i))}_i}$ which are simultaneous $\hat{T}_S$-eigenstates for subregions $S_{\mathcal{S}}$ and $S_{\mathcal{A}}$ of $S^1(y_i)$ where the states of $\mathcal{S}$ and $\mathcal{A}$ are determined respectively, \nomrefpage\nomeqref {4.6.0}\nompageref{236}
+  \item [{$\ket*{\gamma^{(S^1(y_i))}_i}$}]\begingroup The simultaneous $\hat{T}_S$-eigenstate of the subregion $S^1(y_i)$ of $S$ with simultaneous $\hat{T}_S$-eigenvalue $\tau_S(x)$ respectively for all $x\in S^1(y_i)$., \nomrefpage\nomeqref {4.6.0}\nompageref{236}
+  \item [{$\ket*{\gamma_i^{(\mathcal{A}_L)}},\ket*{\gamma_i^{(\mathcal{A}_R)}}$}]\begingroup simultaneous $\hat{T}_S$-eigenstates on the subregions $S_{\mathcal{A}_L}, S_{\mathcal{A}_R}$ that are sufficient to determine the measurement parameters of the apparatuses on the left wing and the right wing of the experiment respectively, \nomrefpage\nomeqref {4.7.0}\nompageref{250}
+  \item [{$\ket*{\gamma_j'}$}]\begingroup Corresponds to the $\ket*{a_j}$-state of the apparatus $\mathcal{A}$ and which forms a component of one of the summands of $\ket*{\Psi_S}$ as shown in equation (\ref{PsiSdecomp}), \nomrefpage\nomeqref {4.6.7}\nompageref{244}
+  \item [{$\ket*{\gamma_k^{(S^1(y_i))}}$}]\begingroup For $k\neq i$, the  simultaneous $\hat{T}_S$-eigenstates of the subregion $S^1(y_i)$ whose simultaneous $\hat{T}_S$-eigenvalues restricted to $S^1(y_i)$ are distinct from $\tau_S$, \nomrefpage\nomeqref {4.6.3}\nompageref{239}
+  \item [{$\ket*{\Gamma_{\tau_S}}$}]\begingroup Simultaneous $\hat{T}_S$-eigenstate of the hypersurface $S$ with simultaneous $\hat{T}_S$-eigenvalue $\tau_S(x)$ where $x$ ranges over $S$, \nomrefpage\nomeqref {4.8.8}\nompageref{275}
+  \item [{$\ket*{\Phi(t)}$}]\begingroup Time dependent state in the Schr\"{o}dinger picture, \nomrefpage\nomeqref {3.2.0}\nompageref{130}
+  \item [{$\ket*{\Phi_{Ri}}$}]\begingroup Entangled component of $\pi_R\ket*{\Psi_R}$ and beable candidate\nomrefeq, \nomrefpage\nomeqref {4.8.2}\nompageref{264}
+  \item [{$\ket*{\Phi}$}]\begingroup A state in the Heisenberg picture, \nomrefpage\nomeqref {3.2.0}\nompageref{129}
+  \item [{$\ket*{\psi'}, \ket*{\chi'}$}]\begingroup States that an observer $\mathcal{O}'$ corresponding to state $\ket*{\psi}$ and $\ket*{\chi}$ that an observer $\mathcal{O}$ observer, \nomrefpage\nomeqref {4.2.14}\nompageref{198}
+  \item [{$\ket*{\psi(t)}$}]\begingroup The state of a system at time $t$,  \nomrefpage\nomeqref {3.1.1}\nompageref{121}
+  \item [{$\ket*{\Psi[S]}$}]\begingroup Hypersurface dependent state in the Tomonaga-Schwinger picture, \nomrefpage\nomeqref {3.2.1}\nompageref{132}
+  \item [{$\ket*{\psi^{(U)}(t)}$}]\begingroup $\ket*{\psi^{(U)}(t)}=U(t,t_0)\ket*{\psi(t_0)}$,  \nomrefpage\nomeqref {3.1.1}\nompageref{121}
+  \item [{$\ket*{\Psi_0}$}]\begingroup The state of the initial hypersurface $S_0$ in the Tomonaga-Schwinger picture, \nomrefpage\nomeqref {3.2.7}\nompageref{140}
+  \item [{$\ket*{\psi_i}$}]\begingroup The eigenstates of an observable $\hat{O}$, \nomrefpage\nomeqref {2.2.0}\nompageref{64}
+  \item [{$\ket*{\Psi_n}$}]\begingroup $\ket*{\Psi_n}=U_{S_nS_0}\ket*{\Psi_0}$, \nomrefpage\nomeqref {4.1.1}\nompageref{179}
+  \item [{$\ket*{\Psi_n}$}]\begingroup The state $\ket*{\Psi_n}=\ket*{\Psi[S_n]}$ on $S_n$, \nomrefpage\nomeqref {4.1.9}\nompageref{183}
+  \item [{$\ket*{\Psi_R}$}]\begingroup The state given by $U_{RS_0}\ket*{\Psi_0}$ that describes the hypersurface $R$, \nomrefpage\nomeqref {4.8.1}\nompageref{263}
+  \item [{$\ket*{\Psi_S}$}]\begingroup The state $U_{SS_0}\ket*{\Psi_0}\in H_S$ in the Tomonaga-Schwinger picture, \nomrefpage\nomeqref {3.2.8}\nompageref{140}
+  \item [{$\ket*{\Psi_U}$}]\begingroup A simultaneous $\hat{T}_S$-eigenstate of a subregion $U\subset S$ belong to the Hilbert space of states $H_U$ describing $U$, \nomrefpage\nomeqref {4.6.0}\nompageref{236}
+  \item [{$\ket*{\Psi_{\text{Bell}}}$}]\begingroup A Bell state, see equation (\ref{bell}), \nomrefpage\nomeqref {1.2.6}\nompageref{18}
+  \item [{$\ket*{\Psi_{n,i}}$}]\begingroup The state $U_{S_{n,i},S_0}\ket*{\Psi_0}$ of the hypersurface $S_{n,i}$, \nomrefpage\nomeqref {4.6.3}\nompageref{240}
+  \item [{$\ket*{\psi}_{\mathcal{S}}, \ket*{\chi}_{\mathcal{E}}, \ket*{\xi}_{\mathcal{U}}$}]\begingroup States that belong to the Hilbert spaces $H_{\mathcal{S}}$, $H_{\mathcal{E}}$, and $H_{\mathcal{U}}$ respectively,  \nomrefpage\nomeqref {2.4.1}\nompageref{70}
+  \item [{$\ket*{\uvbm{a};\uvbp{b};\ldots}_A$}]\begingroup An example of a state of a particle $q_A$ with hidden variables specifying all the spin outcomes of every possible axis along which the spin of the particle could be measured, \nomrefpage\nomeqref {1.4.0}\nompageref{27}
+  \item [{$\ket*{\uvbm{a}}$}]\begingroup Spin down state in the $\uvb{a}$-direction, \nomrefpage\nomeqref {1.1.0}\nompageref{7}
+  \item [{$\ket*{\uvbp{a}}$}]\begingroup Spin up state in the $\uvb{a}$-direction, \nomrefpage\nomeqref {1.1.0}\nompageref{7}
+  \item [{$\ket*{\uvbp{s}}_L, \ket*{\uvbm{s}}_L$}]\begingroup Pointer states for the apparatus on the left-wing of the experiment, \nomrefpage\nomeqref {4.7.1}\nompageref{252}
+  \item [{$\ket*{\Xi^{(S^1(y_i))}_i}$}]\begingroup A simultaneous $\hat{T}_S$-eigenstate over the remainder of $S^1(y_i)$, i.e. for the subregion $S^1(y_i)\setminus(S_{\mathcal{S}}\cup S_{\mathcal{A}})$, see equation (\ref{gammadecomp}), \nomrefpage\nomeqref {4.6.1}\nompageref{237}
+  \item [{$\ket*{\xi_i(t)}$}]\begingroup The state $\ket*{s_i}\ket*{a_i(t)}\ket*{p_{i,A}(t)}\ket*{p_{i,B}(t)}\in H_{\mathcal{V}}$ of $\mathcal{V}=\mathcal{S}+\mathcal{A}+\mathcal{P}_A+\mathcal{P}_B$, \nomrefpage\nomeqref {2.8.0}\nompageref{98}
+  \item [{$\ket*{\Xi_j}$}]\begingroup The states on the subregion $S\setminus (S^1(y_i)\cup S_{\mathcal{A}}')$ so that equation (\ref{PsiSdecomp}) holds, \nomrefpage\nomeqref {4.6.2}\nompageref{239}
+  \item [{$\ket*{\xi_{n,f}}$}]\begingroup Corresponds to the state of all the other regions of $S_{n,f}$ not determined by $\ket*{\gamma_i^{(\mathcal{S})}}$ in equation (\ref{Psinfdecomp}), \nomrefpage\nomeqref {4.6.7}\nompageref{243}
+  \item [{$\ket*{\xi_{n,i}}$}]\begingroup Corresponds to the state of all the other regions of $S_{n,i}$ not determined by $\ket*{\gamma_i^{(\mathcal{S})}}$, $\ket*{\gamma_i^{(\mathcal{A})}}$, $\ket*{s}$ or $\ket*{a}$ depicted in equation (\ref{Psinidecomp}), \nomrefpage\nomeqref {4.6.4}\nompageref{240}
+  \item [{$\ket*{\xi_{n,m}}$}]\begingroup Corresponds to the state of all the regions of $S_{n,m}$ not determined by $\ket*{\gamma_i^{(\mathcal{S})}}$, $\ket*{\gamma_i^{(\mathcal{A})}}$,  $S_{\mathcal{A}}'$, or the state of $\mathcal{S}$ and $\mathcal{A}$ in the vicinity of $y_m=(t_m, z_0)$ in equation (\ref{Psinmdecomp}), \nomrefpage\nomeqref {4.6.8}\nompageref{244}
+  \item [{$\ket*{a+}_L, \ket*{a-}_L$}]\begingroup States of the left wing apparatus corresponding to the pointer states $\ket*{\uvbp{s}}_L$ and $\ket*{\uvbm{s}}_L$ respectively, \nomrefpage\nomeqref {4.7.1}\nompageref{252}
+  \item [{$\ket*{a_\theta+}_R, \ket*{a_\theta-}_R$}]\begingroup States of the right wing apparatus corresponding to the pointer states $\ket*{\bm{\hat{s}_\theta+}}_R$ and $\ket*{\bm{\hat{s}_\theta-}}_R$ respectively, \nomrefpage\nomeqref {4.7.1}\nompageref{252}
+  \item [{$\ket*{a_f}$}]\begingroup The final state of the apparatus $\mathcal{A}$ after it has interacted with $\mathcal{S}$  and photons reflected from it have intersected $S$, \nomrefpage\nomeqref {4.6.2}\nompageref{238}
+  \item [{$\ket*{a_r(t_0)}$}]\begingroup The ready state of a measuring device, \nomrefpage\nomeqref {2.4.15}\nompageref{82}
+  \item [{$\ket*{a}$}]\begingroup The state of an apparatus  $\mathcal{A}$ that  Kent's stress-energy beables determine which encapsulates among other things the measurement parameters of the apparatus, \nomrefpage\nomeqref {4.6.0}\nompageref{235}
+  \item [{$\ket*{a}_L$}]\begingroup Ready state of the left wing apparatus, \nomrefpage\nomeqref {4.7.1}\nompageref{252}
+  \item [{$\ket*{a}_R$}]\begingroup Ready state of the right wing apparatus, \nomrefpage\nomeqref {4.7.1}\nompageref{252}
+  \item [{$\ket*{E_i(t)}$}]\begingroup State of the environment $\mathcal{E}$ corresponding to the pointer state $\ket*{s_i}$, \nomrefpage\nomeqref {2.8.0}\nompageref{97}
+  \item [{$\ket*{E_r(t)}$}]\begingroup Ready states of the environment $\mathcal{E}$, \nomrefpage\nomeqref {2.8.0}\nompageref{97}
+  \item [{$\ket*{p_{i, A}(t)}, \ket*{p_{i, B}(t)}$}]\begingroup The states of Alice and Bob after they have observed the apparatus to be in the state $\ket*{a_i(t)}$, \nomrefpage\nomeqref {2.8.0}\nompageref{97}
+  \item [{$\ket*{p_{r, A}(t)}, \ket*{p_{r, B}(t)}$}]\begingroup Ready states of Alice and Bob before they observe a measurement outcome, \nomrefpage\nomeqref {2.8.0}\nompageref{97}
+  \item [{$\ket*{s_f}$}]\begingroup Final pointer state of $\mathcal{S}$ corresponding to the apparatus state $\ket*{a_f}$, \nomrefpage\nomeqref {4.6.2}\nompageref{238}
+  \item [{$\ket*{s}$}]\begingroup The state of a particle $\mathcal{S}$ that the information in $\tau_S$ determines to be heading towards the apparatus $\mathcal{A}$ so that it will interact with it, \nomrefpage\nomeqref {4.6.0}\nompageref{235}
+  \item [{$\ket*{x}$}]\begingroup A non-normalizable position state \nomrefpage\nomeqref {2.6.0}\nompageref{91}
+  \item [{$\Lambda$}]\begingroup A Lorentz transformation, \nomrefpage\nomeqref {4.2.1}\nompageref{190}
+  \item [{$\Lambda$}]\begingroup The set of $\lambda$ that describe both $q_A$ and $q_B$, \nomrefpage\nomeqref {1.6.0}\nompageref{34}
+  \item [{$\lambda$}]\begingroup A complete state describing both $q_A$ and $q_B$ that is independent of Alice and Bob's measurement choices, but that encodes all other features that would influence the corresponding measurement outcomes, \nomrefpage\nomeqref {1.6.0}\nompageref{34}
+  \item [{$\Lambda\indices{^\mu_\nu}x^\nu$}]\begingroup The components of a Lorentz Transformation, \nomrefpage\nomeqref {4.2.1}\nompageref{190}
+  \item [{$\Lambda\indices{_\mu^\nu}$}]\begingroup The components of an inverse Lorentz transformation $\Lambda^{-1}$, see equation (\ref{colambda}), \nomrefpage\nomeqref {4.2.6}\nompageref{194}
+  \item [{$\mathbb{C}$}]\begingroup The set of complex numbers, \nomrefpage\nomeqref {1.1.0}\nompageref{9}
+  \item [{$\mathbb{N}$}]\begingroup  the set of positive integers greater than $0$, \nomrefpage\nomeqref {3.2.4}\nompageref{136}
+  \item [{$\mathcal{A}$}]\begingroup A measuring device considered in decoherence theory, \nomrefpage\nomeqref {2.4.15}\nompageref{82}
+  \item [{$\mathcal{A}_A, \mathcal{A}_B$}]\begingroup Stern-Gerlach apparatuses belonging to Alice and Bob respectively,  \nomrefpage\nomeqref {2.9.0}\nompageref{107}
+  \item [{$\mathcal{E}$}]\begingroup The environment of a system $\mathcal{S}$ considered in decoherence theory, \nomrefpage\nomeqref {2.4.0}\nompageref{69}
+  \item [{$\mathcal{O}, \mathcal{O}'$}]\begingroup Two observers, \nomrefpage\nomeqref {4.2.0}\nompageref{188}
+  \item [{$\mathcal{P}_A,\mathcal{P}_B$}]\begingroup The physical systems corresponding to two scientists, Alice and Bob respectively, \nomrefpage\nomeqref {2.8.0}\nompageref{97}
+  \item [{$\mathcal{S}$}]\begingroup A generic system considered in decoherence theory, \nomrefpage\nomeqref {2.4.0}\nompageref{69}
+  \item [{$\mathcal{S}_1, \mathcal{S}_2$}]\begingroup Two spatially separated systems, \nomrefpage\nomeqref {1.2.0}\nompageref{14}
+  \item [{$\mathcal{U}$}]\begingroup The composite of the systems $\mathcal{S}$ and $\mathcal{E}$ considered in decoherence theory, \nomrefpage\nomeqref {2.4.0}\nompageref{69}
+  \item [{$\mathcal{V}$}]\begingroup The composite subsystem $\mathcal{S}+\mathcal{A}+\mathcal{P}_A+\mathcal{P}_B$ so that $\mathcal{U}=\mathcal{V}+\mathcal{E}$, \nomrefpage\nomeqref {2.8.0}\nompageref{97}
+  \item [{$\mu, \nu$}]\begingroup Generic indices of tensors, $\mu, \nu=0,1,2,$ or $3$, \nomrefpage\nomeqref {3.3.0}\nompageref{143}
+  \item [{$\norm{\psi}$}]\begingroup $\sqrt{\ip*{\psi}{\psi}}$ for some state $\ket*{\psi}$, \nomrefpage\nomeqref {2.2.0}\nompageref{62}
+  \item [{$\overline{z}$}]\begingroup The complex conjugate of a complex number $z$, \nomrefpage\nomeqref {1.1.0}\nompageref{9}
+  \item [{$\pi_\tau^{\mu\nu}$}]\begingroup The projection $\pi_\tau^{\mu\nu}=\sum_j\dyad*{\eta_{j,\tau}^{\mu\nu}}$, \nomrefpage\nomeqref {4.1.4}\nompageref{180}
+  \item [{$\pi_n$}]\begingroup $\pi_n \ket*{\Psi_n}$ is the (weighted) sum of all the states in the superposition of $\ket*{\Psi_n}$ for which the mass-energy density has a definite value that is equal to the notional mass-energy density measurement $\tau_S(x)$ for all $x\in S\cap S_n$, p. \pageref{overviewpi}, see also equation (\ref{tauprojection}), \nomrefpage\nomeqref {4.1.2}\nompageref{179}
+  \item [{$\pi_n'$}]\begingroup The projection $\pi_n'=\sum_j\dyad{\xi_j'}$, \nomrefpage\nomeqref {4.2.18}\nompageref{203}
+  \item [{$\pi_n(\tau_{S_n\cap S})$}]\begingroup The projection $\pi_n$ where $\tau_{S_n\cap S}$ is the function $\tau_S$ restricted to $S_n\cap S$, \nomrefpage\nomeqref {4.1.6}\nompageref{182}
+  \item [{$\pi_R$}]\begingroup the projection analogous to $\pi_n$ for the hypersurface $R$ rather than the hypersurface $S_n$, \nomrefpage\nomeqref {4.8.1}\nompageref{263}
+  \item [{$\pi_{n,\tau}^{\mu\nu}$}]\begingroup The projection $\pi_{n,\tau}^{\mu\nu}=\sum_j\dyad*{\chi_{j,\tau}^{\mu\nu}}$, \nomrefpage\nomeqref {4.1.3}\nompageref{180}
+  \item [{$\propto$}]\begingroup Means proportional to, e.g. $\ket*{\psi_1}_\mathcal{S}\propto\ket*{\psi_2}_\mathcal{S}$ means there exists $\alpha$ such that  $\ket*{\psi_1}_\mathcal{S}=\alpha\ket*{\psi_2}_\mathcal{S}$,  \nomrefpage\nomeqref {2.4.1}\nompageref{71}
+  \item [{$\psi(\vb{x}_A, \vb{x}_B, t)$}]\begingroup Pilot wave, \nomrefpage\nomeqref {1.8.1}\nompageref{42}
+  \item [{$\psi(x)$}]\begingroup The bispinor field of quantum field theory, \nomrefpage\nomeqref {3.2.0}\nompageref{130}
+  \item [{$\psi(x)$}]\begingroup The wave function corresponding to the state $\ket*{\psi}$ given by the formula $\psi(x)=\ip{x}{\psi}$,  \nomrefpage\nomeqref {2.6.1}\nompageref{91}
+  \item [{$\psi_0^\text{sys}$}]\begingroup A wave function in Kent's toy model that is the superposition of two localized wave functions $\psi_1^\text{sys}$ and $\psi_2^\text{sys}$, \nomrefpage\nomeqref {3.5.0}\nompageref{165}
+  \item [{$\psi_1^\text{sys}, psi_2^\text{sys}$}]\begingroup Wave functions localized at $z_1$ and $z_2$ respectively, \nomrefpage\nomeqref {3.5.0}\nompageref{165}
+  \item [{$\Re(z)$}]\begingroup The real part of a complex number $z$,  \nomrefpage\nomeqref {2.6.2}\nompageref{93}
+  \item [{$\setminus$}]\begingroup $S\setminus U$ denotes all the elements in $S$ that are not in $U$, \nomrefpage\nomeqref {4.6.0}\nompageref{236}
+  \item [{$\sim$}]\begingroup we write $\ket*{\phi}\sim \ket*{\gamma}$ to mean that  $\ket*{\phi}$ and $\ket*{\gamma}$ are simultaneous, \nomrefpage\nomeqref {4.8.7}\nompageref{274}
+  \item [{$\sum_{i=1}^8 N_i$}]\begingroup Shorthand for $N_1+N_2+N_3+N_4+N_5+N_6+N_7+N_8$, \nomrefpage\nomeqref {1.4.0}\nompageref{30}
+  \item [{$\tau$}]\begingroup The particular value the stress-energy tensor $T^{\mu\nu}(y)$ takes when a measurement of it is performed at $y\in S_n$, \nomrefpage\nomeqref {4.1.0}\nompageref{177}
+  \item [{$\tau'_S(x')$}]\begingroup A particular range of values for each $x'\in S$ of the physical quantity described by $T'_S(x')$ observed by $\mathcal{O}'$, \nomrefpage\nomeqref {4.2.14}\nompageref{201}
+  \item [{$\tau^{\mu\nu}(x)$}]\begingroup For fixed $\mu,\nu$, the simultaneous eigenvalue for all $x\in S$ of a simultaneous eigenstate $\hat{T}^{\mu\nu}(x)$, \nomrefpage\nomeqref {3.3.0}\nompageref{143}
+  \item [{$\tau^{\prime\mu\nu}(x')$}]\begingroup A particular (real) value of the physical quantity described by $T^{\prime\mu\nu}(x')$ that $\mathcal{O}'$ observes, \nomrefpage\nomeqref {4.2.14}\nompageref{200}
+  \item [{$\tau_S(x)$}]\begingroup A real valued function which specifies the outcome of the notional measurement $T_S(x)$ for every $x\in S$, \nomrefpage\nomeqref {3.2.0}\nompageref{126}
+  \item [{$\tau_{S,i}(x)$}]\begingroup Simultaneous $\hat{T}_S$-eigenvalue corresponding to simultaneous $\hat{T}_S$-eigenvalue $\ket*{\Gamma_{i}}$, \nomrefpage\nomeqref {3.2.4}\nompageref{136}
+  \item [{$\tau_{S_n\cap S}$}]\begingroup The function $\tau_S$ restricted to $S_n\cap S$, \nomrefpage\nomeqref {4.1.6}\nompageref{181}
+  \item [{$\Tr (\hat{A})$}]\begingroup The trace of an operator $\hat{A}$, see equation (\ref{tracedef}), \nomrefpage\nomeqref {2.4.4}\nompageref{74}
+  \item [{$\Tr_\mathcal{E}(\hat{A}_\mathcal{U})$}]\begingroup The partial trace of an operator $\hat{A}_\mathcal{U}$ acting on $H_\mathcal{U}$,  see equation (\ref{partialtrace}), \nomrefpage\nomeqref {2.4.10}\nompageref{78}
+  \item [{$\Tr_\mathcal{S}(\hat{A}_\mathcal{S}), \Tr_\mathcal{U}(\hat{A}_\mathcal{U})$}]\begingroup The traces of the operators $\hat{A}_\mathcal{S}$ and $\hat{A}_\mathcal{U}$ acting  on $H_\mathcal{S}$ and on $H_\mathcal{U}$ respectively, \nomrefpage\nomeqref {2.4.8}\nompageref{77}
+  \item [{$\uvbm{a}$}]\begingroup The location a particle in the state $\ket*{\uvbm{a}}$ would hit the detection screen, \nomrefpage\nomeqref {1.1.0}\nompageref{7}
+  \item [{$\uvbp{a}$}]\begingroup The location a particle in the state $\ket*{\uvbp{a}}$ would hit the detection screen, \nomrefpage\nomeqref {1.1.0}\nompageref{7}
+  \item [{$\uvb{a}$}]\begingroup Unit vector in a particular direction, \nomrefpage\nomeqref {1.1.0}\nompageref{7}
+  \item [{$\var(x)$}]\begingroup The Dirac delta function, \nomrefpage\nomeqref {2.6.0}\nompageref{92}
+  \item [{$\vb{p}_A, \vb{p}_B$}]\begingroup Exact momenta of particles $q_A$ and $q_B$ in the Bohmian interpretation, \nomrefpage\nomeqref {1.8.0}\nompageref{41}
+  \item [{$\vb{v}$}]\begingroup A vector $\vb{v}= (v_x, v_y, v_z)$ denoting a velocity, \nomrefpage\nomeqref {1.2.11}\nompageref{21}
+  \item [{$\vb{x}$}]\begingroup A vector $\vb{x}= (x, y, z)$ representing a location in three-dimensional space, \nomrefpage\nomeqref {1.2.11}\nompageref{22}
+  \item [{$\vb{x}_A, \vb{x}_B$}]\begingroup Exact locations of particles $q_A$ and $q_B$ in the Bohmian interpretation, \nomrefpage\nomeqref {1.8.0}\nompageref{41}
+  \item [{$\{\ket*{\chi_{j,\tau}^{\mu\nu}}:j\in\mathbb{N}\}$}]\begingroup The subset of $\{\ket*{\eta_j^{\mu\nu}}:j\in\mathbb{N}\}$ such that $\hat{T}^{\mu\nu}(y)\ket*{\chi_{j,\tau}^{\mu\nu}}=\tau\ket*{\chi_{j,\tau}^{\mu\nu}}$ and $\hat{T}_S(x)\ket*{\chi_{j,\tau}^{\mu\nu}}=\tau_S(x)\ket*{\chi_{j,\tau}^{\mu\nu}}$ for all $x\in S_n\cap S$, \nomrefpage\nomeqref {4.1.3}\nompageref{180}
+  \item [{$\{\ket*{\eta_j^{\mu\nu}}:j\in\mathbb{N}\}$}]\begingroup An orthonormal basis of $H_{S_n}$ consisting of simultaneous $\hat{T}^{\mu\nu}(y)$, $\hat{T}_S(x)$-eigenstates so that $\hat{T}^{\mu\nu}(y)\ket*{\eta_j^{\mu\nu}}=\tau_{j}\ket*{\eta_j^{\mu\nu}}$ and $\hat{T}_{S}(x)\ket*{\eta_j^{\mu\nu}}=\tau_{S,j}(x)\ket*{\eta_j^{\mu\nu}}$ for $x\in S_n\cap S$, where $\tau_{j}$ and $\tau_{S,j}(x)$ are the corresponding eigenvalues, \nomrefpage\nomeqref {4.1.3}\nompageref{180}
+  \item [{$\{\ket*{\eta_{j,\tau}^{\mu\nu}}:j\in\mathbb{N}\}$}]\begingroup The subset of  $\{\ket*{\eta_j^{\mu\nu}}:j\in\mathbb{N}\}$ with $\hat{T}^{\mu\nu}(y)\ket*{\eta_{j,\tau}^{\mu\nu}}=\tau\ket*{\eta_{j,\tau}^{\mu\nu}}$, \nomrefpage\nomeqref {4.1.4}\nompageref{180}
+  \item [{$\{\ket*{\gamma_{i,l}^{(\mathcal{S})}}:l\}$}]\begingroup A basis of states that describe all the states of the subregion $S_{\mathcal{S}}$ of $S^1(y_i)$ corresponding to $\mathcal{S}$ that together with $\ket*{\Xi_i^{(S^1(y_i))}}$ and $\ket*{\Psi_S}$ determine $\mathcal{S}$ to be in the state $\ket*{s}$, \nomrefpage\nomeqref {4.6.9}\nompageref{246}
+  \item [{$\{\ket*{\Gamma_{i}}:i\in\mathbb{N}\}$}]\begingroup Orthonormal basis of $H_S$ consisting of simultaneous $\hat{T}_S$-eigenstates with corresponding simultaneous $\hat{T}_S$-eigenvalues $\tau_{S,i}(x)$, \nomrefpage\nomeqref {3.2.4}\nompageref{136}
+  \item [{$\{\ket*{\xi_j'}:j\}$}]\begingroup Orthonormal basis of the Hilbert space of states $H'_{S_n,\tau_S'}$ for which $\mathcal{O}'$ observes $T'_S(x')$ to be $\tau'_S(x')$ for all $x'\in S_n(y')\cap S$, \nomrefpage\nomeqref {4.2.17}\nompageref{203}
+  \item [{$\{\ket*{\xi_j}:j\in\mathbb{N}\}$}]\begingroup An orthonormal basis of $H_{S_n,\tau_S}$, \nomrefpage\nomeqref {4.1.0}\nompageref{178}
+  \item [{$\{\ket*{\xi_j}:j\}$}]\begingroup Orthonormal basis of the Hilbert space of states $H_{S_n,\tau_S}$ for which $\mathcal{O}$ observes $T_S(x)$ to be $\tau_S(x)$ for all $x\in S_n(y)\cap S$, \nomrefpage\nomeqref {4.2.17}\nompageref{203}
+  \item [{$\{\ket*{\xi_{k,j}}:j\}$}]\begingroup An orthonormal basis of the Hilbert space $H_k$ that describes the space of states of the cell $y_k\in S_n$, \nomrefpage\nomeqref {4.3.1}\nompageref{208}
+  \item [{$\{\ket*{a_i(t)}:i\}$}]\begingroup The states of an apparatus $\mathcal{A}$  corresponding to the pointer states $\{\ket*{s_i}:i\}$ of $H_\mathcal{S}$, \nomrefpage\nomeqref {2.4.15}\nompageref{82}
+  \item [{$\{\ket*{a_j}:j\}$}]\begingroup States of the apparatus $\mathcal{A}$ corresponding to the set of pointer states  $\{\ket*{s_j}:j\}$  of $\mathcal{S}$, \nomrefpage\nomeqref {4.6.1}\nompageref{238}
+  \item [{$\{\ket*{s_i}:i\}$}]\begingroup The set of pointer states of $H_\mathcal{S}$  corresponding to an apparatus $\mathcal{A}$, \nomrefpage\nomeqref {2.4.15}\nompageref{82}
+  \item [{$\{\ket*{Z_k'}:k\}$}]\begingroup Basis of states corresponding to the subregion $S\setminus(S^{1}(y_i)\cup S_{\mathcal{A}}')$, \nomrefpage\nomeqref {4.6.10}\nompageref{247}
+  \item [{$\{\ket*{Z_k}:k\}$}]\begingroup A basis of simultaneous $\hat{T}_S$-eigenstates for the subregion $(S\setminus S^1(y_1))\cup S_{\mathcal{A}}$ so that states of the form $\ket*{\gamma_{i,l}^{(\mathcal{S})}}\ket*{\Xi_i^{(S^1(y_i))}}\ket*{Z_k}$ will be simultaneous $\hat{T}_S$-eigenstates for the whole of $S$, \nomrefpage\nomeqref {4.6.9}\nompageref{246}
+  \item [{$A^\mu(x)$}]\begingroup The four-vector potential of the electromagnetic field, \nomrefpage\nomeqref {3.2.0}\nompageref{130}
+  \item [{$A^\mu(x)$}]\begingroup The four-vector potential of the electromagnetic field, \nomrefpage\nomeqref {3.2.3}\nompageref{134}
+  \item [{$A_i$}]\begingroup Alice's measurement outcome when she makes the measurement choice $a_i$, \nomrefpage\nomeqref {1.6.0}\nompageref{34}
+  \item [{$a_i$}]\begingroup One of Alice's measurement choices, \nomrefpage\nomeqref {1.6.0}\nompageref{34}
+  \item [{$b$}]\begingroup The complex number whose modulus squared gives the probability that the notional measurement on $S^1(y_i)$ will be $\tau_S$, see equation (\ref{PsiSdecomp}), \nomrefpage\nomeqref {4.6.3}\nompageref{239}
+  \item [{$B_i$}]\begingroup Bob's measurement outcome when he makes the measurement choice $b_i$, \nomrefpage\nomeqref {1.6.0}\nompageref{34}
+  \item [{$b_i$}]\begingroup One of Bob's measurement choices, \nomrefpage\nomeqref {1.6.0}\nompageref{34}
+  \item [{$c$}]\begingroup The speed of light, \nomrefpage\nomeqref {1.2.11}\nompageref{22}
+  \item [{$c_j$}]\begingroup The complex numbers that appear in the superposition $\ket*{s}=\sum_j c_j \ket*{s_j}$, \nomrefpage\nomeqref {4.6.1}\nompageref{238}
+  \item [{$E$}]\begingroup An object's energy, \nomrefpage\nomeqref {4.2.3}\nompageref{192}
+  \item [{$e^{i \theta}$}]\begingroup Defined to be equal to $\cos \theta + i\sin \theta$, \nomrefpage\nomeqref {1.8.1}\nompageref{42}
+  \item [{$H$}]\begingroup A Hilbert space, \nomrefpage\nomeqref {2.2.0}\nompageref{62}
+  \item [{$H'_{S_n,\tau_S'}$}]\begingroup The Hilbert space of states for which $\mathcal{O}'$ observes $T'_S(x')$ to be $\tau'_S(x')$ for all $x'\in S_n(y')\cap S$, \nomrefpage\nomeqref {4.2.17}\nompageref{203}
+  \item [{$H_k$}]\begingroup A Hilbert space for the cell $y_k\in S_n$, \nomrefpage\nomeqref {4.3.0}\nompageref{208}
+  \item [{$H_S$}]\begingroup The Hilbert space of all states of the hypersurface $S$ in the Tomonaga-Schwinger picture, \nomrefpage\nomeqref {3.2.4}\nompageref{134}
+  \item [{$H_{\mathcal{S}}, H_{\mathcal{E}}, H_{\mathcal{U}}$}]\begingroup The Hilbert space of states for $\mathcal{S}$, $\mathcal{E}$ and $\mathcal{U}$ respectively considered in decoherence theory, \nomrefpage\nomeqref {2.4.0}\nompageref{70}
+  \item [{$H_{S_n,\tau_S}$}]\begingroup The subspace of states $\ket*{\xi}\in  H_{S_n}$ for which  $\hat{T}_S(x)\ket*{\xi}=\tau_S(x)\ket*{\xi}$  for all $x\in S_n\cap S$, \nomrefpage\nomeqref {4.1.0}\nompageref{178}
+  \item [{$H_{S_n}'$}]\begingroup The states on $S_n$ that an observer $\mathcal{O}'$ can observe, \nomrefpage\nomeqref {4.2.14}\nompageref{198}
+  \item [{$i$}]\begingroup The square root of $-1$, $\sqrt{-1}$, \nomrefpage\nomeqref {1.1.0}\nompageref{9}
+  \item [{$i,j,k$}]\begingroup Roman letters range over $1$, $2$, and $3$ (e.g. the $i$ in $(x^i)_{i=1}^3$), \nomrefpage\nomeqref {4.2.0}\nompageref{188}
+  \item [{$j^\mu(x)$}]\begingroup Current density, \nomrefpage\nomeqref {3.2.3}\nompageref{134}
+  \item [{$M(H)$}]\begingroup The set of all density matrices on the Hilbert space $H$, \nomrefpage\nomeqref {2.4.5}\nompageref{74}
+  \item [{$O(\vb{x}_A, \vb{x}_B)$}]\begingroup A physical quantity dependent on the locations of the particles $q_A$ and $q_B$ in the Bohmian interpretation, \nomrefpage\nomeqref {1.8.2}\nompageref{43}
+  \item [{$o_i$}]\begingroup The eigenvalues of an observable $\hat{O}$, \nomrefpage\nomeqref {2.2.0}\nompageref{64}
+  \item [{$O_{\mathcal{S}}$}]\begingroup The observable that returns $j$ if the system $\mathcal{S}$ is measured to be in the state $\ket*{s_j}$, \nomrefpage\nomeqref {4.6.10}\nompageref{246}
+  \item [{$O_{\mathcal{S}}, O_{\mathcal{A}}$}]\begingroup Measurement procedures on $\mathcal{S}$ and $\mathcal{A}$ respectively, \nomrefpage\nomeqref {4.5.1}\nompageref{228}
+  \item [{$o_{\mathcal{S}}, o_{\mathcal{A}}$}]\begingroup particular measurement outcomes of measurement procedures $O_{\mathcal{S}}$ and $O_{\mathcal{A}}$ respectively, \nomrefpage\nomeqref {4.5.1}\nompageref{228}
+  \item [{$O_{\uvbp{a}}$}]\begingroup A physical measurement device which outputs 1 if the particle is in the spin $\ket*{\uvbp{a}}$-state and 0 if the particle is in the spin $\ket*{\uvbm{a}}$-state, \nomrefpage\nomeqref {2.2.0}\nompageref{61}
+  \item [{$p$}]\begingroup The four-momentum $p=(E/c, p^1, p^2, p^3)$ where $E$ is an object's energy, and $p^1, p^2$, and $p^3$  \nomenclature{$p^1, p^2$, $p^3$}{The three components of an object's momentum in the directions $\hat{e}_1$, $\hat{e}_2$, and $\hat{e}_3$ respectively, \nomrefpage}  are the three components of momentum in the directions $\hat{e}_1$, $\hat{e}_2$, and $\hat{e}_3$ respectively, \nomrefpage\nomeqref {4.2.3}\nompageref{192}
+  \item [{$P(r)$}]\begingroup the probability a statement $r$ is true, \nomrefpage\nomeqref {3.4.1}\nompageref{158}
+  \item [{$p(V_i, V_j)$}]\begingroup The probability given our knowledge that particle  $q_A$ belongs to the region $V_i$ and particle $q_B$ belongs to the region $V_j$, \nomrefpage\nomeqref {1.8.2}\nompageref{43}
+  \item [{$P(X)$}]\begingroup The probability an event $X$ occurs, \nomrefpage\nomeqref {1.2.1}\nompageref{16}
+  \item [{$P(X\mid Y)$}]\begingroup The probability an event $X$ occurs given that the event $Y$ occurs, \nomrefpage\nomeqref {1.2.1}\nompageref{16}
+  \item [{$P^{\ket*{\phi}_{\mathcal{S}+\mathcal{A}}}(O_\mathcal{S}=o_\mathcal{S}\, \& \,O_\mathcal{A}=o_\mathcal{A})$}]\begingroup The standard probability calculated using the Born Rule with the eigenstates of the observables $\hat{O}_\mathcal{S}$ and $\hat{O}_\mathcal{A}$ and the quantum state $\ket*{\phi}_{\mathcal{S}+\mathcal{A}}$, \nomrefpage\nomeqref {4.5.2}\nompageref{230}
+  \item [{$P^{\ket*{\phi}_{\mathcal{S}+\mathcal{A}}}_{\lambda}(O_\mathcal{S}=o_\mathcal{S})$}]\begingroup The probability the measurement outcome of $O_\mathcal{S}$ is $o_\mathcal{S}$ when PI holds, see equation (\ref{generalPI}), \nomrefpage\nomeqref {4.5.2}\nompageref{229}
+  \item [{$p_\lambda$}]\begingroup The probability the hidden variable for the composite system $\mathcal{S}+\mathcal{A}$ is $\lambda$, so that $\sum_{\lambda\in\Lambda} p_\lambda = 1$, \nomrefpage\nomeqref {4.5.2}\nompageref{229}
+  \item [{$P_\lambda^{\ket*{\phi}_{\mathcal{S}+\mathcal{A}}}(O_\mathcal{S}=o_\mathcal{S}\,\& \, O_\mathcal{A}=o_\mathcal{A})$}]\begingroup The probability that the measurement outcomes of $O_{\mathcal{S}}$ and $O_{\mathcal{A}}$ will be $o_{\mathcal{S}}$  and $o_{\mathcal{A}}$ respectively given the hidden variable $\lambda$ and the quantum state $\ket*{\phi}_{\mathcal{S}+\mathcal{A}}$ describing the composite system $\mathcal{S}+\mathcal{A}$, \nomrefpage\nomeqref {4.5.1}\nompageref{229}
+  \item [{$p_i$}]\begingroup The probability the particle will be found to be in the eigenstate $\ket*{\psi_i}$ of the observable $\hat{O}$, \nomrefpage\nomeqref {2.2.1}\nompageref{65}
+  \item [{$P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbp{a},\uvbp{b})$}]\begingroup The probability particle $q_A$ is measured to be in the $\ket*{\uvbp{a}}$-state and particle $q_B$ is measured to be in the $\ket*{\uvbp{b}}$-state given the complete state $\lambda$ of both particles, \nomrefpage\nomeqref {1.8.3}\nompageref{44}
+  \item [{$P_{\lambda,x,y}(X , Y)$}]\begingroup The probability  Alice obtains outcome $X$ and Bob obtains outcome $Y$ given  Alice's measurement choice $x$, Bob's measurement choice $y$, and the complete state $\lambda$ describing the two particles they measure.\nomrefpage\nomeqref {1.6.1}\nompageref{35}
+  \item [{$P_{A, \lambda,x,y}(X)$}]\begingroup The probability Alice obtains the outcome $X$ given the complete state $\lambda$ and Alice's measurement choice $x$ and Bob's measurement choice $y$, see equation (\ref{PIone}), \nomrefpage\nomeqref {1.6.4}\nompageref{36}
+  \item [{$P_{AB}(\alpha', \beta'\mid\alpha, \beta)$}]\begingroup The conditional probability particle $q_A$ will be found to be in state $\ket*{\alpha'}$ and particle $q_B$ will be found to be in state $\ket*{\beta'}$ given that particle $q_A$ is currently in the state $\ket*{\alpha}$ and particle $q_B$ is currently in the state $\ket*{\beta}$, see equation (\ref{indepprob}), \nomrefpage\nomeqref {1.2.4}\nompageref{17}
+  \item [{$P_{AB}(\uvbp{a},\uvbp{b})$}]\begingroup The probability particle $q_A$ is in the $\ket*{\uvbp{a}}$-state and particle $q_B$ is in the $\ket*{\uvbp{b}}$-state in the hidden variables interpretation, \nomrefpage\nomeqref {1.4.0}\nompageref{30}
+  \item [{$P_{B, \lambda,x,y}(Y)$}]\begingroup The probability Bob obtains the outcome $Y$ given the complete state $\lambda$ and Alice's measurement choice $x$ and Bob's measurement choice $y$, see equation (\ref{PItwo}), \nomrefpage\nomeqref {1.6.4}\nompageref{36}
+  \item [{$q(\tau)$}]\begingroup The statement that $T^{\mu\nu}(y)$ (understood in the conventional non-Kentian sense) takes the value $\tau$, \nomrefpage\nomeqref {3.4.3}\nompageref{159}
+  \item [{$q(\tau)$}]\begingroup The statement that some quantity $T$  takes the value $\tau$, \nomrefpage\nomeqref {3.4.1}\nompageref{158}
+  \item [{$q_A, q_B$}]\begingroup Two particles of a spin singlet, \nomrefpage\nomeqref {1.2.0}\nompageref{13}
+  \item [{$R$}]\begingroup A generic hypersurface which intersects $S$ and in which $R\setminus S$ is a bounded region that is prior to $S$, \nomrefpage\nomeqref {4.8.1}\nompageref{263}
+  \item [{$r(\tau_S, y)$}]\begingroup The statement that $T_S(x)$ has the determinate value $\tau_S(x)$ for all $x\in S^1(y)$, \nomrefpage\nomeqref {3.4.3}\nompageref{159}
+  \item [{$r(\vb{x}_A, \vb{x}_B, t)$}]\begingroup Modulus of the pilot wave $\psi(\vb{x}_A, \vb{x}_B, t)$, \nomrefpage\nomeqref {1.8.1}\nompageref{42}
+  \item [{$r_n$}]\begingroup The statement that  $T_S(x)$ has the determinate value $\tau_S(x)$ for all $x\in S_n\cap S$, \nomrefpage\nomeqref {3.4.4}\nompageref{162}
+  \item [{$r_n(\tau_{S_n\cap S})$}]\begingroup The statement $r_n$  that $T_S(x)=\tau_S(x)$ for all $x\in S_n(y)\cap S$,  \nomrefpage\nomeqref {4.1.6}\nompageref{182}
+  \item [{$R_{i}$}]\begingroup Disjoint region of the hypersurface $R$ which  $\ket*{\Phi_{Ri}}$ describes and such that $R=\bigcup_i R_{i}$, \nomrefpage\nomeqref {4.8.2}\nompageref{264}
+  \item [{$S$}]\begingroup A distant future hypersurface on which a notional energy-density measurement is made, \nomrefpage\nomeqref {3.2.0}\nompageref{123}
+  \item [{$S(\vb{x}_A, \vb{x}_B,t )$}]\begingroup Phase of the pilot wave $\psi(\vb{x}_A, \vb{x}_B, t)$, \nomrefpage\nomeqref {1.8.1}\nompageref{42}
+  \item [{$S^1(y)$}]\begingroup The set  of all the spacetime locations of $S$ outside the light cone of $y$, \nomrefpage\nomeqref {3.3.0}\nompageref{147}
+  \item [{$S^1(y_f,y_i)$}]\begingroup The subset of $S$ that is within the light cone of $y_i=(t_i, z_0)$ but outside the light cone of $y_f=(t_f, z_0)$, i.e. $S^1(y_f)\setminus S^1(y_i)$, \nomrefpage\nomeqref {4.6.1}\nompageref{237}
+  \item [{$S_0$}]\begingroup Initial hypersurface for which Kent assumes all physics occurs between $S_0$ and $S$, \nomrefpage\nomeqref {3.2.7}\nompageref{140}
+  \item [{$S_n$}]\begingroup Shorthand for $S_n(y)$, \nomrefpage\nomeqref {3.4.4}\nompageref{162}
+  \item [{$S_n(y)$}]\begingroup One of a sequence of hypersurfaces which contain $y$ and intersect $S$, \nomrefpage\nomeqref {3.4.4}\nompageref{162}
+  \item [{$S_{\mathcal{A}_L}, S_{\mathcal{A}_R}$}]\begingroup Subregions of $S$ such that the notional measurement of the mass-energy density corresponds to simultaneous $\hat{T}_S$-eigenstates $\ket*{\gamma_i^{(\mathcal{A}_L)}}$ and $\ket*{\gamma_i^{(\mathcal{A}_R)}}$ respectively on these subregions, \nomrefpage\nomeqref {4.7.0}\nompageref{250}
+  \item [{$S_{\mathcal{A}}'$}]\begingroup The subregion of $S^1(y_m,y_f)$ where photons coming from the apparatus arrive and hence determine which state the apparatus is in, \nomrefpage\nomeqref {4.6.2}\nompageref{239}
+  \item [{$S_{\mathcal{S}}, S_{\mathcal{A}}$}]\begingroup Subregions of $S^1(y_i)$ where the states of $\mathcal{S}$ and $\mathcal{A}$ are determined respectively, \nomrefpage\nomeqref {4.6.0}\nompageref{236}
+  \item [{$S_{n,i}$}]\begingroup A sequence of hypersurfaces which go through the spacetime location $y_i=(t_i, z_0)$ such that $\lim_{n\rightarrow\infty} S_{n,i}\cap S=S^1(y_i)$, \nomrefpage\nomeqref {4.6.3}\nompageref{240}
+  \item [{$S_{n,m}$}]\begingroup One of the hypersurfaces that goes through $y_m$, \nomrefpage\nomeqref {4.6.7}\nompageref{244}
+  \item [{$T'_S(x')$}]\begingroup The mass-energy density as described by an observer $\mathcal{O}'$, see equation (\ref{TSprimedef}), \nomrefpage\nomeqref {4.2.12}\nompageref{197}
+  \item [{$T'_S(x')$}]\begingroup The mass-energy density of the hypersurface $S$ observed by observer $\mathcal{O}'$ at a spacetime location that $\mathcal{O}'$ describes as $x'$, \nomrefpage\nomeqref {4.2.14}\nompageref{200}
+  \item [{$T^{\mu\nu}(y)$}]\begingroup The stress-energy tensor, \nomrefpage\nomeqref {3.3.0}\nompageref{143}
+  \item [{$t^{\mu\nu}(y)$}]\begingroup Approximate eigenvalues of  $\hat{T}^{\mu\nu}(y)$ for all $\mu, \nu$, \nomrefpage\nomeqref {4.8.0}\nompageref{261}
+  \item [{$T^{\prime\mu\nu}(x')$}]\begingroup The $\mu\nu$-component of the stress-energy tensor that $\mathcal{O}'$ observes at a spacetime location  belonging to $S$ that $\mathcal{O}'$ describes as $x'$, \nomrefpage\nomeqref {4.2.14}\nompageref{199}
+  \item [{$t_f$}]\begingroup A time after  a particle $\mathcal{S}$ and  some apparatus $\mathcal{A}$ have interacted with one another, but before they have interacted with the environment, \nomrefpage\nomeqref {4.6.1}\nompageref{237}
+  \item [{$t_i$}]\begingroup A time before  a particle $\mathcal{S}$ and  some apparatus $\mathcal{A}$ have interacted with one another, \nomrefpage\nomeqref {4.6.0}\nompageref{234}
+  \item [{$t_m$}]\begingroup A time after a particle $\mathcal{S}$ and  some apparatus $\mathcal{A}$ have interacted by which time $\mathcal{A}$ displays a definite measurement outcome, \nomrefpage\nomeqref {4.6.2}\nompageref{238}
+  \item [{$T_S(x)$}]\begingroup The mass-energy density on a hypersurface $S$, p. \pageref{firstTS}. Also see equation (\ref{TSdef}), \nomrefpage \nomeqref {4.2.11}\nompageref{195}
+  \item [{$U(\Delta t)$}]\begingroup Unitary operator parameterized by a time interval $\Delta t$, \nomrefpage\nomeqref {3.2.0}\nompageref{130}
+  \item [{$U(\Lambda)$}]\begingroup The unitary operator which relates the state $\ket*{\psi}$ observer $\mathcal{O}$ observes to the state $\ket*{\psi'}$ observer $\mathcal{O}'$ observes, i.e. $\ket*{\psi'}=U(\Lambda)\ket*{\psi}$, \nomrefpage\nomeqref {4.2.14}\nompageref{199}
+  \item [{$U(t',t)$}]\begingroup A unitary operator that determines the evolution of states from time $t$ to time $t'$,  \nomrefpage\nomeqref {3.1.0}\nompageref{120}
+  \item [{$U[S]$}]\begingroup Unitary operator that maps the Heisenberg picture state $\ket*{\Phi}$ to the corresponding $\ket*{\Psi[S]}$-state that describes the state of the hypersurface $S$, i.e. $\ket*{\Psi[S]}=U[S]\ket*{\Phi}$ in the Tomonaga-Schwinger picture, \nomrefpage\nomeqref {3.2.1}\nompageref{133}
+  \item [{$V$}]\begingroup The region particles $q_A$ and $q_B$ are confined to in the Bohmian interpretation, \nomrefpage\nomeqref {1.8.2}\nompageref{43}
+  \item [{$V_i$}]\begingroup Small non-overlapping regions whose union is $V=\bigcup_iV_i$, \nomrefpage\nomeqref {1.8.2}\nompageref{43}
+  \item [{$W$}]\begingroup A world described by the state $\ket*{\Psi(t_0)}=\Big(\sum_i c_i \ket*{\xi_i(t_0)}\Big)\ket*{E_r(t)}$,  \nomrefpage\nomeqref {2.8.1}\nompageref{102}
+  \item [{$W_i$}]\begingroup A world described by the state $\ket*{\xi_i(t)}\ket*{E_i(t)}$,  \nomrefpage\nomeqref {2.8.1}\nompageref{102}
+  \item [{$X$}]\begingroup A variable representing an unknown outcome for Alice's measurement, \nomrefpage\nomeqref {1.6.0}\nompageref{34}
+  \item [{$x$}]\begingroup A variable representing an unknown choice for Alice's measurement, \nomrefpage\nomeqref {1.6.0}\nompageref{34}
+  \item [{$x$}]\begingroup a spacetime location $(x^0,x^1,x^2,x^3)$, \nomrefpage\nomeqref {3.2.0}\nompageref{123}
+  \item [{$x'$}]\begingroup The coordinate of a spacetime location described by observer $\mathcal{O}'$ so that $x'=(\Lambda\indices{^\mu_\nu}x^\nu)_{\mu=0}^3$ where $x$ is a spacetime location described by observer $\mathcal{O}$, \nomrefpage\nomeqref {4.2.11}\nompageref{196}
+  \item [{$x^0$}]\begingroup $x^0=c t$, \nomrefpage\nomeqref {3.2.0}\nompageref{123}
+  \item [{$x^\mu\hat{e}_\mu$}]\begingroup The sum $\sum_{\mu=0}^3x^\mu\hat{e}_\mu$ given by the Einstein summation convention, \nomrefpage\nomeqref {4.2.0}\nompageref{188}
+  \item [{$x_\mu$}]\begingroup $x_\mu\myeq\eta_{\mu\nu}x^\nu$, \nomrefpage\nomeqref {4.2.1}\nompageref{190}
+  \item [{$Y$}]\begingroup A variable representing an unknown outcome for Bob's measurement, \nomrefpage\nomeqref {1.6.0}\nompageref{34}
+  \item [{$y$}]\begingroup A variable representing an unknown choice for Bob's measurement, \nomrefpage\nomeqref {1.6.0}\nompageref{34}
+  \item [{$y_i, y_f, y_m$}]\begingroup Denote the spacetime locations $(t_i, z_0)$, $(t_f, z_0)$, and $(t_m, z_0)$ respectively, \nomrefpage\nomeqref {4.6.0}\nompageref{234}
+  \item [{$y_L, y_R$}]\begingroup Spacetime locations of the two Stern-Gerlach apparatuses $y_L=(t_i, z_L)$ and $y_R=(t_i,z_R) $ respectively, \nomrefpage\nomeqref {4.7.0}\nompageref{250}
+  \item [{$y_{k_1}, \ldots, y_{k_M}$}]\begingroup The finite number of cells that $y_1$ is entangled with, \nomrefpage\nomeqref {4.3.0}\nompageref{208}
+  \item [{$z_0$}]\begingroup The spatial location of  some apparatus $\mathcal{A}$, \nomrefpage\nomeqref {4.6.0}\nompageref{234}
+  \item [{$z_L, z_R$}]\begingroup Spatial locations of the two Stern-Gerlach apparatuses, \nomrefpage\nomeqref {4.7.0}\nompageref{250}
+  \item [{${\eta'}^\mu(x')$}]\begingroup The future-directed unit four-vector orthogonal to $S$ as described by observer $\mathcal{O}'$, \nomrefpage\nomeqref {4.2.11}\nompageref{196}
+  \item [{OI}]\begingroup Outcome Independence, \nomrefpage\nomeqref {1.5.0}\nompageref{33}
+  \item [{PD}]\begingroup Parameter Dependence, \nomrefpage\nomeqref {1.6.4}\nompageref{37}
+  \item [{PI}]\begingroup Parameter Independence, \nomrefpage\nomeqref {1.5.0}\nompageref{33}
+
+\end{thenomenclature}

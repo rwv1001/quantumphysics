@@ -291,7 +291,7 @@ I am very grateful to my advisor Dr. Alexander Pruss. It is because of him that 
 % flatex input: [Intro.tex]
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
-In recent years, it has become increasingly common for popularizers of quantum physics to tell us that we need to let go of our naïve common sense understanding of reality. We're told we must replace this common sense understanding with something that at first seems very bizarre and counter-intuitive: a many-worlds interpretation of reality. This is the idea that whenever there is quantum indeterminacy among several possibilities, then all these possibilities are realized, and the actualization of these possibilities can be extrapolated up to the macroscopic level. Thus, many-worlds advocates, when reflecting on the famous Schr\"{o}dinger's Cat thought experiment do not question the foundations of quantum mechanics on which the thought experiment is based, but rather they embrace the seemingly absurd conclusion of Schr\"{o}dinger that the foundations of quantum mechanics imply that a cat could be both dead and alive. Many-worlds advocates thus speak of the cat being dead in one world and the cat being alive in another world that is just as real as the first. 
+In recent years, it has become increasingly common for popularizers of quantum physics to tell us that we need to let go of our naïve common sense understanding of reality. We're told we must replace this common sense understanding with something that at first seems very bizarre and counter-intuitive: a many-worlds interpretation of reality. This is the idea that whenever there is quantum indeterminacy among several possibilities, then all these possibilities are realized, and the actualization of these possibilities can be extrapolated up to the macroscopic level. Thus, many-worlds advocates, when reflecting on the famous Schr\"{o}dinger's Cat thought experiment do not question the foundations of quantum mechanics on which the thought experiment is based, but rather they embrace the seemingly absurd conclusion of Schr\"{o}dinger that the foundations of quantum mechanics imply that a cat could be both dead and alive. Many-worlds advocates thus speak of the cat being dead in one world and the cat being alive in another world that is just as real as the first.    
 
 In this dissertation, I will consider in detail the EPR-Bohm paradox and the mysterious correlations that it exhibits, and I will explain why the EPR-Bohm paradox can lead one to think that our best physics suggests a many-worlds picture of reality. I will thus consider the many-worlds interpretation in some detail and explain why it is so attractive. But ultimately, my goal is not to endorse the many-worlds interpretation of quantum physics, but rather it is to argue that the reasons for endorsing the many-worlds interpretation are not compelling. My argument relies on a recent interpretation of quantum physics by the physicist Adrian Kent. Kent's interpretation shares several features with the many-worlds interpretation that make it seem attractive, yet in Kent's interpretation, there is only one world.  
 
@@ -443,12 +443,12 @@ If we then put  $\alpha=\cos(\theta/2)$ and $\beta=\sin(\theta/2)$, it will foll
 \ket*{\uvbp{b}}&= \cos(\theta/2)\ket*{\uvbp{a}}+\sin(\theta/2) \ket*{\uvbm{a}},\label{spintrans1}\\
 \ket*{\uvbm{b}}&= \cos(\theta/2)\ket*{\uvbm{a}}-\sin(\theta/2) \ket*{\uvbp{a}}.\label{spintrans2}
 \end{align}
-\end{subequations} 
+\end{subequations}
 % flatex input end: [Chapter01/Stern-Gerlach.tex]
 
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter01/EPR.tex]
-\section{The Copenhagen Interpretation and the EPR-Bohm Paradox\label{eprsec}}
+\section{The Copenhagen Interpretation and the EPR-Bohm Paradox}\label{eprsec}
 Given the equations (\ref{spintrans1}) and (\ref{spintrans2}) that  relate the states $\ket*{\uvbpm{a}}$ and $\ket*{\uvbpm{b}}$ to each other, we can calculate probabilities such as the probability a particle will be measured to be in the $\ket*{\uvbp{a}}$-state given that it is in the $\ket*{\uvbp{b}}$-state. There however arises the question of what the physical meaning of one of these states is. Clearly, the $\ket*{\uvbp{b}}$-state says something about the spin of a particle; but is this a complete description of the particle's spin state? For the $\ket*{\uvbp{b}}$-state only tells us what the outcome of a spin measurement would be along one particular axis $\uvb{b}$. For a spin measurement along another axis $\uvb{a}\neq\pm\uvb{b}$, $\ket*{\uvbp{b}}$ only tells us the probabilities (via equation (\ref{spintrans1}) and the Born Rule) that the measurement outcome would be $\ket*{\uvbp{a}}$ or $\ket*{\uvbm{a}}$ -- but the $\ket*{\uvbp{b}}$-state doesn't determine either of these outcomes. So we want to know whether this indetermination of the measurement outcome along the $\uvb{a}$-axis is merely a reflection of our lack of knowledge of a more complete specification of the particle's spin state, or alternatively, whether the  $\ket*{\uvbp{b}}$-state is a complete description of the spin state of the particle so that there is no fact of the matter about what spin state the particle would be found to be in along the $\uvb{a}$-axis until a measurement of spin along the $\uvb{a}$-axis is made. 
 
 Now Bohr and Heisenberg believed the latter to be the case. This was because their mathematical formalism of quantum physics implied that there are physical quantities of particles that couldn't be simultaneously determined. For example, their mathematical formalism is incapable of representing a particle which has a definite spin in both the $\uvb{a}$-direction and the $\uvb{b}$-direction when $\uvb{a}\neq\pm\uvb{b}.$ So when a particle that is in the $\ket*{\uvbp{b}}$-state is measured along the $\uvb{a}$-axis and is found to be in the $\ket*{\uvbp{a}}$-state, there is a so-called collapse of the $\ket*{\uvbp{b}}$-state:
@@ -466,8 +466,10 @@ Now naively, one would expect that if the spin of $q_A$ were to be measured, the
 the real factual situation of the system $\mathcal{S}_2$ should be independent of what is done to the system $\mathcal{S}_1$.\footnote{Einstein expressed this locality principle in his autobiographical notes: ``But on one supposition we should, in my opinion, absolutely hold fast: the real factual situation of the system $\mathcal{S}_2$ is independent of what is done with the system $\mathcal{S}_1$, which is spatially separated from the former.'' \cite[p. 85]{EinsteinLocality}.} This principle seemed so intuitive to Einstein, he was convinced it must be true.\footnote{\cite[449]{IsaacsonWalter2008E:hl}.} Writing to Max Born, Einstein famously said ``Physics should represent a reality in time and space, free from spooky  action at a distance.''\footnote{From a letter written March 3, 1947, \cite[155]{BornMax2005TBl:}. Quoted from \cite[450]{IsaacsonWalter2008E:hl}.} Although Einstein offered no argument in support of his principle of locality, several arguments have been proposed in its favor. For instance,  Van Laer makes the following argument: 
 \begin{adjustwidth}{1cm}{}
 	\begin{displayquote}
+        \singlespacing 
 Suppose that body $A$ is located in void space, and that body $P$ is now brought into its vicinity. If $P$ is acted on by $A$, then either $A$'s activity ``across'' the intervening space pre-existed $P$'s arrival, in which case an action existed without an object and without a correlative passion, both of which run counter to the \emph{ratio} of action; or $A$'s activity only occurred when $P$ became present to it, in which case $A$ would somehow have to have ``known'' $P$'s becoming present, which is not consonant with the nature of mere body as such.\footnote{See \cite[59-144]{LaerP.H.van1953Pp}. The quote here is from \cite[246]{Grove}, who in turn quotes a slightly modified version of Van Laer's argument found in \cite[257]{TallaricoJames1962AaaD}. Grove also appeals to the Aristotelian doctrine of hylomorphism in order to defend the principle of locality: 
 	\begin{displayquote}
+        \singlespacing
         What does it mean for one hylomorphic substance to act on another? It is for the one to effect accidental or (by way of the accidental) substantial change in the other. As the accidents involved are inseparable from spatiality or extension, so must be the operations which occur through them. That is to say, that the interactions of cosmic (nonintellectual) beings are in essence spatial (and therefore spatiotemporal): they involve that which characterizes the spatial as such, i.e., ``parts outside parts,'' extendedness and adjacency. For one hylomorphic being to act on another (and for that other to ``receive'' the action of the one), there must be an ontological ground or commonality which is located precisely in their spatiality; they must ``share space,'' not in violation of the principle of unilocality but along a common boundary, thereby forming a unity through relation, i.e., ``existing with respect to one another.''
     \end{displayquote}
   }
@@ -590,7 +592,7 @@ Therefore, if one is more convinced (as most physicists are) of the truth of spe
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter01/SchrodingerCat.tex]
 
-\section{Schr\"{o}dinger's Cat\label{SchrondingersCat}}
+\section{Schr\"{o}dinger's Cat}\label{SchrondingersCat}
 Schr\"{o}dinger's famous thought experiment was first discussed in a 1935 paper in the context of the EPR paradox and the inherent problems it raised for the Copenhagen interpretation.\footnote{For Schr\"{o}dinger's original reference to his thought experiment, see \cite{SchrondingerOrig}. For an English translation, see \cite{SchrondingerEnglish}.} According to the Copenhagen interpretation, given the Bell state 
 \begin{equation}\tag{\ref{bell} revisited}
     \ket*{\Psi_{\text{Bell}}}=\frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}_A\ket*{\uvbm{a}}_B-\ket*{\uvbm{a}}_A\ket*{\uvbp{a}}_B),
@@ -634,7 +636,7 @@ But before the box is opened and any measurement is made, the state of the cat a
 
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter01/HiddenVariables.tex]
-\section{Hidden Variables and Bell's Inequality\label{hiddenbellsection}}
+\section{Hidden Variables and Bell's Inequality}\label{hiddenbellsection}
 Given the problem with the Copenhagen interpretation that the EPR-Bohm paradox and Schr\"{o}dinger's Cat highlight, it is tempting to suppose that states such as $\ket*{\uvbp{a}}$ and $\ket*{\uvbm{a}}$ merely represents our limited knowledge of a more complete physical state that would also include a specification of the particle's spin state along other axes besides the $\uvb{a}$-axis. If we were to make this supposition, there would be a fact of the matter, albeit unknown to us, concerning what spin state the particle would be found to be in  were we to measure its spin along some $\uvb{b}$-axis for $\uvb{b}\neq\uvb{a}$. And  even though we might decide not to measure the spin of the particle along the $\uvb{b}$-axis, there would still be this hidden fact about the particle's spin in this direction. Furthermore, since there would be no reason to suppose there was anything special about the $\uvb{a}$ or $\uvb{b}$-axes, it would then be reasonable to suppose that there were hidden facts about what spin direction the particle would be found to be in for every possible axis orientation. This would mean that a complete description of the particle's spin state would require an infinite list of outcomes for all the possible orientations we could configure the magnetic field of our Stern-Gerlach apparatus to be in. For example, the complete spin state of a particle which according to our limited knowledge was in the $\ket*{\uvbp{b}}$-state could be depicted as $\ket*{\uvbp{a};\uvbp{b};\ldots}$ or  $\ket*{\uvbm{a};\uvbp{b};\ldots}$,  % 
 \nomenclature{$\ket*{\uvbm{a};\uvbp{b};\ldots}_A$}{An example of a state of a particle $q_A$ with hidden variables specifying all the spin outcomes of every possible axis along which the spin of the particle could be measured, \nomrefpage}%
 etc. where the ellipses would range over one of the two possible measurement outcomes for every other magnetic field orientation. However, because we would never in practice be able to perform all these experiments, and since only one such experiment would be needed to alter this infinite list,\footnote{In other words, it is assumed that directly measuring the particle will involve perturbing it so that its state will change.} nearly all of the entries in this infinite list would remain forever hidden. Hence, this would be an example of a \textbf{hidden variables}\index{hidden variables} interpretation of quantum theory.  Moreover, if we're assuming Einstein's locality principle, it follows that any changes in these hidden spin outcomes for possible measurements of a specific particle can't affect the hidden variables of any other spatially separated localized particles. Therefore, given Einstein's locality principle, it is appropriate to refer to these hidden variables as \textbf{local}\index{hidden variables!local} hidden variables.
@@ -697,7 +699,7 @@ $$P_{AB}(\uvbp{a},\uvbp{b})= P_A(\uvbp{a})P_{BA}(\uvbp{b}|\uvbp{a})=\frac{1}{2}\
 Then taking the angle between the $\uvb{a}$ and $\uvb{b}$-axes to be $90^\circ$, and the $\uvb{c}$-axis to be at $45^\circ$ to both the $\uvb{a}$ and $\uvb{b}$-axes, we would find that $P_{AB}(\uvbp{a},\uvbp{b})=\frac{1}{4}$ and $P_{AB}(\uvbp{a},\uvbp{c})+P_{AB}(\uvbp{c},\uvbp{b})=0.1464\ldots$, and so Bell's inequality would be violated if we assumed that the probability of each outcome is determined by the Bell state  (\ref{bell}). 
       
 % flatex input end: [Chapter01/HiddenVariables.tex]
-
+ 
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter01/IdentifyingTheCulprit.tex]
 \section{Isolating the Culprit}
@@ -714,7 +716,7 @@ Shimony argued that if we only denied OI, then the proof of Bell's Inequality wo
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter01/PI.tex]
 
-\section{Parameter Independence\label{PISec}}
+\section{Parameter Independence}\label{PISec}
 To explain Shimony's\footnote{See \cite[146-147]{Shimony86} and \cite[7-9]{Butterfield}.}  notion of  Parameter Independence, we suppose we have an experimental setup similar to the experimental setup described in the previous section. Thus, we suppose there are two particles labeled $q_A$ and $q_B$, and that a measurement can be made on particle  $q_A$ at one location (e.g. Alice's laboratory), and a measurement can be made on particle $q_B$ at some other location (e.g. Bob's laboratory). We will assume that Alice can make a choice of one of $n$ measurements to be made. These are labeled $a_1,\ldots, a_n$.  %
 \nomenclature{$a_i$}{One of Alice's measurement choices, \nomrefpage}%
 For example, $a_1$ might be a measurement of $q_A$'s spin along the $z$-axis, whereas $a_2$ might be the measurement of $q_A$'s spin along an axis that is at  a $45^\circ$ angle to the $z$-axis etc. We use the variable $x$ to denote Alice's choice so that $x=a_i$ for some $i\in\{1,\ldots,n\}$. If Alice chooses to make measurement $a_i$ (i.e. $x=a_i$), the measurement outcome is labeled $A_i$,  %
@@ -775,7 +777,7 @@ $$P_{\lambda,\vb{\hat{a}},\vb{\hat{b}}}(\vb{\hat{a}+}, \vb{\hat{b}+})+P_{\lambda
 
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter01/PDProblem.tex]
-\section{The Problem with Parameter Dependence\label{PDProb}}
+\section{The Problem with Parameter Dependence}\label{PDProb}
 As is well known, special relativity implies that it is impossible to send signals faster than the speed of light. To see why this is, first recall that in order for light to travel at a constant speed regardless of how fast the source of light is traveling, it is necessary for clocks moving relative to an observer to run more slowly. For a proof of this fact, suppose Alice is an experimenter on earth and Bob is an experimenter on a spaceship which is travelling close to the speed of light away from the earth. We can imagine each of them having a simple clock in their possession which consists of a photon travelling back and forth between two mirrors one meter apart with a tick of the clock happening each time the photon hits one of the mirrors.  If both their clocks are parallel to each other (i.e. the line joining Alice's two mirrors is parallel to the line joining Bob's two mirrors) and perpendicular to Bob's motion with respect to Alice, then Alice would observe the distance the photon travels between each tick of Bob's clock to be longer than the distance the photon travels between each tick of her clock. Since Alice would observe both the photon of her own clock and the photon of Bob's clock to travel at the same speed, she would therefore observe Bob's clock to tick more slowly than her own clock. This means that if their clocks were originally synced when Bob left the earth, and Alice determined Bob's clock to have ticked $n_B$ times since his departure, then she would observe her own clock to have ticked $n_A=\gamma n_B$ times, where $\gamma >1$ depends on how fast Bob is moving relative to her.  
 
 Now if Alice could send messages to Bob much faster than the speed of light, we could suppose she sends out a message to Bob when her clock has just ticked $n_A$ times. If the message was transmitted almost instantaneously, Bob would  receive the message at approximately the time when his clock had just ticked $n_A/\gamma$ times. 
@@ -918,7 +920,7 @@ Since (\ref{PDproof5}) contradicts (\ref{PDproof6}), the assumption (\ref{PDproo
 
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter01/OI.tex]
-\section{Outcome Independence\label{OISec}}
+\section{Outcome Independence}\label{OISec}
 
 Although a PI violation can account for the violation of Bell's Inequality, this is not the only possible culprit to consider. Another assumption of Bell's Inequality that might be violated is \textbf{Outcome Independence}\index{Outcome Independence} (OI). Outcome independence is the assumption
 \begin{equation}\label{OI}
@@ -1115,7 +1117,7 @@ where $\hat{O}\ket*{\psi_i}=o_i\ket*{\psi_i}$ for some set of states $\ket*{\psi
 
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter02/PreferredBasis.tex]
-\section{The Preferred Basis Problem\protect\footnotemark}
+\section[The Preferred Basis Problem]{The Preferred Basis Problem\protect\footnotemark}
 \footnotetext{See \cite[53-55]{Schlosshauer}.}Now just because we can have an observable $\hat{O}$, there is no guarantee that there is a measuring device that could determine whether the system was in one of the eigenstates of $\hat{O}$. For instance, if $\ket*{\text{Cat Alive}}$ is the physical state in which a cat is alive, and $\ket*{\text{Cat Dead}}$ is the physical state in which the same cat is dead, then although there are measuring devices that can distinguish between the $\ket*{\text{Cat Alive}}$-state and the $\ket*{\text{Cat Dead}}$-state,\footnote{For example, we assume that human beings can be thought of as such measuring devices.} there are no known measuring devices that can distinguish between the $\frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}+\ket*{\text{Cat Dead}})$-state and the $\frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}-\ket*{\text{Cat Dead}})$-state. On the other hand, there are measuring devices that can distinguish between the $\frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}+\ket*{\uvbm{a}})$-state and the $\frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}-\ket*{\uvbm{a}})$-state in a Stern-Gerlach experiment. Why the difference?
 
 This question is at the heart of the \textbf{preferred basis problem}\index{preferred basis problem}. As mentioned already, a basis is just a set of states via which all other states of the system can be uniquely expressed. For instance, we can express the state $\frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}+\ket*{\text{Cat Dead}})$ uniquely as a sum of elements from the basis $\{\ket*{\text{Cat Alive}}, \ket*{\text{Cat Dead}}\}$, and thus we think of $\frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}+\ket*{\text{Cat Dead}})$ as being a superposition of the $\ket*{\text{Cat Alive}}$ and $\ket*{\text{Cat Dead}}$ basis states. However, we can also uniquely express  $\ket*{\text{Cat Alive}}$ in terms of the basis $\{\frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}+\ket*{\text{Cat Dead}}), \frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}-\ket*{\text{Cat Dead}})\}.$\footnote{i.e. $\ket*{\text{Cat Alive}}= \frac{1}{\sqrt{2}}\Big(\frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}+\ket*{\text{Cat Dead}})\Big)+\frac{1}{\sqrt{2}}\Big( \frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}-\ket*{\text{Cat Dead}})\Big). $} Nevertheless, we would not tend to think of $\ket*{\text{Cat Alive}}$ as being in a superposition of the $\frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}+\ket*{\text{Cat Dead}}) $ and $\frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}-\ket*{\text{Cat Dead}})$ basis states. That is, we have a preference for the basis $\{\ket*{\text{Cat Alive}}, \ket*{\text{Cat Dead}}\}$ over the basis $\{\frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}+\ket*{\text{Cat Dead}}), \frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}-\ket*{\text{Cat Dead}})\}.$ We refer to a basis whose basis states our measuring device can distinguish between as a \textbf{preferred basis}\index{preferred basis}. As will be shown in section \ref{sectionPreferredBasis}, decoherence theory offers a very elegant solution to the preferred basis problem. 
@@ -1128,7 +1130,7 @@ This question is at the heart of the \textbf{preferred basis problem}\index{pref
      
 
       
-    \section{Decoherence Theory\label{decotheory}\textsuperscript{*}\protect\footnotemark}\renewcommand{\thefootnote}{\fnsymbol{footnote}}\footnotetext[1]{As mentioned in the introduction on page \pageref{asteriskmeaning}, sections marked with an asterisk may be challenging to readers who do not have a mathematics or physics background.}\renewcommand*{\thefootnote}{\arabic{footnote}}\footnotetext{For more details see \cite[ch. 2]{Schlosshauer}.}Before we can show how decoherence theory solves the preferred basis problem, we will first need to look at decoherence theory in general. To understand what's going on in decoherence theory, there are a number of things we need to discuss, namely
+    \section[Decoherence Theory\textsuperscript{*}]{Decoherence Theory\textsuperscript{*}\protect\footnotemark}\label{decotheory}\renewcommand{\thefootnote}{\fnsymbol{footnote}}\footnotetext[1]{As mentioned in the introduction on page \pageref{asteriskmeaning}, sections marked with an asterisk may be challenging to readers who do not have a mathematics or physics background.}\renewcommand*{\thefootnote}{\arabic{footnote}}\footnotetext{For more details see \cite[ch. 2]{Schlosshauer}.}Before we can show how decoherence theory solves the preferred basis problem, we will first need to look at decoherence theory in general. To understand what's going on in decoherence theory, there are a number of things we need to discuss, namely
     \begin{enumerate}[noitemsep, nosep, topsep=0pt]
     \item composite systems
     \item entanglement
@@ -1329,7 +1331,7 @@ for the set of all density matrices on $H$. Since we are assuming\footnote{As me
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter02/SolutionOfPreferredBasis.tex]
 
-\section{\label{sectionPreferredBasis}A Solution to the Preferred Basis Problem\protect\footnotemark}
+\section[A Solution to the Preferred Basis Problem]{A Solution to the Preferred Basis Problem\protect\footnotemark}\label{sectionPreferredBasis}
 \footnotetext{For more details, see \cite[71-84]{Schlosshauer}}We can now see how decoherence theory solves the preferred basis problem. Although up to this point we have been focusing on how a system $\mathcal{S}$ interacts with a measuring apparatus $\mathcal{A}$, we can generalize to the situation in which a system $\mathcal{S}$ interacts with its environment $\mathcal{E}$. We can still define pointer states in the same way as we did on page \pageref{pointer}. These pointer states will then make up the preferred basis. The two defining criteria of pointer states entail that pointer states will remain stable and immune to decoherence effects. 
 
 Since physicists have a good understanding of how different systems interact, they are able to explain what it is about a basis that makes it a preferred basis.  The details of their analysis need not concern us here, but it's possible to show that for macroscopic and mesoscopic objects, states specified in terms of position decohere with one another very rapidly.\footnote{e.g. See the discussion in \cite[94]{Schlosshauer}.} This explains why we don't detect $\frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}+\ket*{\text{Cat Dead}})$ and $\frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}-\ket*{\text{Cat Dead}})$-states, but we do detect $\ket*{\text{Cat Alive}}$ and $\ket*{\text{Cat Dead}}$-states. Also note that $\ket*{\text{Cat Alive}}$  does indeed have the property that it is immune to decoherence effects, for if we were to express $\ket*{\text{Cat Alive}}$ in terms of the basis $\{\ket*{\psi_+},\ket*{\psi_-} \}$ where $\ket*{\psi_\pm}=\frac{1}{\sqrt{2}}(\ket*{\text{Cat Alive}}\pm\ket*{\text{Cat Dead}})$, then $\ket*{\text{Cat Alive}}=\frac{1}{\sqrt{2}}(\ket*{\psi_+}+\ket*{\psi_-})$. The corresponding density matrix would then be 
@@ -1341,7 +1343,7 @@ Since physicists have a good understanding of how different systems interact, th
 %\usepackage[inline]{showlabels}
  % flatex input: [Chapter02/Interference.tex]
  
-    \section{\label{Nonobservability} The Problem of Nonobservability of  Interference and its Solution\protect\footnotemark}\footnotetext{See \cite[55-57, 63-65]{Schlosshauer}. }Before we consider the many-worlds interpretation in detail, it will be helpful to consider the role that decoherence plays in the removal of quantum interference at the macroscopic scale, as it is this lack of quantum  interference between mutually exclusive states that justifies our belief that a system is in a definite state rather than in a superposition of alternative realities. The question of why quantum interference typically disappears at macroscopic scales is referred to as the problem of the nonobservability of interference. 
+    \section[The Problem of Nonobservability of  Interference and its Solution]{The Problem of Nonobservability of  Interference and its Solution\protect\footnotemark}\label{Nonobservability}\footnotetext{See \cite[55-57, 63-65]{Schlosshauer}. }Before we consider the many-worlds interpretation in detail, it will be helpful to consider the role that decoherence plays in the removal of quantum interference at the macroscopic scale, as it is this lack of quantum  interference between mutually exclusive states that justifies our belief that a system is in a definite state rather than in a superposition of alternative realities. The question of why quantum interference typically disappears at macroscopic scales is referred to as the problem of the nonobservability of interference. 
     
     We can explain this problem in the context of the double slit experiment:
     \begin{figure}[ht!]
@@ -1660,9 +1662,9 @@ Now according to the Copenhagen interpretation, when the measurement correspondi
 
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter03/AdditionalVariables.tex]
-\section{The Additional Variables of Kent's Theory\label{additional}}
+\section{The Additional Variables of Kent's Theory}\label{additional}
 The second similarity Kent's theory has with the Bohmian interpretation is that it posits the reality of some additional variables beyond standard quantum theory (i.e. in addition to the quantum state\footnote{We may wish to think of these additional variables as hidden variables, but we are not obliged to since we don't speculate on whether these additional variables are necessarily unknowable. Rather, we just see them as supplementing the quantum state so as to provide a complete description of the system.}). Some details in the section are rather technical, so I've split this section into two subsections: the first section gives an overview, and the second section is more technical and can be skipped if desired. 
-\subsection{Overview\label{additionalOverview}}
+\subsection{Overview}\label{additionalOverview}
 In the Bohmian interpretation, the additional variables are the positions and momenta of all the particles, whereas in Kent's theory, the additional variables specify the mass-energy density on a three-dimensional distant future spacelike hypersurface $S$  %
 \nomenclature{$S$}{A distant future hypersurface on which a notional energy-density measurement is made, \nomrefpage}%
  in spacetime. 
@@ -1753,7 +1755,7 @@ Kent's proposal might initially sound like he is suggesting that physical realit
 Now we saw on page \pageref{eigendef}, that for any measurement on a physical system, we can associate an observable whose eigenstates describe a possible state of the physical system in which the measurement is given by the observable's corresponding eigenvalue. Now in the case of the notional measurement of $T_S(x)$, there will be lots of observables, denoted by $\hat{T}_S(x)$, corresponding to all the different places $x\in S$ where the measurement could be made. Therefore, if a measurement were made on $S$ for all $x\in S$, the corresponding state of $S$ would not just be an eigenstate of one observable $\hat{T}_S(x)$,\label{firstHatTS} 
 but rather, it would have to be an eigenstate of every observable $\hat{T}_S(x)$ for every $x\in S$. We will therefore need to speak of simultaneous $\hat{T}_S$-eigenstates and simultaneous $\hat{T}_S$-eigenvalues in order to specify the quantum state of $S$ on which $T_S(x)$ has a determinate value of $\tau_S(x)$ for every $x\in S$. This terminology will be described in more detail on page \pageref{simultaneous}.  Given that there is such a simultaneous $\hat{T}_S$-eigenstate, we can then work out via the Born Rule the probability this state would be selected given the initial state of the universe.
 
-\subsection{Technical Details\textsuperscript{*}\label{AdditionalVariablesDetails}}  
+\subsection{Technical Details\textsuperscript{*}}\label{AdditionalVariablesDetails}  
 In order to specify more precisely the additional variables that Kent's theory requires, we need to discuss the Tomonaga-Schwinger picture of relativistic quantum physics.\footnote{See \cite{SchwingerJulianI}; \cite{TomonagaI}} In order to explain this formulation, it is helpful to first consider  the distinction between the Heisenberg picture and the Schr\"{o}dinger picture of standard quantum theory. 
 
 In the \textbf{Heisenberg picture}\index{Heisenberg picture}, the states describing a system do not change over time. Rather, the observables change over time. So for instance, if there is a time-independent state $\ket*{\Phi}$ describing a system and there is some measurable quantity whose expectation value we wish to know at time $t$ given the state $\ket*{\Phi}$, %
@@ -2040,7 +2042,7 @@ where $U[S]$ and $U[S_0]$ are the Schwinger unitary operators introduced on
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter03/OneWorldFeature.tex]
 
-\section{The One-World Feature of Kent's Theory\label{OneWorldFeature}}
+\section{The One-World Feature of Kent's Theory}\label{OneWorldFeature}
 The third similarity Kent's theory shares with the Bohmian interpretation is that it is a one-world interpretation of quantum physics. It will be helpful to contrast this with the many-worlds interpretation. 
 
  Unlike the many-worlds interpretation, Kent's theory does not allow for indeterminate states of macroscopic objects such as cats. In the many-worlds interpretation, Schr\"{o}dinger will still only observe his cat to be either dead or alive, and not both dead and alive. However, Schr\"{o}dinger himself goes into a superposition of observing his cat to be alive and his cat to be dead. In the many-worlds interpretation, there is thus a difference between observing something to be so, and something actually being so: the observation is of a particular physical scenario, but the reality is a superposition of different physical scenarios. 
@@ -2177,6 +2179,7 @@ One might still worry that it would still take a very long time for the light me
 \label{selectionmeaningbeg} Another objection one could raise against Kent's interpretation is that it depends on the selection of a particular measurement outcome $\tau_S$ for the mass-energy density $T_S$ on $S$. However, Kent is rather vague about what he means by selection. Here is a (slightly edited) passage from Kent's 2014 paper that could do with some clarification:
 \begin{adjustwidth}{1cm}{}
 	\begin{displayquote}
+    \singlespacing
     For any given hypersurface $S$ in the future of the initial hypersurface $S_0$, we consider the effect of joint measurements of the local mass-energy density $T_S(x)$ \ldots carried out at each point $x\in S$ \ldots. This gives us a probability distribution on possible mass-energy distributions $\tau_S(x)$ on $S$. In a universe in which physics starts on $S_0$ and ends on $S$, our picture of reality is that one $\tau_S(x)$ is randomly selected from the Born rule probability distribution. In other words, there is a randomly selected final boundary condition on S, which is defined mathematically in the same way that it would be if $T_S(x)$ were actually measured on S. However, we treat this simply as a mathematical algorithm. We do not suppose that a physical measurement actually takes place on $S$, or anywhere else. Our aim, instead, is to give a mathematical description of reality applicable to closed quantum systems, for which there are no external observers able to carry out measurements. To give a description of reality between $S_0$ and $S$, we use the initial state on $S_0$, the randomly chosen final outcome data $\tau_S(x)$ on $S$, and the unitary evolution law arising from the quantum dynamics.\footnote{\cite[2]{Kent2014}}
   \end{displayquote}
 \end{adjustwidth}  
@@ -2210,7 +2213,7 @@ Given the above discussion, it seems that the manner in which $T_S$ is selected 
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter03/CalculatingBeables.tex]
 
-\section{Calculating Kent's $T^{\mu\nu}(y)$-beables\textsuperscript{*} \label{kentcalculation}}
+\section{Calculating Kent's $T^{\mu\nu}(y)$-beables\textsuperscript{*} }\label{kentcalculation}
 Having given a qualitative description in the last section of how a measurement outcome on $S$ determines which facts obtain in reality such as whether Schr\"{o}dinger's cat is alive or dead, we now give a more quantitative description of how Kent's beables are calculated. Kent's beables specify $T^{\mu\nu}(y)$ values for all $y$ between $S_0$ and $S$, and for all $\mu,\nu = 0, 1, 2,$ and $3$. Kent's $T^{\mu\nu}(y)$-beables are conditional expectation values, and the conditional expectation that we need to calculate depends on the notion of \textbf{conditional probability}\index{conditional probability}. Recall that in probability theory, the conditional probability $P(q|r)$  %
 \nomenclature{$P(q|r)$}{the conditional probability that a statement $q$ is true given that a statement $r$ is true, \nomrefpage}%
 that a statement $q$ is true given that a statement $r$ is true is given by the formula
@@ -2888,7 +2891,7 @@ Since the arguments in this chapter are rather technical, several sections are d
 
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter04/QMConsistency.tex]
-\section{Consistency of Kent's Theory with Standard Quantum Theory\label{kentinterpretationconsistency}}
+\section{Consistency of Kent's Theory with Standard Quantum Theory}\label{kentinterpretationconsistency}
 \subsection{Overview}
 If we are to take Kent's theory seriously, it should be just as good at making predictions as standard quantum theory, and it had better not contradict empirical observations. Over the last century, standard quantum theory has been firmly established, and so far, it has not been contradicted by any experimental observations. Standard quantum theory allows us to form a quantum state description of a physical system based on how the system was set up in an experimental environment, and then Schr\"{o}dinger's equation can be used to evolve this state forwards in time, and finally, we can calculate expectation values for various physical quantities belonging to this physical system, and these agree with the average values measured on the system when the experiment is performed many times. In other words, standard quantum theory is \textbf{empirically adequate}\index{empirical adequacy!informal definition}\footnote{See p. \pageref{adeq} for a more formal definition of empirical adequacy.} in its domain of applicability. Thus, if we can show that Kent's theory is just as good at making predictions as standard quantum theory, then it too will be empirically adequate to the same degree. This doesn't necessarily mean that Kent's theory will make exactly the same predictions as standard quantum theory, for the additional information  beyond standard quantum theory that Kent's theory requires may alter these predictions. Indeed, if this additional information made absolutely no difference to the predictions of standard quantum theory, then it would seem rather redundant. But we should nevertheless be able to derive the predictions of standard quantum theory from Kent's theory by averaging over the unknown variables that describe the additional information in Kent's theory.  
 
@@ -2988,7 +2991,7 @@ and according to (\ref{schwingerformula}) the expectation value $\ev*{\hat{T}^{\
 %\usepackage[inline]{showlabels}
 
 % flatex input: [Chapter04/KentLorentzInvariance.tex]
-\section{Kent's Theory and Lorentz Invariance\label{LorentzInvariance}}
+\section{Kent's Theory and Lorentz Invariance}\label{LorentzInvariance}
 \subsection{Overview}
 Lorentz invariance is the fundamental property of a physical theory that must be satisfied if it is to be consistent with special relativity. Experimental observations show that light always travels at the same speed in a vacuum no matter how fast the source of light is travelling. This experimental fact leads to some surprising consequences for how different observers will measure the same physical events. For instance, it means that velocities don't add up in the way one would naturally expect. We can understand why velocities don't add up in this way by considering a simple example: suppose Alice is travelling on a train at 100 mph, and she has a ball with her that she kicks down the aisle of the passenger car at 20 mph in the direction of travel. Then naturally, we would expect the kicked ball to be travelling at (100+20)=120 mph with respect to Bob who happens to be standing by the railroad track.  But now suppose Alice shines a beam of light in the direction of travel. If we ignore the fact that light travels slightly more slowly in air than in a vacuum, then whilst on the train, Alice would measure the beam of light to travel at 670,616,629 mph. So by analogy with the previous example, we would expect the stationary observer, Bob to measure the beam of light that Alice shines to travel at (100+670,616,629)=670,616,729 mph. However, it turns out that Bob measures the beam of light to have exactly the same speed as Alice measures. Thus, the manner in which Alice and Bob's velocity measurements differ is not what we would expect -- we can't just add or subtract velocities. Instead we have to use what's known as a \emph{Lorentz transformation}\index{Lorentz transformation!overview} to work out how their respective measurements transform.  
 
@@ -3385,7 +3388,7 @@ Note that in this proof of Lorentz invariance, we don't need to take the limit o
 
 % flatex input: [Chapter04/KentDecoherence.tex]
 
-\section{Kent's Theory\label{Kentdecoherencesection} and the Problem of Outcomes}
+\section{Kent's Theory and the Problem of Outcomes}\label{Kentdecoherencesection}
 \subsection{Overview}
 In section \ref{probOutcomes} we saw that decoherence theory by itself does not offer a solution to the problem of outcomes. In this section, we consider how the additional information in Kent's theory is sufficient to address this problem. We will explain this by again considering  Kent's toy model discussed in section \ref{toysection}.
 
@@ -3837,7 +3840,7 @@ In these examples we have therefore seen how the additional information concerni
 % flatex input: [Chapter04/ButterfieldOI.tex]
 
 
-\section{Butterfield's Analysis of Outcome Independence  in Kent's theory\label{butterfieldtoy}}
+\section{Butterfield's Analysis of Outcome Independence  in Kent's theory}\label{butterfieldtoy}
 Let us now consider Kent's theory in the light of Shimony's notion of Outcome Independence (OI)  as defined in section \ref{OISec}. 
 Butterfield\footnote{See \cite[30-32]{Butterfield}} tries to answer the question of whether OI holds in Kent's theory by considering an example that builds on Kent's toy model. Butterfield's example is designed to capture the salient features of a Bell experiment where two spatially separated observers always observe opposite outcomes of some measurement. Following Kent, Butterfield thus considers a universe in one spatial dimension. In this universe, there are two entangled systems, a left-system and a right-system as depicted in figure \ref{ButterfieldOI}.  
 
@@ -3979,7 +3982,7 @@ In the next section I will discuss Leegwater's criteria for what one should coun
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter04/Colbeck-Renner.tex]
 
-\section{Hidden Variables and the Colbeck-Renner theorem\label{colbeckrennerthm}}
+\section{Hidden Variables and the Colbeck-Renner theorem}\label{colbeckrennerthm}
 In this section we will consider hidden variables in the light of the Colbeck-Renner theorem. Roughly speaking, the Colbeck-Renner theorem says there are no hidden variables theories that are of interest to quantum physicists -- either the hidden variables will be redundant or the hidden variable theory will be incompatible with standard quantum theory. It might therefore seem that the Colbeck-Renner theorem presents a serious challenge to Kent's theory. However, the challenge really hinges on what criteria the data of a theory must satisfy for it to be classified as hidden variable data. A careful analysis of the kind of data Kent's theory relies on reveals that the Colbeck-Renner theorem is not as serious a challenge to Kent's theory as it first might seem.  
 
 First we need to consider the criteria a set of data should satisfy if it is to be classified as hidden variable data of a physical system $\mathcal{S}$. The criteria we discuss below can be found either explicitly or implicitly in Leegwater's proof of the Colbeck-Renner theorem.\footnote{See \cite{LeegwaterGijs2016Aitf}} The first criterion we will discuss is the following:
@@ -4013,6 +4016,7 @@ Another criterion implicit in Leegwater's proof for a set of data $\lambda$ to c
 It is worth noting that  we used criterion \ref{hidden2} when showing that OI implies the negation of PI. If this criterion doesn't hold, we cannot even begin to consider whether PI holds in a given theory. This is because the criterion for PI depends on the probability $P_{\lambda,\bm{\hat{a}},\bm{\hat{b}}}(\uvbpm{a},\uvbpm{b})$ being well-defined, but if the choice of $\bm{\hat{a}}$ or $\bm{\hat{b}}$ affects  what $\lambda$ should be, then one wouldn't be able to define $P_{\lambda',\bm{\hat{a}},\bm{\hat{b}}}(\uvbpm{a},\uvbpm{b})$ for $\lambda'\neq\lambda$.\footnote{Cf. footnote \ref{lambdadetermineprob} on page \pageref{lambdadetermineprob}.} But even without any consideration of PI, a rejection of criterion \ref{hidden2} would still seem undesirable, for it would be rather strange if changing the choice of measurement parameters necessarily changed the hidden variable $\lambda$ of the system $\mathcal{S}$, and hence by criterion \ref{hidden1} the system $\mathcal{S}$ itself.\footnote{Of course, in the quantum world, strangeness is not necessarily an argument against something being true.} Moreover, if a scientist chose the measurement parameter before it was determined which system was going to be measured, then it wouldn't even be clear which $\lambda$ of which system we were talking about.\footnote{If the scientist's decisions were entirely determined by physical causes, then there wouldn't necessarily be this problem of associating the choice of measurement with the $\lambda$ of the system, because the physical state of the universe could determine which choice of measurement is going to be made as well as which system is going to be measured. But even in an entirely deterministic universe, a correlation between measurement setting and the state of a system would be rather surprising. Maudlin puts it this way:
 \begin{adjustwidth}{1cm}{}
 	\begin{displayquote}
+		\singlespacing
 		$[$The measurement settings$]$ could be coupled to a computer, or a throw of dice, or the stock market, or the whim of the experimenter, and so on. So if the behavior of each [particle] 
 		is influenced only by events in its past light cone, there would have to be fundamental laws connecting the [particle's] trajectory to distant facts about the disposition of dice and the number of shares of IBM being sold and so on, a different connection for each possible mechanism for determining the setting. This strains credulity. (\cite[57]{MaudlinTim2011Q}).
 	\end{displayquote}
@@ -4029,6 +4033,7 @@ Closely related to criterion \ref{hidden2} is the following criterion:
 Butterfield refers to criterion \ref{hidden5} as the `no-conspiracy' assumption, and it is one of the criteria assumed in the Colbeck-Renner theorem. However, Butterfield adds that `no-conspiracy' is a rather unfair label for this criterion since there wouldn't necessarily be anything conspiratorial if this assumption was violated.\footnote{See \cite[34]{Butterfield}.} But in saying this, Butterfield is envisaging $\lambda$ to be the whole of $\tau_S$, and this is in violation of criterion \ref{hidden1}. Since we can expect the whole of $\tau_S$ (together with the universal state $\ket*{\Psi_0}$) to determine Kent's stress-momentum tensor for the measurement parameter dial/knob, then we wouldn't expect criterion \ref{hidden5} to hold. But on the other hand, if we adopt criterion \ref{hidden1} and assume that only information relevant to $\mathcal{S}$ is included in the $\lambda$ for $\mathcal{S}$, then criterion \ref{hidden5} is more plausible. It ties in with common sense intuitions that scientists have free will and can make choices about which measurements they make, and that these choices are statistically independent of the states of the physical systems they are measuring. However, not everyone shares this intuition. If criterion \ref{hidden5} doesn't hold, then what a physical system does will depend on what property of this system one is about to measure. This kind of dependence is referred to as \textbf{superdeterminism}\index{superdeterminism}. Bell coined the term superdeterminism in a 1983 BBC interview, where he said:  
 \begin{adjustwidth}{1cm}{}
 	\begin{displayquote}
+		\singlespacing
 		There is a way to escape the inference of superluminal speeds and spooky action at a distance. But it involves absolute determinism in the universe, the complete absence of free will. Suppose the world is superdeterministic, with not just inanimate nature running on behind-the-scenes clockwork, but with our behavior, including our belief that we are free to choose to do one experiment rather than another, absolutely predetermined, including the ``decision'' by the experimenter to carry out one set of measurements rather than another, the difficulty disappears.
 	\end{displayquote}
 \end{adjustwidth}
@@ -4100,7 +4105,7 @@ As for criterion \ref{hidden3}, there doesn't seem to be any problem with droppi
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter04/KentStandardQM.tex]
 
-\section{Conditioned Quantum States\textsuperscript{*}\label{KentconsistentQT}}
+\section{Conditioned Quantum States\textsuperscript{*}}\label{KentconsistentQT}
 Although I have already argued in section \ref{kentinterpretationconsistency} that Kent's theory predicts the same expectation values as standard quantum theory when one averages Kent's beables over all the possible mass-energy density measurements that could be made on $S$, these expectation values are not the expectation values we'd be interested in if we were scientists performing an experiment such as the Stern-Gerlach experiment. Rather, we would typically base our expectation calculations on the state of the apparatus and the system being measured -- we would not base our expectation calculations on the  universal quantum state $\ket*{\Psi_n}$ on a hypersurface $S_n$. Also, in considering the question of whether PI or OI are true, we need to assume that there are some existing observers with their apparatuses. However, we wouldn't be able to make such an assumption if all we had to go on was the quantum state $\ket*{\Psi_n}$ that had unitarily evolved from some primordial state $\ket*{\Psi_0}$. So in order for Kent's theory to say anything about such situations, we must be able to extract the quantum state of a system at a particular time from the universal quantum state $\ket*{\Psi_0}$ and the mass-energy density $\tau_S$. I will refer to such a state as a \emph{conditioned quantum state}\index{conditioned quantum state}. In this section I will explain how to extract conditioned quantum states from $\ket*{\Psi_0}$ and $\tau_S$, and I will show that given a conditioned quantum state, Kent's theory does indeed give the same predictions as standard quantum theory in the case of an experimental apparatus $\mathcal{A}$ measuring the properties of a particle $\mathcal{S}$. Again, we will consider a toy model similar to Kent's toy model described in section \ref{toysection} where photons are treated as point particles. 
  
 So let $\tau_S$ be the notional mass-energy density measurement on $S$. In order to avoid undue complexity, we will assume that there is no simultaneous $\hat{T}_S$-eigenstate degeneracy so that if $\ket*{\Gamma}$ and $\ket*{\Gamma'}$ are normalized\footnote{In this section we will assume that all states are normalized.} simultaneous $\hat{T}_S$-eigenstates with simultaneous eigenvalues $\tau_S$ and $\tau_S'$ respectively, then
@@ -4462,7 +4467,7 @@ which is analogous to the EA formula on page \pageref{adeq}.
 % flatex input: [Chapter04/KentPI.tex]
 
 
-\section{Kent's Theory and Parameter Independence\label{kentpi}}
+\section{Kent's Theory and Parameter Independence}\label{kentpi}
   In the previous section, we saw how we can generalize Kent's beable $\ev*{\hat{T}^{\mu\nu}(y)}_{\tau_S}$ to calculate conditional expectations $\ev*{\hat{O}}_{\tau_S}$ for any observable $\hat{O}$ defined at a particular spacetime location $(t_i, z_0)$, and that in the case of the observable $[s_f]=\dyad{s_f}$, this expectation yields the same probability as standard quantum theory for the outcome $\ket*{s_f}$ given the initial state $\ket*{s}$ of the system.  We also saw that  EA holds in Kent's theory, and to see this, it was necessary to calculate the probability $P_\lambda^{\ket*{s}}(O_{\mathcal{S}}=j)$ appropriately conditioned on the mass-energy density measurement determined on a subregion of $S$. 
   
   Now the expectation  $\ev*{[s_f]}_{\tau_S}$ and the probability $P_\lambda^{\ket*{s}}(O_{\mathcal{S}}=j)$ depend on just one observable for just one spacetime location. However, in order to consider whether PI holds, we need to consider two observables corresponding to two different spacetime locations. In order to do this, we need to make a further adaption to Kent's theory. In this section, we will describe this adaption and show that with it, Kent's theory allows us to calculate probabilities for Bell-type experiments, and that these probabilities are the same as in standard quantum theory. Since PI holds in standard quantum theory,  a consequence of Kent's theory agreeing with standard quantum theory is that PI will also hold in Kent's theory. 
@@ -4736,7 +4741,7 @@ where we have used (\ref{piphiPI}), and this is the same as the probability that
  
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter04/BeableAndTime.tex]
-\section{Beables and Time\label{beablesandtime}}
+\section{Beables and Time}\label{beablesandtime}
 In previous sections I've tried to show that Kent's theory is a one-world theory which makes the same predictions as standard quantum theory and is consistent with special relativity (subject to a minor alteration which allows us to attribute PI to Kent's theory). There are however a number of issues that might still make people reluctant to take Kent's theory seriously. For instance, it may strike many people as wildly speculative to suggest that the current state of reality is specified in terms of expectation values of stress-momentum operators conditioned on some notional measurement made in the far distant future. Also, many people, myself included, do not find determinism philosophically attractive, yet on the face of it, Kent's theory does seem to be deterministic. It also looks like Kent's theory relies on there being backwards in time causality, an idea which to many people will seem just as absurd as the many-worlds interpretation. In this final section, I will discuss these concerns and how they might be addressed. 
 
 To begin with, let's consider the criticism that Kent's theory is too wildly speculative for anyone to take seriously. In response to this criticism, I think the best way to see Kent's theory is not as a claim of how physical reality must be, but more like a thought experiment that opens up the logical space of how physical reality might be if one accepts special relativity and standard quantum theory. For instance, the Colbeck-Renner theorem might lead one to conclude that there are no interesting hidden variables theories that make the same predictions as quantum theory and satisfy PI. However, as I've tried to show in section \ref{colbeckrennerthm}, the information additional to the quantum state that is contained in a distant future mass-energy density measurement is not constrained by the underlying assumptions of Colbeck, Renner, et al., and hence their conclusion about the redundancy of hidden variables does not apply to Kent's theory. 
@@ -4908,8 +4913,15 @@ Inevitably, Kent's theory and my adaption to it are highly speculative. In this 
 %\usepackage[inline]{showlabels}
 
 \pagebreak
-\addcontentsline{toc}{chapter}{Bibliography} 
-\printbibliography
+
+\begingroup 
+\setstretch{1} % this changes the bibliography to single space within each item
+\titlespacing{\chapter}{0pt}{19.44pt}{25.92pt} % since single spaced now have to change this.
+
+\printbibliography[title={BIBLIOGRAPHY}]
+\addcontentsline{toc}{chapter}{BIBLIOGRAPHY} % adds this to table of contents
+\endgroup
+
 
 \pagebreak
 \addcontentsline{toc}{chapter}{Notation}

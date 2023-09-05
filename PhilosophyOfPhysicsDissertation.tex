@@ -8,7 +8,7 @@
 %\usepackage[inline]{showlabels}
 
 \begin{document}
-
+\renewcommand\indexname{INDEX}
   
 
 
@@ -19,7 +19,7 @@
 \include{Chapter01/Stern-Gerlach}
 \include{Chapter01/EPR}
 \include{Chapter01/SchrodingerCat}
-\include{Chapter01/HiddenVariables}
+\include{Chapter01/HiddenVariables} 
 \include{Chapter01/IdentifyingTheCulprit}
 \include{Chapter01/PI}
 \include{Chapter01/PDProblem}
@@ -66,11 +66,18 @@
 \include{conclusion}
 
 \pagebreak
-\addcontentsline{toc}{chapter}{Bibliography} 
-\printbibliography
+
+\begingroup 
+\setstretch{1} % this changes the bibliography to single space within each item
+\titlespacing{\chapter}{0pt}{19.44pt}{25.92pt} % since single spaced now have to change this.
+
+\printbibliography[title={BIBLIOGRAPHY}]
+\addcontentsline{toc}{chapter}{BIBLIOGRAPHY} % adds this to table of contents
+\endgroup
+
 
 \pagebreak
-\addcontentsline{toc}{chapter}{Notation}
+\addcontentsline{toc}{chapter}{NOTATION}
 
 \singlespacing 
 

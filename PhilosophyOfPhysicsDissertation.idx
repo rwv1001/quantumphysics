@@ -1,119 +1,119 @@
-\indexentry{angular momentum}{4}
-\indexentry{vector}{4}
 \indexentry{momentum}{4}
+\indexentry{angular momentum}{5}
+\indexentry{vector}{5}
 \indexentry{angular velocity}{5}
 \indexentry{qunatization}{6}
 \indexentry{ket-vector}{6}
-\indexentry{Born Rule}{8}
+\indexentry{Born Rule}{9}
 \indexentry{linearity}{10}
 \indexentry{Copenhagen Interpretation}{13}
 \indexentry{spin singlet}{13}
 \indexentry{photon}{13}
 \indexentry{positron}{13}
 \indexentry{standard quantum theory}{14}
-\indexentry{Einstein's locality principle}{14}
+\indexentry{Einstein's locality principle}{15}
 \indexentry{statistical independence}{16}
 \indexentry{conditional probability}{16}
-\indexentry{conditional independence}{16}
+\indexentry{conditional independence}{17}
 \indexentry{Bell state}{18}
-\indexentry{velocity}{21}
+\indexentry{velocity}{22}
 \indexentry{boost}{22}
-\indexentry{hidden variables}{29}
-\indexentry{hidden variables!local}{29}
-\indexentry{Bell's inequality}{32}
-\indexentry{culprit, the}{34}
+\indexentry{hidden variables}{30}
+\indexentry{hidden variables!local}{30}
+\indexentry{Bell's inequality}{33}
+\indexentry{culprit, the}{35}
 \indexentry{Parameter Independence}{38}
-\indexentry{Parameter Dependence}{38}
-\indexentry{Bohmian interpretation}{43}
-\indexentry{pilot wave}{43}
-\indexentry{function}{43}
-\indexentry{domain}{43}
-\indexentry{range}{43}
-\indexentry{function!real-valued}{43}
-\indexentry{phase of a complex number}{43}
-\indexentry{modulus of a complex number}{43}
-\indexentry{gradient}{43}
-\indexentry{expectation value!pilot wave}{44}
-\indexentry{Outcome Independence}{49}
-\indexentry{observable}{64}
-\indexentry{normalized state}{65}
-\indexentry{Hilbert space!rigorous definition}{65}
-\indexentry{complex vector space}{66}
-\indexentry{Hilbert space!basic definition}{66}
-\indexentry{orthonormality}{67}
-\indexentry{operator}{67}
-\indexentry{expectation value!standard quantum theory}{68}
-\indexentry{Hermitian Operator}{69}
-\indexentry{eigenstate}{69}
-\indexentry{eigenvalue}{69}
-\indexentry{basis}{69}
-\indexentry{linear combination}{69}
-\indexentry{preferred basis problem}{70}
-\indexentry{preferred basis}{71}
-\indexentry{composite systems}{72}
-\indexentry{entangled}{74}
-\indexentry{trace}{76}
-\indexentry{adjoint}{76}
-\indexentry{density matrix}{77}
-\indexentry{pure state}{78}
-\indexentry{mixed state}{78}
-\indexentry{coherence}{78}
-\indexentry{partial trace}{80}
-\indexentry{reduced density matrix}{82}
-\indexentry{improper mixtures}{83}
-\indexentry{von Neumann measurement scheme}{83}
-\indexentry{pointer state}{84}
-\indexentry{decoherence}{88}
-\indexentry{decoherence time}{88}
-\indexentry{Superconducting Quantum Interference Devices (SQUID)}{92}
-\indexentry{Dirac delta}{93}
-\indexentry{problem of outcomes}{99}
-\indexentry{many-worlds interpretation}{103}
-\indexentry{branching}{105}
-\indexentry{unitary operator}{125}
-\indexentry{spacetime location}{127}
-\indexentry{spacelike-separation}{128}
-\indexentry{lightlike-separation}{129}
-\indexentry{timelike-separation}{129}
-\indexentry{mass-energy density}{130}
-\indexentry{Heisenberg picture}{133}
-\indexentry{Schr\"{o}dinger picture}{133}
-\indexentry{four-vector potential}{133}
-\indexentry{functional}{136}
-\indexentry{functional derivative}{137}
-\indexentry{current density}{137}
-\indexentry{d'Alembert operator}{138}
-\indexentry{eigenspace}{139}
-\indexentry{simultaneous $\hat{T}_S$-eigenstate}{139}
-\indexentry{simultaneous $\hat{T}_S$-eigenvalue}{139}
-\indexentry{beable}{146}
-\indexentry{stress-energy tensor}{147}
-\indexentry{conditional probability}{162}
-\indexentry{conditional expectation}{162}
-\indexentry{quantum wave functions}{170}
-\indexentry{empirical adequacy!informal definition}{179}
-\indexentry{projection}{184}
-\indexentry{Lorentz transformation!overview}{189}
-\indexentry{scalar}{189}
-\indexentry{rest mass}{189}
-\indexentry{four-vector!overview}{190}
-\indexentry{rank-two tensor!overview}{190}
-\indexentry{Lorentz invariant}{191}
-\indexentry{Einstein summation convention}{192}
-\indexentry{Lorentz transformation!technical definition}{194}
-\indexentry{four-momentum}{196}
-\indexentry{four-vector}{196}
-\indexentry{four-vector field}{196}
-\indexentry{four-velocity}{196}
-\indexentry{relativistic mass}{196}
-\indexentry{four-covector}{198}
-\indexentry{Kronecker-delta}{198}
-\indexentry{Lorentz transformation!orthochronous}{200}
-\indexentry{superdeterminism}{232}
-\indexentry{empirical adequacy!formal definition}{234}
-\indexentry{conditioned quantum state}{238}
-\indexentry{simultaneous $\hat{T}_S$-eigenstate of a subregion}{240}
-\indexentry{conditioned quantum states!derivation}{246}
-\indexentry{additional variables theories}{262}
-\indexentry{completeness of basic entities}{267}
-\indexentry{eschaton}{280}
+\indexentry{Parameter Dependence}{39}
+\indexentry{Bohmian interpretation}{44}
+\indexentry{pilot wave}{44}
+\indexentry{function}{44}
+\indexentry{domain}{44}
+\indexentry{range}{44}
+\indexentry{function!real-valued}{44}
+\indexentry{phase of a complex number}{44}
+\indexentry{modulus of a complex number}{44}
+\indexentry{gradient}{45}
+\indexentry{expectation value!pilot wave}{46}
+\indexentry{Outcome Independence}{50}
+\indexentry{observable}{65}
+\indexentry{normalized state}{66}
+\indexentry{Hilbert space!rigorous definition}{66}
+\indexentry{complex vector space}{67}
+\indexentry{Hilbert space!basic definition}{67}
+\indexentry{orthonormality}{68}
+\indexentry{operator}{68}
+\indexentry{expectation value!standard quantum theory}{69}
+\indexentry{Hermitian Operator}{70}
+\indexentry{eigenstate}{70}
+\indexentry{eigenvalue}{70}
+\indexentry{basis}{71}
+\indexentry{linear combination}{71}
+\indexentry{preferred basis problem}{72}
+\indexentry{preferred basis}{73}
+\indexentry{composite systems}{74}
+\indexentry{entangled}{76}
+\indexentry{trace}{78}
+\indexentry{density matrix}{79}
+\indexentry{adjoint}{79}
+\indexentry{pure state}{80}
+\indexentry{mixed state}{81}
+\indexentry{coherence}{81}
+\indexentry{partial trace}{82}
+\indexentry{reduced density matrix}{85}
+\indexentry{improper mixtures}{86}
+\indexentry{von Neumann measurement scheme}{87}
+\indexentry{pointer state}{87}
+\indexentry{decoherence}{91}
+\indexentry{decoherence time}{91}
+\indexentry{Superconducting Quantum Interference Devices (SQUID)}{96}
+\indexentry{Dirac delta}{98}
+\indexentry{problem of outcomes}{103}
+\indexentry{many-worlds interpretation}{107}
+\indexentry{branching}{109}
+\indexentry{unitary operator}{129}
+\indexentry{spacetime location}{131}
+\indexentry{spacelike-separation}{132}
+\indexentry{lightlike-separation}{133}
+\indexentry{timelike-separation}{133}
+\indexentry{mass-energy density}{134}
+\indexentry{Heisenberg picture}{137}
+\indexentry{Schr\"{o}dinger picture}{138}
+\indexentry{four-vector potential}{138}
+\indexentry{functional}{141}
+\indexentry{functional derivative}{142}
+\indexentry{current density}{142}
+\indexentry{d'Alembert operator}{142}
+\indexentry{eigenspace}{143}
+\indexentry{simultaneous $\hat{T}_S$-eigenstate}{144}
+\indexentry{simultaneous $\hat{T}_S$-eigenvalue}{144}
+\indexentry{beable}{151}
+\indexentry{stress-energy tensor}{152}
+\indexentry{conditional probability}{167}
+\indexentry{conditional expectation}{167}
+\indexentry{quantum wave functions}{176}
+\indexentry{empirical adequacy!informal definition}{185}
+\indexentry{projection}{190}
+\indexentry{Lorentz transformation!overview}{196}
+\indexentry{scalar}{196}
+\indexentry{rest mass}{196}
+\indexentry{four-vector!overview}{197}
+\indexentry{rank-two tensor!overview}{197}
+\indexentry{Lorentz invariant}{198}
+\indexentry{Einstein summation convention}{199}
+\indexentry{Lorentz transformation!technical definition}{201}
+\indexentry{four-momentum}{203}
+\indexentry{four-vector}{203}
+\indexentry{four-velocity}{203}
+\indexentry{relativistic mass}{203}
+\indexentry{four-vector field}{204}
+\indexentry{four-covector}{205}
+\indexentry{Kronecker-delta}{205}
+\indexentry{Lorentz transformation!orthochronous}{207}
+\indexentry{superdeterminism}{239}
+\indexentry{empirical adequacy!formal definition}{241}
+\indexentry{conditioned quantum state}{245}
+\indexentry{simultaneous $\hat{T}_S$-eigenstate of a subregion}{248}
+\indexentry{conditioned quantum states!derivation}{253}
+\indexentry{additional variables theories}{270}
+\indexentry{completeness of basic entities}{275}
+\indexentry{eschaton}{289}
