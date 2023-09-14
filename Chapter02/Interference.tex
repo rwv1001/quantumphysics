@@ -13,7 +13,6 @@
      {\includegraphics[width=.45\textwidth]{Chapter02/Two-Slit_Experiment_Particles.png}};
      \node[below right] at (noninterfere.south west) {(B) Particles not exhibiting interference.};
     \end{tikzpicture}
-    \vspace*{10px}
     \caption[Double-Slit Experiment]{The Double-Slit Experiment. Particles are incident on a double slit. In diagram (A), the particles are exhibiting an interference pattern, whereas in diagram (B), the particles are not exhibiting an interference pattern. Whether or not there is interference will depend on factors such as the size of the particles and whether it can be ascertained which slit the particle went through. The larger the particles are, or the more information available as to which slit the particle went through, the less likely the particles will exhibit interference.\protect\footnotemark}
     \label{DoubleSlit}
     \end{figure}
@@ -43,8 +42,8 @@ cannot be normalized. This is because the bracket  $\ip{x}{y}$ is defined to be 
     
     Now if  $\ket*{\psi}=\frac{1}{\sqrt{2}}(\ket*{\psi_1}+\ket*{\psi_2})$, then 
     $\psi(x)=\frac{1}{\sqrt{2}}(\psi_1(x)+\psi_2(x)).$ Therefore, the corresponding probability density will be
-    \begin{equation*}\abs{\psi(x)}^2=\frac{1}{2}(\abs{\psi_1(x)}^2+\abs{\psi_2(x)}^2+2\Re(\overline{\psi_1(x)}\psi_2(x)).\protect\footnotemark
-    \end{equation*}
+    \begin{equation}\abs{\psi(x)}^2=\frac{1}{2}(\abs{\psi_1(x)}^2+\abs{\psi_2(x)}^2+2\Re(\overline{\psi_1(x)}\psi_2(x)).\protect\footnotemark
+    \end{equation}
     \footnotetext{Here $\Re$ %
 \nomenclature{$\Re(z)$}{The real part of a complex number $z$,  \nomrefpage}%
     means the real part of a complex number. Thus, if the complex number $z=\alpha+i\beta$ for real numbers $\alpha$ and $\beta$, then $\Re(z)=\alpha$. To see why the above equation holds, we recall that $\abs{z}^2=z\overline{z}$ and that $\Re(z)=\frac{1}{2}(z+\overline{z})$. Therefore, if $z=\frac{1}{\sqrt{2}}(v+w)$ for complex number $v$ and $w$, then $\abs{z }^2 =\frac{1}{\sqrt{2}}(v+w)\frac{1}{\sqrt{2}}\overline{(v+w)}= \frac{1}{2}(v+w)\overline{(v+w)}=\frac{1}{2}(v\overline{v}+w\overline{w}+w\overline{v}+v\overline{w})=\frac{1}{2}(\abs{v}^2+\abs{w}^2+w\overline{v}+\overline{w\overline{v}})=\frac{1}{2}(\abs{v}^2+\abs{w}^2+2\Re(\overline{v}w))$.}Now when the detection screen is far away from the double slits, we will have $\abs{\psi_1(x)}^2\approx \abs{\psi_2(x)}^2$ for $x$ near the center point on the screen. However, depending on slight changes in the value of $x$ from the center point on the screen, sometimes $\psi_1(x)$ and $\psi_2(x)$ will be in phase so that  $\psi_1(x)\approx\psi_2(x)$, in which case $\abs{\psi(x)}^2\approx 2\abs{\psi_1(x)}^2$. But sometimes $\psi_1(x)$ and $\psi_2(x)$ will be  out of phase so that $\psi_1(x)\approx-\psi_2(x),$ in which case $\abs{\psi(x)}^2\approx 0$. Hence, we get the interference pattern as shown in figure \ref{DoubleSlit} (A).

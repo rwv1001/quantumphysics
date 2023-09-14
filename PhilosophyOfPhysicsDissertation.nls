@@ -1,5 +1,5 @@
 
-\begin{thenomenclature} 
+\begin{thenomenclature}\interlinepenalty10000
 \nomgroup{A}
   \item [{$(t, x, y, z)$}]\begingroup A spacetime location where $t$ parameterizes time, and $x$, $y$, and $z$ parameterize the three dimensions of space, \nomrefpage\nomeqref {1.2.11}\nompageref{21}
   \item [{$(x^0,x^1,x^2,x^3)$}]\begingroup A spacetime location, \nomrefpage\nomeqref {3.2.0}\nompageref{126}

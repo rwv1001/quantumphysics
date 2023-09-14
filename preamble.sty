@@ -18,8 +18,6 @@
 \usepackage{comment}
 \usepackage{mathtools}
 \usepackage{siunitx}
-\usepackage[acronym, nopostdot, nonumberlist, section]{glossaries}
-\usepackage{glossary-mcols}
 \usepackage{etoolbox}
 \usepackage{graphicx} % Required for including images
 \usepackage{tikz, tikz-3dplot}
@@ -29,8 +27,8 @@
 \usetikzlibrary{decorations.text}
 \usepackage[autolanguage]{numprint}
 \usepackage{caption}
-\usepackage{parskip}
 \usepackage{bigfoot}
+\usepackage[bottom]{footmisc} %RWV: footnotes need to be at the bottom of the page
 \usepackage{cleveref}
 \usepackage{tensor}
 \usepackage{imakeidx}\makeindex[options = -s myindex] 
@@ -211,7 +209,7 @@ cube side color=blue!40,
 
 
 
-\interfootnotelinepenalty=0
+
 \allowdisplaybreaks
 \setcounter{tocdepth}{4}
 
@@ -231,7 +229,7 @@ cube side color=blue!40,
    listformat=simple,
    justification=flushLeft, % makes the caption centered if not one line and left justified if more than one line. Don't use raggedright, it stil parindents the first line
    font=normal,
-   skip = 16.92pt, % plus the built in space gives a double space between caption and figure
+   skip = 21.22pt, % plus the built in space gives a double space between caption and figure. RWV changed 16.92pt -> 21.22pt to make double space
    position = bottom, % places the caption below the figure
    labelsep=period % period after the figure number
 }
@@ -240,7 +238,7 @@ cube side color=blue!40,
    listformat=simple,
    justification=centering,
    font=normal,
-   skip = 16.92pt, % plus the built in 4 pt gives a double space between caption and table
+   skip = 11.22pt, % plus the built in 4 pt gives a double space between caption and table. RWV changed 16.92pt -> 11.22pt to make double space 
    position = top, % places the caption above the table
    labelsep=period, % period after the table number
    indention=-\parindent
@@ -256,17 +254,20 @@ cube side color=blue!40,
 \titleformat{\subsubsection}[runin]{\itshape}{\thetitle}{\baselinestretch pt}{\hspace{\parindent}}[\it . ~] % Level 5 heading
 
 \titlespacing{\chapter}{0pt}{6pt}{12.96pt} % puts chapter titles at 1.5 inches from top, only needed an extra 6 pts. Puts a triple space after chapter title before first section
-\titlespacing{\section}{0pt}{12.96pt}{12.96pt} % puts a triple space above section title (unless there is no text before first section in a chapter, which is taken care of by the spacing after the chapter)
+\titlespacing{\section}{0pt}{12.96pt}{-2.24pt} % puts a triple space above section title (unless there is no text before first section in a chapter, which is taken care of by the spacing after the chapter). RWV: changed 12.96pt to -2.24pt
 \titlespacing{\subsection}{0pt}{12.96pt}{0pt} % puts a triple space above subsection title (unless there is no text before first subsection in a section, which is taken care of by the spacing after the section)
 \titlespacing{\subsubsection}{0pt}{12.96pt}{0pt} % puts triplespace above subsubsection title
 
 \usepackage{tocloft}% for formatting the table of contents, list of figures, and list of tables
 %\renewcommand\cftdotsep{2} % uncomment this and adjust the number to increase/decrease the number of dots/inch in toc/lof/lot
 \setlength{\cftaftertoctitleskip}{12.96pt} % for a triple space after titles of TOC/LOF/LOT
-\setlength{\cftafterloftitleskip}{25.92pt} % for a triple space after titles of TOC/LOF/LOT
-\setlength{\cftafterlottitleskip}{25.92pt} % for a triple space after titles of TOC/LOF/LOT
+\setlength{\cftafterloftitleskip}{12.96pt} % for a triple space after titles of TOC/LOF/LOT - RWV: changed 25.92pt->12.96pt 
+\setlength{\cftafterlottitleskip}{12.96pt} % for a triple space after titles of TOC/LOF/LOT - RWV: changed 25.92pt->12.96pt 
 \renewcommand\cftfigindent{0pt} % no indent for entries on LOF
+\renewcommand\cfttabindent{0pt} % RWV correct indent for LOT entries
 \setcounter{tocdepth}{1} % sets table of contents to only show down to subsections (level 1-3 headings)
+
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % RWV: Include ellipses for chapters in table of contents 
 
  % for hanging entries
 \setlength{\bibitemsep}{12.96pt} % gives a double space between entries
@@ -288,7 +289,7 @@ cube side color=blue!40,
 %----------%----------%----------%----------%----------%----------%----------%----------%
 %   Put all your info in here, will be called later
 %----------%----------%----------%----------%----------%----------%----------%----------%
-\newcommand{\mytitle}{The EPR-Bohm Paradox \\ and Kent's One-World Solution} % Enter your title here with the line break you want.
+\newcommand{\mytitle}{The EPR-Bohm Paradox and Kent's One-World Solution} % Enter your title here with the line break you want.
 \newcommand{\myname}{Robert William Verrill} % Put you name here.
 \newcommand{\degreesought}{Ph.D.} % What degree you are going for
 \newcommand{\mymentor}{Alexander R. Pruss, Ph.D.} % your Ph.D. advisor and degree
@@ -392,3 +393,66 @@ cube side color=blue!40,
 \usepackage{etoolbox}
 \appto\normalsize{\belowdisplayshortskip=\belowdisplayskip} % this is for spacing around displayed equations
 \appto\normalsize{\abovedisplayshortskip=\abovedisplayskip}
+
+%RWV begin - this is so there list of figures and tables entries are evenly spaced. e.g. no vertical space between 2.2 and 3.1 in list of figures 
+\makeatletter
+% \patchcmd{<cmd>}{<search>}{<replace>}{<succes>}{<failure>}
+\patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
+\patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
+\patchcmd{\NR@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}
+\patchcmd{\NR@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}
+\makeatother
+%RWV end 
+
+\newif\iffootnotez
+\let\FootnotetextZ\footnotetext
+\renewcommand\footnotetext[1]{\begingroup\footnoteztrue\FootnotetextZ{#1}\endgroup}
+\let\FootnoteZ\footnote
+\renewcommand\footnote[1]{\begingroup\footnoteztrue\FootnoteZ{#1}\endgroup}
+
+%RWV begin - have triple space before and after figures
+\AtBeginEnvironment{figure}{\vspace{7.82pt}}
+\AtEndEnvironment{figure}{\vspace{-15.2pt}}
+%RWV end 
+
+%RWV begin - have triple space before and after tables
+\AtBeginEnvironment{table}{\vspace{4.4pt}}
+\AtEndEnvironment{table}{\vspace{-14.5pt}}
+%RWV end 
+
+%RWV begin - need to have double space between footnotes
+\renewcommand{\footnoterule}
+    {\noindent\smash{\rule[-8pt]{2.4in}{0.4pt}}}
+\setlength{\footnotesep}{1.33\baselineskip}
+\setlength{\skip\footins}{-5.7pt}
+%RWV end 
+
+%RWV begin - have double space before and after equations
+
+\AtBeginEnvironment{equation}{\iffootnotez \else\vspace{-22.1pt}\fi}
+\AtEndEnvironment{equation}{\iffootnotez \else\vspace{-21.5pt}\fi}
+
+%RWV end 
+
+%RWV begin - have double space before and after equations
+
+\AtBeginEnvironment{equation*}{\iffootnotez \else \vspace{-14.4pt}\fi}
+\AtEndEnvironment{equation*}{\iffootnotez \else \vspace{-12.3pt}\fi}
+
+%RWV end 
+
+%RWV begin - have double space before and after subequations
+\AtBeginEnvironment{align*}{\iffootnotez \else \vspace{-9.5pt}\fi}
+\AtBeginEnvironment{align}{\iffootnotez \else \vspace{-22.4pt}\fi}
+\gdef\alignspace{-49.7}
+\gdef\alignstarspace{-9.5}
+
+
+
+\abovedisplayskip=0pt
+\belowdisplayskip=0pt
+\abovedisplayshortskip=0pt
+\belowdisplayshortskip=0pt
+
+
+\predisplaypenalty=0

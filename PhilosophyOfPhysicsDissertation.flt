@@ -9,7 +9,7 @@
 %\usepackage[inline]{showlabels}
 
 \begin{document}
-
+\renewcommand\indexname{INDEX}
   
 
 
@@ -19,9 +19,9 @@
 %----------%----------%----------%----------%----------%----------%----------%----------%
 %----------%----------%----------%----------%----------%----------%----------%----------%
 
-\renewcommand\contentsname{\vspace{-.75in} {\centering \normalsize{ \textnormal{TABLE OF CONTENTS} } \par}} % Adjusts these to look like they need to and put them at 2.5 inches from the top of the page
-\renewcommand\listfigurename{\vspace{-.75in} {\centering \normalsize{ \textnormal{LIST OF FIGURES} } \par}} %
-\renewcommand\listtablename{\vspace{-.75in} {\centering \normalsize{ \textnormal{LIST OF TABLES} } \par}}   %
+\renewcommand\contentsname{\vspace{-0.4in} {\centering \normalsize{ \textnormal{TABLE OF CONTENTS} } \par}} % Adjusts these to look like they need to and put them at 2.5 inches from the top of the page RWV - I was told 1.5in, so changed \vspace{-.75in} -> \vspace{-0.4in}
+\renewcommand\listfigurename{\vspace{-0.63in} {\centering \normalsize{ \textnormal{LIST OF FIGURES} } \par}} %RWV - I was told 1.5in, so changed \vspace{-.75in} -> \vspace{-0.63in}
+\renewcommand\listtablename{\vspace{-0.63in} {\centering \normalsize{ \textnormal{LIST OF TABLES} } \par}}   %RWV - I was told 1.5in, so changed \vspace{-.75in} -> \vspace{-0.63in}
 
  
 %----------%----------%----------%----------%----------%----------%----------%----------%
@@ -77,7 +77,7 @@ Mentor: \mymentor{}
 
     by\\
     
-    \myname{}, Ph.D.\\ % after your name put your current degrees held
+    \myname{}, B.A, M.A., Ph.D.\\ % after your name put your current degrees held
 
     A Dissertation
     
@@ -289,8 +289,8 @@ I am very grateful to my advisor Dr. Alexander Pruss. It is because of him that 
  
 %\usepackage[inline]{showlabels}
 % flatex input: [Intro.tex]
-\chapter*{Introduction}
-\addcontentsline{toc}{chapter}{Introduction}
+\chapter*{INTRODUCTION}
+\addcontentsline{toc}{chapter}{INTRODUCTION}
 In recent years, it has become increasingly common for popularizers of quantum physics to tell us that we need to let go of our naïve common sense understanding of reality. We're told we must replace this common sense understanding with something that at first seems very bizarre and counter-intuitive: a many-worlds interpretation of reality. This is the idea that whenever there is quantum indeterminacy among several possibilities, then all these possibilities are realized, and the actualization of these possibilities can be extrapolated up to the macroscopic level. Thus, many-worlds advocates, when reflecting on the famous Schr\"{o}dinger's Cat thought experiment do not question the foundations of quantum mechanics on which the thought experiment is based, but rather they embrace the seemingly absurd conclusion of Schr\"{o}dinger that the foundations of quantum mechanics imply that a cat could be both dead and alive. Many-worlds advocates thus speak of the cat being dead in one world and the cat being alive in another world that is just as real as the first.    
 
 In this dissertation, I will consider in detail the EPR-Bohm paradox and the mysterious correlations that it exhibits, and I will explain why the EPR-Bohm paradox can lead one to think that our best physics suggests a many-worlds picture of reality. I will thus consider the many-worlds interpretation in some detail and explain why it is so attractive. But ultimately, my goal is not to endorse the many-worlds interpretation of quantum physics, but rather it is to argue that the reasons for endorsing the many-worlds interpretation are not compelling. My argument relies on a recent interpretation of quantum physics by the physicist Adrian Kent. Kent's interpretation shares several features with the many-worlds interpretation that make it seem attractive, yet in Kent's interpretation, there is only one world.  
@@ -301,7 +301,7 @@ In this dissertation, I will do my best to avoid unnecessary mathematical jargon
 % flatex input end: [Intro.tex]
 
 %\usepackage[inline]{showlabels}
-\newpage 
+\newpage  
 % flatex input: [Chapter01/chapterIntro.tex]
 \begin{comment}
     \section{Introduction}
@@ -344,7 +344,7 @@ Now silver atoms have a property somewhat analogous to the classical notion of \
 Now if we tried to understand the angular momentum of a silver atom classically, we would expect the magnetic field of the two magnets to interact with the silver atom in a way that was determined by the relative direction of the silver atom's angular momentum compared to the direction of the magnetic field. Since we would expect the silver atom to have an entirely random angular momentum, we would expect it to be deflected by varying degrees either up or down in the direction of the magnetic field. Thus, if a detection screen were placed beyond the two magnets which the silver atoms would hit, we would expect there to be a whole continuum of possible locations where the silver atoms would be detected. However, in reality, it is found that there are precisely two locations where the silver atoms hit the screen. It is as though the particles can spin either clockwise or anticlockwise, but that there is absolutely no variance in the angular speed at which they rotate. This is surprising. The angular momentum appears to be \textbf{quantized}\index{qunatization} in one of two directions, either parallel to the magnetic field or antiparallel\footnotetext{Drawing by Pearson Scott Foresman, Public domain, via Wikimedia Commons. Labeling was added for use in this dissertation. Original: https://commons.wikimedia.org/wiki/
 File:Top\_(PSF).png.} to it.\footnote{See figure \ref{antiparallel} for what is meant be antiparallel.} Corresponding to this quantization of angular momentum, we say that the atom is either in the spin up state or the spin down state with respect to the direction of the magnetic field. 
 \begin{figure}[ht!]
-\captionsetup{justification=centering}
+\captionsetup{justification=justified}
 \centering
 \fbox{\begin{picture}(65,50)
    \put(0,10){\vector(1,1){30}} %% a
@@ -353,7 +353,6 @@ File:Top\_(PSF).png.} to it.\footnote{See figure \ref{antiparallel} for what is 
    \put(65,40){\vector(-1,-1){30}} %% -a
    \put(30,25){$-\vec{a}$}
 \end{picture}}
-\vspace*{10px}
 \caption[Meaning of antiparallel]{Meaning of antiparallel: the arrows in opposite directions are said to be antiparallel to one another.}\label{antiparallel}
 \end{figure}\\
 \noindent If the direction of the magnetic field is implicitly understood, we write $\ket*{+}$ and $\ket*{-}$ for the spin up and spin down states of the atom respectively. We refer to the symbols $\ket*{+}$ %
@@ -395,7 +394,6 @@ mydot/.pic={\fill (0,0) circle (\dotsize);}}
 \node[text width=2cm, align=center] at (-3.2,0) {\footnotesize Beam center  of  the  silver atoms};
 \node[draw] at (3,-2){Detection Screen};
 \end{tikzpicture}
-\vspace*{10px}
 \caption[Locations of detections on detection screen]{Locations of detections before and after rotating the magnetic field by an angle $\theta$. Before rotation, the particles can be detected at either location $\uvbp{a}$ or location $\uvbm{a}$. After the rotation, particles can be detected at either location $\uvbp{b}$ or $\uvbm{b}$. }
 \label{rotate}
 \end{figure}
@@ -405,11 +403,10 @@ So suppose we knew the particle was in a spin state such that it was on course t
 \captionsetup{justification=centering}
 \centering
 \includegraphics[width=100mm]{Chapter01/1920px-Stern-Gerlach_Analyzer_Sequential_Series_E2v.png}
-\vspace*{10px}
 \caption[Two Stern-Gerlach experiments in sequence]{Two Stern-Gerlach experiments in sequence. By directing the beam of particles through one magnetic field first, the particles emerging in one of the two beams will be in a known spin state before they enter the second magnetic field.\protect\footnotemark}
 \label{knownspin}
 \end{figure}
-\footnotetext{Diagram by MJasK. This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. Source: https://commons.wikimedia.org/wiki/File:Stern-Gerlach\_Analyzer\_Sequential\_Series\_E2.png. } In this experimental setup, the second magnetic field has been rotated by an angle of $90^\circ$ with respect to the first magnetic field. But suppose we just rotated the second magnetic field by a very small angle $\theta$ with respect to the first magnetic field. Then we would expect the particle now to arrive at a location  $\uvbp{b}$ close by to $\uvbp{a}$ as shown in figure \ref{rotate}. And this is what we notice experimentally for the most part. However, occasionally, the particle will arrive at location $\uvbm{b}$. The frequency of this occurrence becomes less and less the less and less the magnetic field is rotated (i.e. the smaller $\theta$ is), so that if the magnetic field is not rotated at all, i.e. $\theta=0$, the particle will always arrive at location $\uvbp{a}$. 
+In this experimental setup, the second magnetic field has been rotated by an angle of $90^\circ$ with respect to the first magnetic field. But suppose we just rotated the second magnetic field by a very small angle $\theta$ with respect to the first magnetic field. Then we would expect the particle now to arrive at a location  $\uvbp{b}$ close by to $\uvbp{a}$ as shown in figure \ref{rotate}.\footnotetext{Diagram by MJasK. This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. Source: https://commons.wikimedia.org/wiki/File:Stern-Gerlach\_Analyzer\_Sequential\_Series\_E2.png. }  And this is what we notice experimentally for the most part. However, occasionally, the particle will arrive at location $\uvbm{b}$. The frequency of this occurrence becomes less and less the less and less the magnetic field is rotated (i.e. the smaller $\theta$ is), so that if the magnetic field is not rotated at all, i.e. $\theta=0$, the particle will always arrive at location $\uvbp{a}$. 
 To capture the probabilistic nature of these outcomes, we use the bra-ket notation. Thus, if $\ket*{\psi}$ stands for either the $\ket*{\uvbp{a}}$ or the $\ket*{\uvbm{a}}$-state, and $\ket*{\chi}$ stands for either the $\ket*{\uvbp{b}}$ or the $\ket*{\uvbp{b}}$-state, then we define the bra-ket $\ip*{\psi}{\chi}\in\mathbb{C}$  %
 \nomenclature{$\ip*{\psi}{\chi}$}{The bra-ket of two states $\ket*{\psi}$ and $\ket*{\chi}$, \nomrefpage} %
 to be a complex number\footnote{Regarding the set of complex numbers $\mathbb{C}$, %
@@ -437,13 +434,14 @@ This suggests that we can express the state $\ket*{\uvbp{b}}$ in terms of the st
 \end{align} 
 \end{subequations}
 for complex numbers $\alpha, \beta \in \mathbb{C}$ such that $|\alpha|^2+|\beta|^2=1$, and we suppose that the bra-ket has the \textbf{linearity}\index{linearity}\label{linearity} property so that  $\ip*{\psi}{\uvbp{b}}=\alpha\ip*{\psi}{\uvbp{a}}+\beta\ip*{\psi}{\uvbm{a}}$ and $\ip*{\psi}{\uvbm{b}}=\bar{\alpha}\ip*{\psi}{\uvbm{a}}-\bar{\beta}\ip*{\psi}{\uvbp{a}}$ for any state $\ket*{\psi}$. Then  it will follow that  $\ip*{\uvbp{b}}{\uvbm{b}}=0,$\footnote{To see this, by putting $\ket*{\psi}=\ket*{\uvbp{b}}$, we will have $\ip*{\uvbp{b}}{\uvbm{b}}=\bar{\alpha}\ip*{\uvbp{b}}{\uvbm{a}}-\bar{\beta}\ip*{\uvbp{b}}{\uvbp{a}}$ by equation (\ref{vectoradd2}). Since  $\ip*{\uvbp{b}}{\uvbm{a}}=\overline{\ip*{\uvbm{a}}{\uvbp{b}}}$ we have $\ip*{\uvbp{b}}{\uvbm{a}}=\bar{\beta}$ by equation (\ref{vectoradd1}), and likewise, since $\ip*{\uvbp{b}}{\uvbp{a}}=\overline{\ip*{\uvbp{a}}{\uvbp{b}}}$, we have $\ip*{\uvbp{b}}{\uvbp{a}}=\bar{\alpha}.$  Therefore,  $\ip*{\uvbp{b}}{\uvbm{b}}=\overline{\alpha}\overline{\beta}-\overline{\beta}{\overline{\alpha}}=0.$}  and that $\ip*{\uvbp{b}}{\uvbp{b}}=\ip*{\uvbm{b}}{\uvbm{b}} = 1.$\footnote{To see this, by putting $\ket*{\psi}=\ket*{\uvbp{b}}$ and using equation (\ref{vectoradd1}), we will have $\ip*{\uvbp{b}}{\uvbp{b}}=\alpha\ip*{\uvbp{b}}{\uvbp{a}}+\beta\ip*{\uvbp{b}}{\uvbm{a}}=\alpha\overline{\alpha}+\beta\overline{\beta}=\abs{\alpha}^2+\abs{\beta}^2=1.$ By a similar calculation, we also see $\ip*{\uvbp{b}}{\uvbp{b}}=1$.}  
-If we then put  $\alpha=\cos(\theta/2)$ and $\beta=\sin(\theta/2)$, it will follow that $\abs*{\ip*{\uvbp{b}}{\uvbp{a}}}=\abs*{\cos(\theta/2)}$ and  $\abs*{\ip*{\uvbp{b}}{\uvbm{a}}}=\abs*{\sin(\theta/2)},$\footnote{To satisfy these criteria, $\alpha$ and $\beta$ are only determined up to rotation by a complex number. Rotating a complex number $z\in\mathbb{C}$ just means multiplying it by a complex number $\lambda$ of modulus $1$ (i.e. $\abs{\lambda}=1$) to get $\lambda z$. We would need to take into account this rotation factor if we considered the three-dimensional situation. Then, without loss of generality, $\alpha=\cos(\theta/2)$ and $\beta=e^{i\phi}\sin(\theta/2)$ where $\theta$ and $\phi$ are the polar and azimuthal angles respectively.} and so with these values for $\alpha$ and $\beta$ we will have
+If we then put  $\alpha=\cos(\theta/2)$ and $\beta=\sin(\theta/2)$, it will follow that $\abs*{\ip*{\uvbp{b}}{\uvbp{a}}}=\abs*{\cos(\theta/2)}$ and  $\abs*{\ip*{\uvbp{b}}{\uvbm{a}}}=\abs*{\sin(\theta/2)},$ and so with these values for $\alpha$ and $\beta$ we will have
 \begin{subequations}\label{spintrans}
 \begin{align}
 \ket*{\uvbp{b}}&= \cos(\theta/2)\ket*{\uvbp{a}}+\sin(\theta/2) \ket*{\uvbm{a}},\label{spintrans1}\\
-\ket*{\uvbm{b}}&= \cos(\theta/2)\ket*{\uvbm{a}}-\sin(\theta/2) \ket*{\uvbp{a}}.\label{spintrans2}
+\ket*{\uvbm{b}}&= \cos(\theta/2)\ket*{\uvbm{a}}-\sin(\theta/2) \ket*{\uvbp{a}}.\protect\footnotemark\label{spintrans2}
 \end{align}
 \end{subequations}
+\footnotetext{To satisfy these criteria, $\alpha$ and $\beta$ are only determined up to rotation by a complex number. Rotating a complex number $z\in\mathbb{C}$ just means multiplying it by a complex number $\lambda$ of modulus $1$ (i.e. $\abs{\lambda}=1$) to get $\lambda z$. We would need to take into account this rotation factor if we considered the three-dimensional situation. Then, without loss of generality, $\alpha=\cos(\theta/2)$ and $\beta=e^{i\phi}\sin(\theta/2)$ where $\theta$ and $\phi$ are the polar and azimuthal angles respectively.} 
 % flatex input end: [Chapter01/Stern-Gerlach.tex]
 
 %\usepackage[inline]{showlabels}
@@ -563,7 +561,8 @@ These probabilities predicted by the Born Rule using the Bell state $\ket*{\Psi_
 \sin(\theta/2)\ket*{\uvbp{a}}\sin(\theta/2)\ket*{\uvbm{a}})\\
 &=\frac{1}{\sqrt{2}}((\cos[2](\theta/2)+\sin[2](\theta/2))\ket*{\uvbp{a}}\ket*{\uvbm{a}}-(\cos[2](\theta/2)+\sin[2](\theta/2))\ket*{\uvbm{a}}\ket*{\uvbp{a}})\\
 &=\frac{1}{\sqrt{2}}(\ket*{\uvbp{a}}\ket*{\uvbm{a}}-\ket*{\uvbm{a}}\ket*{\uvbp{a}}).
-\end{align*}}Therefore, if Alice had chosen to measure her particle along the $\uvb{b}$-axis rather than the $\uvb{a}$-axis, she would still obtain equal probabilities for finding her particle to be in either the state $\ket*{\uvbp{b}}_A$ or $\ket*{\uvbm{b}}_A$, and the same equal probabilities for Bob's measurement outcomes hold as well. 
+\end{align*}
+Hence, equation (\ref{bellstate2}).}Therefore, if Alice had chosen to measure her particle along the $\uvb{b}$-axis rather than the $\uvb{a}$-axis, she would still obtain equal probabilities for finding her particle to be in either the state $\ket*{\uvbp{b}}_A$ or $\ket*{\uvbm{b}}_A$, and the same equal probabilities for Bob's measurement outcomes hold as well. 
 
 Now although attributing the state $\ket*{\Psi_{\text{Bell}}}$ to a spin singlet successfully determines the experimentally observed probabilities for  Alice and Bob's spin measurement outcomes, this fact spells trouble for the Copenhagen interpretation. For if we stipulate that $\ket*{\Psi_{\text{Bell}}}$ is a complete description of the spin state of the spin-singlet, then assuming Alice makes her measurement first and obtains the measurement outcome $\ket*{\uvbp{a}}_A$, then as this measurement outcome is established there will be a collapse of the state
 \begin{equation}\label{BellCollapse1}
@@ -650,7 +649,7 @@ We also assume that in each run of the experiment, Alice and Bob independently m
 } $N=\sum_{i=1}^8 N_i$ as shown in table \ref{hiddentable}.
       
       \begin{table}[ht]
-      \caption{Spin-components of particles $q_A$ and $q_B$ in the hidden-variable theory}
+      \caption[Spin-components of particles in the hidden-variable theory]{Spin-components of particles $q_A$ and $q_B$ in the hidden-variable theory}
       \centering
       \begin{tabular}{c c c} 
       \\ 
@@ -1357,7 +1356,6 @@ Since physicists have a good understanding of how different systems interact, th
      {\includegraphics[width=.45\textwidth]{Chapter02/Two-Slit_Experiment_Particles.png}};
      \node[below right] at (noninterfere.south west) {(B) Particles not exhibiting interference.};
     \end{tikzpicture}
-    \vspace*{10px}
     \caption[Double-Slit Experiment]{The Double-Slit Experiment. Particles are incident on a double slit. In diagram (A), the particles are exhibiting an interference pattern, whereas in diagram (B), the particles are not exhibiting an interference pattern. Whether or not there is interference will depend on factors such as the size of the particles and whether it can be ascertained which slit the particle went through. The larger the particles are, or the more information available as to which slit the particle went through, the less likely the particles will exhibit interference.\protect\footnotemark}
     \label{DoubleSlit}
     \end{figure}
@@ -1614,7 +1612,7 @@ Despite some attractive features of the many-worlds interpretation, it calls for
 %\usepackage[inline]{showlabels}
 \newpage 
 % flatex input: [Chapter03/chapterIntro.tex]
-\chapter{A description of Kent's Theory of Quantum Physics\label{kentchapterdesc}}
+\chapter{A Description of Kent's Theory of Quantum Physics\label{kentchapterdesc}}
 
 In this chapter, I will describe Kent's theory of quantum physics, but before doing this, it is worth briefly reminding ourselves of the problem in quantum physics that we wish to address. 
 
@@ -4885,8 +4883,8 @@ One final point worth considering is why one energy-density measurement on $S$ i
 %\usepackage[inline]{showlabels}
 
 % flatex input: [conclusion.tex]
-\chapter*{Conclusion}
-\addcontentsline{toc}{chapter}{Conclusion}
+\chapter*{CONCLUSION}
+\addcontentsline{toc}{chapter}{CONCLUSION}
 The purpose of this dissertation has been to evaluate the merits of Kent's one-world interpretation of quantum physics. I began this dissertation by discussing the mysterious correlations of spin measurements that are observed in the EPR-Bohm paradox: how is it that two distant observers Alice and Bob always get opposite results when they perform a spin measurement along parallel axes of two particles belonging to a spin singlet? Special relativity should rule out any faster than light communication between the two particles, and the violation of Bell's inequality rules out the possibility that the results of the spin measurements are already encoded in the states of the two particles.
  
 Shimony attempted to resolve this paradox by making a distinction between Outcome Independence (OI) and Parameter Independence (PI). Shimony argued that if PI held, then the correlations observed in the EPR-Bohm paradox would present no threat to special relativity since it would then be impossible for Alice and Bob to send messages to each other faster than the speed of light by choosing the axis on which they were to perform their spin measurements. On the other hand, if OI was false, the assumption on which Bell's inequality depends would not be valid. Thus, by accepting PI and denying OI, Shimony thought that quantum physics could be reconciled with special relativity without Bell's inequality needing to be satisfied. 
@@ -4924,7 +4922,7 @@ Inevitably, Kent's theory and my adaption to it are highly speculative. In this 
 
 
 \pagebreak
-\addcontentsline{toc}{chapter}{Notation}
+\addcontentsline{toc}{chapter}{NOTATION}
 
 \singlespacing 
 

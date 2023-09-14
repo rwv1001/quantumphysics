@@ -1,0 +1,767 @@
+% This file was build by John Miller and Jennifer Loe in Fall 2019 - Spring 2020. Any errors in it are probably John's. 
+% This blank dissertation file should closely follow the Baylor Graudate School's requirements and is intended to as minimal as possible.
+% I am writing this in overleaf/sharlatex. I'm specifically choosing to call only packages that are built into to overleaf/sharelatex so that this example should compile as a standalone .tex file in overleaf/sharelatex.
+
+\documentclass[12pt]{report} % for binding in a book change to [12pt,twosided]
+
+%\usepackage[left=1.25in,right=1.25in,top=1in,bottom=1in]{geometry} % for margins everywhere except abstract page, which is changed when needed 
+\usepackage[left=1.25in,right=1.25in,top=1.5in,bottom=1.5in]{geometry} 
+
+\usepackage{setspace} 
+\linespread{2} % this is to get a double spacing throughout AS IS DONE IN MICROSOFT WORD (which all that the graduate school knows), don't use "doublespacing" as built into setspace
+
+\usepackage{caption} % for captions
+\setlength{\intextsep}{25.92pt} % this plus the double space gives a triple space after figures in the text, however only a single space before. Will have to locally add extra space above figures by adding space (usually \vspace{25.92pt}, but check this locally) at begining of figure environments.
+\setlength{\textfloatsep}{25.92pt} % This puts a triple space after figures at the top of a page. 
+\DeclareCaptionJustification{flushLeft}{\flushleft}
+\captionsetup[figure]{ % tables setup
+   name=Figure,
+   listformat=simple,
+   justification=flushLeft, % makes the caption centered if not one line and left justified if more than one line. Don't use raggedright, it stil parindents the first line
+   font=normal,
+   skip = 16.92pt, % plus the built in space gives a double space between caption and figure
+   position = bottom, % places the caption below the figure
+   labelsep=period % period after the figure number
+}
+\captionsetup[table]{ % tables setup
+   name=Table,
+   listformat=simple,
+   justification=centering,
+   font=normal,
+   skip = 16.92pt, % plus the built in 4 pt gives a double space between caption and table
+   position = top, % places the caption above the table
+   labelsep=period, % period after the table number
+   indention=-\parindent
+}
+
+\usepackage[all]{nowidow} % no widows, no orphans
+
+\usepackage{titlesec} % without nostruts (sub)sections beginning on a new page would be pushed below the top margin
+\usepackage{fmtcount} % % For editing chapter and section titles.
+\titleformat{\chapter}[display]{\centering}{\MakeUppercase{\chaptertitlename} \ \NUMBERstring{chapter}}{0pt}{}% For the chapter number and title, Level 1 and 2 headings
+\titleformat{\section}[hang]{\centering \itshape}{ \thetitle \ }{0 pt}{} % Level 3 heading
+\titleformat{\subsection}[hang]{\itshape}{ \thetitle \ }{0pt}{} % Level 4 heading
+\titleformat{\subsubsection}[runin]{\itshape}{\thetitle}{\baselinestretch pt}{\hspace{\parindent}}[\it . ~] % Level 5 heading
+
+\titlespacing{\chapter}{0pt}{6pt}{12.96pt} % puts chapter titles at 1.5 inches from top, only needed an extra 6 pts. Puts a triple space after chapter title before first section
+\titlespacing{\section}{0pt}{12.96pt}{12.96pt} % puts a triple space above section title (unless there is no text before first section in a chapter, which is taken care of by the spacing after the chapter)
+\titlespacing{\subsection}{0pt}{12.96pt}{0pt} % puts a triple space above subsection title (unless there is no text before first subsection in a section, which is taken care of by the spacing after the section)
+\titlespacing{\subsubsection}{0pt}{12.96pt}{0pt} % puts triplespace above subsubsection title
+
+\usepackage{tocloft}% for formatting the table of contents, list of figures, and list of tables
+%\renewcommand\cftdotsep{2} % uncomment this and adjust the number to increase/decrease the number of dots/inch in toc/lof/lot
+\setlength{\cftaftertoctitleskip}{12.96pt} % for a triple space after titles of TOC/LOF/LOT
+\setlength{\cftafterloftitleskip}{25.92pt} % for a triple space after titles of TOC/LOF/LOT
+\setlength{\cftafterlottitleskip}{25.92pt} % for a triple space after titles of TOC/LOF/LOT
+\renewcommand\cftfigindent{0pt} % no indent for entries on LOF
+\setcounter{tocdepth}{1} % sets table of contents to only show down to subsections (level 1-3 headings)
+
+\usepackage[style=apa]{biblatex} % for hanging entries
+\setlength{\bibitemsep}{12.96pt} % gives a double space between entries
+\addbibresource{mybib.bib}
+
+\usepackage{amssymb, amsmath, amsfonts, amsthm, xcolor, tikz}
+
+%These two lines are for if you want to add algorithms:
+\usepackage[chapter]{algorithm}
+\usepackage{algpseudocode}
+%Algorithms should be formatted as figures and tables with a triple space above and below.  
+
+\usepackage[american]{babel} % delete this, just for examples
+\DeclareLanguageMapping{american}{american-apa} % delete this, just for examples
+\usepackage{lipsum} % for babel, delete this
+\usepackage{csquotes} 
+\usepackage{ytableau} % this is just for the figure example, delete it
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%   Put all your info in here, will be called later
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\newcommand{\mytitle}{This is This Is A Long Title\\ That Will Be On Two Lines} % Enter your title here with the line break you want.
+\newcommand{\myname}{Your Name Here} % Put you name here.
+\newcommand{\degreesought}{Ph.D.} % What degree you are going for
+\newcommand{\mymentor}{Thesis A. Advisor, Ph.D.} % your Ph.D. advisor and degree
+
+\newcommand{\shortsignatureline}[1]{ 
+        \begin{singlespacing}
+        \begin{center}
+        \vrule width 3.625in height 0.2mm
+        \\
+        \vspace{-.05in}
+        #1 
+        \end{center}
+        \end{singlespacing}
+}
+
+\newcommand{\longsignatureline}[1]{ 
+        \begin{singlespacing}
+        \begin{center}
+        \vrule width 4.375in height 0.2mm
+        \\
+        \vspace{-.05in}
+        #1 
+        \end{center}
+        \end{singlespacing}
+}
+
+\numberwithin{equation}{subsection}
+\numberwithin{figure}{chapter} % figures and table must be numbered withing chapters
+
+\newtheoremstyle{numbernote} % the numbernote theoremstyle acts like a level 5 heading. This is for numbered theorems (theroem, etc.) with a note. 
+  {12.96pt} % Space above
+  {0pt} % Space below
+  {\normalfont} % Body font
+  {\parindent} % Indent amount
+  {\itshape} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {\thmname{#1} \thmnumber{#2} \thmnote{(#3)}} % Theorem head spec 
+
+\newtheoremstyle{nonumber} % the nonumber theoremstyle acts like a level 5 heading. This is for unnumbered theorems (theroem*, etc.) with a note. Normally something like \newtheorem* works for this but it messed up my spacing with the punctiation after theorem head.
+  {12.96pt} % Space above
+  {0pt} % Space below
+  {\normalfont} % Body font
+  {\parindent} % Indent amount
+  {\itshape} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {\thmname{#1} \thmnote{(#3)}} % Theorem head spec 
+
+\newtheoremstyle{nonumbernonote} % the nonumbernonote theoremstyle acts like a level 5 heading. This is for unnumbered theorems (theroem*, etc.) without a note. Normally something like \newtheorem* works for this but it messed up my spacing with the punctiation after theorem head.
+  {12.96pt} % Space above
+  {0pt} % Space below
+  {\normalfont} % Body font
+  {\parindent} % Indent amount
+  {\itshape} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {\thmname{#1}} % Theorem head spec 
+
+\newtheoremstyle{nonote} % the nonote theoremstyle acts like a level 5 heading. This is for numbered theorems (theroem, etc.) without a note. 
+  {12.96pt} % Space above
+  {0pt} % Space below
+  {\normalfont} % Body font
+  {\parindent} % Indent amount
+  {\itshape} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {\thmname{#1} \thmnumber{#2}} % Theorem head spec 
+
+\theoremstyle{numbernote}
+\newtheorem{definition}{Definition}[subsection]
+
+\theoremstyle{nonumber}
+\newtheorem*{definition*}{Definition}
+\newtheorem*{case*}{Case}
+\newtheorem*{subcase*}{Subcase}
+
+\theoremstyle{nonumbernonote}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{proposition*}{Proposition}
+\newtheorem*{summary*}{Summary}
+\newtheorem*{example*}{Example}
+\newtheorem*{nonexample*}{Non-Example}
+\newtheorem*{remark*}{Remark}
+
+\theoremstyle{nonote}
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{corollary}{Corollary}[subsection]
+\newtheorem{lemma}{Lemma}[subsection]
+\newtheorem{proposition}{Proposition}[subsection]
+\newtheorem{case}{Case}[section]
+\newtheorem{subcase}[subsection]{Case}
+\newtheorem{summary}{Summary}[subsection]
+\newtheorem{example}{Example}[subsection]
+
+%\DeclareCaptionLabelFormat{continued}{#1 #2 (Cont.)} % here the #1 is for the name, #2 is the number, So this will make \ContinuedFloats be labeled Name Number (Cont.)
+%\captionsetup[ContinuedFloat]{labelformat=continued} % these two lines are for figures that need to be broken up over multiple pages
+
+\usepackage{etoolbox}
+\appto\normalsize{\belowdisplayshortskip=\belowdisplayskip} % this is for spacing around displayed equations
+\appto\normalsize{\abovedisplayshortskip=\abovedisplayskip}
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\begin{document}
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+\renewcommand\contentsname{\vspace{-.75in} {\centering \normalsize{ \textnormal{TABLE OF CONTENTS} } \par}} % Adjusts these to look like they need to and put them at 2.5 inches from the top of the page
+\renewcommand\listfigurename{\vspace{-.75in} {\centering \normalsize{ \textnormal{LIST OF FIGURES} } \par}} %
+\renewcommand\listtablename{\vspace{-.75in} {\centering \normalsize{ \textnormal{LIST OF TABLES} } \par}}   %
+
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  Front Matter
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%   Abstract
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+\thispagestyle{empty}
+\newgeometry{left=1.25in,right=1.25in,top=2.5in,bottom=1in} % 2.5 in top margin for abstract page - shouldn't be more than a page
+
+{\centering ABSTRACT\\
+   
+    \begin{singlespacing}
+    \mytitle{}\\            % singlespacing for the title
+    \end{singlespacing}
+
+ \myname{}, \degreesought{} \\
+    
+Mentor: \mymentor{}
+\par} 
+
+\vspace{12.96pt} % to get a triple space before abstract
+% Now your abstract:
+
+The abstract briefly summarizes the contents of the document. Begin the body of the abstract after a triple-space below the mentor’s name. The first line of the abstract is indented, paragraph style. Text is double-spaced. Limit the
+dissertation abstract to 350 words; the thesis abstract to 150 words.
+
+
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%   End of Abstract
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\pagebreak
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%   Signature Page
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+\newgeometry{left=1.25in,right=1.25in,top=1in,bottom=0.4375in} % this is for the signature page only
+\thispagestyle{empty}
+\begin{center}
+    \begin{singlespacing}
+    \mytitle{}\\            % singlespacing for the title
+    \end{singlespacing}
+
+    by\\
+    
+    \myname{}, B.S.\\ % after your name put your current degrees held
+
+    A Dissertation
+    
+    Approved by the Department of Mathematics
+    
+    \longsignatureline{Dorina Mitrea, Ph.D., Chairperson} % dept chair goes here
+
+\begin{singlespacing}
+    Submitted to the Graduate Faculty of\\
+    
+    Baylor University in Partial Fulfillment of the\\
+    
+    Requirements for the Degree\\
+    
+    of\\
+    
+\end{singlespacing}
+
+    Doctor of Philosophy\\ % or Masters of Science 
+\end{center}
+
+\vspace{0.25in} % put the right amount of space in here
+
+\begin{minipage}{3.625in}
+\begin{center}
+Approved by the Dissertation Committee
+
+\shortsignatureline{\mymentor{}, Chairperson}
+
+\vspace{-.175in}
+
+\shortsignatureline{Reader Number 2, Ph.D.} % These won't be called again so they don't get a command
+
+\vspace{-.175in}
+
+\shortsignatureline{Reader Number 3, Ph.D.}
+
+\vspace{-.175in}
+
+\shortsignatureline{Reader Number 4, Ph.D.}
+
+\vspace{-.175in}
+
+{\color{white} \shortsignatureline{Reader Number 5, Ph.D.}} % make this not white if you have a 5th reader
+\end{center}
+\end{minipage}
+
+\vfill
+
+{\hfill
+\begin{minipage}{3.625in}
+\begin{center}
+Accepted by the Graduate School 
+
+Month 20XX %This should be the month and year you are GRADUATING, not defending.
+
+\shortsignatureline{J. Larry Lyon, Ph.D., Dean} % Dean of the graduate school
+
+\end{center}
+\end{minipage}
+}
+
+\vfill
+
+\begin{center}
+    {\scriptsize \it Page bearing signatures is kept on file in the Graduate School.}
+\end{center}
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%   End of Signature Page
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\pagebreak
+\restoregeometry % if we use restore geometry we get the 2.5 in margin - don't want that
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%   Copyright Page
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\thispagestyle{empty}
+~
+
+\vfill{}
+
+\begin{center} 
+Copyright \copyright ~ \the\year ~ by \myname \\ %This year should match your GRADUATION year!  If you defend before the year you are graduating, change this manually.
+
+All rights reserved
+\end{center}
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  End Copyright Page
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\pagebreak
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+\pagenumbering{roman} % roman until chapter 1
+\setcounter{page}{4} % to make the previous pages count
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  Table of Contents
+%----------%----------%----------%----------%----------%----------%----------%----------%
+{
+\let\LaTeXStandardTableOfContents\tableofcontents
+\renewcommand{\tableofcontents}{
+\begingroup
+\renewcommand{\bfseries}{\relax}
+\LaTeXStandardTableOfContents
+\endgroup}
+\setstretch{1} % makes TOC single space
+\tableofcontents
+}
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  End Table of Contents
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\pagebreak
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  List of Figures
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+\listoffigures
+\addcontentsline{toc}{chapter}{LIST OF FIGURES} % adds this to table of contents
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  End List of Figures
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\pagebreak
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  List of Tables
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\listoftables
+\addcontentsline{toc}{chapter}{LIST OF TABLES} % adds this to table of contents
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  End List of Tables
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\pagebreak
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  Acknowledgements
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\chapter*{ACKNOWLEDGMENTS} % chapter* doesn't give this a chapter number
+\addcontentsline{toc}{chapter}{ACKNOWLEDGMENTS} % adds this to table of contents
+
+An acknowledgments section traditionally is included in all dissertations and theses. It
+is the place for the author to acknowledge professionally the various sources of
+direction, assistance, funding, etc. that facilitated the project. 
+
+% A few suggestions from idk who:
+
+%1. gratitude. you can't thank everyone who helped with your dissertation, your graduate career, and your life, but some folks have gone way out of their way for you. this is a nice opportunity to note their contributions. for me, it was also a nice opening for somewhat cheekily acknowledging the particular debts i owed to those who taught me research skills and values. for example, i mentioned that "To the extent that I've stolen from others, I've probably stolen more ideas from Irv than from anyone else. As I leave Wisconsin, I only wish I had committed more of them to paper."
+
+%2. tone. i favor a more conversational tone for acknowledgements than for the balance of the dissertation, but remember that these pages must nevertheless remain part of the dissertation. try to avoid the sort of slang, profanity, or extreme informality that will look silly in a decade or two.
+
+%3. don't hate, congratulate. unless you are profoundly insensitive, you are certain to be bitter, peeved, dismayed, or chagrined about something that happened during your graduate career. you might be tempted to express these sentiments in the acknowledgements. nevertheless, i'd advise against a paragraph highlighting, say, your fortitude in forging on "despite Professor Uggleson's consistently wrongheaded advice." this sort of thing generally comes off like a teenager's complaint against a well-meaning parent. similarly, the conspicuous exclusion of advisors and committee chairs is akin to dis-inviting a friend to your birthday party. it isn't really appropriate anymore, is it? instead, just let the healing begin.
+
+%4. expand the field. everyone acknowledges their advisors and committee members, as well as their parents and partners. but who else gave real support? when i started thinking big-picture, i knew i couldn't ignore my fine undergrad teachers at the wizversity, great friends from my halcyon days as a social worker, and my beloved softball team. upon deeper reflection, i simply had to acknowledge the influence of paul westerberg, robert merton, bob mould, gore vidal, james coleman, satchel paige, and travis hirschi, as well as "George, Larry, and Flaherty, the police officers who helped me out many years ago, for their judicious and humane discretion." i couldn't have made it without them, that's for sure.
+
+%5. specificity counts. rather than simply thanking a list of names or categories of people, show how they helped you along the way. did their wicked sense of humor help you bear the pressure of a tough first semester? did they hook you up with the research assistantship that paid off big-time? did they offer emotional support when you seriously considered leaving the business?
+
+%you can draft the acknowledgements early, but I wouldn't circulate them to your committee until after your oral examination. at that point, i'd just run them by your advisor and then insert the pages shortly before you officially file the documents. once you're all approved and filed, you can then deliver a handsomely bound dissertation -- in classic black with gold lettering, of course -- to your committee members and to anyone else who helped out along the way. trust me, they'll appreciate it. and which section do you think they'll read first?
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  End Acknowledgements
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\pagebreak
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  Dedication
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\newgeometry{left=1.25in,right=1.25in,top=3in,bottom=1in} % the dedication should be 3 inches from the top
+\addcontentsline{toc}{chapter}{DEDICATION} % adds this to table of contents
+{\centering The text of this page is brief and generally there is no ending punctuation \par}
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  End Dedication
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\pagebreak
+\restoregeometry
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  Body
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+\pagenumbering{arabic} % arabic page numbering for the body
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\chapter{Preliminaries} \label{Chapter: Preliminaries}
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+Maybe some set-up.
+
+%----------%----------%
+\section{Background}
+%----------%----------%
+
+%----------%
+\subsection{A subsection with a theorem}
+%----------%
+
+\begin{theorem}[Hilbert]
+    This is a theorem that is going to span multiple lines (hopefully) and a displayed math ending. Notice the spacing around the displayed math looks off.
+    \begingroup % this will have to be done locally for displayed math that is small enough, or if you have mostly small math you can make this global and locally change displayed math that is large
+        \abovedisplayskip=0pt plus 6pt minus 9pt
+        \abovedisplayshortskip=0pt plus 6pt minus 4 pt
+        \belowdisplayskip=0pt plus 3pt minus 9pt
+        \belowdisplayshortskip=0pt plus 3pt minus 4pt
+    \[
+        y = F(x)
+    \]
+    \endgroup
+    where \(F\) is a happy fella.
+\end{theorem}
+
+If you have displayed math of different sizes you can mess with the above definitions to space it out different. For example:
+\begingroup
+    \abovedisplayskip=6pt plus 6pt minus 9pt
+    \abovedisplayshortskip=6pt plus 6pt minus 4 pt
+    \belowdisplayskip=6pt plus 3pt minus 9pt
+    \belowdisplayshortskip=6pt plus 3pt minus 4pt
+\[
+    \int_a^b f(x) ~ dx = F(b) - F(a)
+\]
+\endgroup
+If you have mostly displayed math that is one line, you can add the above to the preamble. 
+
+\begin{example*}
+    The Young diagram associated to \(\lambda = (5, 3, 1, 1)\) is 
+    \[
+        \ytableaushort{~~~~~,~~~,~,~}
+    \]
+    and a semistandard tableaux on the shape \(\lambda\) is
+    \[
+        \ytableaushort{1 1 2 2 3,2 2 5,4 5 6, 5}.
+    \]
+    Check out this paper. \parencite{sam2011pieri}
+\end{example*}
+~ \vspace{-25.92pt} % this gives a triple space before the subsection below
+
+%----------%
+\subsection{A subsection}
+%----------%
+
+\lipsum[1]
+
+\subsubsection{A subsubsection}
+
+\lipsum[1]
+
+\begin{theorem*}[(2020)] %notice that since we put theorem* as no number no note, that's what happens. You can move this to where you like or make more \newtheorems to do this
+    Statement.
+\end{theorem*}
+
+\lipsum[1]
+
+\begin{definition*}[Here's what it's called]
+    This is it.
+\end{definition*}
+
+\lipsum[1]
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% End Section Background
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% Section Contributions
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\section{Contributions}
+
+Contributions. \lipsum[1]
+
+% putting a table to see it show on list of tables
+\begin{table}[!htbp]
+    \caption[An example of a long caption]{A Table with a really long caption so that it goes over two lines I hope. This must be centered, not left-justified.}
+    \label{tab:my_label}
+    \centering
+    \begin{tabular}{c|c}
+        \hline
+        Col1 & Col2\\
+        \hline
+        1 & 1 \\
+        1 & 1 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\lipsum[1]
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% Subsection A subsection
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\subsection{A Subsection. Must Use Title Capitalization}
+
+
+\lipsum[1]
+
+Here is an equation: long text long text long text
+\begin{align*}
+    A &= \prod_{\substack{x = y,\\ 1 = 4\\ 7 - 1\\ 11}} B
+\end{align*}
+Wasn't that nice. I need this line to be longer so I can see what's happening.
+
+\begin{table}
+    \caption{Another Table}
+    \label{tab:my_label1}
+    \centering
+    \begin{tabular}{c|c}
+        \hline
+        Col1 & Col2\\
+        \hline
+        1 & 1 \\
+        1 & 1 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\lipsum[1]
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% Subsubsection A subsubsection
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\subsubsection{A Subsubsection}
+
+\lipsum[1]
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% End Subsection A subsubsection
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% End Subsection A subsection
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% End Section Contributions
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% End Chapter Introduction
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  Chapter Two - Preliminaries
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\chapter{Preliminaries}
+
+Preliminaries. Here I'm going to talk about things from Chapter One.  If I reference Chapter One, I must spell out the number ``One".  The automatic LaTeX referencing to a chapter label does not do this.
+
+This is from a book. \parencite{sternberg1995group}  
+
+\lipsum[1]
+
+% putting a figure to see it show on list of figures
+%-----%
+\begin{figure}[!htbp]
+\centering
+\vspace{25.92pt} % you'll have to manually space to get a triple space around figures, tables, etc.
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (1.25,1);
+        \draw[<->] (0,.25) -- (1.25,.25);
+        \node at (.25,.4) {\small \(w_1\)};
+        \draw[<->] (1,0) -- (1,1);
+        \node at (.8,.7) {\small \(h_1\)};
+    \end{tikzpicture}
+\caption{A box with width and height.}
+\label{A box with width and height}
+\end{figure}
+%-----%
+
+Here is some text and stuff.
+
+\lipsum[1]
+
+\begin{algorithm}[!htbp]
+	\caption{Classical Gram-Schmidt Procedure}
+	\begin{algorithmic}[1]
+		\For{$j = 1:m$}
+			\State $u_j \gets x_j$
+			\For{$i = 1:j-1$}
+				\State $\alpha_{ij} \gets u_i^Tx_j$
+				\State $u_j \gets u_j - \alpha_{ij} u_i$
+			\EndFor
+		\State $\alpha_{jj} \gets \|u_j\|$
+		\EndFor
+	\end{algorithmic}
+	\label{alg:ClassicalGramSchmidt}
+\end{algorithm}
+
+\lipsum[1]
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% End Chapter Two - Preliminaries
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\pagebreak
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% Chapter Three
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+\chapter{My Previously Published Chapter}
+
+\vspace{12.96pt} % this is to get a triple space around the following
+{
+    \setstretch{1}
+
+    A majority of this chapter is published as: publication info. long lines..... in a journal. more length. Title. 2020. \par % without this \par the single spacing doesn't happen!
+}
+\vspace{12.96pt} % this is to get a triple space around the previous
+
+Consider this publication... \lipsum[1]
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% End Chapter Three
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+\pagebreak
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%  Back Matter
+%----------%----------%----------%----------%----------%----------%----------%----------%
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% Appendices Page
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+\titleformat{\chapter}[display]{\centering}{\MakeUppercase{\chaptertitlename} \ \thechapter}{0pt}{}% Changin the chapter number and title for appendices, Level 1 and 2 headings
+\appendix
+
+~
+\vfill
+
+{\centering APPENDICES \par} % If only one appendix change to APPENDIX
+
+
+\vfill
+~
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% End Appendices Page
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% Appendix A
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+\chapter{Title of Appendix A}
+
+\lipsum[1]
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% End Appendix A
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% Appendix B
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+\chapter{Title of Appendix B}
+
+\lipsum[1]
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% End Appendix B
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% Bibliography
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+\begingroup 
+\setstretch{1} % this changes the bibliography to single space within each item
+\titlespacing{\chapter}{0pt}{19.44pt}{25.92pt} % since single spaced now have to change this.
+
+\printbibliography[title={BIBLIOGRAPHY}]
+\addcontentsline{toc}{chapter}{BIBLIOGRAPHY} % adds this to table of contents
+\endgroup
+
+
+%----------%----------%----------%----------%----------%----------%----------%----------%
+% End Bibliography
+%----------%----------%----------%----------%----------%----------%----------%----------%
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
