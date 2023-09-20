@@ -3,8 +3,12 @@
 Although I have already argued in section \ref{kentinterpretationconsistency} that Kent's theory predicts the same expectation values as standard quantum theory when one averages Kent's beables over all the possible mass-energy density measurements that could be made on $S$, these expectation values are not the expectation values we'd be interested in if we were scientists performing an experiment such as the Stern-Gerlach experiment. Rather, we would typically base our expectation calculations on the state of the apparatus and the system being measured -- we would not base our expectation calculations on the  universal quantum state $\ket*{\Psi_n}$ on a hypersurface $S_n$. Also, in considering the question of whether PI or OI are true, we need to assume that there are some existing observers with their apparatuses. However, we wouldn't be able to make such an assumption if all we had to go on was the quantum state $\ket*{\Psi_n}$ that had unitarily evolved from some primordial state $\ket*{\Psi_0}$. So in order for Kent's theory to say anything about such situations, we must be able to extract the quantum state of a system at a particular time from the universal quantum state $\ket*{\Psi_0}$ and the mass-energy density $\tau_S$. I will refer to such a state as a \emph{conditioned quantum state}\index{conditioned quantum state}. In this section I will explain how to extract conditioned quantum states from $\ket*{\Psi_0}$ and $\tau_S$, and I will show that given a conditioned quantum state, Kent's theory does indeed give the same predictions as standard quantum theory in the case of an experimental apparatus $\mathcal{A}$ measuring the properties of a particle $\mathcal{S}$. Again, we will consider a toy model similar to Kent's toy model described in section \ref{toysection} where photons are treated as point particles. 
  
 So let $\tau_S$ be the notional mass-energy density measurement on $S$. In order to avoid undue complexity, we will assume that there is no simultaneous $\hat{T}_S$-eigenstate degeneracy so that if $\ket*{\Gamma}$ and $\ket*{\Gamma'}$ are normalized\footnote{In this section we will assume that all states are normalized.} simultaneous $\hat{T}_S$-eigenstates with simultaneous eigenvalues $\tau_S$ and $\tau_S'$ respectively, then
-$$(\forall x\in S) \,(\tau_S(x)=\tau_S'(x))\implies \ket*{\Gamma}=\ket*{\Gamma'}.\protect\footnotemark $$\footnotetext{The only reason for making this assumption is in order to avoid cluttering the notation. But if one insisted, one could add an index to all the states below in order to keep track of any degeneracy present.}This means that corresponding to $\tau_S$, there will be a unique simultaneous $\hat{T}_S$-eigenstate $\ket*{\Gamma}$, and according to the Born Rule, the notional mass-energy density measurement outcome $\tau_S$ will have been selected with a probability 
-$$P(T_S = \tau_S)=|\mel{\Gamma}{U_{SS_0}}{\Psi_0}|^2=|\ip{\Gamma}{\Psi_S}|^2$$
+\begin{equation*}
+(\forall x\in S) \,(\tau_S(x)=\tau_S'(x))\implies \ket*{\Gamma}=\ket*{\Gamma'}.\protect\footnotemark 
+\end{equation*}\footnotetext{The only reason for making this assumption is in order to avoid cluttering the notation. But if one insisted, one could add an index to all the states below in order to keep track of any degeneracy present.}This means that corresponding to $\tau_S$, there will be a unique simultaneous $\hat{T}_S$-eigenstate $\ket*{\Gamma}$, and according to the Born Rule, the notional mass-energy density measurement outcome $\tau_S$ will have been selected with a probability 
+\begin{equation*}
+P(T_S = \tau_S)=|\mel{\Gamma}{U_{SS_0}}{\Psi_0}|^2=|\ip{\Gamma}{\Psi_S}|^2
+\end{equation*}
 where $\ket*{\Psi_0}$ is the state of the initial hypersurface $S_0$, where $U_{SS_0}$ is the unitary operator defined by equation (\ref{SchwingerUnitaryOP}), and where $\ket*{\Psi_S}=U_{SS_0}\ket*{\Psi_0}$.
 
 Now suppose this notional mass-energy density measurement outcome $\tau_S$ indicates that there is some apparatus $\mathcal{A}$ that exists in the vicinity of a spatial location $z_0$ %
@@ -210,7 +214,9 @@ We will assume that given that the notional mass-energy density measurement rest
  is the set of pointer states corresponding to a particular parameter setting of the apparatus $\mathcal{A}$ that are encapsulated in the state $\ket*{a}$. As described on page \pageref{pointer}, this means there are future states $\ket*{a_j}$  %
 \nomenclature{$\{\ket*{a_j}:j\}$}{States of the apparatus $\mathcal{A}$ corresponding to the set of pointer states  $\{\ket*{s_j}:j\}$  of $\mathcal{S}$, \nomrefpage}%
 of the apparatus $\mathcal{A}$ such that $\ip{a_j}{a_{j'}}=0$ for $j\neq j'$,\footnote{Strictly speaking, $\ip{a_j}{a_{j'}}\approx 0$ for $j\neq j'$, but we will assume $\ip{a_j}{a_{j'}}=0$ in this toy model in order to avoid undue complexity.} and such that the composite system $\mathcal{S}+\mathcal{A}$ will evolve according to the Schr\"{o}dinger equation as
-$$\ket*{s_j}\ket*{a}\rightarrow \ket*{s_j}\ket*{a_j} $$
+\begin{equation*}
+\ket*{s_j}\ket*{a}\rightarrow \ket*{s_j}\ket*{a_j} 
+\end{equation*}
 for each pointer state $\ket*{s_j}$, and hence
 \begin{equation}\label{saevolution}
 \ket*{s}\ket*{a}\rightarrow \sum_j c_j \ket*{s_j}\ket*{a_j}.
@@ -275,13 +281,21 @@ Now we're assuming that the measurement outcome $\tau_S$ on the whole of $S$ wil
 where $\ket*{\gamma_k'}$ correspond to the possible measurements of $T_S(x)$  on $(S\cap S_f)\setminus(S\cap S_i)$, and $\sum_k\abs{g_k}^2=1$.
 
 But from time $t_f$ to $t_m$, we assume that the apparatus does get entangled with photons which are measured on $S\cap S_m$. Thus, if $\{\ket*{\gamma_j^{\prime\prime}}:j\}$ are the normalized states representing the possible measurements outcomes of these photons such that $\ip{\gamma_j^{\prime\prime}}{\gamma_k^{\prime\prime}}\approx 0$ for $j\neq k$, then 
-$$U_{S_m,S_f} U_{S_f,S_i}\ket*{\Phi_{i}}\approx \sum_j c_j\ket*{s_j}\ket*{a_j}\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\gamma_i^{(\mathcal{A})}}\sum_kg_k\ket*{\gamma'_k}\ket*{\gamma_j^{\prime\prime}}.$$
+\begin{equation*}
+U_{S_m,S_f} U_{S_f,S_i}\ket*{\Phi_{i}}\approx \sum_j c_j\ket*{s_j}\ket*{a_j}\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\gamma_i^{(\mathcal{A})}}\sum_kg_k\ket*{\gamma'_k}\ket*{\gamma_j^{\prime\prime}}.
+\end{equation*}
 Since we are assuming that at time $t_m$ a measurement of photons on $S\cap S_m$ is able to determine that the apparatus is in state $\ket*{a_f}$, this can only happen if $U_{S_m,S_f} U_{S_f,S_i}\ket*{\Phi_{i}}$ is found to be in one of the states $\ket*{\Phi_{k,f}}$ for some $k$ where
-$$\ket*{\Phi_{k,j}}=\ket*{s_j}\ket*{a_j}\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\gamma_i^{(\mathcal{A})}}\ket*{\gamma'_k}\ket*{\gamma_j^{\prime\prime}}.$$
+\begin{equation*}
+\ket*{\Phi_{k,j}}=\ket*{s_j}\ket*{a_j}\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\gamma_i^{(\mathcal{A})}}\ket*{\gamma'_k}\ket*{\gamma_j^{\prime\prime}}.
+\end{equation*}
 By the Born Rule, the probability $\ket*{\Phi_i}$ will be found to be in state $\ket*{\Phi_{k,j}}$ will be
-$$\abs{\ip{\Phi_{k,j}}{\Phi_i}}=\abs{c_j}^2\abs{g_k}^2.$$
+\begin{equation*}
+\abs{\ip{\Phi_{k,j}}{\Phi_i}}=\abs{c_j}^2\abs{g_k}^2.
+\end{equation*}
 Therefore,
-$$P(f|\ket*{\Phi_i})=\sum_k \abs{\ip{\Phi_{k,f}}{\Phi_i}}=\abs{c_f}^2=\abs{\ip{s_f}{s}}^2.$$
+\begin{equation*}
+P(f|\ket*{\Phi_i})=\sum_k \abs{\ip{\Phi_{k,f}}{\Phi_i}}=\abs{c_f}^2=\abs{\ip{s_f}{s}}^2.
+\end{equation*}
 Hence, the probability that a complete measurement of $T_S(x)$ on $S$ will give a measurement outcome of the particle being in state $\ket*{s_f}$ given the partial measurement of $T_S(x)$ on $S_i\cap S$ determines the particle to be initially in the state $\ket*{s}$ will be the same as the standard Born Rule probability $\abs{\ip{s_f}{s}}^2$ of $\ket*{s}$ being found to be in state $\ket*{s_f}$.
 
 \end{comment}
@@ -295,7 +309,9 @@ Now in equation (\ref{kentconsistency0}), we saw how to calculate the expectatio
 \ev*{\hat{O}}_{\tau_S}=\lim_{n\rightarrow\infty}\frac{\ev*{\pi_{n,i}\hat{O}}{\Psi_{n,i}}}{\ev*{\pi_{n,i}}{\Psi_{n,i}}}.
 \end{equation}
 By (\ref{piphi}), $\lim_{n\rightarrow\infty}\ev*{\pi_{n,i}}{\Psi_{n,i}}=\abs{b}^2$, and so taking $\hat{O}$ to be $[s_f]$ at spacetime location $y_i$ we have 
-$$ \ev*{[s_f]}_{\tau_S}=\frac{\abs{b}^2\abs{\ip{s_f}{s}}^2}{\abs{b}^2}=\abs{\ip{s_f}{s}}^2.$$
+\begin{equation*}
+ \ev*{[s_f]}_{\tau_S}=\frac{\abs{b}^2\abs{\ip{s_f}{s}}^2}{\abs{b}^2}=\abs{\ip{s_f}{s}}^2.
+\end{equation*}
 Thus, Kent's conditional expectation $\ev*{[s_f]}_{\tau_S}$ at spacetime location $y_i$ gives us the same probability $\abs{\ip{s_f}{s}}^2$ for a particle transitioning from state $\ket*{s}$ to state $\ket*{s_f}$ as in standard quantum theory.
 
 We can also use Kent's conditional expectation to show that at time $t_m$, $\ket*{s_f}$ occurs with probability $1$ given the notional measurement $\tau_S$ on $S$ outside the light cone of $y_m=(t_m,z_0)$ has $\ket*{\gamma_f'}$ as a component. To see this, first note that since we are assuming that between times $t_i$ and $t_f$, $\ket*{s}\ket*{a}$ evolves according to (\ref{saevolution}), we can apply $U_{S_{n,f},S_{n,i}}$ to (\ref{Psinidecomp}) (where $S_{n,f}$ is one of the hypersurfaces that goes through $y_f$ as depicted in figure \ref{pisolution}) to get
@@ -323,7 +339,9 @@ where the component $\ket*{\xi_{n,m}}$ %
 and the larger $n$ is, the closer (\ref{piphim}) will come to being an equality. 
 
 We can now use (\ref{kentconsistency}) to calculate Kent's conditional expectation of $\ev*{[s_f]}_{\tau_S}$ at spacetime location $y_m$. By (\ref{piphim}), we have  $\lim_{n\rightarrow\infty}\ev*{\pi_{n,m}}{\Psi_{n,m}}=\abs{b}^2 \abs{c_f}^2 $, and $\lim_{n\rightarrow\infty}\ev*{[s_f] \pi_{n,m}}{\Psi_{n,m}}=\abs{b}^2 \abs{c_f}^2 $, and so by (\ref{kentevo}), at spacetime location $y_m$ we have
-$$ \ev*{[s_f]}_{\tau_S}=1,$$
+\begin{equation*}
+ \ev*{[s_f]}_{\tau_S}=1,
+\end{equation*}
 and so according to Kent's theory, $\mathcal{S}$ will be in state $\ket*{s_f}$ by time $t_m$.
 
 Also note that we can typically expect the $\ket*{\gamma_i^{(\mathcal{S})}}$-state to be independent of the $\ket*{\gamma_i^{(\mathcal{A})}}$-state. Therefore, since $\ket*{\gamma_i^{(\mathcal{A})}}$ will determine the measurement choice, and since $\ket*{\gamma_i^{(\mathcal{S})}}$ determines the initial state of the particle, we can expect the state of the particle to be independent of the measurement choice in Kent's theory. Thus, we can fulfil one of the necessary criteria (i.e. criterion \ref{hidden2}) for PI to be a well-defined notion.
@@ -342,14 +360,26 @@ $O_{\mathcal{S}}$ %
  be the observable that returns $j$ if the system $\mathcal{S}$ is measured to be in the state $\ket*{s_j}$, and for $\lambda = \ket*{\gamma_i^{(\mathcal{S})}}$, we let $P_\lambda^{\ket*{s}}(O_{\mathcal{S}}=j)$ denote the probability that $O_{\mathcal{S}}=j$ given that the hypersurface is in state $\ket*{\Psi_S}$ before the notional mass-energy density measurement on $S$, and that this measurement result is only determined up to the state $\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\Xi_i^{(S^1(y_i))}}$ on the subregion $S^1(y_1)\setminus S_{\mathcal{A}}$ which nevertheless ensures the system $\mathcal{S}$ is in the  state $\ket*{s}$ before it interacts with the apparatus $\mathcal{A}$. Then to calculate $P_\lambda^{\ket*{s}}(O_{\mathcal{S}}=j)$, we will need to sum over the probabilities that the notional energy density measurement has a $\ket*{\gamma_j'}$ component\footnote{To avoid undue complexity, we assume there is only one $\ket*{\gamma_j'}$-state for each $\ket*{a_j}$-state of the apparatus $\mathcal{A}$.} in its simultaneous $\hat{T}_S$-eigenstate for each state in the basis of states  $\{\ket*{Z_1'},\ket*{Z_2'},\ldots\}$ %
  \nomenclature{$\{\ket*{Z_k'}:k\}$}{Basis of states corresponding to the subregion $S\setminus(S^{1}(y_i)\cup S_{\mathcal{A}}')$, \nomrefpage}%
   corresponding to the subregion $S\setminus(S^{1}(y_i)\cup S_{\mathcal{A}}')$. Accordingly, if we slightly redefine our notation by absorbing $\ket*{\gamma_i^{(\mathcal{A})}}$ into the $\ket*{\gamma_l'}$, we will find that   
-$$P_\lambda^{\ket*{s}}(O_{\mathcal{S}}=j)=\frac{\sum_k|\ip*{\Psi_S}{\gamma_i^{(\mathcal{S})}}\ket*{\Xi_i^{(S^1(y_i))}}\ket*{\gamma_j'}\ket*{Z_k'}|^2}{\sum_{k,l}|\ip*{\Psi_S}{\gamma_i^{(\mathcal{S})}}\ket*{\Xi_i^{(S^1(y_i))}}\ket*{\gamma_l'}\ket*{Z_k'}|^2}.$$ 
+\begin{equation*}
+P_\lambda^{\ket*{s}}(O_{\mathcal{S}}=j)=\frac{\sum_k|\ip*{\Psi_S}{\gamma_i^{(\mathcal{S})}}\ket*{\Xi_i^{(S^1(y_i))}}\ket*{\gamma_j'}\ket*{Z_k'}|^2}{\sum_{k,l}|\ip*{\Psi_S}{\gamma_i^{(\mathcal{S})}}\ket*{\Xi_i^{(S^1(y_i))}}\ket*{\gamma_l'}\ket*{Z_k'}|^2}.
+\end{equation*} 
 Also note that with this slight redefinition of $\ket*{\gamma_l'}$,  equation (\ref{PsiSdecomp}) becomes
-$$\ket*{\Psi_S}=b\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\Xi_i^{(S^1(y_i)}}\sum_lc_l\ket*{\gamma_l'}\ket*{\Xi_l}+\cdots.$$
+\begin{equation*}
+\ket*{\Psi_S}=b\ket*{\gamma_i^{(\mathcal{S})}}\ket*{\Xi_i^{(S^1(y_i)}}\sum_lc_l\ket*{\gamma_l'}\ket*{\Xi_l}+\cdots.
+\end{equation*}
 We will therefore be able to express
 $\ket*{\Xi_l}$ in terms of the basis $\{\ket*{Z_1'}, \ket*{Z_2'},\ldots  \}$ so that 
-$$\ket*{\Xi_l}= \sum_k d_{lk}\ket*{Z_k'}$$
+\begin{equation*}
+\ket*{\Xi_l}= \sum_k d_{lk}\ket*{Z_k'}
+\end{equation*}
 with $\sum_{k}|d_{lk}|^2=1$ since we are assuming all states are normalized. Therefore,
-$$P_\lambda^{\ket*{s}}(O_{\mathcal{S}}=j)=\frac{|b|^2|c_j|^2\sum_k |d_{jk}|^2}{|b|^2\sum_{k,l} |c_l|^2 |d_{lk}|^2}= |c_j|^2.$$
-Therefore, $$P_\lambda^{\ket*{s}}(O_{\mathcal{S}}=j)=|\ip*{s}{s_j}|^2=P^{\ket*{s}}(O_{\mathcal{S}}=j).$$ Moreover, since $\sum_\lambda p_\lambda =1$ we have 
-$$\sum_\lambda p_\lambda P_\lambda^{\ket*{s}}(O_{\mathcal{S}}=j)= P^{\ket*{s}}(O_{\mathcal{S}}=j)$$
+\begin{equation*}
+P_\lambda^{\ket*{s}}(O_{\mathcal{S}}=j)=\frac{|b|^2|c_j|^2\sum_k |d_{jk}|^2}{|b|^2\sum_{k,l} |c_l|^2 |d_{lk}|^2}= |c_j|^2.
+\end{equation*}
+Therefore, \begin{equation*}
+P_\lambda^{\ket*{s}}(O_{\mathcal{S}}=j)=|\ip*{s}{s_j}|^2=P^{\ket*{s}}(O_{\mathcal{S}}=j).
+\end{equation*} Moreover, since $\sum_\lambda p_\lambda =1$ we have 
+\begin{equation*}
+\sum_\lambda p_\lambda P_\lambda^{\ket*{s}}(O_{\mathcal{S}}=j)= P^{\ket*{s}}(O_{\mathcal{S}}=j)
+\end{equation*}
 which is analogous to the EA formula on page \pageref{adeq}.

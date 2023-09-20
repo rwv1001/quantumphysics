@@ -406,7 +406,7 @@ cube side color=blue!40,
 
 \newif\iffootnotez
 \let\FootnotetextZ\footnotetext
-\renewcommand\footnotetext[1]{\begingroup\footnoteztrue\FootnotetextZ{#1}\endgroup}
+\renewcommand\footnotetext[2][\value{footnote}]{\begingroup\footnoteztrue\FootnotetextZ[#1]{#2}\endgroup}
 \let\FootnoteZ\footnote
 \renewcommand\footnote[1]{\begingroup\footnoteztrue\FootnoteZ{#1}\endgroup}
 
@@ -422,9 +422,9 @@ cube side color=blue!40,
 
 %RWV begin - need to have double space between footnotes
 \renewcommand{\footnoterule}
-    {\noindent\smash{\rule[-8pt]{2.4in}{0.4pt}}}
+    {\noindent\smash{\rule[-5pt]{2.4in}{0.4pt}}}
 \setlength{\footnotesep}{1.33\baselineskip}
-\setlength{\skip\footins}{-5.7pt}
+\setlength{\skip\footins}{3.7pt}
 %RWV end 
 
 %RWV begin - have double space before and after equations
@@ -445,7 +445,7 @@ cube side color=blue!40,
 \AtBeginEnvironment{align*}{\iffootnotez \else \vspace{-9.5pt}\fi}
 \AtBeginEnvironment{align}{\iffootnotez \else \vspace{-22.4pt}\fi}
 \gdef\alignspace{-49.7}
-\gdef\alignstarspace{-9.5}
+\gdef\alignstarspace{-40}
 
 
 
@@ -454,5 +454,10 @@ cube side color=blue!40,
 \abovedisplayshortskip=0pt
 \belowdisplayshortskip=0pt
 
-
+\clubpenalty=0
+\widowpenalty=0
+\widowpenalties 3 0 0 0
+\clubpenalties 3 0 0 0
+\displaywidowpenalty=0
 \predisplaypenalty=0
+

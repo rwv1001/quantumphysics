@@ -3,7 +3,7 @@ Given a possible kind of measurement (e.g. measuring the spin of a particle alon
 \nomenclature{$O_{\uvbp{a}}$}{A physical measurement device which outputs 1 if the particle is in the spin $\ket*{\uvbp{a}}$-state and 0 if the particle is in the spin $\ket*{\uvbm{a}}$-state, \nomrefpage}%
 and which outputs 1 if the particle is in the spin $\ket*{\uvbp{a}}$-state and 0 if the particle is in the spin $\ket*{\uvbm{a}}$-state. This measurement device will have a corresponding observable which we will denote by $\hat{O}_{\uvbp{a}}$ %
 \nomenclature{$\hat{O}_{\uvbp{a}}$}{The observable corresponding to the measurement device $O_{\uvbp{a}}$, \nomrefpage}%
-and which we will describe shortly once we have defined what a Hilbert space is.\footnote{Note that in contrast to the physical object $O_{\uvbp{a}}$, we're taking $\hat{O}_{\uvbp{a}}$ to be a mathematical object, a Hermitian operator on a Hilbert space.}  
+and which we will describe shortly once we have defined {\interfootnotelinepenalty=10000 what a Hilbert space is.\footnote{Note that in contrast to the physical object $O_{\uvbp{a}}$, we're taking $\hat{O}_{\uvbp{a}}$ to be a mathematical object, a Hermitian operator on a Hilbert space.} } 
 
 To motivate the definition of a Hilbert space, recall that the states $\ket*{\uvbp{a}}$ and $\ket*{\uvbm{a}}$ representing the spin of  a particle can be added to give the spin state $\ket*{\uvbp{b}}$ and $\ket*{\uvbm{b}}$ as seen in equation (\ref{spintrans}). Also, recall that if we have two states $\ket*{\psi}$ and $\ket*{\chi}$, we can define their bra-ket $\ip*{\chi}{\psi}$ to be a complex number satisfying the Born Rule. In other words, $\abs{\ip*{\chi}{\psi}}^2$ is the probability $P(\chi|\psi)$ that the particle will be found to be in state $\ket*{\chi}$ given that we know that the particle is in state $\ket*{\psi}$. We thus imposed the assumption that  $\ip*{\psi}{\psi}=1$ for any state $\ket*{\psi}$. 
 
@@ -11,20 +11,7 @@ Now in order to arrive at a definition of a Hilbert space, we first need to rela
 \nomenclature{$\norm{\psi}$}{$\sqrt{\ip*{\psi}{\psi}}$ for some state $\ket*{\psi}$, \nomrefpage}%
 and we say that $\ket*{\psi}$ has been \textbf{normalized}\index{normalized state} when $\norm{\psi}=1$. Now when calculating probabilities, we need to remember to include a normalization factor. Thus, the probability that the particle will be found to be in state $\ket*{\chi}$ given that we know that the particle is in state $\ket*{\psi}$ will now be $P(\chi|\psi) = \frac{|\ip*{\chi}{\psi}|^2}{\norm{\psi}\norm{\chi}}.$\footnote{ If there is no such normalization factor because $\norm{\psi}=0,$ then $\ket*{\psi}$ does not represent a physical state, so the probability the system is ever in this state will be zero, and so in this case we will set $P(\chi|\psi)=P(\psi|\chi)=0.$} It is  dropping the assumption $\norm{\psi}=1$ on the states of a physical system that gives rise to the mathematical structure known as a Hilbert Space.   
 
-A \textbf{Hilbert space}\index{Hilbert space!rigorous definition} is a set $H$ %
-\nomenclature{$H$}{A Hilbert space, \nomrefpage}%
-in which 
-\begin{enumerate}[noitemsep, nosep, topsep=0pt]
-\item any two members of $H$ can be added to obtain another member of $H$, 
-\item any member of $H$ can be multiplied by any complex number to obtain another member of $H$,
-\item one can take the bra-ket of any two members of $H$ to obtain a complex number\end{enumerate}
-subject to some natural axioms.\footnotemark
-
-A very simple example of a Hilbert space would be the set of states 
-$$\{\alpha\ket*{\uvbp{a}}+\beta\ket*{\uvbm{a}}:\alpha,\beta\in\mathbb{C}\}.$$ 
-As we will soon see, the observable corresponding to the measurement device $O_{\uvbp{a}}$ will be the operator $\hat{O}_{\uvbp{a}}$ that sends the state $\alpha\ket*{\uvbp{a}}+\beta\ket*{\uvbm{a}}$ to the state $\alpha\ket*{\uvbp{a}}.$
-
-More generally, suppose we have an experimental setup (for example the Stern-Gerlach experiment) where a physical system can be in one of several measurable states $\ket*{\psi_1},\ldots,\ket*{\psi_N}\in H$. The physical system could also be in a state described by a sum of some of the $\ket*{\psi_1},\ldots,\ket*{\psi_N}$, \footnotetext{More formally, a complex Hilbert space $H$ is a complex vector space possessing a bra-ket. By a \textbf{complex vector space}\index{complex vector space}, we mean a set $V$ such that the following axioms are satisfied 
+A \textbf{Hilbert space}\index{Hilbert space!rigorous definition}\footnote{More formally, a complex Hilbert space $H$ is a complex vector space possessing a bra-ket. By a \textbf{complex vector space}\index{complex vector space}, we mean a set $V$ such that the following axioms are satisfied 
 \begin{itemize}[topsep=0pt]
 \item $\psi+(\chi+\zeta)=(\psi+\chi)+\zeta,\,\forall \lambda, \chi,\zeta\in V$
 \item $\psi+\chi=\chi+\psi,\,\forall \psi,\chi\in V$
@@ -41,7 +28,22 @@ A \textbf{Hilbert space}\index{Hilbert space!basic definition} $H$ is a complex 
 \item $\ip{\psi}{\chi}=\overline{\ip{\chi}{\psi}},\,\forall\psi,\chi\in H$,
 \item $\ip{\psi}{\psi}\geq 0,\, \forall \ket*{\psi}\in H$ and $\ip{\psi}{\psi}=0$ if and only if $\ket*{\psi}=\bm{0}$,
 \item $\ip{\zeta}{\lambda\psi+\mu\chi}=\lambda\ip{\zeta}{\psi}+\mu\ip{\zeta}{\chi},\,\forall \ket*{\psi},\ket*{\chi},\ket*{\zeta}\in H$ and  $\lambda,\mu\in\mathbb{C}$.
-\end{itemize}} but by saying the system is in one of these $\ket*{\psi_1},\ldots,\ket*{\psi_N}$ measurable states, we mean that there is a measuring device that will always give the same measurement outcome whenever the system is in the same measurable state.\footnote{When the state is described as a non-trivial sum of the measurable states, we no longer have such certainty, and instead we can only speak of probabilities based on the coefficients on the measurable states.} We also assume \textbf{orthonormality}\index{orthonormality}, that is we assume $\ip{\psi_i}{\psi_i}=1$ and $\ip{\psi_i}{\psi_j}=0$ for $i\neq j$ so that if the system is measured to be in the $\ket*{\psi_j}$-state, then there would be zero probability that it could then be measured to be in the $\ket*{\psi_i}$-state for $i\neq j$.  
+\end{itemize}} is a set $H$ %
+\nomenclature{$H$}{A Hilbert space, \nomrefpage}%
+in which 
+\begin{enumerate}[noitemsep, nosep, topsep=0pt]
+\item any two members of $H$ can be added to obtain another member of $H$, 
+\item any member of $H$ can be multiplied by any complex number to obtain another member of $H$,
+\item one can take the bra-ket of any two members of $H$ to obtain a complex number\end{enumerate}
+subject to some natural axioms.
+
+A very simple example of a Hilbert space would be the set of states 
+\begin{equation*}
+\{\alpha\ket*{\uvbp{a}}+\beta\ket*{\uvbm{a}}:\alpha,\beta\in\mathbb{C}\}.
+\end{equation*} 
+As we will soon see, the observable corresponding to the measurement device $O_{\uvbp{a}}$ will be the operator $\hat{O}_{\uvbp{a}}$ that sends the state $\alpha\ket*{\uvbp{a}}+\beta\ket*{\uvbm{a}}$ to the state $\alpha\ket*{\uvbp{a}}.$
+
+More generally, suppose we have an experimental setup (for example the Stern-Gerlach experiment) where a physical system can be in one of several measurable states $\ket*{\psi_1},\ldots,\ket*{\psi_N}\in H$. The physical system could also be in a state described by a sum of some of the $\ket*{\psi_1},\ldots,\ket*{\psi_N}$,  but by saying the system is in one of these $\ket*{\psi_1},\ldots,\ket*{\psi_N}$ measurable states, we mean that there is a measuring device that will always give the same measurement outcome whenever the system is in the same {\interfootnotelinepenalty=10000 measurable state.\footnote{When the state is described as a non-trivial sum of the measurable states, we no longer have such certainty, and instead we can only speak of probabilities based on the coefficients on the measurable states.} We also assume} \textbf{orthonormality}\index{orthonormality}, that is we assume $\ip{\psi_i}{\psi_i}=1$ and $\ip{\psi_i}{\psi_j}=0$ for $i\neq j$ so that if the system is measured to be in the $\ket*{\psi_j}$-state, then there would be zero probability that it could then be measured to be in the $\ket*{\psi_i}$-state for $i\neq j$.  
 
 Now suppose that for each measurable state $\ket*{\psi_i}$, we assign a real number $o_i$. %
 \nomenclature{$o_i$}{The eigenvalues of an observable $\hat{O}$, \nomrefpage}%
@@ -67,7 +69,7 @@ for $i=1,\ldots, N$ is the probability the particle will be found to be in the s
 \end{equation}\footnotetext{\label{footnote_1}To see this, note that $\alpha_i=\ip{\psi_i}{\psi}$ from which it follows that  if we define the mapping $I=\sum_{i=1}^N\dyad{\psi_i}$ then $I\ket*{\psi}=\sum_{i=1}^N\ket*{\psi_i}\ip{\psi_i}{\psi}=\sum_{i=1}^N\ip{\psi_i}{\psi}\ket*{\psi_i}=\ket*{\psi}$. Therefore,
 \begin{align*}\ev*{\hat{O}}{\psi}&= \ev*{\hat{O} I}{\psi}=\sum_{i=1}^N \mel{\psi}{\hat{O}}{\psi_i}\ip{\psi_i}{\psi}=\sum_{i=1}^No_i\ip{\psi}{\psi_i}\ip{\psi_i}{\psi}=\sum_{i=1}^No_i\abs{\ip{\psi_i}{\psi}}^2\\&=\sum_{i=1}^No_ip_i=\ev*{\hat{O}}_\psi.\end{align*}}We can see that this formula is correct in the simple example when the system is in the $\ket*{\psi_i}$-state, for in this case, the expectation value should be $o_i$, and we clearly have $\ev*{\hat{O}}{\psi_i}=o_i$ since $\hat{O}\ket*{\psi_i}=o_i\ket*{\psi_i}$ and $\ip*{\psi_i}=1$. Hence, $\ev*{\hat{O}}_{\psi_i}=\ev*{\hat{O}}{\psi_i}$ as expected.
 
-To say that $\hat{O}$ is \textbf{Hermitian}\index{Hermitian Operator} is to say that $\ev*{\hat{O}}{\psi}$ is a real number for any arbitrary state $\ket*{\psi}$. Thus, the observable $\hat{O}$ defined by the two criteria above is a Hermitian operator acting on the Hilbert space of states $H$ since we are assuming the $o_i$ are all real numbers. Roughly speaking, we can assume\footnote{Strictly speaking, we require a Hermitian operator to have a property known as compactness for this assumption to hold.}  that given a Hermitian operator $\hat{O}$ on a Hilbert space of states $H$, any state $\ket*{\psi}\in H$ can be expressed as a (possibly infinite) sum 
+To say that $\hat{O}$ is \textbf{Hermitian}\index{Hermitian Operator} is to say that $\ev*{\hat{O}}{\psi}$ is a real number for any arbitrary state $\ket*{\psi}$. Thus, the observable $\hat{O}$ defined by the two criteria above is a Hermitian operator acting on the Hilbert space of states $H$ since we are assuming the $o_i$ are all real numbers. {\interfootnotelinepenalty=10000 Roughly speaking, we can assume\footnote{Strictly speaking, we require a Hermitian operator to have a property known as compactness for this assumption to hold.}  that given a Hermitian operator} $\hat{O}$ on a Hilbert space of states $H$, any state $\ket*{\psi}\in H$ can be expressed as a (possibly infinite) sum 
 \begin{equation}\label{span}
 \ket*{\psi}=\sum_{i=1}^N\alpha_i\ket*{\psi_i}
 \end{equation}

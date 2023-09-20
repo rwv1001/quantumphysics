@@ -1,34 +1,48 @@
 \section{The Problem with Parameter Dependence}\label{PDProb}
 As is well known, special relativity implies that it is impossible to send signals faster than the speed of light. To see why this is, first recall that in order for light to travel at a constant speed regardless of how fast the source of light is traveling, it is 
-\makebox[\linewidth][s]{necessary for clocks moving relative to an observer to run more slowly. For a proof of}
-\newpage \noindent
+necessary for clocks moving relative to an observer to run more slowly. For a proof of
 this fact, suppose Alice is an experimenter on earth and Bob is an experimenter on a spaceship which is travelling close to the speed of light away from the earth. We can imagine each of them having a simple clock in their possession which consists of a photon travelling back and forth between two mirrors one meter apart with a tick of the clock happening each time the photon hits one of the mirrors.  If both their clocks are parallel to each other (i.e. the line joining Alice's two mirrors is parallel to the line joining Bob's two mirrors) and perpendicular to Bob's motion with respect to Alice, then Alice would observe the distance the photon travels between each tick of Bob's clock to be longer than the distance the photon travels between each tick of her clock. Since Alice would observe both the photon of her own clock and the photon of Bob's clock to travel at the same speed, she would therefore observe Bob's clock to tick more slowly than her own clock. This means that if their clocks were originally synced when Bob left the earth, and Alice determined Bob's clock to have ticked $n_B$ times since his departure, then she would observe her own clock to have ticked $n_A=\gamma n_B$ times, where $\gamma >1$ depends on how fast Bob is moving relative to her.  
 
 Now if Alice could send messages to Bob much faster than the speed of light, we could suppose she sends out a message to Bob when her clock has just ticked $n_A$ times. If the message was transmitted almost instantaneously, Bob would  receive the message at approximately the time when his clock had just ticked $n_A/\gamma$ times. 
 But if Bob then immediately replied to Alice's message with his message also transmitting almost simultaneously, then since Bob will also notice Alice's clock ticking more slowly with respect to his own clock, he will determine that Alice receives his reply message at approximately the time when her clock reads $n_A/\gamma^2$ ticks. But since $\gamma>1$, this means that Alice will receive a reply to her message to Bob before she has sent her original message to him. This is clearly absurd. 
 
 Using a slightly more technical argument\footnote{The more technical argument is as follows: we work in one spatial dimension and suppose that Bob is travelling away from Alice with velocity $v$ on a trajectory $(t, vt)$  in Alice's spacetime coordinates. At time $t_A$, she sends a message to Bob which travels at a velocity $v_m>v$ so that her message can catch up with Bob. Her message to Bob therefore has a trajectory $(t_A+T,v_m T)$ where $T$ is the interval of time after she has sent her message. At the time $t_{AB}$ in Alice's time coordinates when her message reaches Bob, her coordinates for Bob and her coordinates for her message location must coincide. Therefore, 
-$$(t_{AB}, v t_{AB})=(t_A +T_{AB}, v_m T_{AB}),$$
-where $T_{AB}$ is the time it takes for her message to reach Bob as measured by Alice. Solving for $t_{AB}$, we therefore find that Alice's clock will show the time $$t_{AB}=\frac{t_A}{1-v/v_m}$$ at the moment Bob receives her message. But since Alice determines Bob's clock to be running more slowly than her own clock by a factor of $\gamma$, it follows that Bob's clock will show the time  
-$$t_B=\frac{t_A}{\gamma(1-v/v_m)}$$ the moment he receives Alice's message. 
+\begin{equation*}
+(t_{AB}, v t_{AB})=(t_A +T_{AB}, v_m T_{AB}),
+\end{equation*}
+where $T_{AB}$ is the time it takes for her message to reach Bob as measured by Alice. Solving for $t_{AB}$, we therefore find that Alice's clock will show the time \begin{equation*}
+t_{AB}=\frac{t_A}{1-v/v_m}
+\end{equation*} at the moment Bob receives her message. But since Alice determines Bob's clock to be running more slowly than her own clock by a factor of $\gamma$, it follows that Bob's clock will show the time  
+\begin{equation*}
+t_B=\frac{t_A}{\gamma(1-v/v_m)}
+\end{equation*} the moment he receives Alice's message. 
 
 
 Now suppose Bob immediately replies to Alice's message with his message propagating back to Alice with velocity $-v_m$. In Bob's coordinates, Alice will have a trajectory $(t,-vt)$, and Bob's message to her will have a trajectory $(t_B+T, -v_m T)$. Since these two trajectories must coincide at the moment Bob's reply reaches Alice, it follows that Bob's clock will show a time $t_{BA}$ which satisfies the equation
-$$(t_{BA}, -v t_{BA})=(t_B+T_{BA}, -v_m T_{BA})$$
+\begin{equation*}
+(t_{BA}, -v t_{BA})=(t_B+T_{BA}, -v_m T_{BA})
+\end{equation*}
 where $T_{BA}$ is the time it takes for Bob's message to Alice as measured by Bob. Solving for $t_{BA}$, we therefore find that Bob's clock will show the time
-$$t_{BA}=\frac{t_B}{1-v/v_m}$$
+\begin{equation*}
+t_{BA}=\frac{t_B}{1-v/v_m}
+\end{equation*}
 when Alice receives Bob's reply. But since Bob determines Alice's clock to be running more slowly than his own clock by a factor of $\gamma$, it follows that Alice's clock will show the time  
-$$t_{AA}=\frac{t_B}{\gamma(1-v/v_m)}=\frac{t_A}{\gamma^2(1-v/v_m)^2}$$ the moment she receives Bob's reply. Now an absurdity will only arise if $t_{AA}<t_A$ since then Alice would receive a reply from Bob before she had sent her message. Thus, an absurdity will arise if both $\gamma^2(1-v/v_m)^2>1$ and $v_m> v$, where as already mentioned, the second inequality must hold in order for Alice's message to reach Bob and vice versa. Now as we will see in footnote \footreference{srdefivation}, $$\gamma=\frac{1}{\sqrt{1-v^2/c^2}}.$$ A simple calculation therefore shows that the inequality $t_{AA}<t_A$ implies
+\begin{equation*}
+t_{AA}=\frac{t_B}{\gamma(1-v/v_m)}=\frac{t_A}{\gamma^2(1-v/v_m)^2}
+\end{equation*} the moment she receives Bob's reply. Now an absurdity will only arise if $t_{AA}<t_A$ since then Alice would receive a reply from Bob before she had sent her message. Thus, an absurdity will arise if both $\gamma^2(1-v/v_m)^2>1$ and $v_m> v$, where as already mentioned, the second inequality must hold in order for Alice's message to reach Bob and vice versa. Now as we will see in footnote \footreference{srdefivation}, \begin{equation*}
+\gamma=\frac{1}{\sqrt{1-v^2/c^2}}.
+\end{equation*} A simple calculation therefore shows that the inequality $t_{AA}<t_A$ implies
 $$
 v>\frac{2v_m}{1+v_m^2/c^2}.
 $$
 Combining this with the inequality $v<v_m$, we see that an absurdity will be possible if 
-$$ v_m>\frac{2v_m}{1+v_m^2/c^2}$$
+\begin{equation*}
+ v_m>\frac{2v_m}{1+v_m^2/c^2}
+\end{equation*}
 or equivalently, if $v_m>c$.} 
 one can also see that an absurdity follows even when the signal transmission isn't almost instantaneous, just so long as the signal propagates faster than the speed of light. Special relativity therefore implies that it is impossible to send signals faster than the speed of light.
 
 Now a serious problem with PD is that it suggests the possibility of superluminal signalling. In particular, if Alice happened to know what $\lambda$ was for each run of the experiment, and if Bob made the same measurement, then because the distribution of Alice's outcomes will depend on Bob's choice of measurement, with enough runs of the experiment, Alice should be able to work out what measurement Bob is making. And this should be possible even if Alice and Bob are separated by many light years. So it seems that faster than light communication could be possible. The only thing preventing such communication would be Alice's lack of knowledge of $\lambda$. 
 
 One might still respond to this argument against PD by saying that in reality, Alice does not know anything about $\lambda$ and hence it won't be possible for Bob to send signals faster than the speed of light to Alice. However, it would nevertheless be very strange if the validity of special relativity hung on what human beings were capable of knowing rather than on the laws that actually governed physical reality itself. But even if it was metaphysically impossible for human beings to know $\lambda$, this would not 
-\makebox[\linewidth][s]{allay the fears that adherents of special relativity would have against PD. For the}
-\newpage \noindent real issue is not so much the possibility that Alice could translate a message that was transmitted from Bob at superluminal speed. Rather, the issue is that Bob could do something whose effect was propagated at superluminal speed. If PI fails, then superluminal propagation of effects will be possible.\label{lambdaknowledge} It's just that if Alice is to know the cause of this effect, she will need to know $\lambda$. But even if she doesn't know $\lambda$, it still seems as though some unknown effect has been transmitted to her superluminally, and with the superluminal propagation of an effect comes the possibility that an effect might occur before its cause. Such a possibility would be analogous to how Alice could receive a reply to a message from Bob before she had sent the original message to him.
+allay the fears that adherents of special relativity would have against PD. For the real issue is not so much the possibility that Alice could translate a message that was transmitted from Bob at superluminal speed. Rather, the issue is that Bob could do something whose effect was propagated at superluminal speed. If PI fails, then superluminal propagation of effects will be possible.\label{lambdaknowledge} It's just that if Alice is to know the cause of this effect, she will need to know $\lambda$. But even if she doesn't know $\lambda$, it still seems as though some unknown effect has been transmitted to her superluminally, and with the superluminal propagation of an effect comes the possibility that an effect might occur before its cause. Such a possibility would be analogous to how Alice could receive a reply to a message from Bob before she had sent the original message to him.

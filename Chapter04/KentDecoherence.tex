@@ -24,8 +24,12 @@ In this expression, $\{\ket*{\xi_{1,j}}:j\}$ %
 \nomenclature{$\{\ket*{\xi_{k,j}}:j\}$}{An orthonormal basis of the Hilbert space $H_k$ that describes the space of states of the cell $y_k\in S_n$, \nomrefpage}%
  is an orthonormal basis of $H_1$, $\mathbb{N}^M$ means the set of all lists $(n_1,\ldots,n_M)$ with each $n_l\in\mathbb{N}$ where $\mathbb{N}$
 is the set of positive integers greater than 0. The set of states $\{\ket*{\xi_{k_{l},m}}:m\in\mathbb{N}\}$ form an orthonormal basis of $H_{k_{l}}$ for each $k_l$, and the $k_{l}$ are all distinct from each other and from $1$. Also, $M$ is chosen to be as small as possible so that any common factors of $\ket*{\Psi_n}$ belong to $\ket*{\Xi}$ which is a sum of states of the form $\prod_l\ket*{\xi_{\kappa_l}}$ where the states $\ket*{\xi_{\kappa_l}}\in H_{\kappa_l}$ range over all the cells of $S_n$ not included in the set $\{k_{l}:l=1,\ldots,M\}.$ We also assume that each summand $c_{j,n}\ket*{\xi_{1,j}}\prod_{l=1}^{M}\ket*{\xi_{k_{l},n_l}}\ket*{\Xi}$ of $\ket*{\Psi_n}$ contains a state in each $H_k$ for every cell $k$ of $S_n$. In other words, if $k\neq 1$ and does not belong to the set $\{k_{l}:l=1,\ldots,M\}$, then $k$ belongs to the set $\{\kappa_l:\text{ there exists }\ket*{\xi_{\kappa_l}}\in H_{\kappa_l}\text{ appearing in }\ket*{\Xi}.\}$. Also, we will give $H_{S_n}$ an inner product so that if 
-$$ \ket*{\Psi_n'}=\Big(\sum_j\sum_{n\in\mathbb{N}^M} c'_{j,n}\ket*{\xi_{1,j}}\prod_{l=1}^{M}\ket*{\xi_{k_{l},n_l}}\Big)\ket*{\Xi'},$$ then
-$$\ip{\Psi_n'}{\Psi_n}=\Big(\sum_j\sum_{n\in\mathbb{N}^M} \overline{c'_{j,n}}c_{j,n} \Big) \ip{\Xi'}{\Xi}$$
+\begin{equation*}
+ \ket*{\Psi_n'}=\Big(\sum_j\sum_{n\in\mathbb{N}^M} c'_{j,n}\ket*{\xi_{1,j}}\prod_{l=1}^{M}\ket*{\xi_{k_{l},n_l}}\Big)\ket*{\Xi'},
+\end{equation*} then
+\begin{equation*}
+\ip{\Psi_n'}{\Psi_n}=\Big(\sum_j\sum_{n\in\mathbb{N}^M} \overline{c'_{j,n}}c_{j,n} \Big) \ip{\Xi'}{\Xi}
+\end{equation*}
 where $\ip{\Xi'}{\Xi}$ is defined in the obvious way. With this inner product, we will assume that $\ket*{\Psi_n}$ is appropriately normalized so that $\ip{\Psi_n}{\Psi_n}=1$. If we also assume that  $\ip{\Xi}{\Xi}=1$, it will follow that $\sum_j\sum_{n\in\mathbb{N}^M}\abs{c_{j,n}}^2=1.$
 
 Now in order to see how Kent's model addresses the problem of outcomes, we will need to consider several scenarios from his toy model. In each scenario, we will use the decomposition (\ref{Sistate}) of $\ket*{\Psi_n}$ to calculate the reduced density matrix that encapsulates all the information needed to calculate expectation values at different spacetime locations. 
@@ -186,7 +190,9 @@ Therefore, by (\ref{kentbeablenoinfo}) and (\ref{kentred}), Kent's beable at $y^
 \end{split}
 \end{equation}
 But since $\hat{\rho}_{y^a_1}$ is an improper mixture, we cannot give (\ref{kentbe}) an ignorance interpretation -- the universe is still in the superposition state
-$$\ket*{\Psi_n}=c_1 \ket*{\psi_1^\text{sys}}\ket*{E_1}+c_2 \ket*{0_1}\ket*{E_2}$$ where $\ket*{E_1}=\ket*{0_2}\ket*{\Xi}$ and $\ket*{E_2}=\ket*{\psi_2^\text{sys}}\ket*{\Xi}$. 
+\begin{equation*}
+\ket*{\Psi_n}=c_1 \ket*{\psi_1^\text{sys}}\ket*{E_1}+c_2 \ket*{0_1}\ket*{E_2}
+\end{equation*} where $\ket*{E_1}=\ket*{0_2}\ket*{\Xi}$ and $\ket*{E_2}=\ket*{\psi_2^\text{sys}}\ket*{\Xi}$. 
 
 In order to solve the problem of outcomes, we need to provide a satisfactory explanation (i.e. an explanation that is consistent with special relativity and the predictions of standard quantum theory)  of how the superposition state $\ket*{\Psi_n}$ effectively goes to either the state $\ket*{\psi_1^\text{sys}}\ket*{E_1}$ or to the state $\ket*{0_1}\ket*{E_2}$.\footnote{Cf. the initial discussion of the problem of outcomes on page \pageref{proboutcomes}. I have used the word `effectively' to qualify this sentence since it is not necessary to prove that there actually is such a transition from the state  $\ket*{\Psi_n}$ to either the state $\ket*{\psi_1^\text{sys}}\ket*{E_1}$ or to the state $\ket*{0_1}\ket*{E_2}$. Rather, it is sufficient to show that if we consider any observable $\hat{O}_{\mathcal{S}}$ acting on $\mathcal{S}$, then the expectation value takes the form $\ev*{\hat{O}_{\mathcal{S}}}{\psi_1^\text{sys}}$ or $\ev*{\hat{O}_{\mathcal{S}}}{0_1}$ once there is an outcome, for then the system $\mathcal{S}$ has all the properties consistent with it being in the state $\ket*{\psi_1^\text{sys}}$ or the state $\ket*{0_1}$ respectively.} In terms of density operators, this means we need to show how the improper state (\ref{kentred}), transitions to a pure state of the form $\dyad{\psi_1^\text{sys}}$ or $\dyad{0_1}$.  
 
@@ -415,20 +421,28 @@ In this case, the state of $S_n(y^c_1)$ will be
  but now we have to consider the fact that the photon intersects $S_n(y^c_1)\cap S$. There are two possible (notional) measurement outcomes that can occur on $S_n(y^c_1)\cap S$: either $T_S=\tau_{S,1}$ where $\tau_{S,1}(y^c_3)\neq 0$, or $T_S=\tau_{S,2}$ where $\tau_{S,2}(y^c_3)=0.$ 
  
  The case  $T_S=\tau_{S,1}$ indicates that there is a photon detection at $y^c_3$ so that the local state at the $y^c_3$-cell is $\ket*{\gamma_3}$. Therefore, if we write $\pi_{n,1}$ for the operator $\pi_n$, we have 
- $$\pi_{n,1}\ket*{\Psi_n}=c_1\ket*{\psi_1^\text{sys}}\ket*{0_2}\ket*{\gamma_3}\ket*{0_4}\ket*{\Xi}.$$
+ \begin{equation*}
+\pi_{n,1}\ket*{\Psi_n}=c_1\ket*{\psi_1^\text{sys}}\ket*{0_2}\ket*{\gamma_3}\ket*{0_4}\ket*{\Xi}.
+\end{equation*}
  Therefore, 
  $\ev*{\pi_{n,1}\hat{T}^{\mu\nu}(y^c_1)}{\Psi_n}=\abs{c_1}^2\ev*{\hat{T}^{\mu\nu}(y^c_1)}{\psi_1^\text{sys}}$ and  $\ev*{\pi_{n,1}}{\Psi_n}=\abs{c_1}^2$. Hence, by (\ref{kentconsistency0}), Kent's beables at $y^c_1$ will be 
- $$\ev*{T^{\mu\nu}(y^c_1)}_{\tau_{S,1}}=\ev*{\hat{T}^{\mu\nu}(y^c_1)}{\psi_1^\text{sys}}.$$ 
+ \begin{equation*}
+\ev*{T^{\mu\nu}(y^c_1)}_{\tau_{S,1}}=\ev*{\hat{T}^{\mu\nu}(y^c_1)}{\psi_1^\text{sys}}.
+\end{equation*} 
  From this, it follows that the reduced density matrix at $y^c_1$ will take the form of a pure state:
  \begin{equation}\label{purerho}
 \hat{\rho}_{y^c_1}= \dyad{\psi_1^\text{sys}}.
 \end{equation} 
  On the other hand, for the case when  $T_S=\tau_{S,2}$, this indicates that there is no photon detection at $y^c_3$, so that the local state at the $y^c_3$-cell will be $\ket*{0_3}$. So if we now  write $\pi_{n,2}$ for the operator $\pi_n$, we have 
- $$\pi_{n,2}\ket*{\Psi_n}=c_2\ket*{0_1}\ket*{\psi_2^\text{sys}}\ket*{0_3}\ket*{\gamma_4}\ket*{\Xi}.$$
+ \begin{equation*}
+\pi_{n,2}\ket*{\Psi_n}=c_2\ket*{0_1}\ket*{\psi_2^\text{sys}}\ket*{0_3}\ket*{\gamma_4}\ket*{\Xi}.
+\end{equation*}
  Therefore, 
  $\ev*{\pi_{n,2}\hat{T}^{\mu\nu}(y^c_1)}{\Psi_n}=\abs{c_2}^2\ev*{\hat{T}^{\mu\nu}(y^c_1)}{0_1}$ and  $\ev*{\pi_{n,2}}{\Psi_n}=\abs{c_2}^2$,  
   and so by (\ref{kentconsistency0}), Kent's beables at $y^c_1$ will be 
- $$\ev*{T^{\mu\nu}(y^c_1)}_{\tau_{S,2}}=\ev*{\hat{T}^{\mu\nu}(y^c_1)}{0_1}.$$
+ \begin{equation*}
+\ev*{T^{\mu\nu}(y^c_1)}_{\tau_{S,2}}=\ev*{\hat{T}^{\mu\nu}(y^c_1)}{0_1}.
+\end{equation*}
  In this case, the reduced density matrix at $y^c_1$  will be
   \begin{equation}
 \hat{\rho}_{y^c_1}= \dyad{0_1},

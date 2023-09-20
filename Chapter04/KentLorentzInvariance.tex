@@ -88,8 +88,12 @@ Now suppose an observer $\mathcal{O}$ %
 \end{figure}
 
 Now the key fact about all observers is that they must always observe light in a vacuum to have a constant speed $c$. Thus,  for a photon that goes through the spacetime locations $(0,0,0,0)$ and $(x^0, x^1, x^2, x^3)$ in the coordinates of $\mathcal{O}$, we must have $(x^0, x^1, x^2, x^3)=(ct,tv^1,tv^2,tv^3)$ where 
-$$\sqrt{(v^1)^2 +(v^2)^2+(v^3)^2}=c.$$ But if $(0,0,0,0)$ and $(x^0, x^1, x^2, x^3)$ corresponds to $(0,0,0,0)$ and $({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ respectively in the coordinates of another observer $\mathcal{O}'$, then we must also have $({x'}^0, {x'}^1, {x'}^2, {x'}^3)=(ct',t'{v'}^1,t'{v'}^2,t'{v'}^3)$ where 
-$$\sqrt{({v'}^1)^2 +({v'}^2)^2+({v'}^3)^2}=c.$$ 
+\begin{equation*}
+\sqrt{(v^1)^2 +(v^2)^2+(v^3)^2}=c.
+\end{equation*} But if $(0,0,0,0)$ and $(x^0, x^1, x^2, x^3)$ corresponds to $(0,0,0,0)$ and $({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ respectively in the coordinates of another observer $\mathcal{O}'$, then we must also have $({x'}^0, {x'}^1, {x'}^2, {x'}^3)=(ct',t'{v'}^1,t'{v'}^2,t'{v'}^3)$ where 
+\begin{equation*}
+\sqrt{({v'}^1)^2 +({v'}^2)^2+({v'}^3)^2}=c.
+\end{equation*} 
 In either case, we must have 
 \begin{equation}\label{invariant}
 (x^0)^2- (x^1)^2- (x^2)^2 - (x^3)^2=({x'}^0)^2- ({x'}^1)^2- ({x'}^2)^2 - ({x'}^3)^2=0.
@@ -99,21 +103,29 @@ If we define $\eta_{00}=1$, $\eta_{ii}=-1$ for $i=1,2,3$ and $\eta_{\mu\nu}=0$ %
  for $\mu\neq\nu$, then using the Einstein summation convention as well as the convention of lowering indices so that we define $x_\mu\myeq\eta_{\mu\nu}x^\nu$, %
  \nomenclature{$x_\mu$}{$x_\mu\myeq\eta_{\mu\nu}x^\nu$, \nomrefpage}%
   then (\ref{invariant}) is equivalent to 
-$$x_\mu x^\mu={x'}_\mu {x'}^\mu=0.$$ 
+\begin{equation*}
+x_\mu x^\mu={x'}_\mu {x'}^\mu=0.
+\end{equation*} 
 Thus, for any coordinate transformation $x\rightarrow x'$ such that  $x_\mu x^\mu={x'}_\mu{x'}^\mu$,  if the speed of light is $c$ in the $x$-coordinates, then the speed of light is also guaranteed to be $c$ in the $x'$-coordinates.  A \textbf{Lorentz transformation}\index{Lorentz transformation!technical definition} $\Lambda$ %
 \nomenclature{$\Lambda$}{A Lorentz transformation, \nomrefpage}%
  is any coordinate  %
  \nomenclature{$\Lambda\indices{^\mu_\nu}x^\nu$}{The components of a Lorentz Transformation, \nomrefpage}%
  transformation of the form ${x'}^\mu=\Lambda\indices{^\mu_\nu}x^\nu$\label{coordtansformation} such that $x_\mu x^\mu={x'}_\mu{x'}^\mu$. Since a Lorentz transformation must satisfy
-$$x_\mu x^\mu=\eta_{\mu\rho}\Lambda\indices{^\rho_\sigma}x^\sigma\Lambda\indices{^\mu_\nu}x^\nu$$
+\begin{equation*}
+x_\mu x^\mu=\eta_{\mu\rho}\Lambda\indices{^\rho_\sigma}x^\sigma\Lambda\indices{^\mu_\nu}x^\nu
+\end{equation*}
 for all $x$, it follows that  
 \begin{equation}\label{lorentztrans}
 \Lambda\indices{^\rho_\mu}\eta_{\rho\sigma}\Lambda\indices{^\sigma_\nu}=\eta_{\mu\nu}.\protect\footnotemark
 \end{equation}
 \footnotetext{To see why this is, note that if  $x_\mu x^\mu={x'}_\mu{x'}^\mu$ for all $x$, then  for any other spacetime location $y$, we have $(x+y)_\mu (x+y)^\mu={(x'+y')}_\mu{(x'+y')}^\mu$. If we expand this out and cancel $x_\mu x^\mu$ with ${x'}_\mu{x'}^\mu$ and cancel $y_\mu y^\mu$ with ${y'}_\mu{y'}^\mu$, and using the fact that $y_\mu x^\mu=x_\mu y^\mu$, etc. we find that  $x_\mu y^\mu={x'}_\mu{y'}^\mu$ for all $x$ and $y$. Hence,
-$$\eta_{\nu\mu}x^\mu y^\nu = x_\mu y^\mu=\eta_{\sigma\rho}\Lambda\indices{^\rho_\mu}\Lambda\indices{^\sigma_\nu}x^\mu y^\nu.$$  
+\begin{equation*}
+\eta_{\nu\mu}x^\mu y^\nu = x_\mu y^\mu=\eta_{\sigma\rho}\Lambda\indices{^\rho_\mu}\Lambda\indices{^\sigma_\nu}x^\mu y^\nu.
+\end{equation*}  
 Since we can choose $x$ such that $x^\mu=1$ and $x^\alpha = 0$ for $\alpha\neq\mu$, and can choose $y$ such that $y^\nu=1$ and $y^\beta=0$ for $\beta\neq\nu$, it follows that
-$$\eta_{\mu\nu} = \eta_{\sigma\rho}\Lambda\indices{^\rho_\mu}\Lambda\indices{^\sigma_\nu}, $$ which is the result we wanted to prove.}Having considered how the coordinates of a spacetime location viewed by one observer relate to the coordinates of the same spacetime location viewed by a different observer, we can now consider how physical quantities viewed by different observers relate to each other. So suppose $\phi(x)\myeq\phi(x^0, x^1, x^2, x^3)$ is the value of a scalar defined at the spacetime location $(x^0, x^1, x^2, x^3)$ as described by an observer $\mathcal{O}$. Then another observer $\mathcal{O}'$ using a different set of coordinate $({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ to describe the spacetime location $(x^0, x^1, x^2, x^3)$ will describe this same scalar as $\phi'(x')\myeq\phi'({x'}^0, {x'}^1, {x'}^2, {x'}^3)$  where $\phi'(x')=\phi(x)$. Therefore,
+\begin{equation*}
+\eta_{\mu\nu} = \eta_{\sigma\rho}\Lambda\indices{^\rho_\mu}\Lambda\indices{^\sigma_\nu}, 
+\end{equation*} which is the result we wanted to prove.}Having considered how the coordinates of a spacetime location viewed by one observer relate to the coordinates of the same spacetime location viewed by a different observer, we can now consider how physical quantities viewed by different observers relate to each other. So suppose $\phi(x)\myeq\phi(x^0, x^1, x^2, x^3)$ is the value of a scalar defined at the spacetime location $(x^0, x^1, x^2, x^3)$ as described by an observer $\mathcal{O}$. Then another observer $\mathcal{O}'$ using a different set of coordinate $({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ to describe the spacetime location $(x^0, x^1, x^2, x^3)$ will describe this same scalar as $\phi'(x')\myeq\phi'({x'}^0, {x'}^1, {x'}^2, {x'}^3)$  where $\phi'(x')=\phi(x)$. Therefore,
 \begin{equation}\label{lorentzscalar}
 \phi'(x')=\phi(\Lambda^{-1}x')
 \end{equation} 
@@ -182,7 +194,9 @@ four-velocity $u$ of an object whose classical velocity is $\vb{v}$. For we must
 	\caption[Four-vector transformation]{Shows how a four-vector ${\varphi}$ (of which only two components are shown) defined at a spacetime location (indicated by $\bullet$) can be expressed either as $(\varphi^1, \varphi^2)$ with respect to the basis $\{\hat{e}_1,\hat{e}_2\}$ or as $({\varphi'}^1,{\varphi'}^2)$ with respect to the basis $\{\hat{e}'_1,\hat{e}'_2\}$.}\label{rotfigure2}
 	\end{figure}
 	Figure \ref{rotfigure2} shows how (two of) the components of a four-vector $\varphi$ at a particular location will differ for different observers under a spatial rotation of the coordinates. A four-vector $\varphi^\mu(x)$ defined at every spacetime location $x$ is called a \textbf{four-vector field}\index{four-vector field}. Thus,  at each spacetime location $x$, the four-vector field $\varphi^\mu(x)$ assigns four numbers, $\varphi^0(x)$, $\varphi^1(x)$, $\varphi^2(x)$, and $\varphi^3(x)$. If $\mathcal{O}$ observes this vector-field $\varphi^\mu(x)$, and $\mathcal{O}'$ is another observer whose coordinates are related to the coordinates $\mathcal{O}$ via the Lorentz transformation $\Lambda$, then $\mathcal{O}'$ will describe the same physical reality that $\mathcal{O}$ describes by assigning four numbers ${\varphi'}^0(x')$, ${\varphi'}^1(x')$, ${\varphi'}^2(x')$, and ${\varphi'}^3(x')$ at every spacetime location $x'$, and the relationship between the description $\mathcal{O}$ gives and the  description $\mathcal{O}'$ gives will be given by the formula
-	$${\varphi'}^\mu(x')=\Lambda\indices{^\mu_\nu}\varphi^\nu(x).$$
+	\begin{equation*}
+{\varphi'}^\mu(x')=\Lambda\indices{^\mu_\nu}\varphi^\nu(x).
+\end{equation*}
 	Hence, under the Lorentz transformation $\Lambda$,  a vector field $\varphi^\mu(x)$ transforms as ${\varphi}^\mu(x)\rightarrow {\varphi'}^\mu(x')$ where
 	\begin{equation}\label{lorentzvector}
 	{\varphi'}^\mu(x')=\Lambda\indices{^\mu_\nu}\varphi^\nu(\Lambda^{-1}x').
@@ -271,11 +285,15 @@ Now two observers $\mathcal{O}$ and $\mathcal{O}'$ will typically assign differe
 \nomenclature{$H_{S_n}'$}{The states on $S_n$ that an observer $\mathcal{O}'$ can observe, \nomrefpage}%
 
 Now if  $\mathcal{O}$ judged $S_n$ to be in the superposition state $\ket*{\psi}+\ket*{\chi}$, then $\mathcal{O}'$ would judge $S_n$ to be proportional to the superposition state $\ket*{\psi'}+\ket*{\chi'}$. Also recall that $\ket*{\psi'}$ and $\lambda\ket*{\psi'}$ represent the same physical state for any complex number $\lambda$, so there is sufficient flexibility as to which state we deem $\ket*{\psi}$ transforms to that we can deem the transformation $\ket*{\psi}\rightarrow\ket*{\psi'}$ to be a linear transformation. But also note that if observer $\mathcal{O}$ uses the Born rule to calculate the transition probability from state $\ket*{\psi}$ to state $\ket*{\chi}$, and  observer $\mathcal{O}'$ uses the Born rule to calculate the transition probability from state $\ket*{\psi'}$ to state $\ket*{\chi'}$, then they should calculate the same probabilities. We must therefore have
-$$|\ip*{\chi}{\psi}|^2=|\ip*{\chi'}{\psi'}|^2.$$
+\begin{equation*}
+|\ip*{\chi}{\psi}|^2=|\ip*{\chi'}{\psi'}|^2.
+\end{equation*}
 Using this fact together with the fact that $\ket*{\psi}$ and $\lambda\ket*{\psi}$ represent the same physical states, it can be shown that there is a unitary operator $U(\Lambda)$ %
 \nomenclature{$U(\Lambda)$}{The unitary operator which relates the state $\ket*{\psi}$ observer $\mathcal{O}$ observes to the state $\ket*{\psi'}$ observer $\mathcal{O}'$ observes, i.e. $\ket*{\psi'}=U(\Lambda)\ket*{\psi}$, \nomrefpage}%
  which relates the states $\ket*{\psi}$ and $\ket*{\psi'}$ via the formula
-$$\ket*{\psi'}=U(\Lambda)\ket*{\psi}.\protect\footnotemark$$\footnotetext{For more details, see \cite{Wigner1939}. Since a unitary operator maps a Hilbert space to itself, we first need to identify $H_{S_n}$ and $H_{S_n}'$ in order for $U(\Lambda)$ to be unitary.}At this point, it is worth clarifying the different meanings of $T^{\mu\nu}(x)$, $T^{\prime\mu\nu}(x')$, $\tau^{\mu\nu}(x)$, $\tau^{\prime\mu\nu}(x')$,  $\hat{T}^{\mu\nu}(x)$ and $\hat{T}^{\prime\mu\nu}(x')$. 
+\begin{equation*}
+\ket*{\psi'}=U(\Lambda)\ket*{\psi}.\protect\footnotemark
+\end{equation*}\footnotetext{For more details, see \cite{Wigner1939}. Since a unitary operator maps a Hilbert space to itself, we first need to identify $H_{S_n}$ and $H_{S_n}'$ in order for $U(\Lambda)$ to be unitary.}At this point, it is worth clarifying the different meanings of $T^{\mu\nu}(x)$, $T^{\prime\mu\nu}(x')$, $\tau^{\mu\nu}(x)$, $\tau^{\prime\mu\nu}(x')$,  $\hat{T}^{\mu\nu}(x)$ and $\hat{T}^{\prime\mu\nu}(x')$. 
 \begin{itemize}
 \item We use $T^{\mu\nu}(x)$ to refer to the description of the physical quantity that is being observed by $\mathcal{O}$. Thus, $T^{\mu\nu}(x)$ is shorthand for the description ``the $\mu\nu$-component of the stress-energy tensor that $\mathcal{O}$ observes at the spacetime location belonging to $S$ that $\mathcal{O}$ describes as  $x$.'' 
 \item Similarly,  $T^{\prime\mu\nu}(x')$ is shorthand for the description ``the $\mu\nu$-component of the stress-energy tensor that $\mathcal{O}'$ observes at a spacetime location  belonging to $S$ that $\mathcal{O}'$ describes as $x'$.'' %
@@ -306,6 +324,7 @@ Having clarified this terminology, we see that if $\ket*{\psi}\in H_{S_n}$ is a 
 \hat{T}^{\prime\mu\nu}(x')\ket*{\psi'}&\approx{\tau'}^{\mu\nu}(x')\ket*{\psi'}.\label{stres2}
 \end{align}
 \end{subequations}
+\vspace{\alignspace pt}
 It then follows from (\ref{stres0}) that if $\ket*{\psi'}=U(\Lambda)\ket*{\psi}$, then
 \begin{equation}\label{stress3}
     U(\Lambda)^{-1}\hat{T}^{\prime\mu\nu}(x')U(\Lambda)\ket*{\psi}\approx{T'}^{\mu\nu}(x')\ket*{\psi}.
