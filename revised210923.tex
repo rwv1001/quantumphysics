@@ -205,7 +205,11 @@ All rights reserved
 %  List of Figures
 %----------%----------%----------%----------%----------%----------%----------%----------%
 
-\listoffigures
+{%
+\let\oldnumberline\numberline%
+\renewcommand{\numberline}{\figurename~\oldnumberline}%
+\listoffigures%
+}
 \addcontentsline{toc}{chapter}{LIST OF FIGURES} % adds this to table of contents
 %----------%----------%----------%----------%----------%----------%----------%----------%
 %  End List of Figures
@@ -218,7 +222,12 @@ All rights reserved
 %----------%----------%----------%----------%----------%----------%----------%----------%
 %  List of Tables
 %----------%----------%----------%----------%----------%----------%----------%----------%
-\listoftables
+{%
+\let\oldnumberline\numberline%
+\renewcommand{\numberline}{\tablename~\oldnumberline}%
+\listoftables%
+}
+
 \addcontentsline{toc}{chapter}{LIST OF TABLES} % adds this to table of contents
 
 %----------%----------%----------%----------%----------%----------%----------%----------%
@@ -447,11 +456,12 @@ If we then put  $\alpha=\cos(\theta/2)$ and $\beta=\sin(\theta/2)$, it will foll
 \ket*{\uvbm{b}}&= \cos(\theta/2)\ket*{\uvbm{a}}-\sin(\theta/2) \ket*{\uvbp{a}}.\label{spintrans2}
 \end{align}
 \end{subequations}}
-\vspace{\alignspace pt}\newline
+
 % flatex input end: [Chapter01/Stern-Gerlach.tex]
 
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter01/EPR.tex]
+\vspace{-15pt}
 \section{The Copenhagen Interpretation and the EPR-Bohm Paradox}\label{eprsec}
 Given the equations (\ref{spintrans1}) and (\ref{spintrans2}) that  relate the states $\ket*{\uvbpm{a}}$ and $\ket*{\uvbpm{b}}$ to each other, we can calculate probabilities such as the probability a particle will be measured to be in the $\ket*{\uvbp{a}}$-state given that it is in the $\ket*{\uvbp{b}}$-state. There however arises the question of what the physical meaning of one of these states is. Clearly, the $\ket*{\uvbp{b}}$-state says something about the spin of a particle; but is this a complete description of the particle's spin state? For the $\ket*{\uvbp{b}}$-state only tells us what the outcome of a spin measurement would be along one particular axis $\uvb{b}$. For a spin measurement along another axis $\uvb{a}\neq\pm\uvb{b}$, $\ket*{\uvbp{b}}$ only tells us the probabilities (via equation (\ref{spintrans1}) and the Born Rule) that the measurement outcome would be $\ket*{\uvbp{a}}$ or $\ket*{\uvbm{a}}$ -- but the $\ket*{\uvbp{b}}$-state doesn't determine either of these outcomes. So we want to know whether this indetermination of the measurement outcome along the $\uvb{a}$-axis is merely a reflection of our lack of knowledge of a more complete specification of the particle's spin state, or alternatively, whether the  $\ket*{\uvbp{b}}$-state is a complete description of the spin state of the particle so that there is no fact of the matter about what spin state the particle would be found to be in along the $\uvb{a}$-axis until a measurement of spin along the $\uvb{a}$-axis is made. 
 
@@ -880,7 +890,7 @@ and the real-valued function\footnote{A \emph{function}\index{function} is a mat
 the complex phase\footnote{The \textbf{phase}\index{phase of a complex number} of a complex number $z$ is the angle $\theta$ (in radians) such that $z=r(\cos \theta + i \sin \theta)$ where $r>0$ is a real number called the \textbf{modulus}\index{modulus of a complex number}. Since $\cos \theta + i\sin \theta=e^{i \theta}$, %
 \nomenclature{$e^{i \theta}$}{Defined to be equal to $\cos \theta + i\sin \theta$, \nomrefpage}%
 it follows from (\ref{pilotwave}) that $r(\vb{x}_A, \vb{x}_B, t)>0$ is the modulus of $\psi(\vb{x}_A, \vb{x}_B, t)$, and $S(\vb{x}_A, \vb{x}_B,t )$ is the phase of $\psi(\vb{x}_A, \vb{x}_B, t)$.} of $\psi(\vb{x}_A, \vb{x}_B, t).$
-The time evolution of the pilot wave is deterministically governed by the Schr\"{o}dinger equation, and the phase $S(\vb{x}_A, \vb{x}_B, t )$ relates the positions $\vb{x}_A$ and $\vb{x}_B$ to the momenta $\vb{p}_A$ and $\vb{p}_B$ via the {\interfootnotelinepenalty=10000 gradient\footnote{Given a smooth function $F$ that maps a vector $\vb{x}$ to a real number $F(\vb{x})$, the \emph{gradient}\index{gradient} of $F$ at $\vb{x}$, written $\grad F(\vb{x})$ is the vector which points in the direction of the steepest ascent of $F$ at $\vb{x}$ and whose magnitude is determined by the rate of the steepest ascent at $\vb{x}$. When $F$ is a smooth function mapping two vectors $\vb{x}_A$ and $\vb{x}_B$ to a real number $F(\vb{x}_A, \vb{x}_B)$, we write $\grad_A F(\vb{x}_A, \vb{x}_B)$ for the gradient of $F$ at $\vb{x}_A$ when $F$ is just considered as a function of $\vb{x}_A$ with $\vb{x}_B$ fixed, and we write $\grad_B F(\vb{x}_A, \vb{x}_B)$ for the gradient of $F$ at $\vb{x}_B$ when $F$ is just considered as a function of $\vb{x}_B$ with $\vb{x}_A$ fixed.} of} $S$:
+The time evolution of the pilot wave is deterministically governed by the Schr\"{o}dinger equation, and the phase $S(\vb{x}_A, \vb{x}_B, t )$ relates the positions $\vb{x}_A$ and $\vb{x}_B$ to the momenta $\vb{p}_A$ and $\vb{p}_B$ via the {\interfootnotelinepenalty=10 gradient\footnote{Given a smooth function $F$ that maps a vector $\vb{x}$ to a real number $F(\vb{x})$, the \emph{gradient}\index{gradient} of $F$ at $\vb{x}$, written $\grad F(\vb{x})$ is the vector which points in the direction of the steepest ascent of $F$ at $\vb{x}$ and whose magnitude is determined by the rate of the steepest ascent at $\vb{x}$. When $F$ is a smooth function mapping two vectors $\vb{x}_A$ and $\vb{x}_B$ to a real number $F(\vb{x}_A, \vb{x}_B)$, we write $\grad_A F(\vb{x}_A, \vb{x}_B)$ for the gradient of $F$ at $\vb{x}_A$ when $F$ is just considered as a function of $\vb{x}_A$ with $\vb{x}_B$ fixed, and we write $\grad_B F(\vb{x}_A, \vb{x}_B)$ for the gradient of $F$ at $\vb{x}_B$ when $F$ is just considered as a function of $\vb{x}_B$ with $\vb{x}_A$ fixed.} of} $S$:
 \begin{equation}
 \vb{p}_A=\grad_A{S}(\vb{x}_A, \vb{x}_B),\qquad
 \vb{p}_B=\grad_B{S}(\vb{x}_A, \vb{x}_B).
@@ -899,7 +909,7 @@ that particle $q_A$  will be in a region $V_i$, and particle $q_B$ will be in a 
 \nomenclature{$V_i$}{Small non-overlapping regions whose union is $V=\bigcup_iV_i$, \nomrefpage}%
 If we are interested in some physical quantity $O(\vb{x}_A, \vb{x}_B)$ %
 \nomenclature{$O(\vb{x}_A, \vb{x}_B)$}{A physical quantity dependent on the locations of the particles $q_A$ and $q_B$ in the Bohmian interpretation, \nomrefpage}%
-that depends on the positions $\vb{x}_A$ and $\vb{x}_B$ of the two particles, then when the regions $V_i$ are  sufficiently small so that almost everywhere,\footnote{I am using the expression ``almost everywhere'' in a measure theoretic sense to mean that the set of all points where discontinuities occur has measure $0$. The motivation for this qualification is that whilst it might seem reasonable to suppose that there could be physical quantities that are discontinuous in some places, it doesn't seem reasonable to suppose that there are physical quantities that could be pathologically discontinuous, e.g. we wouldn't expect there to be a physical quantity that took the value of $1$ unit when all the coordinates of a location were rational and a value of $2$ units when one of the coordinates was irrational. Given this qualification about $O(\vb{x}_A,\vb{x}_B)$ being continuous almost everywhere, then even though $O(\vb{x}_A,\vb{x}_B)$ could be discontinuous at some points so that there could be some  $V_i\times V_j$ cells in which $O(\vb{x}_A,\vb{x}_B)$ varied non-negligibly for $(\vb{x}_A,\vb{x}_B)\in V_i\times V_j$, it would still be the case that the sum of the $p(V_i, V_j)\max_{(\vb{x}_i,\vb{x}_j)\in V_i\times V_j}|O(\vb{x}_i,\vb{x}_j)|$ terms for such cells would be negligible. This follows from the Lebesgue-Vitali theorem that states that any bounded function on a compact interval is Riemann integrable if and only if it is continuous almost everywhere. See \cite{wiki:Riemann}.} $O(\vb{x}_i, \vb{x}_j)$ varies negligibly for any $\vb{x}_i\in V_i$ and $\vb{x}_j\in V_j$,  the average value (also known as the \textbf{expectation value}\index{expectation value!pilot wave})
+{\interfootnotelinepenalty=1 that depends on the positions $\vb{x}_A$ and $\vb{x}_B$ of the two particles, then when the regions $V_i$ are  sufficiently small so that almost everywhere,\footnote{I am using the expression ``almost everywhere'' in a measure theoretic sense to mean that the set of all points where discontinuities occur has measure $0$. The motivation for this qualification is that whilst it might seem reasonable to suppose that there could be physical quantities that are discontinuous in some places, it doesn't seem reasonable to suppose that there are physical quantities that could be pathologically discontinuous, e.g. we wouldn't expect there to be a physical quantity that took the value of $1$ unit when all the coordinates of a location were rational and a value of $2$ units when one of the coordinates was irrational. Given this qualification about $O(\vb{x}_A,\vb{x}_B)$ being continuous almost everywhere, then even though $O(\vb{x}_A,\vb{x}_B)$ could be discontinuous at some points so that there could be some  $V_i\times V_j$ cells in which $O(\vb{x}_A,\vb{x}_B)$ varied non-negligibly for $(\vb{x}_A,\vb{x}_B)\in V_i\times V_j$, it would still be the case that the sum of the $p(V_i, V_j)\max_{(\vb{x}_i,\vb{x}_j)\in V_i\times V_j}|O(\vb{x}_i,\vb{x}_j)|$ terms for such cells would be negligible. This follows from the Lebesgue-Vitali theorem that states that any bounded function on a compact interval is Riemann integrable if and only if it is continuous almost everywhere. See \cite{wiki:Riemann}.} $O(\vb{x}_i, \vb{x}_j)$ varies negligibly for any $\vb{x}_i\in V_i$ and $\vb{x}_j\in V_j$,  the average value} (also known as the \textbf{expectation value}\index{expectation value!pilot wave})
 \begin{equation}\label{bohmconsistency}
 \ev{O}=\sum_{i,j}p(V_i, V_j)O(\vb{x}_i, \vb{x}_j)
 \end{equation}
@@ -1065,8 +1075,8 @@ One theory that denies the reality of experimental outcomes is the many-worlds i
 % flatex input end: [Chapter01/Summary.tex]
  
 %\usepackage[inline]{showlabels}
-\enlargethispage{-2.0in}
-
+\enlargethispage{-4.2in}
+ 
 \newpage
 % flatex input: [Chapter02/chapterIntro.tex]
 \chapter{The Measurement Problem and the Many-Worlds Interpretation\label{measprobchap}}
@@ -2764,7 +2774,7 @@ declare function={
 
 
 \vspace{-10pt}
-\caption[Photon measurements for energy density calculations at $y^a_1$ and $y^a_2$]{(a) highlights the part of $S$ used to calculate the energy density at $y^a_1$ whose time is less than $2t_1-t_2$. (b) highlights the part of $S$ used to calculate the energy density at $y^a_2$ whose time is less than $2t_1-t_2$.}
+\caption[Measurements for energy density calculations at $y^a_1$ and $y^a_2$]{(a) highlights the part of $S$ used to calculate the energy density at $y^a_1$ whose time is less than $2t_1-t_2$. (b) highlights the part of $S$ used to calculate the energy density at $y^a_2$ whose time is less than $2t_1-t_2$.}
 \label{TM2}
 \vspace{19.96pt}
 \end{figure}
@@ -2899,7 +2909,7 @@ declare function={
 
 \end{tikzpicture}% pic 1
 \vspace{-10pt}
-\caption[Photon measurements for energy density calculations at $y^b_1$ and $y^b_2$]{(a) highlights the part of $S$ used to calculate the energy density at $y^b_1$ whose time is greater than $2t_1-t_2$. (b) highlights the part of $S$ used to calculate the energy density at $y^b_2$ whose time is greater than $2t_1-t_2$.}
+\caption[Measurements for energy density calculations at $y^b_1$ and $y^b_2$]{(a) highlights the part of $S$ used to calculate the energy density at $y^b_1$ whose time is greater than $2t_1-t_2$. (b) highlights the part of $S$ used to calculate the energy density at $y^b_2$ whose time is greater than $2t_1-t_2$.}
 \label{TM3}
 \end{figure}
 In this situation, when we consider the location $y^b_1$, there is no additional information in $S^1(y^b_1)\cap S$ beyond standard quantum theory, so there will be a proportion of $\abs{c_1}^2$ of the total initial energy of the system at $y^b_1$. But at location $y^b_2$, the information in $S^1(y^b_2)\cap S$ shows that the photon has reflected from the localized $\psi_1^\text{sys}$-state, and so this additional information tells us that after time $t_b$, there is no energy localized at $z_2$ since from the perspective of $y^b_2$, the energy is known to be localized at $z_1$. So it is as though the information of $S^1(y^b_2)\cap S$ has determined that we are in a world in which there is an energy density of zero at $y^b_2$, and there are no other worlds in which the energy density  at $y^b_2$ is non-zero since all worlds have to be consistent with the notional measurement made on $S$. So for a short time the total energy of the system is reduced by $\abs{c_1}^2$.  
@@ -3035,7 +3045,7 @@ declare function={
 
 
 \vspace{-10pt}
-\caption[Photon measurements for energy density calculations at $y^c_1$ and $y^c_2$]{(a) highlights the part of $S$ used to calculate the energy density at $y^c_1$ whose time is greater than $t_1$. (b) highlights the part of $S$ used to calculate the energy density at $y^c_2$ whose time is greater than $t_1$.}
+\caption[Measurements for energy density calculations at $y^c_1$ and $y^c_2$]{(a) highlights the part of $S$ used to calculate the energy density at $y^c_1$ whose time is greater than $t_1$. (b) highlights the part of $S$ used to calculate the energy density at $y^c_2$ whose time is greater than $t_1$.}
 \label{TM4}
 \end{figure}
 
@@ -3074,6 +3084,7 @@ Since the arguments in this chapter are rather technical, several sections are d
 %\usepackage[inline]{showlabels}
 % flatex input: [Chapter04/QMConsistency.tex]
 \section{Consistency of Kent's Theory with Standard Quantum Theory}\label{kentinterpretationconsistency}
+\vspace{12.96pt}
 \subsection{Overview}
 If we are to take Kent's theory seriously, it should be just as good at making predictions as standard quantum theory, and it had better not contradict empirical observations. Over the last century, standard quantum theory has been firmly established, and so far, it has not been contradicted by any experimental observations. Standard quantum theory allows us to form a quantum state description of a physical system based on how the system was set up in an experimental environment, and then Schr\"{o}dinger's equation can be used to evolve this state forwards in time, and finally, we can calculate expectation values for various physical quantities belonging to this physical system, and these agree with the average values measured on the system when the experiment is performed many times. In other words, standard quantum theory is \textbf{empirically adequate}\index{empirical adequacy!informal definition}\footnote{See p. \pageref{adeq} for a more formal definition of empirical adequacy.} in its domain of applicability. Thus, if we can show that Kent's theory is just as good at making predictions as standard quantum theory, then it too will be empirically adequate to the same degree. This doesn't necessarily mean that Kent's theory will make exactly the same predictions as standard quantum theory, for the additional information  beyond standard quantum theory that Kent's theory requires may alter these predictions. Indeed, if this additional information made absolutely no difference to the predictions of standard quantum theory, then it would seem rather redundant. But we should nevertheless be able to derive the predictions of standard quantum theory from Kent's theory by averaging over the unknown variables that describe the additional information in Kent's theory.  
 
@@ -3176,6 +3187,7 @@ and according to (\ref{schwingerformula}) the expectation value $\ev*{\hat{T}^{\
 
 % flatex input: [Chapter04/KentLorentzInvariance.tex]
 \section{Kent's Theory and Lorentz Invariance}\label{LorentzInvariance}
+\vspace{12.96pt}
 \subsection{Overview}
 Lorentz invariance is the fundamental property of a physical theory that must be satisfied if it is to be consistent with special relativity. Experimental observations show that light always travels at the same speed in a vacuum no matter how fast the source of light is travelling. This experimental fact leads to some surprising consequences for how different observers will measure the same physical events. For instance, it means that velocities don't add up in the way one would naturally expect. We can understand why velocities don't add up in this way by considering a simple example: suppose Alice is travelling on a train at 100 mph, and she has a ball with her that she kicks down the aisle of the passenger car at 20 mph in the direction of travel. Then naturally, we would expect the kicked ball to be travelling at (100+20)=120 mph with respect to Bob who happens to be standing by the railroad track.  But now suppose Alice shines a beam of light in the direction of travel. If we ignore the fact that light travels slightly more slowly in air than in a vacuum, then whilst on the train, Alice would measure the beam of light to travel at 670,616,629 mph. So by analogy with the previous example, we would expect the stationary observer, Bob to measure the beam of light that Alice shines to travel at (100+670,616,629)=670,616,729 mph. However, it turns out that Bob measures the beam of light to have exactly the same speed as Alice measures. Thus, the manner in which Alice and Bob's velocity measurements differ is not what we would expect -- we can't just add or subtract velocities. Instead we have to use what's known as a \emph{Lorentz transformation}\index{Lorentz transformation!overview} to work out how their respective measurements transform.  
 
@@ -3318,9 +3330,7 @@ x_\mu x^\mu=\eta_{\mu\rho}\Lambda\indices{^\rho_\sigma}x^\sigma\Lambda\indices{^
 \eta_{\nu\mu}x^\mu y^\nu = x_\mu y^\mu=\eta_{\sigma\rho}\Lambda\indices{^\rho_\mu}\Lambda\indices{^\sigma_\nu}x^\mu y^\nu.
 \end{equation*}  
 Since we can choose $x$ such that $x^\mu=1$ and $x^\alpha = 0$ for $\alpha\neq\mu$, and can choose $y$ such that $y^\nu=1$ and $y^\beta=0$ for $\beta\neq\nu$, it follows that
-\begin{equation*}
-\eta_{\mu\nu} = \eta_{\sigma\rho}\Lambda\indices{^\rho_\mu}\Lambda\indices{^\sigma_\nu}, 
-\end{equation*} which is the result we wanted to prove.}Having considered how the coordinates of a spacetime location viewed by one observer relate to the coordinates of the same spacetime location viewed by a different observer, we can now consider how physical quantities viewed by different observers relate to each other. So suppose $\phi(x)\myeq\phi(x^0, x^1, x^2, x^3)$ is the value of a scalar defined at the spacetime location $(x^0, x^1, x^2, x^3)$ as described by an observer $\mathcal{O}$. Then another observer $\mathcal{O}'$ using a different set of coordinate $({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ to describe the spacetime location $(x^0, x^1, x^2, x^3)$ will describe this same scalar as $\phi'(x')\myeq\phi'({x'}^0, {x'}^1, {x'}^2, {x'}^3)$  where $\phi'(x')=\phi(x)$. Therefore,
+$\eta_{\mu\nu} = \eta_{\sigma\rho}\Lambda\indices{^\rho_\mu}\Lambda\indices{^\sigma_\nu}$ which is the result we wanted to prove.}Having considered how the coordinates of a spacetime location viewed by one observer relate to the coordinates of the same spacetime location viewed by a different observer, we can now consider how physical quantities viewed by different observers relate to each other. So suppose $\phi(x)\myeq\phi(x^0, x^1, x^2, x^3)$ is the value of a scalar defined at the spacetime location $(x^0, x^1, x^2, x^3)$ as described by an observer $\mathcal{O}$. Then another observer $\mathcal{O}'$ using a different set of coordinate $({x'}^0, {x'}^1, {x'}^2, {x'}^3)$ to describe the spacetime location $(x^0, x^1, x^2, x^3)$ will describe this same scalar as $\phi'(x')\myeq\phi'({x'}^0, {x'}^1, {x'}^2, {x'}^3)$  where $\phi'(x')=\phi(x)$. Therefore,
 \begin{equation}\label{lorentzscalar}
 \phi'(x')=\phi(\Lambda^{-1}x')
 \end{equation} 
@@ -3662,6 +3672,7 @@ Note that in this proof of Lorentz invariance, we don't need to take the limit o
 % flatex input: [Chapter04/KentDecoherence.tex]
 
 \section{Kent's Theory and the Problem of Outcomes}\label{Kentdecoherencesection}
+\vspace{12.96pt}
 \subsection{Overview}
 In section \ref{probOutcomes} we saw that decoherence theory by itself does not offer a solution to the problem of outcomes. In this section, we consider how the additional information in Kent's theory is sufficient to address this problem. We will explain this by again considering  Kent's toy model discussed in section \ref{toysection}.
 
@@ -3808,7 +3819,7 @@ declare function={
 \end{tikzpicture}% pic 1
 
 \vspace{-10pt}
-\caption[Depiction of localized states prior to any photon interaction]{Depiction of a superposition of two local states at $z_1$ and $z_2$ before the photon has interacted with them. The small gray squares indicate cells in $S^1(y^a_1)$ whose states are among the summands in (\ref{Sistate}) rather than in $\Xi$. The white square indicates a cell in $S_n(y^a_1)$ whose state is a factor in $\Xi$.}
+\caption[Localized states prior to any photon interaction]{Depiction of a superposition of two local states at $z_1$ and $z_2$ before the photon has interacted with them. The small gray squares indicate cells in $S^1(y^a_1)$ whose states are among the summands in (\ref{Sistate}) rather than in $\Xi$. The white square indicates a cell in $S_n(y^a_1)$ whose state is a factor in $\Xi$.}
 \label{kentdeco1}
 \end{figure}
 
@@ -3848,7 +3859,7 @@ where $\hat{O}_\mathcal{S}$ is an observable on $H_\mathcal{S}$,  and $\hat{O}_\
 \begin{equation}\label{reduced2}
 \hat{\rho}_\mathcal{S}=\sum_j \abs{c_j}^2\dyad{\psi_j}+\sum_{j\neq k} c_j\overline{c_k}\ip{E_k}{E_j}\dyad{\psi_j}{\psi_k}.\protect\footnotemark
 \end{equation}
-\footnotetext{cf. (\ref{reduced})}We can thus apply this to the situation at hand by taking $S_n$ to be our universe $\mathcal{U}$ and $y^a_1$ to be the system $\mathcal{S}$, and $S_n\setminus \{y^a_1\}$ to be the environment $\mathcal{E}$. If we assume that $\ip{0_2}{\psi_2^\text{sys}}= 0$, then by (\ref{reduced2}), the corresponding reduced density matrix $\hat{\rho}_{y^a_1}$ takes the form of an improper mixture
+\footnotetext{cf. (\ref{reduced}).}We can thus apply this to the situation at hand by taking $S_n$ to be our universe $\mathcal{U}$ and $y^a_1$ to be the system $\mathcal{S}$, and $S_n\setminus \{y^a_1\}$ to be the environment $\mathcal{E}$. If we assume that $\ip{0_2}{\psi_2^\text{sys}}= 0$, then by (\ref{reduced2}), the corresponding reduced density matrix $\hat{\rho}_{y^a_1}$ takes the form of an improper mixture
 \begin{equation}\label{kentred}
 \hat{\rho}_{y^a_1}= \abs{c_1}^2\dyad{\psi_1^\text{sys}}+\abs{c_2}^2\dyad{0_1}.
 \end{equation}
@@ -3984,7 +3995,7 @@ declare function={
 \end{tikzpicture}% pic 1
 
 \vspace{-10pt}
-\caption[Depiction of localized states after photon interaction]{Depiction of a superposition of two local states at $z_1$ and $z_2$ with $S_n(y^b_1)$ being after the photon has interacted without the photon intersecting $S_n(y^b_1)\cap S$. The small gray squares indicate cells in $S^1(y^b_1)$ whose states are among the summands in (\ref{Sistate}).}
+\caption[Localized states after photon interaction]{Depiction of a superposition of two local states at $z_1$ and $z_2$ with $S_n(y^b_1)$ being after the photon has interacted without the photon intersecting $S_n(y^b_1)\cap S$. The small gray squares indicate cells in $S^1(y^b_1)$ whose states are among the summands in (\ref{Sistate}).}
 \label{kentdecoh2}
 \end{figure}
 
@@ -4108,7 +4119,7 @@ declare function={
 \end{tikzpicture}% pic 1
 
 \vspace{-10pt}
-\caption[Depiction of localized states with reflected photons intersecting $S_n(y^c_1)$]{Depiction of a superposition of two local states at $z_1$ and $z_2$ with $y^c_1$ sufficiently late that the photon intersects $S_n(y^c_1)\cap S$. The small gray squares indicate cells in $S^1(y^c_1)$ whose states are among the summands in (\ref{Sistate})}
+\caption[Localized states with reflected photons intersecting $S_n(y^c_1)$]{Depiction of a superposition of two local states at $z_1$ and $z_2$ with $y^c_1$ sufficiently late that the photon intersects $S_n(y^c_1)\cap S$. The small gray squares indicate cells in $S^1(y^c_1)$ whose states are among the summands in (\ref{Sistate})}
 \label{kentdecoh3}
 \end{figure}
 
@@ -4441,7 +4452,7 @@ As for the definition of \textbf{empirical adequacy}\index{empirical adequacy!fo
 	\sum_{\lambda\in\Lambda}p_\lambda P_\lambda^{\ket*{\phi}_{\mathcal{S}+\mathcal{A}}}(O_\mathcal{S}=o_\mathcal{S}\, \& \,O_\mathcal{A}=o_\mathcal{A})=P^{\ket*{\phi}_{\mathcal{S}+\mathcal{A}}}(O_\mathcal{S}=o_\mathcal{S}\, \& \,O_\mathcal{A}=o_\mathcal{A})
 \end{equation}
 where $\Lambda$ is the set of all hidden variables so that $\sum_{\lambda\in\Lambda} p_\lambda = 1$, %
-\nomenclature{$p_\lambda$}{The probability the hidden variable for the composite system $\mathcal{S}+\mathcal{A}$ is $\lambda$, so that $\sum_{\lambda\in\Lambda} p_\lambda = 1$, \nomrefpage}%
+\nomenclature{$p_\lambda$}{The probability the hidden variable for the composite system $\mathcal{S}+\mathcal{A}$ is $\lambda$, so that $\sum_{\lambda\in\Lambda} p_\lambda = 1$, \nomrefpage\newline }%
  and where 
 
 
@@ -4660,7 +4671,7 @@ P(T_S = \tau_S)=|\mel{\Gamma}{U_{SS_0}}{\Psi_0}|^2=|\ip{\Gamma}{\Psi_S}|^2
 	\end{tikzpicture}% pic 1
 	
 	\vspace{-10pt}
-	\caption[Toy model where photon detection determines measurement choice]{Depicts an experiment where the state of some photons $\gamma_i^{(\mathcal{S})}$ and $\gamma_i^{(\mathcal{A})}$ on the hypersurface $S$ determines the initial conditions of an experimental setup of a particle $\mathcal{S}$ and apparatus $\mathcal{A}$ in the vicinity of the spacetime location $( t_i, z_0)$.  The state of the photons $\gamma_f^{\prime}$ on the hypersurface $S$ determines the final state of the apparatus $\mathcal{A}$ after the particle $ \mathcal{S}$ has finished interacting with it from time $t_f$ onwards so that the apparatus at time $t_m$	displays a definite measurement outcome. It is assumed that no incoming photons have become entangled with the experiment after the $\gamma_i^{(\mathcal{S})}$ and $\gamma_i^{(\mathcal{A})}$ photons and before the $\gamma_f^{\prime}$ photons have become entangled with the experiment.  }
+	\caption[Toy model where $\gamma_i^{(\mathcal{A})}$ determines measurement choice]{Depicts an experiment where the state of some photons $\gamma_i^{(\mathcal{S})}$ and $\gamma_i^{(\mathcal{A})}$ on the hypersurface $S$ determines the initial conditions of an experimental setup of a particle $\mathcal{S}$ and apparatus $\mathcal{A}$ in the vicinity of the spacetime location $( t_i, z_0)$.  The state of the photons $\gamma_f^{\prime}$ on the hypersurface $S$ determines the final state of the apparatus $\mathcal{A}$ after the particle $ \mathcal{S}$ has finished interacting with it from time $t_f$ onwards so that the apparatus at time $t_m$	displays a definite measurement outcome. It is assumed that no incoming photons have become entangled with the experiment after the $\gamma_i^{(\mathcal{S})}$ and $\gamma_i^{(\mathcal{A})}$ photons and before the $\gamma_f^{\prime}$ photons have become entangled with the experiment.  }
 	\label{pisolution}
 	\end{figure}
 
@@ -5505,6 +5516,11 @@ Inevitably, Kent's theory and my adaption to it are highly speculative. In this 
 \setstretch{1} % this changes the bibliography to single space within each item
 \titlespacing{\chapter}{0pt}{19.44pt}{25.92pt} % since single spaced now have to change this.
 
+
+
+\clubpenalty=10000
+\widowpenalty=10000
+\vspace{-30pt}
 \printbibliography[title={BIBLIOGRAPHY}]
 \addcontentsline{toc}{chapter}{BIBLIOGRAPHY} % adds this to table of contents
 \endgroup
